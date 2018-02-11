@@ -1,0 +1,248 @@
+do qsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 09:32:38 on Feb 10,2018
+# vlog -reportprogress 300 -sv -l qsta_compile.log -mfcu -f flist 
+# -- Compiling module dut_dummy
+# -- Compiling interface apb_if
+# -- Compiling interface apb_master_if
+# -- Compiling interface apb_slave_if
+# -- Compiling package apb_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) Using implicit +incdir+C:/questasim64_10.4c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# 
+# -- Compiling module demo_top
+# -- Importing package apb_pkg
+# 
+# Top level modules:
+# 	demo_top
+# End time: 09:32:38 on Feb 10,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# No design specified
+vsim -c +UVM_VERBOSITY=MEDIUM +UVM_TESTNAME=test_read_after_write demo_top
+# vsim -c "+UVM_VERBOSITY=MEDIUM" "+UVM_TESTNAME=test_read_after_write" demo_top 
+# Start time: 09:27:24 on Feb 10,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.apb_pkg(fast)
+# Loading work.demo_top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.apb_if(fast)
+# Loading C:/questasim64_10.4c/uvm-1.1d\win64\uvm_dpi.dll
+add wave *
+# (vish-4014) No objects found matching '*'.
+
+add wave -position end  sim:/demo_top/apb_if_0/PADDR_WIDTH
+add wave -position end  sim:/demo_top/apb_if_0/PWDATA_WIDTH
+add wave -position end  sim:/demo_top/apb_if_0/PRDATA_WIDTH
+add wave -position end  sim:/demo_top/apb_if_0/pclock
+add wave -position end  sim:/demo_top/apb_if_0/preset
+add wave -position end  sim:/demo_top/apb_if_0/paddr
+add wave -position end  sim:/demo_top/apb_if_0/prwd
+add wave -position end  sim:/demo_top/apb_if_0/pwdata
+add wave -position end  sim:/demo_top/apb_if_0/penable
+add wave -position end  sim:/demo_top/apb_if_0/psel
+add wave -position end  sim:/demo_top/apb_if_0/prdata
+add wave -position end  sim:/demo_top/apb_if_0/pslverr
+add wave -position end  sim:/demo_top/apb_if_0/pready
+add wave -position end  sim:/demo_top/apb_if_0/has_checks
+add wave -position end  sim:/demo_top/apb_if_0/has_coverage
+run 1ms
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a versiogn of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test_read_after_write...
+# UVM_INFO @ 0: uvm_test_top.demo_tb0.apb0 [CFGNRD]  ::: The following resources have at least one write and no reads :::
+# default_sequence [/^uvm_test_top\.demo_tb0\.apb0\.slave\[0\]\.sequencer\.run_phase$/] : (class uvm_pkg::uvm_object_wrapper) {mem_response_seq} @uvm_object_registry__49@1
+# -  
+#   --------
+#   uvm_test_top reads: 0 @ 0  writes: 1 @ 0
+#  
+# default_sequence [/^uvm_test_top\.demo_tb0\.apb0\.master\.sequencer\.run_phase$/] : (class uvm_pkg::uvm_object_wrapper) {read_after_write_seq} @uvm_object_registry__46@1
+# -  
+#   --------
+#   uvm_test_top reads: 0 @ 0  writes: 1 @ 0
+#  
+# vif [/^uvm_test_top\.demo_tb0\.apb0\.slave\[1\]\..*$/] : (virtual apb_if #(32, 32, 32)) /demo_top/apb_if_0
+# -  
+#   --------
+#   uvm_test_top.demo_tb0.apb0.slave[1] reads: 0 @ 0  writes: 1 @ 0
+#  
+# vif [/^uvm_test_top\.demo_tb0\.apb0\.slave\[0\]\..*$/] : (virtual apb_if #(32, 32, 32)) /demo_top/apb_if_0
+# -  
+#   --------
+#   uvm_test_top.demo_tb0.apb0.slave[0] reads: 0 @ 0  writes: 1 @ 0
+#  
+# -----------------------------------------------------------------------
+# Name                         Type                     Size  Value      
+# -----------------------------------------------------------------------
+# uvm_test_top                 test_read_after_write    -     @467       
+#   demo_tb0                   demo_tb                  -     @486       
+#     apb0                     apb_env                  -     @503       
+#       bus_collector          apb_collector            -     @562       
+#         addr_trans_export    uvm_blocking_peek_imp    -     @581       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         item_collected_port  uvm_analysis_port        -     @573       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         cfg                  demo_config              -     @493       
+#         checks_enable        integral                 1     'h1        
+#         coverage_enable      integral                 1     'h1        
+#         num_transactions     integral                 32    'h0        
+#         recording_detail     uvm_verbosity            32    UVM_FULL   
+#       bus_monitor            apb_monitor              -     @518       
+#         addr_trans_export    uvm_blocking_peek_imp    -     @546       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         addr_trans_port      uvm_blocking_peek_port   -     @554       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         coll_mon_port        uvm_analysis_imp         -     @538       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         item_collected_port  uvm_analysis_port        -     @530       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         cfg                  demo_config              -     @493       
+#         checks_enable        integral                 1     'h1        
+#         coverage_enable      integral                 1     'h0        
+#         num_transactions     integral                 32    'h0        
+#         recording_detail     uvm_verbosity            32    UVM_FULL   
+#       master                 apb_master_agent         -     @589       
+#         driver               apb_master_driver        -     @735       
+#           rsp_port           uvm_analysis_port        -     @750       
+#           seq_item_port      uvm_seq_item_pull_port   -     @742       
+#           cfg                demo_config              -     @493       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         sequencer            apb_master_sequencer     -     @626       
+#           rsp_export         uvm_analysis_export      -     @633       
+#           seq_item_export    uvm_seq_item_pull_imp    -     @727       
+#           cfg                demo_config              -     @493       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#           arbitration_queue  array                    0     -          
+#           lock_queue         array                    0     -          
+#           num_last_reqs      integral                 32    'd1        
+#           num_last_rsps      integral                 32    'd1        
+#         monitor              apb_monitor              -     @518       
+#         collector            apb_collector            -     @562       
+#         is_active            uvm_active_passive_enum  1     UVM_ACTIVE 
+#         cfg                  demo_config              -     @493       
+#         recording_detail     uvm_verbosity            32    UVM_FULL   
+#       slave[0]               apb_slave_agent          -     @596       
+#         driver               apb_slave_driver         -     @896       
+#           rsp_port           uvm_analysis_port        -     @911       
+#           seq_item_port      uvm_seq_item_pull_port   -     @903       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#         sequencer            apb_slave_sequencer      -     @779       
+#           addr_trans_port    uvm_blocking_peek_port   -     @888       
+#           rsp_export         uvm_analysis_export      -     @786       
+#           seq_item_export    uvm_seq_item_pull_imp    -     @880       
+#           cfg                apb_slave_config         -     @494       
+#           recording_detail   uvm_verbosity            32    UVM_FULL   
+#           arbitration_queue  array                    0     -          
+#           lock_queue         array                    0     -          
+#           num_last_reqs      integral                 32    'd1        
+#           num_last_rsps      integral                 32    'd1        
+#         monitor              apb_monitor              -     @518       
+#         collector            apb_collector            -     @562       
+#         is_active            uvm_active_passive_enum  1     UVM_ACTIVE 
+#         cfg                  apb_slave_config         -     @494       
+#         recording_detail     uvm_verbosity            32    UVM_FULL   
+#       slave[1]               apb_slave_agent          -     @603       
+#         monitor              apb_monitor              -     @518       
+#         collector            apb_collector            -     @562       
+#         is_active            uvm_active_passive_enum  1     UVM_PASSIVE
+#         cfg                  apb_slave_config         -     @495       
+#         recording_detail     uvm_verbosity            32    UVM_FULL   
+#       cfg                    demo_config              -     @493       
+#         slave_configs        da(object)               2     -          
+#           [0]                apb_slave_config         -     @494       
+#           [1]                apb_slave_config         -     @495       
+#         master_config        apb_master_config        -     @496       
+#           name               string                   6     master     
+#           is_active          uvm_active_passive_enum  1     UVM_ACTIVE 
+#       checks_enable          integral                 1     'h1        
+#       coverage_enable        integral                 1     'h1        
+#       recording_detail       uvm_verbosity            32    UVM_FULL   
+#     recording_detail         uvm_verbosity            32    UVM_FULL   
+# -----------------------------------------------------------------------
+# UVM_INFO ../sv/apb_slave_seq_lib.sv(77) @ 0: uvm_test_top.demo_tb0.apb0.slave[0].sequencer@@mem_response_seq [mem_response_seq] Starting...
+# UVM_INFO ../sv/apb_master_seq_lib.sv(182) @ 0: uvm_test_top.demo_tb0.apb0.master.sequencer@@read_after_write_seq [read_after_write_seq] Starting...
+# UVM_INFO ../sv/apb_master_driver.sv(112) @ 0: uvm_test_top.demo_tb0.apb0.master.driver [APB_MASTER_DRIVER] Reset observed
+# UVM_INFO ../sv/apb_slave_driver.sv(84) @ 0: uvm_test_top.demo_tb0.apb0.slave[0].driver [apb_slave_driver] Reset observed
+# UVM_INFO ../sv/apb_collector.sv(108) @ 51: uvm_test_top.demo_tb0.apb0.bus_collector [apb_collector] Detected Reset Done
+# UVM_INFO ../sv/apb_slave_driver.sv(72) @ 51: uvm_test_top.demo_tb0.apb0.slave[0].driver [apb_slave_driver] Reset dropped
+# UVM_INFO ../sv/apb_collector.sv(139) @ 135: uvm_test_top.demo_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @569      
+#   addr           integral            32    'hc86204d8
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h2d734298
+#   master         string              6     master    
+#   slave          string              6     slave0    
+#   begin_time     time                64    115       
+#   end_time       time                64    135       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/apb_slave_seq_lib.sv(82) @ 215: uvm_test_top.demo_tb0.apb0.slave[0].sequencer@@mem_response_seq [mem_response_seq] Address:c86204d8 Range Matching APB_READ.  Responding...
+# UVM_INFO ../sv/apb_collector.sv(139) @ 225: uvm_test_top.demo_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @569      
+#   addr           integral            32    'hc86204d8
+#   direction      apb_direction_enum  32    APB_READ  
+#   data           integral            32    'h2d734298
+#   master         string              6     master    
+#   slave          string              6     slave0    
+#   begin_time     time                64    205       
+#   end_time       time                64    225       
+# -----------------------------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 415: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../sv/apb_collector.sv(153) @ 415: uvm_test_top.demo_tb0.apb0.bus_collector [apb_collector] Report: APB collector collected 2 transfers
+# UVM_INFO ../sv/apb_monitor.sv(164) @ 415: uvm_test_top.demo_tb0.apb0.bus_monitor [apb_monitor] Report: APB monitor collected 2 transfers
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   16
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [APB_MASTER_DRIVER]     1
+# [CFGNRD]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [apb_collector]     4
+# [apb_monitor]     1
+# [apb_slave_driver]     2
+# [mem_response_seq]     2
+# [read_after_write_seq]     1
+# ** Note: $finish    : C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 415 ns  Iteration: 53  Instance: /demo_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+
+
