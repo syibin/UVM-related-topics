@@ -1,0 +1,15 @@
+# Current time Sun Feb 18 21:59:12 2018
+# Program = vish
+# Id = "10.4c"
+# Version = "2015.07"
+# Date = "Jul 20 2015"
+# Platform = win64
+
+Exception c0000005 has occurred at address 40309adf. Traceback:
+# 0    0x40309adf: 'Ucdb_Init + 0x7148f'
+# 1    0x0c168a50: '<unknown (@0xc168a50)>'
+# 2    0x00000001: '<unknown (@0x1)>'
+# 3    0x00000001: '<unknown (@0x1)>'
+StackWalk failed 487
+# End of Stack Trace
+

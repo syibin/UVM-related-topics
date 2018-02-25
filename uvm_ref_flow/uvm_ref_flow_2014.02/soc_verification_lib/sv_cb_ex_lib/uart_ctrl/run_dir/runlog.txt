@@ -1,0 +1,1626 @@
+do qsim.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is sunyibin@CA81.
+# 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 22:01:39 on Feb 18,2018
+# vlog -reportprogress 300 -sv -l qsta_compile.log -mfcu -f flist 
+# -- Compiling package apb_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) Using implicit +incdir+C:/questasim64_10.4c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# 
+# -- Compiling package uart_pkg
+# -- Compiling package uart_ctrl_pkg
+# -- Importing package apb_pkg
+# -- Importing package uart_pkg
+# -- Compiling interface apb_if
+# -- Compiling interface apb_master_if
+# -- Compiling interface apb_slave_if
+# -- Compiling interface uart_if
+# -- Compiling interface uart_ctrl_internal_if
+# -- Compiling module uart_ctrl_top
+# -- Importing package uart_ctrl_pkg
+# -- Compiling module uart_top
+# -- Compiling module uart_wb
+# -- Compiling module uart_transmitter
+# -- Compiling module uart_receiver
+# -- Compiling module uart_tfifo
+# -- Compiling module uart_rfifo
+# -- Compiling module uart_regs
+# -- Compiling module uart_debug_if
+# -- Compiling module raminfr
+# -- Compiling module uart_sync_flops
+# 
+# Top level modules:
+# 	uart_ctrl_top
+# End time: 22:01:40 on Feb 18,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# =======================================================
+# UART CONTROLLER DUT REGISTERS:
+# uart_ctrl_top.uart_dut.regs.dl  =xxxx
+# uart_ctrl_top.uart_dut.regs.fcr = x
+# uart_ctrl_top.uart_dut.regs.ier = x
+# uart_ctrl_top.uart_dut.regs.iir = x
+# uart_ctrl_top.uart_dut.regs.lcr = xx
+# =======================================================
+# End time: 22:01:41 on Feb 18,2018, Elapsed time: 0:02:04
+# Errors: 5, Warnings: 2
+# vsim -c -suppress 3009 "+UVM_VERBOSITY=MEDIUM" "+UVM_TESTNAME=apb_uart_rx_tx" uart_ctrl_top 
+# Start time: 22:01:41 on Feb 18,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.uart_pkg(fast)
+# Loading work.apb_pkg(fast)
+# Loading work.uart_ctrl_pkg(fast)
+# Loading work.uart_ctrl_top(fast)
+# Loading work.uart_if(fast__1)
+# Loading work.uart_ctrl_internal_if(fast__1)
+# Loading work.uart_top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.uart_ctrl_internal_if(fast)
+# Loading work.apb_if(fast)
+# Loading work.uart_if(fast)
+# Loading C:/questasim64_10.4c/uvm-1.1d\win64\uvm_dpi.dll
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# (uart_ctrl_top.uart_dut) UART INFO: Data bus width is 32. Debug Interface present.
+# 
+# (uart_ctrl_top.uart_dut) UART INFO: Doesn't have baudrate output
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test apb_uart_rx_tx...
+# UVM_INFO ../tb/sv/uart_ctrl_tb.sv(89) @ 0: uvm_test_top.uart_ctrl_tb0 [NOCONFIG] No uart_ctrl_config, creating...
+# UVM_INFO ../tb/sv/uart_ctrl_tb.sv(93) @ 0: uvm_test_top.uart_ctrl_tb0 [uart_ctrl_tb] Printing cfg:
+# -----------------------------------------------------------------
+# Name                   Type                     Size  Value      
+# -----------------------------------------------------------------
+# cfg                    uart_ctrl_config         -     @586       
+#   apb_cfg              apb_config               -     @588       
+#     slave_configs      da(object)               1     -          
+#       [0]              apb_slave_config         -     @590       
+#         name           string                   5     uart0      
+#         is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#         start_address  integral                 32    'h0        
+#         end_address    integral                 32    'h81ffff   
+#         psel_index     integral                 32    'h0        
+#     master_config      apb_master_config        -     @589       
+#       name             string                   6     master     
+#       is_active        uvm_active_passive_enum  1     UVM_ACTIVE 
+#   uart_cfg             uart_config              -     @587       
+#     is_tx_active       uvm_active_passive_enum  1     UVM_ACTIVE 
+#     is_rx_active       uvm_active_passive_enum  1     UVM_PASSIVE
+#     baud_rate_gen      integral                 8     'd0        
+#     baud_rate_div      integral                 8     'd0        
+#     char_length        integral                 2     'h0        
+#     nbstop             integral                 1     'h0        
+#     parity_en          integral                 1     'h0        
+#     parity_mode        integral                 2     'h0        
+# -----------------------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(93) @ 0: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [NOCONFIG] No apb_slave_config ..
+# UVM_INFO @ 0: uvm_test_top.uart_ctrl_tb0.apb0 [CFGNRD]  ::: The following resources have at least one write and no reads :::
+# apb_slave_cfg [/^uvm_test_top\.uart_ctrl_tb0\.uart_ctrl0\.monitor\..*x_scbd$/] : (class uvm_pkg::uvm_object) {slave_config} 590 1 1679 @uvm_status_container@1 {uart0} UVM_PASSIVE 0 8519679 0 {apb_slave_config}
+# -  
+#   --------
+#   uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor reads: 0 @ 0  writes: 1 @ 0
+#  
+# apb_slave_cfg [/^uvm_test_top\.uart_ctrl_tb0\.uart_ctrl0$/] : (class uvm_pkg::uvm_object) {slave_config} 590 1 1679 @uvm_status_container@1 {uart0} UVM_PASSIVE 0 8519679 0 {apb_slave_config}
+# -  
+#   --------
+#   uvm_test_top.uart_ctrl_tb0 reads: 0 @ 0  writes: 1 @ 0
+#  
+# default_sequence [/^uvm_test_top\.uart_ctrl_tb0\.virtual_sequencer\.run_phase$/] : (class uvm_pkg::uvm_object_wrapper) {concurrent_u2a_a2u_rand_trans_vseq} @uvm_object_registry__80@1
+# -  
+#   --------
+#   uvm_test_top reads: 0 @ 0  writes: 1 @ 0
+#  
+# vif [/^uvm_test_top\.uart_ctrl_tb0\.apb0\.slave\[0\]\..*$/] : (virtual apb_if #(32, 32, 32)) /uart_ctrl_top/apb_if0
+# -  
+#   --------
+#   uvm_test_top.uart_ctrl_tb0.apb0.slave[0] reads: 0 @ 0  writes: 1 @ 0
+#  
+# UVM_INFO ../tb/sv/uart_ctrl_tb.sv(162) @ 0: uvm_test_top.uart_ctrl_tb0 [uart_ctrl_tb] UART_Controller Testbench Topology:
+# ----------------------------------------------------------------------------------
+# Name                          Type                               Size  Value      
+# ----------------------------------------------------------------------------------
+# uart_ctrl_tb0                 uart_ctrl_tb                       -     @576       
+#   apb0                        apb_env                            -     @671       
+#     bus_collector             apb_collector                      -     @900       
+#       addr_trans_export       uvm_blocking_peek_imp              -     @921       
+#       item_collected_port     uvm_analysis_port                  -     @912       
+#       cfg                     apb_config                         -     @588       
+#       checks_enable           integral                           1     'h1        
+#       coverage_enable         integral                           1     'h1        
+#       num_transactions        integral                           32    'h0        
+#     bus_monitor               apb_monitor                        -     @851       
+#       addr_trans_export       uvm_blocking_peek_imp              -     @882       
+#       addr_trans_port         uvm_blocking_peek_port             -     @891       
+#       coll_mon_port           uvm_analysis_imp                   -     @873       
+#       item_collected_port     uvm_analysis_port                  -     @864       
+#       cfg                     apb_config                         -     @588       
+#       checks_enable           integral                           1     'h1        
+#       coverage_enable         integral                           1     'h1        
+#       num_transactions        integral                           32    'h0        
+#     master                    apb_master_agent                   -     @930       
+#       driver                  apb_master_driver                  -     @1082      
+#         rsp_port              uvm_analysis_port                  -     @1099      
+#         seq_item_port         uvm_seq_item_pull_port             -     @1090      
+#         cfg                   apb_config                         -     @588       
+#       sequencer               apb_master_sequencer               -     @959       
+#         rsp_export            uvm_analysis_export                -     @967       
+#         seq_item_export       uvm_seq_item_pull_imp              -     @1073      
+#         cfg                   apb_config                         -     @588       
+#         arbitration_queue     array                              0     -          
+#         lock_queue            array                              0     -          
+#         num_last_reqs         integral                           32    'd1        
+#         num_last_rsps         integral                           32    'd1        
+#       monitor                 apb_monitor                        -     @851       
+#       collector               apb_collector                      -     @900       
+#       is_active               uvm_active_passive_enum            1     UVM_ACTIVE 
+#       cfg                     apb_config                         -     @588       
+#     slave[0]                  apb_slave_agent                    -     @938       
+#       monitor                 apb_monitor                        -     @851       
+#       collector               apb_collector                      -     @900       
+#       is_active               uvm_active_passive_enum            1     UVM_PASSIVE
+#       cfg                     apb_slave_config                   -     @590       
+#     cfg                       apb_config                         -     @588       
+#       slave_configs           da(object)                         1     -          
+#         [0]                   apb_slave_config                   -     @590       
+#           name                string                             5     uart0      
+#           is_active           uvm_active_passive_enum            1     UVM_PASSIVE
+#           start_address       integral                           32    'h0        
+#           end_address         integral                           32    'h81ffff   
+#           psel_index          integral                           32    'h0        
+#       master_config           apb_master_config                  -     @589       
+#         name                  string                             6     master     
+#         is_active             uvm_active_passive_enum            1     UVM_ACTIVE 
+#     checks_enable             integral                           1     'h1        
+#     coverage_enable           integral                           1     'h1        
+#   uart0                       uart_env                           -     @679       
+#     Rx                        uart_rx_agent                      -     @1140      
+#       monitor                 uart_rx_monitor                    -     @1153      
+#         frame_collected_port  uvm_analysis_port                  -     @1161      
+#         cfg                   uart_config                        -     @587       
+#         checks_enable         integral                           1     'h1        
+#         coverage_enable       integral                           1     'h1        
+#         cfg                   uart_config                        -     @587       
+#       is_active               uvm_active_passive_enum            1     UVM_PASSIVE
+#       cfg                     uart_config                        -     @587       
+#     Tx                        uart_tx_agent                      -     @1132      
+#       driver                  uart_tx_driver                     -     @1319      
+#         rsp_port              uvm_analysis_port                  -     @1336      
+#         seq_item_port         uvm_seq_item_pull_port             -     @1327      
+#         cfg                   uart_config                        -     @587       
+#       monitor                 uart_tx_monitor                    -     @1179      
+#         frame_collected_port  uvm_analysis_port                  -     @1187      
+#         cfg                   uart_config                        -     @587       
+#         checks_enable         integral                           1     'h1        
+#         coverage_enable       integral                           1     'h1        
+#         cfg                   uart_config                        -     @587       
+#       sequencer               uart_sequencer                     -     @1196      
+#         rsp_export            uvm_analysis_export                -     @1204      
+#         seq_item_export       uvm_seq_item_pull_imp              -     @1310      
+#         cfg                   uart_config                        -     @587       
+#         arbitration_queue     array                              0     -          
+#         lock_queue            array                              0     -          
+#         num_last_reqs         integral                           32    'd1        
+#         num_last_rsps         integral                           32    'd1        
+#       is_active               uvm_active_passive_enum            1     UVM_ACTIVE 
+#       cfg                     uart_config                        -     @587       
+#     dut_cfg_port_in           uvm_analysis_imp                   -     @687       
+#     cfg                       uart_config                        -     @587       
+#       is_tx_active            uvm_active_passive_enum            1     UVM_ACTIVE 
+#       is_rx_active            uvm_active_passive_enum            1     UVM_PASSIVE
+#       baud_rate_gen           integral                           8     'd0        
+#       baud_rate_div           integral                           8     'd0        
+#       char_length             integral                           2     'h0        
+#       nbstop                  integral                           1     'h0        
+#       parity_en               integral                           1     'h0        
+#       parity_mode             integral                           2     'h0        
+#     checks_enable             integral                           1     'h1        
+#     coverage_enable           integral                           1     'h1        
+#   uart_ctrl0                  uart_ctrl_env                      -     @696       
+#     apb_in                    uvm_analysis_imp                   -     @713       
+#     apb_predictor             uvm_reg_predictor #(apb_transfer)  -     @1368      
+#       bus_in                  uvm_analysis_imp                   -     @1376      
+#       reg_ap                  uvm_analysis_port                  -     @1385      
+#     monitor                   uart_ctrl_monitor                  -     @1517      
+#       apb_in                  uvm_analysis_imp_apb               -     @1525      
+#       apb_out                 uvm_analysis_port                  -     @1534      
+#       rx_scbd                 uart_ctrl_rx_scbd                  -     @1621      
+#         apb_add               uvm_analysis_imp_apb               -     @1638      
+#         uart_match            uvm_analysis_imp_uart              -     @1629      
+#       tx_scbd                 uart_ctrl_tx_scbd                  -     @1595      
+#         apb_match             uvm_analysis_imp_apb               -     @1612      
+#         uart_add              uvm_analysis_imp_uart              -     @1603      
+#         uart_cfg              uart_config                        -     @587       
+#         slave_cfg             apb_slave_config                   -     @590       
+#       uart_cover              uart_ctrl_cover                    -     @1583      
+#       uart_rx_in              uvm_analysis_imp_rx                -     @1543      
+#       uart_rx_out             uvm_analysis_port                  -     @1552      
+#       uart_tx_in              uvm_analysis_imp_tx                -     @1561      
+#       uart_tx_out             uvm_analysis_port                  -     @1570      
+#       cfg                     uart_ctrl_config                   -     @586       
+#     reg_sequencer             uart_ctrl_reg_sequencer            -     @1394      
+#       rsp_export              uvm_analysis_export                -     @1402      
+#       seq_item_export         uvm_seq_item_pull_imp              -     @1508      
+#       reg_model               uart_ctrl_reg_model_c              -     @603       
+#       arbitration_queue       array                              0     -          
+#       lock_queue              array                              0     -          
+#       num_last_reqs           integral                           32    'd1        
+#       num_last_rsps           integral                           32    'd1        
+#     uart_cfg_out              uvm_analysis_port                  -     @704       
+#     reg_model                 uart_ctrl_reg_model_c              -     @603       
+#     reg2apb                   reg_to_apb_adapter                 -     @1367      
+#     cfg                       uart_ctrl_config                   -     @586       
+#       apb_cfg                 apb_config                         -     @588       
+#         slave_configs         da(object)                         1     -          
+#           [0]                 apb_slave_config                   -     @590       
+#         master_config         apb_master_config                  -     @589       
+#           name                string                             6     master     
+#           is_active           uvm_active_passive_enum            1     UVM_ACTIVE 
+#       uart_cfg                uart_config                        -     @587       
+#         is_tx_active          uvm_active_passive_enum            1     UVM_ACTIVE 
+#         is_rx_active          uvm_active_passive_enum            1     UVM_PASSIVE
+#         baud_rate_gen         integral                           8     'd0        
+#         baud_rate_div         integral                           8     'd0        
+#         char_length           integral                           2     'h0        
+#         nbstop                integral                           1     'h0        
+#         parity_en             integral                           1     'h0        
+#         parity_mode           integral                           2     'h0        
+#   virtual_sequencer           uart_ctrl_virtual_sequencer        -     @722       
+#     rsp_export                uvm_analysis_export                -     @730       
+#     seq_item_export           uvm_seq_item_pull_imp              -     @836       
+#     reg_model                 uart_ctrl_reg_model_c              -     @603       
+#     arbitration_queue         array                              0     -          
+#     lock_queue                array                              0     -          
+#     num_last_reqs             integral                           32    'd1        
+#     num_last_rsps             integral                           32    'd1        
+#   reg_model                   uart_ctrl_reg_model_c              -     @603       
+#   cfg                         uart_ctrl_config                   -     @586       
+#     apb_cfg                   apb_config                         -     @588       
+#       slave_configs           da(object)                         1     -          
+#         [0]                   apb_slave_config                   -     @590       
+#           name                string                             5     uart0      
+#           is_active           uvm_active_passive_enum            1     UVM_PASSIVE
+#           start_address       integral                           32    'h0        
+#           end_address         integral                           32    'h81ffff   
+#           psel_index          integral                           32    'h0        
+#       master_config           apb_master_config                  -     @589       
+#         name                  string                             6     master     
+#         is_active             uvm_active_passive_enum            1     UVM_ACTIVE 
+#     uart_cfg                  uart_config                        -     @587       
+#       is_tx_active            uvm_active_passive_enum            1     UVM_ACTIVE 
+#       is_rx_active            uvm_active_passive_enum            1     UVM_PASSIVE
+#       baud_rate_gen           integral                           8     'd0        
+#       baud_rate_div           integral                           8     'd0        
+#       char_length             integral                           2     'h0        
+#       nbstop                  integral                           1     'h0        
+#       parity_en               integral                           1     'h0        
+#       parity_mode             integral                           2     'h0        
+#   coverage_enable             integral                           1     'h1        
+# ----------------------------------------------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(127) @ 0: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Start Running
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(127) @ 0: uvm_test_top.uart_ctrl_tb0.uart0.Rx.monitor [uart_rx_monitor] Start Running
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_virtual_seq_lib.sv(70) @ 0: uvm_test_top.uart_ctrl_tb0.virtual_sequencer@@concurrent_u2a_a2u_rand_trans_vseq [concurrent_u2a_a2u_rand_trans_vseq] UART Controller Virtual Sequencer Executing
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_virtual_seq_lib.sv(71) @ 0: uvm_test_top.uart_ctrl_tb0.virtual_sequencer@@concurrent_u2a_a2u_rand_trans_vseq [concurrent_u2a_a2u_rand_trans_vseq] Number of APB->UART Transaction = 4
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_virtual_seq_lib.sv(72) @ 0: uvm_test_top.uart_ctrl_tb0.virtual_sequencer@@concurrent_u2a_a2u_rand_trans_vseq [concurrent_u2a_a2u_rand_trans_vseq] Number of UART->APB Transaction = 7
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_virtual_seq_lib.sv(73) @ 0: uvm_test_top.uart_ctrl_tb0.virtual_sequencer@@concurrent_u2a_a2u_rand_trans_vseq [concurrent_u2a_a2u_rand_trans_vseq] Total Number of APB<->UART Transaction = 11
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_reg_seq_lib.sv(92) @ 0: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.reg_sequencer@@concurrent_u2a_a2u_rand_trans_vseq.config_seq [uart_ctrl_config_reg_seq] UART Controller Register configuration sequence starting...
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_master_driver.sv(112) @ 0: uvm_test_top.uart_ctrl_tb0.apb0.master.driver [APB_MASTER_DRIVER] Reset observed
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(97) @ 0: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Reset Asserted
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(108) @ 51: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Detected Reset Done
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(130) @ 51: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Detected Reset Done
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 51: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(130) @ 51: uvm_test_top.uart_ctrl_tb0.uart0.Rx.monitor [uart_rx_monitor] Detected Reset Done
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 51: uvm_test_top.uart_ctrl_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 85: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 85: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    65       
+#   end_time       time                64    85       
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 115: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 115: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    95       
+#   end_time       time                64    115      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 145: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 145: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    125      
+#   end_time       time                64    145      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 175: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 175: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    155      
+#   end_time       time                64    175      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 205: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 205: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    185      
+#   end_time       time                64    205      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 235: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 235: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    215      
+#   end_time       time                64    235      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 265: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 265: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    245      
+#   end_time       time                64    265      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 295: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'h8f
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 295: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8f     
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    275      
+#   end_time       time                64    295      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 325: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 325: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h0      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h1      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    305      
+#   end_time       time                64    325      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 355: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h1, data = 'h0
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 355: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h1      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    335      
+#   end_time       time                64    355      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_reg_seq_lib.sv(105) @ 375: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.reg_sequencer@@concurrent_u2a_a2u_rand_trans_vseq.config_seq [uart_ctrl_config_reg_seq] UART Controller Register configuration sequence completed
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_seq_lib.sv(93) @ 375: uvm_test_top.uart_ctrl_tb0.apb0.master.sequencer@@concurrent_u2a_a2u_rand_trans_vseq.raw_seq [apb_to_uart_wr] APB RGM Sequencer Starting 4 Writes...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_seq_lib.sv(125) @ 375: uvm_test_top.uart_ctrl_tb0.uart0.Tx.sequencer@@concurrent_u2a_a2u_rand_trans_vseq.uart_seq [uart_transmit_seq] UART sequencer: Executing 7 Frames
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 385: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h3, data = 'hf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 385: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @908     
+#   addr           integral            32    'h3      
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'hf      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    365      
+#   end_time       time                64    385      
+# ----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 415: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 415: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    395       
+#   end_time       time                64    415       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 445: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 445: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    425       
+#   end_time       time                64    445       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 475: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 475: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    455       
+#   end_time       time                64    475       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 505: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 505: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    485       
+#   end_time       time                64    505       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 535: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 535: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    515       
+#   end_time       time                64    535       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 565: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 565: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    545       
+#   end_time       time                64    565       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 595: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 595: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    575       
+#   end_time       time                64    595       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 625: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hdd683d12
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 625: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hdd683d12
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    605       
+#   end_time       time                64    625       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 845: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 845: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    825       
+#   end_time       time                64    845       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 875: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 875: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    855       
+#   end_time       time                64    875       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 905: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 905: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    885       
+#   end_time       time                64    905       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 935: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 935: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    915       
+#   end_time       time                64    935       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 965: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 965: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    945       
+#   end_time       time                64    965       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 995: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 995: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    975       
+#   end_time       time                64    995       
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1025: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1025: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1005      
+#   end_time       time                64    1025      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1055: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h1f79555d
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1055: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h1f79555d
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1035      
+#   end_time       time                64    1055      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1275: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1275: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1255      
+#   end_time       time                64    1275      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1305: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1305: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1285      
+#   end_time       time                64    1305      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1335: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1335: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1315      
+#   end_time       time                64    1335      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1365: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1365: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1345      
+#   end_time       time                64    1365      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1395: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1395: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1375      
+#   end_time       time                64    1395      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1425: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1425: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1405      
+#   end_time       time                64    1425      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1455: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1455: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1435      
+#   end_time       time                64    1455      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1485: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'h42a6b6cf
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1485: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h42a6b6cf
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1465      
+#   end_time       time                64    1485      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1705: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1705: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1685      
+#   end_time       time                64    1705      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1735: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1735: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1715      
+#   end_time       time                64    1735      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1765: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1765: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1745      
+#   end_time       time                64    1765      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1795: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1795: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1775      
+#   end_time       time                64    1795      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1825: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1825: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1805      
+#   end_time       time                64    1825      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1855: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1855: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1835      
+#   end_time       time                64    1855      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1885: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1885: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1865      
+#   end_time       time                64    1885      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(123) @ 1915: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_WRITE: addr = 'h0, data = 'hfcfdc8db
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 1915: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @908      
+#   addr           integral            32    'h0       
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hfcfdc8db
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1895      
+#   end_time       time                64    1915      
+# -----------------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(185) @ 1965: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(219) @ 3446: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(216) @ 3525: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame **1** Sent...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(220) @ 3605: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(236) @ 3685: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:1
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @2235      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h0        
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd24       
+#   begin_time      time        64    1965       
+# -----------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 3685: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(185) @ 4045: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(219) @ 5526: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(216) @ 5605: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame **2** Sent...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(220) @ 5685: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(236) @ 5765: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:2
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @2247      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h28       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd5        
+#   begin_time      time        64    4045       
+# -----------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 5765: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(185) @ 7405: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(219) @ 8886: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(216) @ 8965: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame **3** Sent...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(220) @ 9045: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(236) @ 9125: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:3
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @2255      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hd7       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd21       
+#   begin_time      time        64    7405       
+# -----------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 9125: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(185) @ 10285: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(219) @ 11766: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(216) @ 11845: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame **4** Sent...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(220) @ 11925: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(236) @ 12005: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:4
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @2263      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h11       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd15       
+#   begin_time      time        64    10285      
+# -----------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 12005: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(185) @ 13325: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(219) @ 14806: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(216) @ 14885: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame **5** Sent...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(220) @ 14965: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(236) @ 15045: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:5
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @2271      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hc3       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd17       
+#   begin_time      time        64    13325      
+# -----------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 15045: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(185) @ 15405: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(219) @ 16886: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(216) @ 16965: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame **6** Sent...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(220) @ 17045: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(236) @ 17125: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:6
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @2279      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h33       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd5        
+#   begin_time      time        64    15405      
+# -----------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 17125: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(185) @ 18445: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(219) @ 19926: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(216) @ 20005: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame **7** Sent...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(220) @ 20085: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(236) @ 20165: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:7
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @2287      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hd        
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd17       
+#   begin_time      time        64    18445      
+# -----------------------------------------------
+# 
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_monitor.sv(175) @ 20165: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../sv/sequence_lib/uart_ctrl_seq_lib.sv(220) @ 30085: uvm_test_top.uart_ctrl_tb0.apb0.master.sequencer@@concurrent_u2a_a2u_rand_trans_vseq.rd_rx_fifo [read_rx_fifo_seq] APB RGM Sequencer Starting 7 Reads...
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30175: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'h0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(83) @ 30175: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### PASS : APB RECEIVED CORRECT DATA from uart0  expected = 'h0, received = 'h0
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30175: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30145   
+#   end_time       time                64    30175   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30215: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'h0
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30215: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30215: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h28, received = 'h0
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30215: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30185   
+#   end_time       time                64    30215   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30255: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'h0
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30255: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30255: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'hd7, received = 'h0
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30255: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30225   
+#   end_time       time                64    30255   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30295: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'h0
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30295: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30295: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h11, received = 'h0
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30295: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30265   
+#   end_time       time                64    30295   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30335: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'h0
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30335: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30335: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'hc3, received = 'h0
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30335: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30305   
+#   end_time       time                64    30335   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30365: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30365: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30365: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h33, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30365: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30345   
+#   end_time       time                64    30365   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30455: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30455: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30455: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'hd, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30455: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30435   
+#   end_time       time                64    30455   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30545: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30545: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30545: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30545: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30515   
+#   end_time       time                64    30545   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30585: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30585: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30585: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30585: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30555   
+#   end_time       time                64    30585   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30625: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30625: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30625: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30625: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30595   
+#   end_time       time                64    30625   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30665: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30665: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30665: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30665: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30635   
+#   end_time       time                64    30665   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30705: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30705: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30705: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30705: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30675   
+#   end_time       time                64    30705   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30735: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30735: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30735: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30735: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30715   
+#   end_time       time                64    30735   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30825: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30825: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30825: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30825: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30805   
+#   end_time       time                64    30825   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30915: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30915: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30915: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30915: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30885   
+#   end_time       time                64    30915   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30955: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30955: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30955: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30955: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30925   
+#   end_time       time                64    30955   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 30995: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 30995: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 30995: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 30995: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    30965   
+#   end_time       time                64    30995   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31035: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31035: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31035: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31035: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31005   
+#   end_time       time                64    31035   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31075: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31075: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31075: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31075: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31045   
+#   end_time       time                64    31075   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31105: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31105: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31105: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31105: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31085   
+#   end_time       time                64    31105   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31195: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31195: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31195: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31195: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31175   
+#   end_time       time                64    31195   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31285: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31285: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31285: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31285: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31255   
+#   end_time       time                64    31285   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31325: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31325: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31325: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31325: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31295   
+#   end_time       time                64    31325   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31365: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31365: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31365: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31365: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31335   
+#   end_time       time                64    31365   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31405: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31405: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31405: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31405: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31375   
+#   end_time       time                64    31405   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31445: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31445: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31445: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31445: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31415   
+#   end_time       time                64    31445   
+# ---------------------------------------------------
+# 
+# UVM_INFO ../sv/uart_ctrl_env.sv(129) @ 31475: uvm_test_top.uart_ctrl_tb0.uart_ctrl0 [uart_ctrl_env] APB_READ: addr = 'h0, data = 'hdb
+# UVM_ERROR ../sv/uart_ctrl_scoreboard.sv(86) @ 31475: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] ####### FAIL : APB RECEIVED WRONG DATA from uart0
+# UVM_INFO ../sv/uart_ctrl_scoreboard.sv(87) @ 31475: uvm_test_top.uart_ctrl_tb0.uart_ctrl0.monitor.tx_scbd [SCRBD] expected = 'h0, received = 'hdb
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(139) @ 31475: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @908    
+#   addr           integral            32    'h0     
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'hdb    
+#   master         string              6     master  
+#   slave          string              5     uart0   
+#   begin_time     time                64    31455   
+#   end_time       time                64    31475   
+# ---------------------------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 32475: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_collector.sv(153) @ 32475: uvm_test_top.uart_ctrl_tb0.apb0.bus_collector [apb_collector] Report: APB collector collected 70 transfers
+# UVM_INFO ../../interface_uvc_lib/apb/sv/apb_monitor.sv(164) @ 32475: uvm_test_top.uart_ctrl_tb0.apb0.bus_monitor [apb_monitor] Report: APB monitor collected 70 transfers
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_rx_monitor.sv(99) @ 32475: uvm_test_top.uart_ctrl_tb0.uart0.Rx.monitor [uart_rx_monitor] UART Frames Collected:0
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_driver.sv(229) @ 32475: uvm_test_top.uart_ctrl_tb0.uart0.Tx.driver [uart_tx_driver] UART Frames Sent:7
+# UVM_INFO ../../interface_uvc_lib/uart/sv/uart_tx_monitor.sv(99) @ 32475: uvm_test_top.uart_ctrl_tb0.uart0.Tx.monitor [uart_tx_monitor] UART Frames Collected:7
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  241
+# UVM_WARNING :    0
+# UVM_ERROR :   26
+# UVM_FATAL :    0
+# ** Report counts by id
+# [APB_MASTER_DRIVER]     1
+# [CFGNRD]     1
+# [NOCONFIG]     2
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCRBD]    53
+# [TEST_DONE]     1
+# [apb_collector]    72
+# [apb_monitor]     1
+# [apb_to_uart_wr]     1
+# [concurrent_u2a_a2u_rand_trans_vseq]     4
+# [read_rx_fifo_seq]     1
+# [uart_ctrl_config_reg_seq]     2
+# [uart_ctrl_env]    70
+# [uart_ctrl_tb]     2
+# [uart_rx_monitor]     4
+# [uart_transmit_seq]     1
+# [uart_tx_driver]    16
+# [uart_tx_monitor]    32
+# ** Note: $finish    : C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 324750 ps  Iteration: 54  Instance: /uart_ctrl_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+
+

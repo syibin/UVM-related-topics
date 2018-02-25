@@ -1,0 +1,15 @@
+QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+Start time: 23:11:13 on Feb 16,2018
+vlog -reportprogress 300 -sv -l qsta_compile.log -mfcu -f flist 
+-- Compiling module dut_dummy
+-- Compiling interface uart_if
+-- Compiling package uart_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) Using implicit +incdir+C:/questasim64_10.4c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling module demo_top
+-- Importing package uart_pkg
+
+Top level modules:
+	demo_top
+End time: 23:11:14 on Feb 16,2018, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

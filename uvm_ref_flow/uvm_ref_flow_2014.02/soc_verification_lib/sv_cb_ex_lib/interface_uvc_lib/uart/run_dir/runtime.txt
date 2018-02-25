@@ -1,0 +1,427 @@
+do qsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 23:11:13 on Feb 16,2018
+# vlog -reportprogress 300 -sv -l qsta_compile.log -mfcu -f flist 
+# -- Compiling module dut_dummy
+# -- Compiling interface uart_if
+# -- Compiling package uart_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) Using implicit +incdir+C:/questasim64_10.4c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# 
+# -- Compiling module demo_top
+# -- Importing package uart_pkg
+# 
+# Top level modules:
+# 	demo_top
+# End time: 23:11:14 on Feb 16,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c "+UVM_VERBOSITY=MEDIUM" "+UVM_TESTNAME=uart_sequence_test" demo_top 
+# Start time: 23:11:14 on Feb 16,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.uart_pkg(fast)
+# Loading work.demo_top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.uart_if(fast)
+# Loading C:/questasim64_10.4c/uvm-1.1d\win64\uvm_dpi.dll
+# ** Error: (vish-4014) No objects found matching '*'.
+
+# Error in macro ./qsim.do line 5
+# (vish-4014) No objects found matching '*'.
+
+#     while executing
+# "add wave *"
+add wave -position end  sim:/demo_top/uart_if_0/clock
+add wave -position end  sim:/demo_top/uart_if_0/reset
+add wave -position end  sim:/demo_top/uart_if_0/txd
+add wave -position end  sim:/demo_top/uart_if_0/rxd
+add wave -position end  sim:/demo_top/uart_if_0/ri_n
+add wave -position end  sim:/demo_top/uart_if_0/cts_n
+add wave -position end  sim:/demo_top/uart_if_0/dsr_n
+add wave -position end  sim:/demo_top/uart_if_0/rts_n
+add wave -position end  sim:/demo_top/uart_if_0/dtr_n
+add wave -position end  sim:/demo_top/uart_if_0/dcd_n
+add wave -position end  sim:/demo_top/uart_if_0/baud_clk
+add wave -position end  sim:/demo_top/uart_if_0/has_checks
+add wave -position end  sim:/demo_top/uart_if_0/has_coverage
+run 1ms
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test uart_sequence_test...
+# ----------------------------------------------------------
+# Name             Type                     Size  Value     
+# ----------------------------------------------------------
+# demo_cfg         demo_config              -     @484      
+#   is_tx_active   uvm_active_passive_enum  1     UVM_ACTIVE
+#   is_rx_active   uvm_active_passive_enum  1     UVM_ACTIVE
+#   baud_rate_gen  integral                 8     'd1       
+#   baud_rate_div  integral                 8     'd0       
+#   char_length    integral                 2     'h3       
+#   nbstop         integral                 1     'h1       
+#   parity_en      integral                 1     'h1       
+#   parity_mode    integral                 2     'h1       
+# ----------------------------------------------------------
+# -------------------------------------------------------------------------
+# Name                            Type                     Size  Value     
+# -------------------------------------------------------------------------
+# uvm_test_top                    uart_sequence_test       -     @463      
+#   demo_tb0                      demo_tb                  -     @476      
+#     uart0                       uart_env                 -     @489      
+#       Rx                        uart_rx_agent            -     @520      
+#         driver                  uart_rx_driver           -     @673      
+#           rsp_port              uvm_analysis_port        -     @690      
+#           seq_item_port         uvm_seq_item_pull_port   -     @681      
+#           cfg                   demo_config              -     @484      
+#         monitor                 uart_rx_monitor          -     @533      
+#           frame_collected_port  uvm_analysis_port        -     @541      
+#           cfg                   demo_config              -     @484      
+#           checks_enable         integral                 1     'h1       
+#           coverage_enable       integral                 1     'h1       
+#           cfg                   demo_config              -     @484      
+#         sequencer               uart_sequencer           -     @550      
+#           rsp_export            uvm_analysis_export      -     @558      
+#           seq_item_export       uvm_seq_item_pull_imp    -     @664      
+#           cfg                   demo_config              -     @484      
+#           arbitration_queue     array                    0     -         
+#           lock_queue            array                    0     -         
+#           num_last_reqs         integral                 32    'd1       
+#           num_last_rsps         integral                 32    'd1       
+#         is_active               uvm_active_passive_enum  1     UVM_ACTIVE
+#         cfg                     demo_config              -     @484      
+#       Tx                        uart_tx_agent            -     @512      
+#         driver                  uart_tx_driver           -     @861      
+#           rsp_port              uvm_analysis_port        -     @878      
+#           seq_item_port         uvm_seq_item_pull_port   -     @869      
+#           cfg                   demo_config              -     @484      
+#         monitor                 uart_tx_monitor          -     @721      
+#           frame_collected_port  uvm_analysis_port        -     @729      
+#           cfg                   demo_config              -     @484      
+#           checks_enable         integral                 1     'h1       
+#           coverage_enable       integral                 1     'h1       
+#           cfg                   demo_config              -     @484      
+#         sequencer               uart_sequencer           -     @738      
+#           rsp_export            uvm_analysis_export      -     @746      
+#           seq_item_export       uvm_seq_item_pull_imp    -     @852      
+#           cfg                   demo_config              -     @484      
+#           arbitration_queue     array                    0     -         
+#           lock_queue            array                    0     -         
+#           num_last_reqs         integral                 32    'd1       
+#           num_last_rsps         integral                 32    'd1       
+#         is_active               uvm_active_passive_enum  1     UVM_ACTIVE
+#         cfg                     demo_config              -     @484      
+#       dut_cfg_port_in           uvm_analysis_imp         -     @497      
+#       cfg                       demo_config              -     @484      
+#         is_tx_active            uvm_active_passive_enum  1     UVM_ACTIVE
+#         is_rx_active            uvm_active_passive_enum  1     UVM_ACTIVE
+#         baud_rate_gen           integral                 8     'd1       
+#         baud_rate_div           integral                 8     'd0       
+#         char_length             integral                 2     'h3       
+#         nbstop                  integral                 1     'h1       
+#         parity_en               integral                 1     'h1       
+#         parity_mode             integral                 2     'h1       
+#       checks_enable             integral                 1     'h1       
+#       coverage_enable           integral                 1     'h1       
+# -------------------------------------------------------------------------
+# UVM_INFO ../sv/uart_monitor.sv(127) @ 0: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] Start Running
+# UVM_INFO ../sv/uart_monitor.sv(127) @ 0: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Start Running
+# UVM_INFO ../sv/uart_seq_lib.sv(70) @ 0: uvm_test_top.demo_tb0.uart0.Tx.sequencer@@uart_incr_payload_seq [uart_incr_payload_seq] UART sequencer executing sequence...
+# UVM_INFO ../sv/uart_seq_lib.sv(166) @ 0: uvm_test_top.demo_tb0.uart0.Rx.sequencer@@uart_short_transmit_seq [uart_short_transmit_seq] UART sequencer: Executing 10 Frames
+# UVM_INFO ../examples/uart_rx_driver.sv(94) @ 0: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Reset Asserted
+# UVM_INFO ../sv/uart_tx_driver.sv(97) @ 0: uvm_test_top.demo_tb0.uart0.Tx.driver [uart_tx_driver] Reset Asserted
+# UVM_INFO ../sv/uart_monitor.sv(130) @ 51: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] Detected Reset Done
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 51: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(130) @ 51: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Detected Reset Done
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 51: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 105: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 165: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 291: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 300: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **1** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 310: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 320: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:1
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @988       
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h44       
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd6        
+#   begin_time      time        64    105        
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 320: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 351: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../sv/uart_tx_driver.sv(216) @ 360: uvm_test_top.demo_tb0.uart0.Tx.driver [uart_tx_driver] Frame **1** Sent...
+# UVM_INFO ../sv/uart_tx_driver.sv(220) @ 370: uvm_test_top.demo_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 380: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:1
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @994       
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h61       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd12       
+#   begin_time      time        64    165        
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 380: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 425: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 605: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 611: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 620: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **2** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 630: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 640: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:2
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1013      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hc5       
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd11       
+#   begin_time      time        64    425        
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 640: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 785: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 791: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../sv/uart_tx_driver.sv(216) @ 800: uvm_test_top.demo_tb0.uart0.Tx.driver [uart_tx_driver] Frame **2** Sent...
+# UVM_INFO ../sv/uart_tx_driver.sv(220) @ 810: uvm_test_top.demo_tb0.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 820: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:2
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1017      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h64       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd23       
+#   begin_time      time        64    605        
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 820: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 971: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 980: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **3** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 990: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 1000: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:3
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1025      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hef       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd15       
+#   begin_time      time        64    785        
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 1000: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 1045: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 1231: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 1240: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **4** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 1250: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 1260: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:4
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1033      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hcb       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd5        
+#   begin_time      time        64    1045       
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 1260: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 1305: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 1491: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 1500: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **5** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 1510: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 1520: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:5
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1041      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h19       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd5        
+#   begin_time      time        64    1305       
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 1520: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 1665: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 1851: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 1860: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **6** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 1870: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 1880: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:6
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1049      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hf9       
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd15       
+#   begin_time      time        64    1665       
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 1880: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 2045: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 2231: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 2240: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **7** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 2250: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 2260: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:7
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1057      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hdb       
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd17       
+#   begin_time      time        64    2045       
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 2260: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 2425: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 2611: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 2620: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **8** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 2630: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 2640: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:8
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1065      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h6b       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd17       
+#   begin_time      time        64    2425       
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 2640: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 2705: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 2891: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 2900: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **9** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 2910: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 2920: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:9
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1073      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h1c       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd7        
+#   begin_time      time        64    2705       
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 2920: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../sv/uart_monitor.sv(185) @ 3105: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../sv/uart_monitor.sv(219) @ 3291: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../examples/uart_rx_driver.sv(213) @ 3300: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame **10** Sent...
+# UVM_INFO ../examples/uart_rx_driver.sv(217) @ 3310: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] Frame complete...
+# UVM_INFO ../sv/uart_monitor.sv(236) @ 3320: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:10
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @1081      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'he2       
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd19       
+#   begin_time      time        64    3105       
+# -----------------------------------------------
+# 
+# UVM_INFO ../sv/uart_monitor.sv(175) @ 3320: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 3510: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../examples/uart_rx_driver.sv(226) @ 3510: uvm_test_top.demo_tb0.uart0.Rx.driver [uart_rx_driver] UART Frames Sent:10
+# UVM_INFO ../sv/uart_rx_monitor.sv(99) @ 3510: uvm_test_top.demo_tb0.uart0.Rx.monitor [uart_rx_monitor] UART Frames Collected:10
+# UVM_INFO ../sv/uart_tx_driver.sv(229) @ 3510: uvm_test_top.demo_tb0.uart0.Tx.driver [uart_tx_driver] UART Frames Sent:2
+# UVM_INFO ../sv/uart_tx_monitor.sv(99) @ 3510: uvm_test_top.demo_tb0.uart0.Tx.monitor [uart_tx_monitor] UART Frames Collected:2
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   90
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [uart_incr_payload_seq]     1
+# [uart_rx_driver]    22
+# [uart_rx_monitor]    44
+# [uart_short_transmit_seq]     1
+# [uart_tx_driver]     6
+# [uart_tx_monitor]    12
+# ** Note: $finish    : C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3510 ns  Iteration: 53  Instance: /demo_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+
+

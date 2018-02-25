@@ -1,0 +1,32 @@
+QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+Start time: 22:01:39 on Feb 18,2018
+vlog -reportprogress 300 -sv -l qsta_compile.log -mfcu -f flist 
+-- Compiling package apb_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) Using implicit +incdir+C:/questasim64_10.4c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package uart_pkg
+-- Compiling package uart_ctrl_pkg
+-- Importing package apb_pkg
+-- Importing package uart_pkg
+-- Compiling interface apb_if
+-- Compiling interface apb_master_if
+-- Compiling interface apb_slave_if
+-- Compiling interface uart_if
+-- Compiling interface uart_ctrl_internal_if
+-- Compiling module uart_ctrl_top
+-- Importing package uart_ctrl_pkg
+-- Compiling module uart_top
+-- Compiling module uart_wb
+-- Compiling module uart_transmitter
+-- Compiling module uart_receiver
+-- Compiling module uart_tfifo
+-- Compiling module uart_rfifo
+-- Compiling module uart_regs
+-- Compiling module uart_debug_if
+-- Compiling module raminfr
+-- Compiling module uart_sync_flops
+
+Top level modules:
+	uart_ctrl_top
+End time: 22:01:40 on Feb 18,2018, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

@@ -1,0 +1,4 @@
++define+LITLE_ENDIAN 
++incdir+../examples
++incdir+../sv
+../examples/demo_top.sv
