@@ -1,10 +1,10 @@
 /*-------------------------------------------------------------------------
 File name   : uart_ctrl_top.sv
 Title       : Top level file
-Description : This file implements the top level test bench for the 
+Description : This file implements the top level test bench for the
             : UART Controller environment
-Notes       : The uart_ctrl_top module instantiates the UART DUT, 
-            : APB master interface, UART interface and connects 
+Notes       : The uart_ctrl_top module instantiates the UART DUT,
+            : APB master interface, UART interface and connects
             : them appropriatly
 ----------------------------------------------------------------------*/
 //   Copyright 1999-2010 Cadence Design Systems, Inc.
@@ -23,6 +23,9 @@ Notes       : The uart_ctrl_top module instantiates the UART DUT,
 //   CONDITIONS OF ANY KIND, either express or implied.  See
 //   the License for the specific language governing
 //   permissions and limitations under the License.
+
+
+`timescale 1ns/10ps
 
 // Interfaces
 `include "apb_if.sv"
@@ -46,7 +49,7 @@ module uart_ctrl_top;
 
   // UART Controller tests (in ../tests directory)
   `include "test_lib.sv"
- 
+
   reg clock;
   reg reset;
 
@@ -61,7 +64,7 @@ module uart_ctrl_top;
   uart_if               uart_if0(.clock(div8_clk[2]), .reset(reset));
   uart_ctrl_internal_if uart_int0(.clock(div8_clk[2]));
 
-  assign wb_sel = (apb_if0.paddr[1:0] == 0) ? 4'b0001 : (apb_if0.paddr[1:0] == 1 ? 4'b0010 : (apb_if0.paddr[1:0] == 2 ? 4'b0100 : 4'b1000)); 
+  assign wb_sel = (apb_if0.paddr[1:0] == 0) ? 4'b0001 : (apb_if0.paddr[1:0] == 1 ? 4'b0010 : (apb_if0.paddr[1:0] == 2 ? 4'b0100 : 4'b1000));
   assign dummy_dbus = {4{apb_if0.pwdata[7:0]}};
   assign apb_if0.prdata[7:0] = dummy_rdbus[31:24] | dummy_rdbus[23:16] | dummy_rdbus[15:8] | dummy_rdbus[7:0];
 
@@ -77,8 +80,8 @@ module uart_ctrl_top;
 
   //RTL Instantiation
   uart_top uart_dut(
-	.wb_clk_i(clock), 
-	
+	.wb_clk_i(clock),
+
 	// Wishbone signals
 	.wb_rst_i(~reset),
         .wb_adr_i(apb_if0.paddr[4:0]),
