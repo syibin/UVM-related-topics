@@ -1,0 +1,2230 @@
+cd {\\Mac\Home\Desktop\UVM-related-topics\uvm_ref_flow\uvm_ref_flow_2014.02\run_dir}
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+quit -sim
+# =======================================================
+# UART CONTROLLER DUT REGISTERS:
+# uart_ctrl_top.uart_dut.regs.dl  =0000
+# uart_ctrl_top.uart_dut.regs.fcr = 3
+# uart_ctrl_top.uart_dut.regs.ier = 0
+# uart_ctrl_top.uart_dut.regs.iir = 1
+# uart_ctrl_top.uart_dut.regs.lcr = 03
+# =======================================================
+# End time: 22:48:20 on Mar 13,2018, Elapsed time: 0:22:12
+# Errors: 1, Warnings: 0
+cd {\\Mac\Home\Desktop\UVM-related-topics\uvm_ref_flow\uvm_ref_flow_2014.02\run_dir}
+do qsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 22:48:36 on Mar 13,2018
+# vlog -reportprogress 300 -sv -l qsta_compile.log -mfcu -f flist 
+# -- Compiling interface ahb_if
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling interface apb_if
+# -- Compiling interface apb_master_if
+# -- Compiling interface apb_slave_if
+# -- Compiling interface uart_if
+# -- Compiling interface spi_if
+# -- Compiling interface gpio_if
+# -- Compiling interface uart_ctrl_internal_if
+# -- Compiling package ahb_pkg
+# ** Note: (vlog-2286) Using implicit +incdir+C:/questasim64_10.4c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# 
+# -- Compiling package apb_pkg
+# -- Compiling package uart_pkg
+# -- Compiling package uart_ctrl_pkg
+# -- Importing package apb_pkg
+# -- Importing package uart_pkg
+# -- Compiling package gpio_pkg
+# -- Compiling package spi_pkg
+# -- Compiling package apb_subsystem_pkg
+# -- Importing package ahb_pkg
+# -- Importing package spi_pkg
+# -- Importing package gpio_pkg
+# -- Importing package uart_ctrl_pkg
+# -- Compiling module spi_clgen
+# -- Compiling module spi_shift
+# -- Compiling module spi_top
+# -- Compiling module apb_subsystem_0
+# -- Compiling module apb_subsystem_1
+# -- Compiling module alut_veneer
+# -- Compiling module gpio_veneer
+# -- Compiling module ttc_veneer
+# -- Compiling module smc_veneer
+# -- Compiling module power_ctrl_veneer
+# -- Compiling module ahb2apb
+# -- Compiling module alut_reg_bank
+# -- Compiling module alut_addr_checker
+# -- Compiling module alut_mem
+# -- Compiling module alut_age_checker
+# -- Compiling module alut
+# -- Compiling module uart_top
+# -- Compiling module uart_wb
+# -- Compiling module uart_transmitter
+# -- Compiling module uart_receiver
+# -- Compiling module uart_tfifo
+# -- Compiling module uart_rfifo
+# -- Compiling module uart_regs
+# -- Compiling module uart_debug_if
+# -- Compiling module raminfr
+# -- Compiling module uart_sync_flops
+# -- Compiling module gpio_lite_subunit
+# -- Compiling module gpio_lite
+# -- Compiling module ttc_counter_lite
+# -- Compiling module ttc_interface_lite
+# -- Compiling module ttc_interrupt_lite
+# -- Compiling module ttc_count_rst_lite
+# -- Compiling module ttc_timer_counter_lite
+# -- Compiling module ttc_lite
+# -- Compiling module smc_addr_lite
+# -- Compiling module smc_cfreg_lite
+# -- Compiling module smc_apb_lite_if
+# -- Compiling module smc_ahb_lite_if
+# -- Compiling module smc_counter_lite
+# -- Compiling module smc_mac_lite
+# -- Compiling module smc_state_lite
+# -- Compiling module smc_strobe_lite
+# -- Compiling module smc_wr_enable_lite
+# -- Compiling module smc_lite
+# -- Compiling module power_ctrl_sm
+# -- Compiling module power_ctrl
+# -- Compiling module apb_subsystem_top
+# -- Importing package apb_subsystem_pkg
+# 
+# Top level modules:
+# 	apb_subsystem_1
+# 	apb_subsystem_top
+# End time: 22:48:38 on Mar 13,2018, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -c -suppress 3009 -debugDB "+UVM_VERBOSITY=MEDIUM" "+UVM_TESTNAME=apb_subsystem_test" apb_subsystem_top -do "run -all" 
+# Start time: 22:48:38 on Mar 13,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.uart_pkg(fast)
+# Loading work.apb_pkg(fast)
+# Loading work.uart_ctrl_pkg(fast)
+# Loading work.gpio_pkg(fast)
+# Loading work.spi_pkg(fast)
+# Loading work.ahb_pkg(fast)
+# Loading work.apb_subsystem_pkg(fast)
+# Loading work.apb_subsystem_top(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.uart_if(fast__1)
+# Loading work.spi_if(fast__1)
+# Loading work.gpio_if(fast__1)
+# Loading work.uart_ctrl_internal_if(fast__1)
+# Loading work.apb_if(fast__1)
+# Loading work.apb_subsystem_0(fast)
+# Loading work.ahb2apb(fast)
+# Loading work.spi_top(fast)
+# Loading work.spi_clgen(fast)
+# Loading work.spi_shift(fast)
+# Loading work.uart_top(fast)
+# Loading work.uart_wb(fast)
+# Loading work.uart_regs(fast)
+# Loading work.uart_transmitter(fast)
+# Loading work.uart_tfifo(fast)
+# Loading work.raminfr(fast)
+# Loading work.uart_sync_flops(fast)
+# Loading work.uart_receiver(fast)
+# Loading work.uart_rfifo(fast)
+# Loading work.uart_debug_if(fast)
+# Loading work.gpio_veneer(fast)
+# Loading work.gpio_lite(fast)
+# Loading work.gpio_lite_subunit(fast)
+# Loading work.ttc_veneer(fast)
+# Loading work.ttc_lite(fast)
+# Loading work.ttc_interface_lite(fast)
+# Loading work.ttc_timer_counter_lite(fast)
+# Loading work.ttc_count_rst_lite(fast)
+# Loading work.ttc_counter_lite(fast)
+# Loading work.ttc_interrupt_lite(fast)
+# Loading work.smc_veneer(fast)
+# Loading work.smc_lite(fast)
+# Loading work.smc_apb_lite_if(fast)
+# Loading work.smc_cfreg_lite(fast)
+# Loading work.smc_ahb_lite_if(fast)
+# Loading work.smc_counter_lite(fast)
+# Loading work.smc_mac_lite(fast)
+# Loading work.smc_state_lite(fast)
+# Loading work.smc_strobe_lite(fast)
+# Loading work.smc_wr_enable_lite(fast)
+# Loading work.smc_addr_lite(fast)
+# Loading work.power_ctrl_veneer(fast)
+# Loading work.power_ctrl(fast)
+# Loading work.power_ctrl_sm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.uart_if(fast)
+# Loading work.uart_ctrl_internal_if(fast)
+# Loading work.apb_if(fast)
+# Loading work.ahb_if(fast)
+# Loading work.spi_if(fast)
+# Loading work.gpio_if(fast)
+# Loading C:/questasim64_10.4c/uvm-1.1d\win64\uvm_dpi.dll
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# 
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# (apb_subsystem_top.i_apb_subsystem.i_oc_uart0) UART INFO: Data bus width is 32. Debug Interface present.
+# 
+# (apb_subsystem_top.i_apb_subsystem.i_oc_uart0) UART INFO: Doesn't have baudrate output
+# 
+# (apb_subsystem_top.i_apb_subsystem.i_oc_uart1) UART INFO: Data bus width is 32. Debug Interface present.
+# 
+# (apb_subsystem_top.i_apb_subsystem.i_oc_uart1) UART INFO: Doesn't have baudrate output
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test apb_subsystem_test...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(64) @ 0: uvm_test_top.ve [apb_subsystem_tb] No apb_subsystem_config, creating...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(76) @ 0: uvm_test_top.ve [apb_subsystem_tb] Printing apb subsystem config:
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# apb_ss_cfg               apb_subsystem_config     -     @723       
+#   uart_cfg0              uart_ctrl_config         -     @724       
+#     apb_cfg              apb_config               -     @726       
+#       slave_configs      da(object)               4     -          
+#         [0]              apb_slave_config         -     @733       
+#           name           string                   4     spi0       
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h800000   
+#           end_address    integral                 32    'h80ffff   
+#           psel_index     integral                 32    'h0        
+#         [1]              apb_slave_config         -     @734       
+#           name           string                   5     uart0      
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h810000   
+#           end_address    integral                 32    'h81ffff   
+#           psel_index     integral                 32    'h0        
+#         [2]              apb_slave_config         -     @735       
+#           name           string                   5     gpio0      
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h820000   
+#           end_address    integral                 32    'h82ffff   
+#           psel_index     integral                 32    'h0        
+#         [3]              apb_slave_config         -     @736       
+#           name           string                   5     uart1      
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h880000   
+#           end_address    integral                 32    'h88ffff   
+#           psel_index     integral                 32    'h1        
+#       master_config      apb_master_config        -     @732       
+#         name             string                   6     master     
+#         is_active        uvm_active_passive_enum  1     UVM_PASSIVE
+#     uart_cfg             uart_config              -     @725       
+#       is_tx_active       uvm_active_passive_enum  1     UVM_ACTIVE 
+#       is_rx_active       uvm_active_passive_enum  1     UVM_PASSIVE
+#       baud_rate_gen      integral                 8     'd0        
+#       baud_rate_div      integral                 8     'd0        
+#       char_length        integral                 2     'h0        
+#       nbstop             integral                 1     'h0        
+#       parity_en          integral                 1     'h0        
+#       parity_mode        integral                 2     'h0        
+#   uart_cfg1              uart_ctrl_config         -     @727       
+#     apb_cfg              apb_config               -     @729       
+#       slave_configs      da(object)               4     -          
+#         [0]              apb_slave_config         -     @738       
+#           name           string                   4     spi0       
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h800000   
+#           end_address    integral                 32    'h80ffff   
+#           psel_index     integral                 32    'h0        
+#         [1]              apb_slave_config         -     @739       
+#           name           string                   5     uart0      
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h810000   
+#           end_address    integral                 32    'h81ffff   
+#           psel_index     integral                 32    'h0        
+#         [2]              apb_slave_config         -     @740       
+#           name           string                   5     gpio0      
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h820000   
+#           end_address    integral                 32    'h82ffff   
+#           psel_index     integral                 32    'h0        
+#         [3]              apb_slave_config         -     @741       
+#           name           string                   5     uart1      
+#           is_active      uvm_active_passive_enum  1     UVM_PASSIVE
+#           start_address  integral                 32    'h880000   
+#           end_address    integral                 32    'h88ffff   
+#           psel_index     integral                 32    'h1        
+#       master_config      apb_master_config        -     @737       
+#         name             string                   6     master     
+#         is_active        uvm_active_passive_enum  1     UVM_PASSIVE
+#     uart_cfg             uart_config              -     @728       
+#       is_tx_active       uvm_active_passive_enum  1     UVM_ACTIVE 
+#       is_rx_active       uvm_active_passive_enum  1     UVM_PASSIVE
+#       baud_rate_gen      integral                 8     'd0        
+#       baud_rate_div      integral                 8     'd0        
+#       char_length        integral                 2     'h0        
+#       nbstop             integral                 1     'h0        
+#       parity_en          integral                 1     'h0        
+#       parity_mode        integral                 2     'h0        
+#   spi_cfg                spi_config               -     @730       
+#     active_passive       uvm_active_passive_enum  1     UVM_ACTIVE 
+#   gpio_cfg               gpio_config              -     @731       
+#     active_passive       uvm_active_passive_enum  1     UVM_ACTIVE 
+# -------------------------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(80) @ 0: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] No apb_subsystem_config creating...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(108) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart0 [TEST!!!] no cfg yet
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(100) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor [TEST!!!] inside monitor now, place0, no cfg yet
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(107) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor [TEST!!!] inside monitor now, place1, do have cfg now
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(119) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor [TEST!!!] inside monitor now, do have cfg now
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(108) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart1 [TEST!!!] no cfg yet
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(100) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart1.monitor [TEST!!!] inside monitor now, place0, no cfg yet
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(107) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart1.monitor [TEST!!!] inside monitor now, place1, do have cfg now
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(119) @ 0: uvm_test_top.ve.apb_ss_env.apb_uart1.monitor [TEST!!!] inside monitor now, do have cfg now
+# UVM_INFO @ 0: uvm_test_top.ve.apb0 [CFGNRD]  ::: The following resources have at least one write and no reads :::
+# apb_slave_cfg [/^uvm_test_top\.ve\.apb_ss_env\.apb_uart1\.monitor\..*x_scbd$/] : (class uvm_pkg::uvm_object) {slave_config} 738 1 3252 @uvm_status_container@1 {spi0} UVM_PASSIVE 8388608 8454143 0 {apb_slave_config}
+# -  
+#   --------
+#   uvm_test_top.ve.apb_ss_env.apb_uart1.monitor reads: 0 @ 0  writes: 1 @ 0
+#  
+# apb_slave_cfg [/^uvm_test_top\.ve\.apb_ss_env\.apb_uart0\.monitor\..*x_scbd$/] : (class uvm_pkg::uvm_object) {slave_config} 733 1 3252 @uvm_status_container@1 {spi0} UVM_PASSIVE 8388608 8454143 0 {apb_slave_config}
+# -  
+#   --------
+#   uvm_test_top.ve.apb_ss_env.apb_uart0.monitor reads: 0 @ 0  writes: 1 @ 0
+#  
+# default_sequence [/^uvm_test_top\.ve\.virtual_sequencer\.run_phase$/] : (class uvm_pkg::uvm_object_wrapper) {apb_subsystem_vseq} @uvm_object_registry__119@1
+# -  
+#   --------
+#   uvm_test_top reads: 0 @ 0  writes: 1 @ 0
+#  
+# gpio_ve_config [/^uvm_test_top\.ve\.gpio0$/] : (class uvm_pkg::uvm_config_object_wrapper) @gpio_config@1 0
+# -  
+#   --------
+#   uvm_test_top.ve reads: 0 @ 0  writes: 1 @ 0
+#  
+# is_active [/^uvm_test_top\.ve\..*ahb0\.slave_agent$/] : (reg signed[4095:0]) 0
+# -  
+#   --------
+#   uvm_test_top.ve reads: 0 @ 0  writes: 1 @ 0
+#  
+# reg_model_apb [/^uvm_test_top\.ve\..*$/] : (class uvm_pkg::uvm_object) {reg_model_apb} 1053 1 3252 @uvm_status_container@1 null { {@gpio_regfile@1:20} {@uart_ctrl_reg_model_c@1:0} {@uart_ctrl_reg_model_c@2:8} {@spi_regfile@1:16} } { } { } { } { {@uvm_reg_map@1:1} } UVM_DEFAULT_PATH {RTL} null @uvm_object_string_pool__4@1 { {"RTL":apb_gpio_addr_map_c} } 1 0 0 {} 0 @uvm_reg_map@1 { {@apb_ss_reg_model_c@1:1} } 26 @uart_ctrl_reg_model_c@1 @uart_ctrl_reg_model_c@2 @spi_regfile@1 @gpio_regfile@1 {apb_ss_reg_model_c}
+# -  
+#   --------
+#   uvm_test_top.ve reads: 0 @ 0  writes: 1 @ 0
+#  
+# spi_ve_config [/^uvm_test_top\.ve\.spi0$/] : (class uvm_pkg::uvm_config_object_wrapper) @spi_config@1 0
+# -  
+#   --------
+#   uvm_test_top.ve reads: 0 @ 0  writes: 1 @ 0
+#  
+# vif [/^uvm_test_top\.ve\.apb0\.slave\[3\]\..*$/] : (virtual apb_if #(32, 32, 32)) /apb_subsystem_top/apbi_mo
+# -  
+#   --------
+#   uvm_test_top.ve.apb0.slave[3] reads: 0 @ 0  writes: 1 @ 0
+#  
+# vif [/^uvm_test_top\.ve\.apb0\.slave\[2\]\..*$/] : (virtual apb_if #(32, 32, 32)) /apb_subsystem_top/apbi_mo
+# -  
+#   --------
+#   uvm_test_top.ve.apb0.slave[2] reads: 0 @ 0  writes: 1 @ 0
+#  
+# vif [/^uvm_test_top\.ve\.apb0\.slave\[1\]\..*$/] : (virtual apb_if #(32, 32, 32)) /apb_subsystem_top/apbi_mo
+# -  
+#   --------
+#   uvm_test_top.ve.apb0.slave[1] reads: 0 @ 0  writes: 1 @ 0
+#  
+# vif [/^uvm_test_top\.ve\.apb0\.slave\[0\]\..*$/] : (virtual apb_if #(32, 32, 32)) /apb_subsystem_top/apbi_mo
+# -  
+#   --------
+#   uvm_test_top.ve.apb0.slave[0] reads: 0 @ 0  writes: 1 @ 0
+#  
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(190) @ 0: uvm_test_top.ve [ENV_TOPOLOGY] APB SubSystem Virtual Sequence Testbench Topology:
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(191) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                          _____                             
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(192) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                         | AHB |                            
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(193) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                         | UVC |                            
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(194) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                          -----                             
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(195) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                            ^                               
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(196) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                            |                               
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(197) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                            v                               
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(198) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                    ____________    _________               
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(199) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                   | AHB - APB  |  | APB UVC |              
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(200) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                   |   Bridge   |  | Passive |              
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(201) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                    ------------    ---------               
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(202) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                            ^         ^                     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(203) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                            |         |                     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(204) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]                            v         v                     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(205) @ 0: uvm_test_top.ve [ENV_TOPOLOGY] <--------------------------------------------------------> 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(206) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]     ^        ^         ^         ^         ^         ^     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(207) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]     |        |         |         |         |         |     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(208) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]     v        v         v         v         v         v     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(209) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]   _____    _____    ______    _______    _____    _______  
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(210) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]  | SPI |  | SMC |  | GPIO |  | UART0 |  | PCM |  | UART1 | 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(211) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]   -----    -----    ------    -------    -----    -------  
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(212) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]     ^                  ^         ^                   ^     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(213) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]     |                  |         |                   |     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(214) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]     v                  v         v                   v     
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(215) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]   _____              ______    _______            _______  
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(216) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]  | SPI |            | GPIO |  | UART0 |          | UART1 | 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(217) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]  | UVC |            | UVC  |  |  UVC  |          |  UVC  | 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(218) @ 0: uvm_test_top.ve [ENV_TOPOLOGY]   -----              -------   -------            -------  
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/tb/sv//apb_subsystem_tb.sv(219) @ 0: uvm_test_top.ve [apb_subsystem_tb] REGISTER MODEL:
+# --------------------------------------------------------------------------------------------------------
+# Name                            Type                   Size  Value                                      
+# --------------------------------------------------------------------------------------------------------
+# reg_model_apb                   apb_ss_reg_model_c     -     @1053                                      
+#   gpio_rf                       gpio_regfile           -     @1196                                      
+#     output_enable               output_enable_c        -     @1208                                      
+#       data                      uvm_reg_field          ...    RW output_enable[31:0]=32'h00000000       
+#     output_value                output_value_c         -     @1211                                      
+#       data                      uvm_reg_field          ...    RW output_value[31:0]=32'h00000000        
+#     input_value                 input_value_c          -     @1214                                      
+#       data                      uvm_reg_field          ...    RO input_value[31:0]=32'h00000000         
+#     bypass_mode                 bypass_mode_c          -     @1202                                      
+#       data                      uvm_reg_field          ...    RW bypass_mode[31:0]=32'h00000000         
+#     direction_mode              direction_mode_c       -     @1205                                      
+#       data                      uvm_reg_field          ...    RW direction_mode[31:0]=32'h00000000      
+#     default_map                 uvm_reg_map            -     @1226                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       output_enable             output_enable_c        ...   @1208 +'h820020                            
+#       output_value              output_value_c         ...   @1211 +'h820030                            
+#       input_value               input_value_c          ...   @1214 +'h820040                            
+#       bypass_mode               bypass_mode_c          ...   @1202 +'h820000                            
+#       direction_mode            direction_mode_c       ...   @1205 +'h820010                            
+#   uart0_rm                      uart_ctrl_reg_model_c  -     @1056                                      
+#     uart_ctrl_rf                uart_ctrl_rf_c         -     @1063                                      
+#       ua_ier                    ua_ier_c               -     @1084                                      
+#         rx_data                 uvm_reg_field          ...    RW ua_ier[0:0]=1'h0                       
+#         tx_data                 uvm_reg_field          ...    RW ua_ier[1:1]=1'h0                       
+#         rx_line_sts             uvm_reg_field          ...    RW ua_ier[2:2]=1'h0                       
+#         mdm_sts                 uvm_reg_field          ...    RW ua_ier[3:3]=1'h0                       
+#       ua_int_id                 ua_int_id_c            -     @1075                                      
+#         priority_bit            uvm_reg_field          ...    RO ua_int_id[0:0]=1'h0                    
+#         bit1                    uvm_reg_field          ...    RO ua_int_id[1:1]=1'h0                    
+#         bit2                    uvm_reg_field          ...    RO ua_int_id[2:2]=1'h0                    
+#         bit3                    uvm_reg_field          ...    RO ua_int_id[3:3]=1'h0                    
+#       ua_fifo_ctrl              ua_fifo_ctrl_c         -     @1078                                      
+#         rx_clear                uvm_reg_field          ...    WO ua_fifo_ctrl[1:1]=1'h0                 
+#         tx_clear                uvm_reg_field          ...    WO ua_fifo_ctrl[2:2]=1'h0                 
+#         rx_fifo_int_trig_level  uvm_reg_field          ...    WO ua_fifo_ctrl[7:6]=2'h0                 
+#       ua_div_latch0             ua_div_latch0_c        -     @1069                                      
+#         div_val                 uvm_reg_field          ...    RW ua_div_latch0[7:0]=8'h00               
+#       ua_div_latch1             ua_div_latch1_c        -     @1072                                      
+#         div_val                 uvm_reg_field          ...    RW ua_div_latch1[7:0]=8'h00               
+#       ua_lcr                    ua_lcr_c               -     @1081                                      
+#         char_lngth              uvm_reg_field          ...    RW ua_lcr[1:0]=2'h0                       
+#         num_stop_bits           uvm_reg_field          ...    RW ua_lcr[2:2]=1'h0                       
+#         p_en                    uvm_reg_field          ...    RW ua_lcr[3:3]=1'h0                       
+#         parity_even             uvm_reg_field          ...    RW ua_lcr[4:4]=1'h0                       
+#         parity_sticky           uvm_reg_field          ...    RW ua_lcr[5:5]=1'h0                       
+#         break_ctrl              uvm_reg_field          ...    RW ua_lcr[6:6]=1'h0                       
+#         div_latch_access        uvm_reg_field          ...    RW ua_lcr[7:7]=1'h0                       
+#       default_map               uvm_reg_map            -     @1112                                      
+#         endian                                         ...   UVM_LITTLE_ENDIAN                          
+#         effective sequencer     ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#         ua_ier                  ua_ier_c               ...   @1084 +'h810008                            
+#         ua_int_id               ua_int_id_c            ...   @1075 +'h810002                            
+#         ua_fifo_ctrl            ua_fifo_ctrl_c         ...   @1078 +'h810002                            
+#         ua_div_latch0           ua_div_latch0_c        ...   @1069 +'h810000                            
+#         ua_div_latch1           ua_div_latch1_c        ...   @1072 +'h810001                            
+#         ua_lcr                  ua_lcr_c               ...   @1081 +'h810003                            
+#     default_map                 uvm_reg_map            -     @1062                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       default_map               uvm_reg_map            -     @1112                                      
+#         endian                                         ...   UVM_LITTLE_ENDIAN                          
+#         effective sequencer     ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#         ua_ier                  ua_ier_c               ...   @1084 +'h810008                            
+#         ua_int_id               ua_int_id_c            ...   @1075 +'h810002                            
+#         ua_fifo_ctrl            ua_fifo_ctrl_c         ...   @1078 +'h810002                            
+#         ua_div_latch0           ua_div_latch0_c        ...   @1069 +'h810000                            
+#         ua_div_latch1           ua_div_latch1_c        ...   @1072 +'h810001                            
+#         ua_lcr                  ua_lcr_c               ...   @1081 +'h810003                            
+#   uart1_rm                      uart_ctrl_reg_model_c  -     @1113                                      
+#     uart_ctrl_rf                uart_ctrl_rf_c         -     @1119                                      
+#       ua_ier                    ua_ier_c               -     @1140                                      
+#         rx_data                 uvm_reg_field          ...    RW ua_ier[0:0]=1'h0                       
+#         tx_data                 uvm_reg_field          ...    RW ua_ier[1:1]=1'h0                       
+#         rx_line_sts             uvm_reg_field          ...    RW ua_ier[2:2]=1'h0                       
+#         mdm_sts                 uvm_reg_field          ...    RW ua_ier[3:3]=1'h0                       
+#       ua_int_id                 ua_int_id_c            -     @1131                                      
+#         priority_bit            uvm_reg_field          ...    RO ua_int_id[0:0]=1'h0                    
+#         bit1                    uvm_reg_field          ...    RO ua_int_id[1:1]=1'h0                    
+#         bit2                    uvm_reg_field          ...    RO ua_int_id[2:2]=1'h0                    
+#         bit3                    uvm_reg_field          ...    RO ua_int_id[3:3]=1'h0                    
+#       ua_fifo_ctrl              ua_fifo_ctrl_c         -     @1134                                      
+#         rx_clear                uvm_reg_field          ...    WO ua_fifo_ctrl[1:1]=1'h0                 
+#         tx_clear                uvm_reg_field          ...    WO ua_fifo_ctrl[2:2]=1'h0                 
+#         rx_fifo_int_trig_level  uvm_reg_field          ...    WO ua_fifo_ctrl[7:6]=2'h0                 
+#       ua_div_latch0             ua_div_latch0_c        -     @1125                                      
+#         div_val                 uvm_reg_field          ...    RW ua_div_latch0[7:0]=8'h00               
+#       ua_div_latch1             ua_div_latch1_c        -     @1128                                      
+#         div_val                 uvm_reg_field          ...    RW ua_div_latch1[7:0]=8'h00               
+#       ua_lcr                    ua_lcr_c               -     @1137                                      
+#         char_lngth              uvm_reg_field          ...    RW ua_lcr[1:0]=2'h0                       
+#         num_stop_bits           uvm_reg_field          ...    RW ua_lcr[2:2]=1'h0                       
+#         p_en                    uvm_reg_field          ...    RW ua_lcr[3:3]=1'h0                       
+#         parity_even             uvm_reg_field          ...    RW ua_lcr[4:4]=1'h0                       
+#         parity_sticky           uvm_reg_field          ...    RW ua_lcr[5:5]=1'h0                       
+#         break_ctrl              uvm_reg_field          ...    RW ua_lcr[6:6]=1'h0                       
+#         div_latch_access        uvm_reg_field          ...    RW ua_lcr[7:7]=1'h0                       
+#       default_map               uvm_reg_map            -     @1168                                      
+#         endian                                         ...   UVM_LITTLE_ENDIAN                          
+#         effective sequencer     ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#         ua_ier                  ua_ier_c               ...   @1140 +'h880008                            
+#         ua_int_id               ua_int_id_c            ...   @1131 +'h880002                            
+#         ua_fifo_ctrl            ua_fifo_ctrl_c         ...   @1134 +'h880002                            
+#         ua_div_latch0           ua_div_latch0_c        ...   @1125 +'h880000                            
+#         ua_div_latch1           ua_div_latch1_c        ...   @1128 +'h880001                            
+#         ua_lcr                  ua_lcr_c               ...   @1137 +'h880003                            
+#     default_map                 uvm_reg_map            -     @1118                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       default_map               uvm_reg_map            -     @1168                                      
+#         endian                                         ...   UVM_LITTLE_ENDIAN                          
+#         effective sequencer     ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#         ua_ier                  ua_ier_c               ...   @1140 +'h880008                            
+#         ua_int_id               ua_int_id_c            ...   @1131 +'h880002                            
+#         ua_fifo_ctrl            ua_fifo_ctrl_c         ...   @1134 +'h880002                            
+#         ua_div_latch0           ua_div_latch0_c        ...   @1125 +'h880000                            
+#         ua_div_latch1           ua_div_latch1_c        ...   @1128 +'h880001                            
+#         ua_lcr                  ua_lcr_c               ...   @1137 +'h880003                            
+#   spi_rf                        spi_regfile            -     @1169                                      
+#     spi_divider                 spi_divider_c          -     @1178                                      
+#       divider                   uvm_reg_field          ...    RW spi_divider[15:0]=16'h0000             
+#     spi_ss                      spi_ss_c               -     @1181                                      
+#       ss                        uvm_reg_field          ...    RW spi_ss[7:0]=8'h00                      
+#     spi_ctrl                    spi_ctrl_c             -     @1175                                      
+#       char_len                  uvm_reg_field          ...    RW spi_ctrl[6:0]=7'h00                    
+#       go_bsy                    uvm_reg_field          ...    RW spi_ctrl[8:8]=1'h0                     
+#       rx_neg                    uvm_reg_field          ...    RW spi_ctrl[9:9]=1'h0                     
+#       tx_neg                    uvm_reg_field          ...    RW spi_ctrl[10:10]=1'h0                   
+#       lsb                       uvm_reg_field          ...    RW spi_ctrl[11:11]=1'h0                   
+#       ie                        uvm_reg_field          ...    RW spi_ctrl[12:12]=1'h0                   
+#       ass                       uvm_reg_field          ...    RW spi_ctrl[13:13]=1'h0                   
+#     default_map                 uvm_reg_map            -     @1195                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       spi_divider               spi_divider_c          ...   @1178 +'h800050                            
+#       spi_ss                    spi_ss_c               ...   @1181 +'h800060                            
+#       spi_ctrl                  spi_ctrl_c             ...   @1175 +'h800040                            
+#   default_map                   uvm_reg_map            -     @1055                                      
+#     endian                                             ...   UVM_LITTLE_ENDIAN                          
+#     effective sequencer         ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#     default_map                 uvm_reg_map            -     @1195                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       spi_divider               spi_divider_c          ...   @1178 +'h800050                            
+#       spi_ss                    spi_ss_c               ...   @1181 +'h800060                            
+#       spi_ctrl                  spi_ctrl_c             ...   @1175 +'h800040                            
+#     default_map                 uvm_reg_map            -     @1226                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       output_enable             output_enable_c        ...   @1208 +'h820020                            
+#       output_value              output_value_c         ...   @1211 +'h820030                            
+#       input_value               input_value_c          ...   @1214 +'h820040                            
+#       bypass_mode               bypass_mode_c          ...   @1202 +'h820000                            
+#       direction_mode            direction_mode_c       ...   @1205 +'h820010                            
+#     default_map                 uvm_reg_map            -     @1062                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       default_map               uvm_reg_map            -     @1112                                      
+#         endian                                         ...   UVM_LITTLE_ENDIAN                          
+#         effective sequencer     ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#         ua_ier                  ua_ier_c               ...   @1084 +'h810008                            
+#         ua_int_id               ua_int_id_c            ...   @1075 +'h810002                            
+#         ua_fifo_ctrl            ua_fifo_ctrl_c         ...   @1078 +'h810002                            
+#         ua_div_latch0           ua_div_latch0_c        ...   @1069 +'h810000                            
+#         ua_div_latch1           ua_div_latch1_c        ...   @1072 +'h810001                            
+#         ua_lcr                  ua_lcr_c               ...   @1081 +'h810003                            
+#     default_map                 uvm_reg_map            -     @1118                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       default_map               uvm_reg_map            -     @1168                                      
+#         endian                                         ...   UVM_LITTLE_ENDIAN                          
+#         effective sequencer     ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#         ua_ier                  ua_ier_c               ...   @1140 +'h880008                            
+#         ua_int_id               ua_int_id_c            ...   @1131 +'h880002                            
+#         ua_fifo_ctrl            ua_fifo_ctrl_c         ...   @1134 +'h880002                            
+#         ua_div_latch0           ua_div_latch0_c        ...   @1125 +'h880000                            
+#         ua_div_latch1           ua_div_latch1_c        ...   @1128 +'h880001                            
+#         ua_lcr                  ua_lcr_c               ...   @1137 +'h880003                            
+#     default_map                 uvm_reg_map            -     @1112                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       ua_ier                    ua_ier_c               ...   @1084 +'h810008                            
+#       ua_int_id                 ua_int_id_c            ...   @1075 +'h810002                            
+#       ua_fifo_ctrl              ua_fifo_ctrl_c         ...   @1078 +'h810002                            
+#       ua_div_latch0             ua_div_latch0_c        ...   @1069 +'h810000                            
+#       ua_div_latch1             ua_div_latch1_c        ...   @1072 +'h810001                            
+#       ua_lcr                    ua_lcr_c               ...   @1081 +'h810003                            
+#     default_map                 uvm_reg_map            -     @1168                                      
+#       endian                                           ...   UVM_LITTLE_ENDIAN                          
+#       effective sequencer       ahb_master_sequencer   ...   uvm_test_top.ve.ahb0.master_agent.sequencer
+#       ua_ier                    ua_ier_c               ...   @1140 +'h880008                            
+#       ua_int_id                 ua_int_id_c            ...   @1131 +'h880002                            
+#       ua_fifo_ctrl              ua_fifo_ctrl_c         ...   @1134 +'h880002                            
+#       ua_div_latch0             ua_div_latch0_c        ...   @1125 +'h880000                            
+#       ua_div_latch1             ua_div_latch1_c        ...   @1128 +'h880001                            
+#       ua_lcr                    ua_lcr_c               ...   @1137 +'h880003                            
+# --------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(127) @ 0: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Start Running
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(127) @ 0: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] Start Running
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(127) @ 0: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Start Running
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(127) @ 0: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] Start Running
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(62) @ 0: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR] run started
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(40) @ 0: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR] print_transfers called
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(457) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq [vseq] Doing apb_subsystem_vseq
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(67) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_uart [vseq] Number of APB->UART0 Transaction =          1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(68) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_uart [vseq] Number of APB->UART1 Transaction =          1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(69) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_uart [vseq] Number of UART0->APB Transaction =          4
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(70) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_uart [vseq] Number of UART1->APB Transaction =          3
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(71) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_uart [vseq] Total Number of AHB, UART Transaction =         10
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(358) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_spi [vseq] Number of APB->SPI Transaction =          4
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(359) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_spi [vseq] Number of SPI->APB Transaction =          4
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(360) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_spi [vseq] Total Number of AHB, SPI Transaction =          8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(416) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_gpio [vseq] Number of AHB->GPIO Transaction =          4
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(417) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_gpio [vseq] Number of GPIO->APB Transaction =          4
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/apb_subsystem_vir_seq_lib.sv(418) @ 0: uvm_test_top.ve.virtual_sequencer@@apb_subsystem_vseq.apb_to_gpio [vseq] Total Number of AHB, GPIO Transaction =          8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv/sequence_lib/uart_ctrl_reg_seq_lib.sv(92) @ 0: reporter@@uart_cfg_dut_seq [uart_ctrl_config_reg_seq] UART Controller Register configuration sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/spi_reg_seq_lib.sv(44) @ 0: reporter@@spi_cfg_dut_seq [ex_reg_rw_reg_seq] complete random spi configuration register sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/gpio_reg_seq_lib.sv(45) @ 0: reporter@@gpio_cfg_dut_seq [ex_reg_rw_reg_seq] complete random gpio configuration register sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/ahb/sv/ahb_master_driver.sv(106) @ 1000: uvm_test_top.ve.ahb0.master_agent.driver [ahb_master_driver] Reset observed
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(97) @ 1000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Reset Asserted
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(97) @ 1000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] Reset Asserted
+# UVM_INFO @ 50000: reporter [MISCMP] Miscompare for gpio_transfer.output_enable: lhs = 'h0 : rhs = 'hffff
+# UVM_INFO @ 50000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@3510 vs. gpio_transfer@3267
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 50000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# ------------------------------------------------
+# Name              Type           Size  Value    
+# ------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @3510    
+#   transmit_delay  integral       32    'd0      
+#   transfer_data   integral       32    'h0      
+#   monitor_data    integral       32    'h0      
+#   output_enable   integral       32    'hffff   
+#   agent           string         9     agents[0]
+#   begin_time      time           64    50000    
+# ------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/ahb/sv/ahb_master_driver.sv(90) @ 1201000: uvm_test_top.ve.ahb0.master_agent.driver [ahb_master_driver] Reset dropped
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(130) @ 1201000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Detected Reset Done
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 1201000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(130) @ 1201000: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] Detected Reset Done
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 1201000: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(130) @ 1201000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Detected Reset Done
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 1201000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(130) @ 1201000: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] Detected Reset Done
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 1201000: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(108) @ 1201000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Detected Reset Done
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 1850000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_WRITE: addr = 'h810003, data = 'h8f8f8f8f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 1850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h810003  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h8f8f8f8f
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    1650000   
+#   end_time       time                64    1850000   
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 2050000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 810003 with data 8f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 2050000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h810003, data = 'h8f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 2550000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800040 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    2350000  
+#   end_time       time                64    2550000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 2650000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800040 with data 8 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 2650000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800040, data = 'h8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 3150000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820000 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    2950000  
+#   end_time       time                64    3150000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 3250000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820000 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 3250000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820000, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 3750000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_WRITE: addr = 'h810001, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 3750000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h810001 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    3550000  
+#   end_time       time                64    3750000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 3950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 810001 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 3950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h810001, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 4450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800041  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h3e3e3e3e
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    4250000   
+#   end_time       time                64    4450000   
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 4550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800041 with data 3e has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 4550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800041, data = 'h3e
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 5050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820001 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    4850000  
+#   end_time       time                64    5050000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 5150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820001 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 5150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820001, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 5650000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_WRITE: addr = 'h810000, data = 'h1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 5650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h810000 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h1      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    5450000  
+#   end_time       time                64    5650000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 5850000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 810000 with data 1 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 5850000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h810000, data = 'h1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 6350000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800042 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    6150000  
+#   end_time       time                64    6350000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 6450000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800042 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 6450000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800042, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 6950000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820002 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    6750000  
+#   end_time       time                64    6950000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 7050000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820002 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 7050000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820002, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv/sequence_lib/uart_ctrl_reg_seq_lib.sv(105) @ 7150000: reporter@@uart_cfg_dut_seq [uart_ctrl_config_reg_seq] UART Controller Register configuration sequence completed
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv/sequence_lib/uart_ctrl_reg_seq_lib.sv(92) @ 7150000: reporter@@uart_cfg_dut_seq [uart_ctrl_config_reg_seq] UART Controller Register configuration sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 7550000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_WRITE: addr = 'h810003, data = 'hf0f0f0f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 7550000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h810003 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'hf0f0f0f
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    7350000  
+#   end_time       time                64    7550000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 7750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 810003 with data f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 7750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h810003, data = 'hf
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 8250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800043 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    8050000  
+#   end_time       time                64    8250000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 8350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800043 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 8350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800043, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 8850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820003 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    8650000  
+#   end_time       time                64    8850000  
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 8950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820003 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 8950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820003, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 9450000: uvm_test_top.ve.apb_ss_env.apb_uart1 [uart_ctrl_env] APB_WRITE: addr = 'h880003, data = 'h8f8f8f8f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 9450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h880003  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h8f8f8f8f
+#   master         string              6     master    
+#   slave          string              5     uart1     
+#   begin_time     time                64    9250000   
+#   end_time       time                64    9450000   
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 9650000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 880003 with data 8f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 9650000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h880003, data = 'h8f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 10150000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800050 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h1      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    9950000  
+#   end_time       time                64    10150000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 10250000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800050 with data 1 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 10250000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800050, data = 'h1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 10750000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820010 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    10550000 
+#   end_time       time                64    10750000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 10850000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820010 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 10850000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820010, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 11350000: uvm_test_top.ve.apb_ss_env.apb_uart1 [uart_ctrl_env] APB_WRITE: addr = 'h880001, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 11350000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h880001 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     uart1    
+#   begin_time     time                64    11150000 
+#   end_time       time                64    11350000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 11550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 880001 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 11550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h880001, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 12050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800051 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    11850000 
+#   end_time       time                64    12050000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 12150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800051 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 12150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800051, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 12650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820011 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    12450000 
+#   end_time       time                64    12650000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 12750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820011 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 12750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820011, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 13250000: uvm_test_top.ve.apb_ss_env.apb_uart1 [uart_ctrl_env] APB_WRITE: addr = 'h880000, data = 'h1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 13250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h880000 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h1      
+#   master         string              6     master   
+#   slave          string              5     uart1    
+#   begin_time     time                64    13050000 
+#   end_time       time                64    13250000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 13450000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 880000 with data 1 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 13450000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h880000, data = 'h1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 13950000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800052 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    13750000 
+#   end_time       time                64    13950000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 14050000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800052 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 14050000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800052, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 14550000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820012 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    14350000 
+#   end_time       time                64    14550000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 14650000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820012 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 14650000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820012, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv/sequence_lib/uart_ctrl_reg_seq_lib.sv(105) @ 14750000: reporter@@uart_cfg_dut_seq [uart_ctrl_config_reg_seq] UART Controller Register configuration sequence completed
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 15150000: uvm_test_top.ve.apb_ss_env.apb_uart1 [uart_ctrl_env] APB_WRITE: addr = 'h880003, data = 'hf0f0f0f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 15150000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h880003 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'hf0f0f0f
+#   master         string              6     master   
+#   slave          string              5     uart1    
+#   begin_time     time                64    14950000 
+#   end_time       time                64    15150000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 15350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 880003 with data f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 15350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h880003, data = 'hf
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_seq_lib.sv(70) @ 15750000: uvm_test_top.ve.uart0.Tx.sequencer@@apb_subsystem_vseq.apb_to_uart.uart_seq [uart_incr_payload_seq] UART sequencer executing sequence...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_seq_lib.sv(70) @ 15750000: uvm_test_top.ve.uart1.Tx.sequencer@@apb_subsystem_vseq.apb_to_uart.uart_seq [uart_incr_payload_seq] UART sequencer executing sequence...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 15850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800053 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    15650000 
+#   end_time       time                64    15850000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 15950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800053 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 15950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800053, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 16450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820013 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    16250000 
+#   end_time       time                64    16450000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 16550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820013 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 16550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820013, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 17050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800060 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h1      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    16850000 
+#   end_time       time                64    17050000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 17150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800060 with data 1 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 17150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800060, data = 'h1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 17650000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_WRITE: addr = 'h810000, data = 'h3ab90f41
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 17650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h810000  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h3ab90f41
+#   master         string              6     master    
+#   slave          string              5     uart0     
+#   begin_time     time                64    17450000  
+#   end_time       time                64    17650000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 17850000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 810000 with data 3ab90f41 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 17850000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h810000, data = 'h3ab90f41
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(127) @ 18350000: uvm_test_top.ve.apb_ss_env.apb_uart1 [uart_ctrl_env] APB_WRITE: addr = 'h880000, data = 'h2133c1b7
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 18350000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h880000  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h2133c1b7
+#   master         string              6     master    
+#   slave          string              5     uart1     
+#   begin_time     time                64    18150000  
+#   end_time       time                64    18350000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 18550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 880000 with data 2133c1b7 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 18550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h880000, data = 'h2133c1b7
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 18750000: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 19050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820020 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    18850000 
+#   end_time       time                64    19050000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 19150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820020 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 19150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820020, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 19550000: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 19650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800061 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    19450000 
+#   end_time       time                64    19650000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 19750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800061 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 19750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800061, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 20250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820021 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    20050000 
+#   end_time       time                64    20250000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 20350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820021 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 20350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820021, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 20850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800062 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    20650000 
+#   end_time       time                64    20850000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 20950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800062 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 20950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800062, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 21450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820022 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    21250000 
+#   end_time       time                64    21450000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 21550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820022 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 21550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820022, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 22050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800063 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    21850000 
+#   end_time       time                64    22050000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 22150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800063 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 22150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800063, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 22650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h820023 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              5     gpio0    
+#   begin_time     time                64    22450000 
+#   end_time       time                64    22650000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 22750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 820023 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 22750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h820023, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/spi_reg_seq_lib.sv(71) @ 22850000: reporter@@en_spi_tx_seq [ex_reg_rw_reg_seq] complete random spi configuration register sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 23250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800000  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h43809007
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    23050000  
+#   end_time       time                64    23250000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 23350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800000 with data 43809007 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 23350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800000, data = 'h43809007
+# UVM_INFO @ 23850000: reporter [MISCMP] Miscompare for gpio_transfer.transfer_data: lhs = 'h0 : rhs = 'hbb8c
+# UVM_INFO @ 23850000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@4955 vs. gpio_transfer@4951
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 23850000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# ------------------------------------------------
+# Name              Type           Size  Value    
+# ------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @4955    
+#   transmit_delay  integral       32    'd0      
+#   transfer_data   integral       32    'hbb8c   
+#   monitor_data    integral       32    'h0      
+#   output_enable   integral       32    'hffff   
+#   agent           string         9     agents[0]
+#   begin_time      time           64    23850000 
+# ------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 23850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h82000c  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hae3cbb8c
+#   master         string              6     master    
+#   slave          string              5     gpio0     
+#   begin_time     time                64    23650000  
+#   end_time       time                64    23850000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_driver.sv(97) @ 23900000: uvm_test_top.ve.gpio0.agents[0].driver [GPIO_DRIVER] GPIO Transfer:
+# -----------------------------------------------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                                                                    
+# -----------------------------------------------------------------------------------------------------------------------------
+# req                            gpio_transfer  -     @4939                                                                    
+#   transmit_delay               integral       32    'd4                                                                      
+#   transfer_data                integral       32    'h453a66b5                                                               
+#   monitor_data                 integral       32    'h0                                                                      
+#   output_enable                integral       32    'h0                                                                      
+#   agent                        string         0     ""                                                                       
+#   begin_time                   time           64    23450000                                                                 
+#   depth                        int            32    'd4                                                                      
+#   parent sequence (name)       string         8     gpio_seq                                                                 
+#   parent sequence (full name)  string         73    uvm_test_top.ve.virtual_sequencer.apb_subsystem_vseq.apb_to_gpio.gpio_seq
+#   sequencer                    string         41    uvm_test_top.ve.gpio0.agents[0].sequencer                                
+# -----------------------------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO @ 23950000: reporter [MISCMP] Miscompare for gpio_transfer.monitor_data: lhs = 'h0 : rhs = 'h453a66b5
+# UVM_INFO @ 23950000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@4972 vs. gpio_transfer@4955
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 23950000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# -------------------------------------------------
+# Name              Type           Size  Value     
+# -------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @4972     
+#   transmit_delay  integral       32    'd0       
+#   transfer_data   integral       32    'hbb8c    
+#   monitor_data    integral       32    'h453a66b5
+#   output_enable   integral       32    'hffff    
+#   agent           string         9     agents[0] 
+#   begin_time      time           64    23950000  
+# -------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 23950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 82000c with data ae3cbb8c has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 23950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h82000c, data = 'hae3cbb8c
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 24450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800040 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    24250000 
+#   end_time       time                64    24450000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 24550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800040 with data 8 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 24550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800040, data = 'h8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 25050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h820010
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     gpio0   
+#   begin_time     time                64    24850000
+#   end_time       time                64    25050000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 25150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 820010 with data 66b5 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 25150000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 25650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800041  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h3f3f3f3f
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    25450000  
+#   end_time       time                64    25650000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 25750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800041 with data 3f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 25750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800041, data = 'h3f
+# UVM_INFO @ 26250000: reporter [MISCMP] Miscompare for gpio_transfer.transfer_data: lhs = 'hbb8c : rhs = 'h8781
+# UVM_INFO @ 26250000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@5105 vs. gpio_transfer@5101
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 26250000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# -------------------------------------------------
+# Name              Type           Size  Value     
+# -------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @5105     
+#   transmit_delay  integral       32    'd0       
+#   transfer_data   integral       32    'h8781    
+#   monitor_data    integral       32    'h453a66b5
+#   output_enable   integral       32    'hffff    
+#   agent           string         9     agents[0] 
+#   begin_time      time           64    26250000  
+# -------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 26250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h82000c  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hd0418781
+#   master         string              6     master    
+#   slave          string              5     gpio0     
+#   begin_time     time                64    26050000  
+#   end_time       time                64    26250000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 26350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 82000c with data d0418781 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 26350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h82000c, data = 'hd0418781
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_driver.sv(97) @ 26800000: uvm_test_top.ve.gpio0.agents[0].driver [GPIO_DRIVER] GPIO Transfer:
+# -----------------------------------------------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                                                                    
+# -----------------------------------------------------------------------------------------------------------------------------
+# req                            gpio_transfer  -     @5089                                                                    
+#   transmit_delay               integral       32    'd9                                                                      
+#   transfer_data                integral       32    'h16eeb554                                                               
+#   monitor_data                 integral       32    'h0                                                                      
+#   output_enable                integral       32    'h0                                                                      
+#   agent                        string         0     ""                                                                       
+#   begin_time                   time           64    25850000                                                                 
+#   depth                        int            32    'd4                                                                      
+#   parent sequence (name)       string         8     gpio_seq                                                                 
+#   parent sequence (full name)  string         73    uvm_test_top.ve.virtual_sequencer.apb_subsystem_vseq.apb_to_gpio.gpio_seq
+#   sequencer                    string         41    uvm_test_top.ve.gpio0.agents[0].sequencer                                
+# -----------------------------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO @ 26850000: reporter [MISCMP] Miscompare for gpio_transfer.monitor_data: lhs = 'h453a66b5 : rhs = 'h16eeb554
+# UVM_INFO @ 26850000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@5145 vs. gpio_transfer@5133
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 26850000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# -------------------------------------------------
+# Name              Type           Size  Value     
+# -------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @5145     
+#   transmit_delay  integral       32    'd0       
+#   transfer_data   integral       32    'h8781    
+#   monitor_data    integral       32    'h16eeb554
+#   output_enable   integral       32    'hffff    
+#   agent           string         9     agents[0] 
+#   begin_time      time           64    26850000  
+# -------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 26850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800042 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    26650000 
+#   end_time       time                64    26850000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 26950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800042 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 26950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800042, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 27450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800043 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    27250000 
+#   end_time       time                64    27450000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 27550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800043 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 27550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800043, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 28050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h820010
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     gpio0   
+#   begin_time     time                64    27850000
+#   end_time       time                64    28050000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 28150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 820010 with data b554 has ended
+# UVM_INFO @ 28650000: reporter [MISCMP] Miscompare for gpio_transfer.transfer_data: lhs = 'h8781 : rhs = 'h49fd
+# UVM_INFO @ 28650000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@5245 vs. gpio_transfer@5241
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 28650000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# -------------------------------------------------
+# Name              Type           Size  Value     
+# -------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @5245     
+#   transmit_delay  integral       32    'd0       
+#   transfer_data   integral       32    'h49fd    
+#   monitor_data    integral       32    'h16eeb554
+#   output_enable   integral       32    'hffff    
+#   agent           string         9     agents[0] 
+#   begin_time      time           64    28650000  
+# -------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 28650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h82000c  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h6c6849fd
+#   master         string              6     master    
+#   slave          string              5     gpio0     
+#   begin_time     time                64    28450000  
+#   end_time       time                64    28650000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 28750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 82000c with data 6c6849fd has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 28750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h82000c, data = 'h6c6849fd
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_driver.sv(97) @ 29100000: uvm_test_top.ve.gpio0.agents[0].driver [GPIO_DRIVER] GPIO Transfer:
+# -----------------------------------------------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                                                                    
+# -----------------------------------------------------------------------------------------------------------------------------
+# req                            gpio_transfer  -     @5229                                                                    
+#   transmit_delay               integral       32    'd8                                                                      
+#   transfer_data                integral       32    'hf3be3f2e                                                               
+#   monitor_data                 integral       32    'h0                                                                      
+#   output_enable                integral       32    'h0                                                                      
+#   agent                        string         0     ""                                                                       
+#   begin_time                   time           64    28250000                                                                 
+#   depth                        int            32    'd4                                                                      
+#   parent sequence (name)       string         8     gpio_seq                                                                 
+#   parent sequence (full name)  string         73    uvm_test_top.ve.virtual_sequencer.apb_subsystem_vseq.apb_to_gpio.gpio_seq
+#   sequencer                    string         41    uvm_test_top.ve.gpio0.agents[0].sequencer                                
+# -----------------------------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO @ 29150000: reporter [MISCMP] Miscompare for gpio_transfer.monitor_data: lhs = 'h16eeb554 : rhs = 'hf3be3f2e
+# UVM_INFO @ 29150000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@5277 vs. gpio_transfer@5265
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 29150000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# -------------------------------------------------
+# Name              Type           Size  Value     
+# -------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @5277     
+#   transmit_delay  integral       32    'd0       
+#   transfer_data   integral       32    'h49fd    
+#   monitor_data    integral       32    'hf3be3f2e
+#   output_enable   integral       32    'hffff    
+#   agent           string         9     agents[0] 
+#   begin_time      time           64    29150000  
+# -------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 29650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h820010
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     gpio0   
+#   begin_time     time                64    29450000
+#   end_time       time                64    29650000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 29750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 820010 with data 3f2e has ended
+# UVM_INFO @ 30250000: reporter [MISCMP] Miscompare for gpio_transfer.transfer_data: lhs = 'h49fd : rhs = 'h2a98
+# UVM_INFO @ 30250000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@5341 vs. gpio_transfer@5337
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 30250000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# -------------------------------------------------
+# Name              Type           Size  Value     
+# -------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @5341     
+#   transmit_delay  integral       32    'd0       
+#   transfer_data   integral       32    'h2a98    
+#   monitor_data    integral       32    'hf3be3f2e
+#   output_enable   integral       32    'hffff    
+#   agent           string         9     agents[0] 
+#   begin_time      time           64    30250000  
+# -------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 30250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h82000c  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h64fa2a98
+#   master         string              6     master    
+#   slave          string              5     gpio0     
+#   begin_time     time                64    30050000  
+#   end_time       time                64    30250000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_driver.sv(97) @ 30300000: uvm_test_top.ve.gpio0.agents[0].driver [GPIO_DRIVER] GPIO Transfer:
+# -----------------------------------------------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                                                                    
+# -----------------------------------------------------------------------------------------------------------------------------
+# req                            gpio_transfer  -     @5325                                                                    
+#   transmit_delay               integral       32    'd4                                                                      
+#   transfer_data                integral       32    'hc2888fff                                                               
+#   monitor_data                 integral       32    'h0                                                                      
+#   output_enable                integral       32    'h0                                                                      
+#   agent                        string         0     ""                                                                       
+#   begin_time                   time           64    29850000                                                                 
+#   depth                        int            32    'd4                                                                      
+#   parent sequence (name)       string         8     gpio_seq                                                                 
+#   parent sequence (full name)  string         73    uvm_test_top.ve.virtual_sequencer.apb_subsystem_vseq.apb_to_gpio.gpio_seq
+#   sequencer                    string         41    uvm_test_top.ve.gpio0.agents[0].sequencer                                
+# -----------------------------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO @ 30350000: reporter [MISCMP] Miscompare for gpio_transfer.monitor_data: lhs = 'hf3be3f2e : rhs = 'hc2888fff
+# UVM_INFO @ 30350000: reporter [MISCMP] 1 Miscompare(s) for object gpio_transfer@5357 vs. gpio_transfer@5341
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/gpio/sv//gpio_monitor.sv(121) @ 30350000: uvm_test_top.ve.gpio0.agents[0].monitor [GPIO_MON] Transfer collected :
+# -------------------------------------------------
+# Name              Type           Size  Value     
+# -------------------------------------------------
+# gpio_transfer     gpio_transfer  -     @5357     
+#   transmit_delay  integral       32    'd0       
+#   transfer_data   integral       32    'h2a98    
+#   monitor_data    integral       32    'hc2888fff
+#   output_enable   integral       32    'hffff    
+#   agent           string         9     agents[0] 
+#   begin_time      time           64    30350000  
+# -------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 30350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 82000c with data 64fa2a98 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 30350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h82000c, data = 'h64fa2a98
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 30850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h820010
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              5     gpio0   
+#   begin_time     time                64    30650000
+#   end_time       time                64    30850000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 30950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 820010 with data 8fff has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 32250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h800000
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              4     spi0    
+#   begin_time     time                64    32050000
+#   end_time       time                64    32250000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 32350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 800000 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(105) @ 32350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Read -- calling compare_and_update() with address = 'h800000, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 32350000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 33551000: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 34351000: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 35950000: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] Collected the following Frame No:1
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @4645      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h41       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd22       
+#   begin_time      time        64    18750000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(193) @ 35950000: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor.rx_scbd [SCRBD] ####### PASS : uart0 RECEIVED CORRECT DATA expected = 'h41, received = 'h41
+# UVM_WARNING ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(145) @ 35950000: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor [CVC-DBG] Trying to pop an empty Q
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 35950000: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 36750000: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] Collected the following Frame No:1
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @4690      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hb7       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd23       
+#   begin_time      time        64    19550000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(193) @ 36750000: uvm_test_top.ve.apb_ss_env.apb_uart1.monitor.rx_scbd [SCRBD] ####### PASS : uart1 RECEIVED CORRECT DATA expected = 'hb7, received = 'hb7
+# UVM_WARNING ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_monitor.sv(145) @ 36750000: uvm_test_top.ve.apb_ss_env.apb_uart1.monitor [CVC-DBG] Trying to pop an empty Q
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 36750000: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/spi_reg_seq_lib.sv(71) @ 37250000: reporter@@en_spi_tx_seq [ex_reg_rw_reg_seq] complete random spi configuration register sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 37650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800000  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hf9f480cd
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    37450000  
+#   end_time       time                64    37650000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 37750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800000 with data f9f480cd has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 37750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800000, data = 'hf9f480cd
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 38250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800040 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    38050000 
+#   end_time       time                64    38250000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 38350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800040 with data 8 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 38350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800040, data = 'h8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 38850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800041  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h3f3f3f3f
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    38650000  
+#   end_time       time                64    38850000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 38950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800041 with data 3f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 38950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800041, data = 'h3f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 39450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800042 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    39250000 
+#   end_time       time                64    39450000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 39550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800042 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 39550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800042, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 39951000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 40050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800043 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    39850000 
+#   end_time       time                64    40050000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 40150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800043 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 40150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800043, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(216) @ 40750000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] Frame **1** Sent...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(220) @ 41550000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 42350000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Collected the following Frame No:1
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @5044      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hc        
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd30       
+#   begin_time      time        64    25150000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 42350000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 47151000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 47550000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 47650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h800000
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              4     spi0    
+#   begin_time     time                64    47450000
+#   end_time       time                64    47650000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 47750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 800000 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(105) @ 47750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Read -- calling compare_and_update() with address = 'h800000, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(216) @ 47950000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame **1** Sent...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(220) @ 48750000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 49550000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:1
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @5459      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h5        
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd39       
+#   begin_time      time        64    32350000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 49550000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/spi_reg_seq_lib.sv(71) @ 49850000: reporter@@en_spi_tx_seq [ex_reg_rw_reg_seq] complete random spi configuration register sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 50250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800000  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hf1134f8e
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    50050000  
+#   end_time       time                64    50250000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 50350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800000 with data f1134f8e has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 50350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800000, data = 'hf1134f8e
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 50850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800040 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    50650000 
+#   end_time       time                64    50850000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 50950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800040 with data 8 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 50950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800040, data = 'h8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 51450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800041  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h3f3f3f3f
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    51250000  
+#   end_time       time                64    51450000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 51550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800041 with data 3f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 51550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800041, data = 'h3f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 52050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800042 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    51850000 
+#   end_time       time                64    52050000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 52150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800042 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 52150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800042, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 52650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800043 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    52450000 
+#   end_time       time                64    52650000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 52750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800043 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 52750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800043, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 60250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h800000
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              4     spi0    
+#   begin_time     time                64    60050000
+#   end_time       time                64    60250000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 60350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 800000 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(105) @ 60350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Read -- calling compare_and_update() with address = 'h800000, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 62351000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv/sequence_lib/spi_reg_seq_lib.sv(71) @ 62450000: reporter@@en_spi_tx_seq [ex_reg_rw_reg_seq] complete random spi configuration register sequence starting...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 62850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800000  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'hd1a718d6
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    62650000  
+#   end_time       time                64    62850000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 62950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800000 with data d1a718d6 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 62950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800000, data = 'hd1a718d6
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(216) @ 63150000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] Frame **2** Sent...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 63450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800040 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h8      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    63250000 
+#   end_time       time                64    63450000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 63550000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800040 with data 8 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 63550000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800040, data = 'h8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(220) @ 63950000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 64050000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# -----------------------------------------------------
+# Name             Type                Size  Value     
+# -----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518     
+#   addr           integral            32    'h800041  
+#   direction      apb_direction_enum  32    APB_WRITE 
+#   data           integral            32    'h3f3f3f3f
+#   master         string              6     master    
+#   slave          string              4     spi0      
+#   begin_time     time                64    63850000  
+#   end_time       time                64    64050000  
+# -----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 64150000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800041 with data 3f has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 64150000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800041, data = 'h3f
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 64650000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800042 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    64450000 
+#   end_time       time                64    64650000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 64750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800042 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 64750000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800042, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 64750000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Collected the following Frame No:2
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @6153      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hf        
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd7        
+#   begin_time      time        64    47550000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 64750000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 65250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h800043 
+#   direction      apb_direction_enum  32    APB_WRITE
+#   data           integral            32    'h0      
+#   master         string              6     master   
+#   slave          string              4     spi0     
+#   begin_time     time                64    65050000 
+#   end_time       time                64    65250000 
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 65350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  WRITE to 800043 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(100) @ 65350000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Write -- calling update() with address = 'h800043, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 65950000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 72850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ---------------------------------------------------
+# Name             Type                Size  Value   
+# ---------------------------------------------------
+# trans_collected  apb_transfer        -     @1518   
+#   addr           integral            32    'h800000
+#   direction      apb_direction_enum  32    APB_READ
+#   data           integral            32    'h0     
+#   master         string              6     master  
+#   slave          string              4     spi0    
+#   begin_time     time                64    72650000
+#   end_time       time                64    72850000
+# ---------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 72950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 800000 with data 0 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//apb_subsystem_env.sv(105) @ 72950000: uvm_test_top.ve.apb_ss_env [apb_subsystem_env] Read -- calling compare_and_update() with address = 'h800000, data = 'h0
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 76350000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 80751000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(216) @ 81550000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame **2** Sent...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(220) @ 82350000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 83150000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:2
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @7048      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h8        
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd21       
+#   begin_time      time        64    65950000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 83150000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 89950000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 91151000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(216) @ 91950000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] Frame **3** Sent...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(220) @ 92750000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 93550000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] Collected the following Frame No:3
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @7480      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'h12       
+#   parity          integral    1     'h1        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd15       
+#   begin_time      time        64    76350000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 93550000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 104751000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(216) @ 105550000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame **3** Sent...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(220) @ 106350000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 107150000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:3
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @8032      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'hb        
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd9        
+#   begin_time      time        64    89950000   
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 107150000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(185) @ 110750000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] SOP detected
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(219) @ 125551000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Received Parity is same as calculated Parity
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(216) @ 126350000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame **4** Sent...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(220) @ 127150000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] Frame complete...
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(133) @ 127750000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_READ: addr = 'h810000, data = 'h5
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(83) @ 127750000: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor.tx_scbd [SCRBD] ####### PASS : APB RECEIVED CORRECT DATA from uart0  expected = 'h5, received = 'h5
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 127750000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h810000 
+#   direction      apb_direction_enum  32    APB_READ 
+#   data           integral            32    'h5      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    127550000
+#   end_time       time                64    127750000
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 127950000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 810000 with data 5 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(236) @ 127950000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] Collected the following Frame No:4
+# -----------------------------------------------
+# Name              Type        Size  Value      
+# -----------------------------------------------
+# uart_frame        uart_frame  -     @8872      
+#   start_bit       integral    1     'h0        
+#   payload         integral    8     'he        
+#   parity          integral    1     'h0        
+#   stop_bits       integral    2     'h1        
+#   error_bits      integral    4     'h0        
+#   parity_type     parity_e    1     GOOD_PARITY
+#   transmit_delay  integral    32    'd5        
+#   begin_time      time        64    110750000  
+# -----------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_monitor.sv(175) @ 127950000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] trying to detect SOP
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(133) @ 128450000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_READ: addr = 'h810000, data = 'h8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(83) @ 128450000: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor.tx_scbd [SCRBD] ####### PASS : APB RECEIVED CORRECT DATA from uart0  expected = 'h8, received = 'h8
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 128450000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h810000 
+#   direction      apb_direction_enum  32    APB_READ 
+#   data           integral            32    'h8      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    128250000
+#   end_time       time                64    128450000
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 128650000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 810000 with data 8 has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(133) @ 129150000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_READ: addr = 'h810000, data = 'hb
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(83) @ 129150000: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor.tx_scbd [SCRBD] ####### PASS : APB RECEIVED CORRECT DATA from uart0  expected = 'hb, received = 'hb
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 129150000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h810000 
+#   direction      apb_direction_enum  32    APB_READ 
+#   data           integral            32    'hb      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    128950000
+#   end_time       time                64    129150000
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 129350000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 810000 with data b has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(133) @ 129850000: uvm_test_top.ve.apb_ss_env.apb_uart0 [uart_ctrl_env] APB_READ: addr = 'h810000, data = 'he
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(83) @ 129850000: uvm_test_top.ve.apb_ss_env.apb_uart0.monitor.tx_scbd [SCRBD] ####### PASS : APB RECEIVED CORRECT DATA from uart0  expected = 'he, received = 'he
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 129850000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h810000 
+#   direction      apb_direction_enum  32    APB_READ 
+#   data           integral            32    'he      
+#   master         string              6     master   
+#   slave          string              5     uart0    
+#   begin_time     time                64    129650000
+#   end_time       time                64    129850000
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 130050000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 810000 with data e has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(133) @ 130550000: uvm_test_top.ve.apb_ss_env.apb_uart1 [uart_ctrl_env] APB_READ: addr = 'h880000, data = 'hc
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(83) @ 130550000: uvm_test_top.ve.apb_ss_env.apb_uart1.monitor.tx_scbd [SCRBD] ####### PASS : APB RECEIVED CORRECT DATA from uart1  expected = 'hc, received = 'hc
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 130550000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h880000 
+#   direction      apb_direction_enum  32    APB_READ 
+#   data           integral            32    'hc      
+#   master         string              6     master   
+#   slave          string              5     uart1    
+#   begin_time     time                64    130350000
+#   end_time       time                64    130550000
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 130750000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 880000 with data c has ended
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_env.sv(133) @ 131250000: uvm_test_top.ve.apb_ss_env.apb_uart1 [uart_ctrl_env] APB_READ: addr = 'h880000, data = 'hf
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/uart_ctrl/sv//uart_ctrl_scoreboard.sv(83) @ 131250000: uvm_test_top.ve.apb_ss_env.apb_uart1.monitor.tx_scbd [SCRBD] ####### PASS : APB RECEIVED CORRECT DATA from uart1  expected = 'hf, received = 'hf
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(139) @ 131250000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Transfer collected :
+# ----------------------------------------------------
+# Name             Type                Size  Value    
+# ----------------------------------------------------
+# trans_collected  apb_transfer        -     @1518    
+#   addr           integral            32    'h880000 
+#   direction      apb_direction_enum  32    APB_READ 
+#   data           integral            32    'hf      
+#   master         string              6     master   
+#   slave          string              5     uart1    
+#   begin_time     time                64    131050000
+#   end_time       time                64    131250000
+# ----------------------------------------------------
+# 
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/apb_subsystem/sv//ahb_user_monitor.sv(55) @ 131450000: uvm_test_top.ve.ahb0.master_agent.monitor [USR_MONITOR]  READ to 880000 with data f has ended
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 131551000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/ahb/sv/ahb_master_driver.sv(135) @ 131551000: uvm_test_top.ve.ahb0.master_agent.driver [ahb_master_driver] 
+# Report: AHB master driver sent 73 transfers
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/ahb/sv/ahb_master_monitor.sv(174) @ 131551000: uvm_test_top.ve.ahb0.master_agent.monitor [ahb_monitor] 
+# Report: AHB master monitor collected 72 transfers
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_collector.sv(153) @ 131551000: uvm_test_top.ve.apb0.bus_collector [apb_collector] Report: APB collector collected 72 transfers
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/apb/sv//apb_monitor.sv(164) @ 131551000: uvm_test_top.ve.apb0.bus_monitor [apb_monitor] Report: APB monitor collected 72 transfers
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_rx_monitor.sv(99) @ 131551000: uvm_test_top.ve.uart0.Rx.monitor [uart_rx_monitor] UART Frames Collected:1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(229) @ 131551000: uvm_test_top.ve.uart0.Tx.driver [uart_tx_driver] UART Frames Sent:4
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_monitor.sv(99) @ 131551000: uvm_test_top.ve.uart0.Tx.monitor [uart_tx_monitor] UART Frames Collected:4
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_rx_monitor.sv(99) @ 131551000: uvm_test_top.ve.uart1.Rx.monitor [uart_rx_monitor] UART Frames Collected:1
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_driver.sv(229) @ 131551000: uvm_test_top.ve.uart1.Tx.driver [uart_tx_driver] UART Frames Sent:3
+# UVM_INFO ../soc_verification_lib/sv_cb_ex_lib/interface_uvc_lib/uart/sv//uart_tx_monitor.sv(99) @ 131551000: uvm_test_top.ve.uart1.Tx.monitor [uart_tx_monitor] UART Frames Collected:3
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  410
+# UVM_WARNING :    2
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [CFGNRD]     1
+# [CVC-DBG]     2
+# [ENV_TOPOLOGY]    29
+# [GPIO_DRIVER]     4
+# [GPIO_MON]     9
+# [MISCMP]    18
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCRBD]     8
+# [TEST!!!]     8
+# [TEST_DONE]     1
+# [USR_MONITOR]    74
+# [ahb_master_driver]     3
+# [ahb_monitor]     1
+# [apb_collector]    74
+# [apb_monitor]     1
+# [apb_subsystem_env]    63
+# [apb_subsystem_tb]     3
+# [ex_reg_rw_reg_seq]     6
+# [uart_ctrl_config_reg_seq]     4
+# [uart_ctrl_env]    16
+# [uart_incr_payload_seq]     2
+# [uart_rx_monitor]    16
+# [uart_tx_driver]    18
+# [uart_tx_monitor]    36
+# [vseq]    12
+# ** Note: $finish    : C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 131551 ns  Iteration: 54  Instance: /apb_subsystem_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.4c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+
+
