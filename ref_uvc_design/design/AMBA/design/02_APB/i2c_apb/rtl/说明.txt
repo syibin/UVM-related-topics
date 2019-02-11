@@ -1,0 +1,3 @@
+This code of i2c master controler is finished by changing I2C-Master Core which written by Richard Herveille.
+i2c_specs.pdf is downloaded from www.opencores.org and gives the specification of
+the controler,but the code is changed for the use of APB bus. 

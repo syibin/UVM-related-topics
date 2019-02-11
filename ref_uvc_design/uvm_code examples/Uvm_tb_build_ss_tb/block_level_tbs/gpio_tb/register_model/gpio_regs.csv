@@ -1,0 +1,13 @@
+Register Name,Register Description,Register Address,Register Width,Register Access,Register Reset Value,Register Constraints,Register Custom Type,Field Name,Field Description,Field Offset,Field Width,Field Access,Field Reset Value,Field is Covered,Field is Reserved,Field is Volatile,Field Constraints
+gpio_in,GPIO Input,0x0,32,RO,0x0,,,,,,,,,,,Y,
+gpio_out,GPIO Output,0x04,32,RW,0x0,,,,,,,,,,,,
+gpio_oe,GPIO Output Enable,0x08,32,RW,0x0,,,,,,,,,,,,
+gpio_inte,GPIO Interrupt,0x0C,32,RW,0x0,,,,,,,,,,,,
+gpio_ptrig,GPIO PTRIG,0x010,32,RW,0x0,,,,,,,,,,,,
+gpio_aux,GPIO Aux,0x014,32,RW,0x0,,,,,,,,,,,,
+gpio_ctrl,GPIO Control,0x018,32,RW,0x0,,,padding,Reserved,2,30,RW,0x0,FALSE,TRUE,,
+gpio_ctrl,,,,,,,,INTS,Interrupt Status,1,1,RW,0x0,TRUE,,,
+gpio_ctrl,,,,,,,,INTE,Interrupt Enable,0,1,RW,0x0,TRUE,,,
+gpio_ints,GPIO Ints,0x01c,32,RW,0x0,,,,,,,,,,,,
+gpio_eclk,GPIO eclk,0x020,32,RW,0x0,,,,,,,,,,,,
+gpio_nec,GPIO nec,0x024,32,RW,0x0,,,,,,,,,,,,

@@ -1,0 +1,41 @@
+#-- Synplicity, Inc.
+#-- Version 7.0.2   
+#-- Project file demo_amba.prj
+#-- Written on Fri Sep 13 17:06:34 2002
+
+
+#add_file options
+add_file -verilog "demo_amba.v"
+add_file -_pasic "demo_amba.sc"
+
+#reporting options
+
+
+#implementation: "verilog"
+impl -add verilog
+
+#device options
+set_option -technology QUICKDSP
+set_option -part QL901M
+set_option -package ps680
+set_option -speed_grade -4
+
+#compilation/mapping options
+set_option -default_enum_encoding default
+set_option -symbolic_fsm_compiler 1
+set_option -resource_sharing 1
+
+#map options
+set_option -frequency 0.000
+set_option -fanout_limit 16
+
+#simulation options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./demo_amba.qdf"
+impl -active "verilog"

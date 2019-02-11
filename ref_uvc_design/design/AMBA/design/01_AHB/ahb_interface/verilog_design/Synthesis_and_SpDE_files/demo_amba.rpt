@@ -1,0 +1,123 @@
+++++++++++++++++++++++
+| Design Information |
+++++++++++++++++++++++
+Design:            demo_amba
+SpDE Version:      SpDE 9.3 Patch1
+Report Generated:  Fri Sep 13 18:42:47 2002
+CHIP Last Updated: Fri Sep 13 18:38:24 2002
+Part Type:         ql901m
+Speed Grade:       6
+Operating Range:   Commercial
+Package Type:      680 PIN PBGA
+Design Check Sum: Undetermined: sequencer has not yet been run
+
++++++++++++++++++++++++++++
+| Utilization Information |
++++++++++++++++++++++++++++
+Utilized cells (no buffers):                   285 of    2016  (14.1%)
+Utilized cells (buffered):                     352 of    2016  (17.5%)
+Utilized Logic cell Frags (no buffers):       1238 of   12096  (10.2%)
+Utilized Logic cell Frags (buffered):         1291 of   12096  (10.7%)
+Utilized Fragment A :                          224
+Utilized Fragment F :                          224
+Utilized Fragment O :                          284
+Utilized Fragment N :                          285
+IO control cells:                                0 of       8  (0.0%)
+Clock only cells:                                0 of       9  (0.0%)
+Bi directional cells:                            8 of     252  (3.2%)
+RAM cells:                                       4 of      36  (11.1%)
+ECU cells:                                       0 of      18  (0.0%)
+PLL cells:                                       0 of       2  (0.0%)
+Flip-Flop of IO cells:                           0 of     252  (0.0%)
+1st Flip-Flop of Logic cells:                  110 of    2016  (5.5%)
+2nd Flip-Flop of Logic cells:                  111 of    2016  (5.5%)
+Routing resources:                            8927 of  155480  (5.7%)
+ViaLink resources:                            7888 of 4324750  (0.2%)
+
+
+
++++++++++++++++++++++++++++++++++
+| Clock Utilization Information |
++++++++++++++++++++++++++++++++++
+	Clock Network             Net                   Pin      Quad                  Load    
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	QuadNet_TR8               hresetn_i             B17      Top Right              1       
+
+	MIPS0                     hclk                           Top Right              194     
+
+|Available Clocks|
+	Quad TOP LEFT     : 	5 of 5 QuadNets available	(100.0%)
+	Quad TOP RIGHT    : 	4 of 5 QuadNets available	(80.0%)
+
+	All Quads       : 	1 of 2 PLL networks available	(50.0%)
+
+
+
+
+++++++++++++++++++
+| Timing Results |
+++++++++++++++++++
+
+Summary:
+
+Clock                               Frequency       Setup Time      Clock to Out   
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+hclk                             48 MHz / 21.0 ns       N/A            6.9 ns
+
+
+Inter Clock Domain Delay Matrix
++++++++++++++++++++++++++++++++
+
+Clock0 = hclk 
+
+ 
+          Clock0  
+Clock0   21.0 ns
+
++++++++++++++++++++++++++++++++++
+| Tools run on design demo_amba |
++++++++++++++++++++++++++++++++++
+partdef         Pre 2.1   
+design          3.0    
+logic optimizer 9.3     Mode = Quality Goal = Speed IgnorePack = FALSE UseNonBondedPads = TRUE Run Time 0:00:28
+placer          9.3     Seed = 42 Mode = Quality Run Time 0:06:07
+router          9.31    Seed = 42 Run Time 0:00:11
+delay modeler   9.3     Mode = Commercial Corner = Worst SpeedGrade = 6 LowPower = FALSE Run Time 0:00:04
+back annotation 9.3     Run Time 0:00:20
+verifier        9.3     Strip = TRUE
+auto buffer     9.3    
+
+
++++++++++++++
+| Pin Table |
++++++++++++++
+Display Pin Info option is FALSE.
+Pin information will not be displayed.
+
+++++++++++++++++++++
+| Fixed Flip Flops |
+++++++++++++++++++++
+None
+
+
++++++++++++++++++++
+| Fixed RAM cells |
++++++++++++++++++++
+None
+
+
++++++++++++++++++++
+| Fixed ECU cells |
++++++++++++++++++++
+None
+
+
++++++++++++++++++++++++++++++++++++++
+| Nets Removed by Technology Mapper |
++++++++++++++++++++++++++++++++++++++
+Removed Nets option is FALSE.
+Removed Nets information will not be displayed.
+
+
+
+++++++++++  The end of report file  ++++++++++

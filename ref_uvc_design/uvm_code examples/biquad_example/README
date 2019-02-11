@@ -1,0 +1,31 @@
+This directory tree contains the BiQuad datapath functional coverage
+example from the Verification Academy Coverage Cookbook.
+
+The content of the example is as follows:
+
+tb/agents/apb_agent - APB agent used in the UVM testbench
+tb/agents/signal_agent - Signal generator agent
+tb/tb - Top level testbench
+tb/tests
+tb/env
+tb/registers
+rtl - Contains a model of the BiQuad filter
+sim - Simulation directory for the example, contains the Makefile
+
+To compile and run the example:
+
+cd sim
+make
+
+This will compile the model and the testbench and then run a smoke test.
+This will return a UVM_TEST_PASSED message after about 2-3 mins of real time.
+
+Other make options:
+
+make guisim - Runs the smoke test in the Questa GUI
+make soak_test - Runs the full biquad tests over several hours, should return a
+                 100% functional coverage result.
+
+Both these simulations produce a Questa ucdb file containing the functional coverage information.
+
+

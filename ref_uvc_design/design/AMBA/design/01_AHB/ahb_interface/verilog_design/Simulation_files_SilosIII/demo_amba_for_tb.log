@@ -1,0 +1,154 @@
+Sse -s -f \"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\simulation_files_silosiii\demo_amba_for_tb.cfv\"
+
+
+
+                      S I L O S  Version 2001.106    
+
+       Copyright (c) 2001 by SIMUCAD Inc.   All rights reserved.
+       No part of this program may be reproduced,   transmitted,
+       transcribed,   or stored in a retrieval system,    in any
+       form or by any means without the prior written consent of
+
+         SIMUCAD Inc., 32970 Alvarado-Niles Road, Union City,   
+                     California, 94587, U.S.A.                  
+                (510)-487-9700  Fax: (510)-487-9721             
+          Electronic Mail Address:   "silos@simucad.com"   
+
+!file .sav="demo_amba_for_tb"
+!control .sav=3
+!control .enablecache
+!control .savcell=0
+!control .disk=1000M
+Reading "testbench.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahbdec.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahbarb.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahb_def.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahbmst.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahb_def.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahbslv.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahb_def.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\demo_amba_for_tb.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\macros.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahb_master.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahb_slave.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\appreq_sm.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\app_codec.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\xor32x2.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\busreq_sm.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\fifo128x32.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\r128a32_25um.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ram128x18_25um.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahb_def.v"
+Reading "\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\Simulation_files_SilosIII\ahb_stimuli.v"
+sim to 0
+	Highest level modules (that have been auto-instantiated):
+		t
+	0 total devices.
+	Linking ...
+
+	1142 nets total: 1150 saved and 0 monitored.
+	767 registers total: 767 saved.
+	Done.                 
+
+	0 State changes on observable nets.
+
+	Simulation stopped at the end of time 0.00ns.
+sim 6000.00ns
+
+	16768 State changes on observable nets.
+
+	Simulation stopped at the end of time 6000.00ns.
+scope "t.m "
+vprobe LED8[7:0]
+scope "t "
+vprobe hresetn
+scope "t "
+vprobe hclk
+vprobe --Testbench_Master_Signals
+vprobe ( --Testbench_Master_Signals )
+scope "t.ahbmst_inst "
+vprobe hbusreq_o
+scope "t.ahbmst_inst "
+vprobe hgrant_i
+scope "t.ahbmst_inst "
+vprobe haddr_o[31:0]
+scope "t.ahbmst_inst "
+vprobe htrans_o[1:0]
+scope "t.ahbmst_inst "
+vprobe hburst_o[2:0]
+scope "t.ahbmst_inst "
+vprobe hsize_o[2:0]
+scope "t.ahbmst_inst "
+vprobe hwrite_o
+scope "t.ahbmst_inst "
+vprobe hwdata_o[31:0]
+scope "t.ahbmst_inst "
+vprobe hresp_i[1:0]
+scope "t.ahbmst_inst "
+vprobe hrdata_i[31:0]
+vprobe --Testbench_Slave_Signals
+vprobe ( --Testbench_Slave_Signals )
+scope "t.ahbslv_inst "
+vprobe hsel_i
+scope "t.ahbslv_inst "
+vprobe haddr_i[31:0]
+scope "t.ahbslv_inst "
+vprobe htrans_i[1:0]
+scope "t.ahbslv_inst "
+vprobe hburst_i[2:0]
+scope "t.ahbslv_inst "
+vprobe hsize_i[2:0]
+scope "t.ahbslv_inst "
+vprobe hwrite_i
+scope "t.ahbslv_inst "
+vprobe hwdata_i[31:0]
+scope "t.ahbslv_inst "
+vprobe hresp_o[1:0]
+scope "t.ahbslv_inst "
+vprobe hready_o
+scope "t.ahbslv_inst "
+vprobe hrdata_o[31:0]
+vprobe --My_Design_Master_Signals
+vprobe ( --My_Design_Master_Signals )
+scope "t.m "
+vprobe ahbm_hbusreq
+scope "t.m "
+vprobe ahbm_hgrant
+scope "t.m "
+vprobe ahbm_haddr[31:0]
+scope "t.m "
+vprobe ahbm_htrans[1:0]
+scope "t.m "
+vprobe ahbm_hburst[2:0]
+scope "t.m "
+vprobe ahbm_hsize[2:0]
+scope "t.m "
+vprobe ahbm_hwrite
+scope "t.m "
+vprobe ahbm_hwdata[31:0]
+scope "t.m "
+vprobe ahbm_hresp[1:0]
+scope "t.m "
+vprobe ahbm_hrdata[31:0]
+vprobe --My_Design_Slave_Signals
+vprobe ( --My_Design_Slave_Signals )
+scope "t.m "
+vprobe ahbs_hsel
+scope "t.m "
+vprobe ahbs_haddr[31:0]
+scope "t.m "
+vprobe ahbs_htrans[1:0]
+scope "t.m "
+vprobe ahbs_hburst[2:0]
+scope "t.m "
+vprobe ahbs_hsize[2:0]
+scope "t.m "
+vprobe ahbs_hwrite
+scope "t.m "
+vprobe ahbs_hwdata[31:0]
+scope "t.m "
+vprobe ahbs_hresp[1:0]
+scope "t.m "
+vprobe ahbs_hready_out
+scope "t.m "
+vprobe ahbs_hrdata[31:0]

@@ -1,0 +1,17 @@
+// Simucad Generated Commands Start Here
+
+// Simucad define
++define+sse
+
+// Project Settings
++typdelays
+-"!file .sav=\"demo_amba_for_tb\""
+-"!control .sav=3"
+-"!control .enablecache"
+-l demo_amba_for_tb.log
+-"!control .savcell=0"
+-"!control .disk=1000M"
+
+// Input Files
+"testbench.v"
+

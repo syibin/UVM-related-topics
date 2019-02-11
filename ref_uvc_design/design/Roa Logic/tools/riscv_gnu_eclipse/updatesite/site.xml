@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Roa Logic RISC-V Eclipse Archives" url="https://www.github.com/RoaLogic/riscv_gnu_eclipse/tree/master/archive">
+      Roa Logic&apos;s Eclipse Plug-in for the RISC-V Gnu Toolchain
+   </description>
+   <feature url="features/com.riscv.cdt.feature_2017.01.0.qualifier.jar" id="com.riscv.cdt.feature" version="2017.01.0.qualifier">
+      <category name="com.riscv.cdt"/>
+   </feature>
+   <category-def name="com.riscv.cdt" label="RISC-V GNU Tools Support"/>
+</site>

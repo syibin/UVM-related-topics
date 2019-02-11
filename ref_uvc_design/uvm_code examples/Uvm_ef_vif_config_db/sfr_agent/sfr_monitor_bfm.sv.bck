@@ -1,0 +1,25 @@
+interface sfr_monitor_bfm(input clk, 
+                          input reset,
+                          input[7:0] address,
+                          input[7:0] write_data,
+                          input[7:0] read_data,
+                          input we,
+                          input re);
+
+  import sfr_agent_pkg::*;
+
+
+
+  task monitor(sfr_seq_item item);
+    @(posedge clk);
+    while(!((we == 1) || (re == 1))) begin
+      @(posedge clk);
+    end
+    item.we = we;
+    item.re = re;
+    item.address = address;
+    item.write_data = write_data;
+    item.read_data = read_data;
+  endtask: monitor
+
+endinterface: sfr_monitor_bfm

@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.cdt.core;bundle-version="5.0.2",
+ org.eclipse.cdt.managedbuilder.core,
+ org.eclipse.cdt.managedbuilder.gnu.ui;bundle-version="5.0.0",
+ org.eclipse.core.resources;bundle-version="3.4.0",
+ org.eclipse.core.runtime;bundle-version="3.4.0",
+ org.eclipse.jface,
+ org.eclipse.ui.console;bundle-version="3.3.0"
+Bundle-Vendor: RoaLogic BV
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: bin/
+Bundle-Version: 2017.01.0.qualifier
+Bundle-Name: RISC-V GNU Toolchain C/C++ Development Support
+Bundle-Activator: org.eclipse.cdt.cross.riscv.gnu.RISCVPlugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.cdt.cross.riscv.gnu;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.eclipse.cdt.managedbuilder.internal.envvar,
+ org.eclipse.core.variables,
+ org.eclipse.ui.statushandlers
+Export-Package: com.riscv.cdt.toolchain,
+ com.riscv.cdt.toolchain.riscv,
+ org.eclipse.cdt.cross.riscv.gnu.windows,
+ org.eclipse.cdt.cross.riscv.gnu,
+ org.eclipse.cdt.cross.riscv.gnu.common,
+ org.eclipse.cdt.cross.riscv.gnu.linux,
+ org.eclipse.cdt.cross.riscv.gnu.scannerconfig
+
+
+

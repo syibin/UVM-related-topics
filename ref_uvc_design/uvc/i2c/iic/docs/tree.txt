@@ -1,0 +1,150 @@
+iic
+|-- agents
+|   |-- iic_agent
+|   |   |-- bits
+|   |   |   |-- iicBit.svh
+|   |   |   |-- iicBitTimingF.sv
+|   |   |   |-- iicBitTimingH.sv
+|   |   |   |-- iicBitTimingS.sv
+|   |   |   |-- iicMasterRxBit.svh
+|   |   |   |-- iicMasterStartBit.svh
+|   |   |   |-- iicMasterStopBit.svh
+|   |   |   |-- iicMasterTxBit.svh
+|   |   |   |-- iicSlaveRxBit.svh
+|   |   |   |-- iicSlaveStartBit.svh
+|   |   |   |-- iicSlaveStopBit.svh
+|   |   |   `-- iicSlaveTxBit.svh
+|   |   |-- iicIf.sv
+|   |   |-- iic_agent.svh
+|   |   |-- iic_agent_config.svh
+|   |   |-- iic_agent_global_defs.svh
+|   |   |-- iic_agent_pkg.sv
+|   |   |-- iic_driver.svh
+|   |   |-- iic_driver_base.svh
+|   |   |-- iic_master_driver.svh
+|   |   |-- iic_seq_item.svh
+|   |   `-- iic_sequencer.svh
+|   `-- wb_agent
+|       |-- wb_agent.svh
+|       |-- wb_agent_config.svh
+|       |-- wb_agent_pkg.sv
+|       |-- wb_driver.svh
+|       |-- wb_if.sv
+|       |-- wb_seq_item.svh
+|       `-- wb_sequencer.svh
+|-- docs
+|   `-- HowTo.txt
+|-- iic_tb
+|   |-- env
+|   |   |-- iic_env.svh
+|   |   |-- iic_env_config.svh
+|   |   |-- iic_env_pkg.sv
+|   |   |-- iic_scoreboard.svh
+|   |   `-- iic_virtual_sequencer.svh
+|   |-- register_model
+|   |-- sequences
+|   |   |-- iicBaseVseq.svh
+|   |   |-- iicBitSeq.svh
+|   |   |-- iicDutTrafficBaseVseq.svh
+|   |   |-- iicFrameSeq.svh
+|   |   |-- iicIdleSeq.svh
+|   |   |-- iicMasterFrameSeq.svh
+|   |   |-- iicMasterRxBitSeq.svh
+|   |   |-- iicMasterRxByteSeq.svh
+|   |   |-- iicMasterRxFrameSeq.svh
+|   |   |-- iicMasterStartSeq.svh
+|   |   |-- iicMasterStopSeq.svh
+|   |   |-- iicMasterTxBitSeq.svh
+|   |   |-- iicMasterTxByteSeq.svh
+|   |   |-- iicMasterTxFrameSeq.svh
+|   |   |-- iicSlaveAddress.svh
+|   |   |-- iicSlaveRxBitSeq.svh
+|   |   |-- iicSlaveRxByteSeq.svh
+|   |   |-- iicSlaveRxFrameSeq.svh
+|   |   |-- iicSlaveStartSeq.svh
+|   |   |-- iicSlaveStopSeq.svh
+|   |   |-- iicSlaveTxBitSeq.svh
+|   |   |-- iicSlaveTxByteSeq.svh
+|   |   |-- iicSlaveTxFrameSeq.svh
+|   |   |-- iicTestBaseVseq.svh
+|   |   |-- iicTestVseq.svh
+|   |   |-- iicTrafficBaseVseq.svh
+|   |   |-- iicXtTrafficBaseVseq.svh
+|   |   |-- iic_seq_pkg.sv
+|   |   |-- iic_vseq_pkg.sv
+|   |   |-- wbFrameSeq.svh
+|   |   |-- wbMasterRxFrameSeq.svh
+|   |   |-- wbMasterTxFrameSeq.svh
+|   |   `-- wb_seq_pkg.sv
+|   |-- sim
+|   |   |-- cleanrundirs
+|   |   |-- compile
+|   |   |-- coverage
+|   |   |-- covhtmlreport
+|   |   |-- report.pl
+|   |   |-- run
+|   |   |-- run.do
+|   |   |-- run.log
+|   |   |-- run.pl
+|   |   |-- runNoWave.do
+|   |   |-- runWave.do
+|   |   |-- run_all.pl
+|   |   |-- run_arb.pl
+|   |   |-- run_dirs
+|   |   |-- viewWave
+|   |   |-- viewWave.do
+|   |   |-- wave.do
+|   |   `-- work
+|   |-- tb
+|   |   |-- global_defs_pkg.svh
+|   |   |-- iic_fcov_monitor.svh
+|   |   `-- iic_tb.sv
+|   `-- test
+|       |-- iicMasterRxRxArbTest
+|       |   |-- iicDutTraffic_MasterRxRxArb_Vseq.svh
+|       |   |-- iicMasterRxRxArbTest.svh
+|       |   |-- iicTest_MasterRxRxArb_Vseq.svh
+|       |   `-- iicXtTraffic_MasterRxRxArb_Vseq.svh
+|       |-- iicMasterRxRxSameAddressArbTest
+|       |   `-- iicMasterRxRxSameAddressArbTest.svh
+|       |-- iicMasterRxTest
+|       |   |-- iicDutTraffic_MasterRx_Vseq.svh
+|       |   |-- iicMasterRxTest.svh
+|       |   |-- iicTest_MasterRx_Vseq.svh
+|       |   `-- iicXtTraffic_MasterRx_Vseq.svh
+|       |-- iicMasterRxTxArbTest
+|       |   |-- iicDutTraffic_MasterRxTxArb_Vseq.svh
+|       |   |-- iicMasterRxTxArbTest.svh
+|       |   |-- iicTest_MasterRxTxArb_Vseq.svh
+|       |   `-- iicXtTraffic_MasterRxTxArb_Vseq.svh
+|       |-- iicMasterTxRxArbTest
+|       |   |-- iicDutTraffic_MasterTxRxArb_Vseq.svh
+|       |   |-- iicMasterTxRxArbTest.svh
+|       |   |-- iicTest_MasterTxRxArb_Vseq.svh
+|       |   `-- iicXtTraffic_MasterTxRxArb_Vseq.svh
+|       |-- iicMasterTxTest
+|       |   |-- iicDutTraffic_MasterTx_Vseq.svh
+|       |   |-- iicMasterTxTest.svh
+|       |   |-- iicTest_MasterTx_Vseq.svh
+|       |   `-- iicXtTraffic_MasterTx_Vseq.svh
+|       |-- iicMasterTxTxArbTest
+|       |   |-- iicDutTraffic_MasterTxTxArb_Vseq.svh
+|       |   |-- iicMasterTxTxArbTest.svh
+|       |   |-- iicTest_MasterTxTxArb_Vseq.svh
+|       |   `-- iicXtTraffic_MasterTxTxArb_Vseq.svh
+|       |-- iicMasterTxTxLongArbTest
+|       |   |-- iicDutTraffic_MasterTxTxLongArb_Vseq.svh
+|       |   |-- iicMasterTxFrameSeq_TxTxLongArb.svh
+|       |   |-- iicMasterTxTxLongArbTest.svh
+|       |   |-- iicTest_MasterTxTxLongArb_Vseq.svh
+|       |   |-- iicXtTraffic_MasterTxTxLongArb_Vseq.svh
+|       |   `-- wbMasterTxFrame_TxTxLongArb.svh
+|       |-- iicPcTest
+|       |   `-- iicPcTest.svh
+|       |-- iic_test_base.svh
+|       `-- iic_test_pkg.sv
+|-- rtl
+|   |-- i2c_master_bit_ctrl.v
+|   |-- i2c_master_byte_ctrl.v
+|   |-- i2c_master_defines.v
+|   `-- i2c_master_top.v

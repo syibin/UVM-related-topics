@@ -1,0 +1,35 @@
+\rm -rf work
+export PROJECT_DIR=/projects
+export TIMESCALE="-timescale 1ns/1ns"
+export IIC_AGENT_DIR=${PROJECT_DIR}/iic/agents/iic_agent  
+export WB_AGENT_DIR=${PROJECT_DIR}/iic/agents/wb_agent
+export IIC_SEQUENCES_DIR=${PROJECT_DIR}/iic/iic_tb/sequences
+export IIC_TB_DIR=${PROJECT_DIR}/iic/iic_tb/tb
+export IIC_TEST_DIR=${PROJECT_DIR}/iic/iic_tb/test
+export IIC_ENV_DIR=${PROJECT_DIR}/iic/iic_tb/env
+export IIC_RTL_DIR=${PROJECT_DIR}/iic/rtl
+export INC_DIRS="+incdir+${IIC_AGENT_DIR}+${IIC_AGENT_DIR}/bits+${IIC_AGENT_DIR}/bytes"
+export INC_DIRS=${INC_DIRS}"+"${WB_AGENT_DIR}
+export INC_DIRS=${INC_DIRS}"+${PROJECT_DIR}/iic/iic_tb/sequences"
+export INC_DIRS=${INC_DIRS}"+"${IIC_TEST_DIR}
+export INC_DIRS=${INC_DIRS}"+"${IIC_ENV_DIR}
+export INC_DIRS=${INC_DIRS}"+"${IIC_RTL_DIR}
+export INC_DIRS=${INC_DIRS}"+"${IIC_TB_DIR}
+vlib work
+vlog ${TIMESCALE} ${IIC_TB_DIR}/global_defs_pkg.svh
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_AGENT_DIR}/iic_agent_pkg.sv
+vlog ${TIMESCALE} ${INC_DIRS} ${WB_AGENT_DIR}/wb_agent_pkg.sv
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_SEQUENCES_DIR}/iic_seq_pkg.sv
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_SEQUENCES_DIR}/wb_seq_pkg.sv
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_SEQUENCES_DIR}/iic_vseq_pkg.sv
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_ENV_DIR}/iic_env_pkg.sv
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_TEST_DIR}/iic_test_pkg.sv
+
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_RTL_DIR}/*.v
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_TB_DIR}/iic_fcov_monitor.svh
+vlog ${TIMESCALE} ${INC_DIRS} ${IIC_TB_DIR}/iic_tb.sv
+
+vopt +cover=bcesxf10+/top/dut/ +acc top -o top_opt
+
+
+

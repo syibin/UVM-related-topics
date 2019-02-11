@@ -1,0 +1,67 @@
+//------------------------------------------------------------
+//   Copyright 2010 Mentor Graphics Corporation
+//   All Rights Reserved Worldwide
+//
+//   Licensed under the Apache License, Version 2.0 (the
+//   "License"); you may not use this file except in
+//   compliance with the License.  You may obtain a copy of
+//   the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in
+//   writing, software distributed under the License is
+//   distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+//   CONDITIONS OF ANY KIND, either express or implied.  See
+//   the License for the specific language governing
+//   permissions and limitations under the License.
+//------------------------------------------------------------
+
+//
+// Interface Description:
+//
+//
+interface apb_slave_driver_bfm (apb_if APB);
+  
+  import apb_slave_agent_pkg::*;
+
+//------------------------------------------
+// Data Members
+//------------------------------------------
+  int apb_index = 0;
+  
+//------------------------------------------
+// Methods
+//------------------------------------------
+  function void set_apb_index(int index);
+    apb_index = index;
+  endfunction : set_apb_index
+
+  task reset();
+    while (!APB.PRESETn) begin
+      APB.PREADY <= 1'b0;
+      APB.PSLVERR <= 1'b0;
+      @(posedge APB.PCLK);
+    end
+  endtask : reset
+
+  task setup_phase(apb_slave_setup_item req);
+    @(posedge APB.PCLK);
+    while (APB.PSEL[apb_index] != 1'b1) @(posedge APB.PCLK);
+    req.addr = APB.PADDR;
+    req.rw = APB.PWRITE;
+    if (req.rw) req.wdata = APB.PWDATA;
+  endtask : setup_phase
+
+  task access_phase(apb_slave_access_item rsp);
+    repeat (rsp.delay + 1) @(posedge APB.PCLK);
+    if ( ! rsp.rw) APB.PRDATA <= rsp.rdata;
+    APB.PREADY <= 1'b1;
+    APB.PSLVERR <= rsp.slv_err;
+    while (APB.PENABLE != 1'b1) @(posedge APB.PCLK);
+    @(posedge APB.PCLK);
+    APB.PREADY <= 1'b0;
+    APB.PSLVERR <= 1'b0;
+  endtask : access_phase
+
+endinterface: apb_slave_driver_bfm

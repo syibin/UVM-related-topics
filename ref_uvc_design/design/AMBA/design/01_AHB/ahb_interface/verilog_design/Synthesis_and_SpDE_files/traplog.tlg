@@ -1,0 +1,17 @@
+Synthesizing work.top.gen
+Synthesizing work.add.cell_level
+Synthesizing work.sum_gen.schematic
+@W:"syng0a01060":250:13:250:18|Unbound component LOGIC2 mapped to black box
+Synthesizing work.logic2.syn_black_box
+Post processing for work.logic2.syn_black_box
+Post processing for work.sum_gen.schematic
+Synthesizing work.sum0.schematic
+Post processing for work.sum0.schematic
+Synthesizing work.cary_gen.schematic
+Post processing for work.cary_gen.schematic
+Synthesizing work.carry0.schematic
+Post processing for work.carry0.schematic
+Synthesizing work.sum_c.schematic
+Post processing for work.sum_c.schematic
+Post processing for work.add.cell_level
+Post processing for work.top.gen

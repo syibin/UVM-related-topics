@@ -1,0 +1,111 @@
+10:00:16:0598 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 37153
+15:03:04:0947 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 35984
+15:03:56:0902 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 46210
+09:15:58:0532 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 34165
+09:23:21:0806 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 44493
+12:34:31:0353 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 43184
+17:22:18:0067 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 37837
+11:37:42:0196 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 41264
+11:40:13:0828 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 41762
+11:48:07:0700 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 44628
+11:52:47:0050 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45325
+11:55:25:0670 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40197
+11:56:15:0072 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 37342
+11:57:29:0109 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - Merge output directory ./cov_work/scope/merged_all already exists. Either specify a different name for the output directory, or use the -overwrite option to overwrite the existing output directory.	   
+11:58:11:0984 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 42230
+11:23:59:0029 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 39551
+14:50:18:0826 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40062
+14:55:48:0608 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 34698
+14:57:05:0966 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - Merge output directory ./cov_work/scope/merged_all already exists. Either specify a different name for the output directory, or use the -overwrite option to overwrite the existing output directory.	   
+14:58:48:0116 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 41223
+15:00:35:0716 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 44126
+15:04:16:0205 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45278
+15:05:48:0489 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 41758
+15:29:59:0736 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45068
+15:34:23:0669 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40590
+15:35:12:0406 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 38677
+15:37:53:0860 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 43358
+15:38:26:0053 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 37172
+12:25:24:0185 [com.cadence.system] [main] FATAL - imc: Affirma_sim_analysis_env 15.1 license checkout failed.
+ERROR (LMF-02004): License call failed for feature Affirma_sim_analysis_env, version 15.100 and quantity 1. The license server search path is defined as 5280@10.10.10.240:5280@10.10.10.240. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-4, 0, 0): Licensed number of users already reached.
+
+Run 'lic_error LMF-02004' for more information.
+
+12:25:50:0099 [com.cadence.system] [main] FATAL - imc: Affirma_sim_analysis_env 15.1 license checkout failed.
+ERROR (LMF-02004): License call failed for feature Affirma_sim_analysis_env, version 15.100 and quantity 1. The license server search path is defined as 5280@10.10.10.240:5280@10.10.10.240. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-4, 0, 0): Licensed number of users already reached.
+
+Run 'lic_error LMF-02004' for more information.
+
+12:27:08:0894 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 36254
+16:31:48:0122 [com.cadence.system] [main] FATAL - imc: Affirma_sim_analysis_env 15.1 license checkout failed.
+ERROR (LMF-02004): License call failed for feature Affirma_sim_analysis_env, version 15.100 and quantity 1. The license server search path is defined as 5280@10.10.10.240:5280@10.10.10.240. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-4, 0, 0): Licensed number of users already reached.
+
+Run 'lic_error LMF-02004' for more information.
+
+10:19:09:0731 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45618
+16:15:09:0071 [com.cadence.system] [main] FATAL - imc: Affirma_sim_analysis_env 15.1 license checkout failed.
+ERROR (LMF-10015): License call failed for feature Affirma_sim_analysis_env, version 15.100 and quantity 1. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-15, 234, 0): Cannot connect to license server system.
+
+Run 'lic_error LMF-10015' for more information.
+
+09:45:06:0857 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 32935
+09:46:25:0938 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33224
+09:51:54:0743 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 46142
+09:52:19:0358 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 46571
+09:54:52:0081 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 37297
+09:55:36:0104 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40199
+17:11:25:0697 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 39043
+17:12:12:0738 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 37273
+20:23:14:0406 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40284
+13:57:29:0355 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 34918
+14:01:14:0833 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 39356
+14:02:21:0468 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45943
+14:09:51:0346 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 42413
+14:13:16:0999 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40100
+14:14:05:0546 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33535
+15:25:34:0790 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 36264
+15:26:38:0587 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45572
+15:27:01:0688 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - invalid command name "gui_show".
+15:27:10:0454 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - invalid command name "gui".
+15:27:16:0583 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - invalid command name "show_gui".
+15:31:27:0545 [com.cadence.mdv.messaging.MDVASynchronicMessaging] [frontend-pool] ERROR - invalid command name "imc".
+15:32:02:0906 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45699
+10:50:57:0572 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 34873
+10:52:32:0673 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45075
+10:55:02:0863 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 45808
+11:04:18:0815 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 42755
+11:04:46:0544 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33804
+11:06:21:0438 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33490
+11:06:41:0286 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 34598
+11:09:38:0805 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40968
+11:11:35:0997 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 36854
+11:12:55:0917 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33480
+11:13:48:0764 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 44336
+09:13:04:0882 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33197
+17:28:59:0757 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 44707
+17:29:31:0253 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33714
+17:39:38:0696 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 35993
+17:40:04:0483 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 44377
+17:43:31:0187 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40207
+17:44:39:0869 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 41208
+12:01:57:0421 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 38697
+12:51:09:0924 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 46192
+16:12:06:0007 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 38003
+16:16:26:0123 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 43113
+16:17:01:0597 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 36949
+10:04:23:0579 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 36310
+11:16:42:0486 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 41342
+14:56:05:0774 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 37758
+14:56:49:0598 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 42329
+14:53:04:0564 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 33390
+15:03:40:0431 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 38140
+10:18:09:0463 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 34810
+12:39:40:0443 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 35424
+12:40:30:0317 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 39641
+12:40:50:0576 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 40371
+13:10:33:0466 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 36850
+13:11:37:0454 [com.cadence.mdv.imc.Main] [main] INFO  - Binding debug tools http on port: 46484

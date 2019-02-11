@@ -1,0 +1,13 @@
+#-- Synplicity, Inc.
+#-- Version 7.0.2   
+#-- Project file \\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\demo_amba.prd
+#-- Written on Fri Sep 13 17:06:34 2002
+
+#
+### Watch Implementation type ###
+#
+watch_impl -active
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

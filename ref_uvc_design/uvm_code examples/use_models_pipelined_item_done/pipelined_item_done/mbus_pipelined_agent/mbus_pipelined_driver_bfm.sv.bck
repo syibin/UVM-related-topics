@@ -1,0 +1,72 @@
+//
+//------------------------------------------------------------------------------
+//   Copyright 2010 Mentor Graphics Corporation
+//   All Rights Reserved Worldwide
+//
+//   Licensed under the Apache License, Version 2.0 (the
+//   "License"); you may not use this file except in
+//   compliance with the License.  You may obtain a copy of
+//   the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in
+//   writing, software distributed under the License is
+//   distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+//   CONDITIONS OF ANY KIND, either express or implied.  See
+//   the License for the specific language governing
+//   permissions and limitations under the License.
+//------------------------------------------------------------------------------
+//
+// This interface implements a pipelined driver
+//
+import mbus_types_pkg::*;
+
+interface mbus_pipelined_driver_bfm (input MCLK,
+                                     input MRESETN,
+                                     output logic[31:0] MADDR,
+                                     output logic[31:0] MWDATA,
+                                     output logic MREAD,
+                                     output mbus_opcode_e MOPCODE,
+                                     input MRDY,
+                                     input[31:0] MRDATA,
+                                     input mbus_resp_e MRESP);
+
+import mbus_pipelined_agent_pkg::*;
+
+task wait_for_reset();
+  @(posedge MRESETN);
+  @(posedge MCLK);
+endtask
+
+task do_command_phase(mbus_seq_item req);
+  MADDR <= req.MADDR;
+  MREAD <= req.MREAD;
+  MOPCODE <= req.MOPCODE;
+  @(posedge MCLK);
+  while (!MRDY == 1) begin
+    @(posedge MCLK);
+  end
+endtask: do_command_phase
+
+task do_data_phase(mbus_seq_item req);
+    @(posedge MCLK);
+    if (req.MREAD == 1) begin
+      @(posedge MCLK);
+      while (MRDY != 1) begin
+        @(posedge MCLK);
+      end
+      req.MRESP = MRESP;
+      req.MRDATA = MRDATA;
+    end
+    else begin
+      MWDATA <= req.MWDATA;
+      @(posedge MCLK);
+      while (MRDY != 1) begin
+        @(posedge MCLK);
+      end
+      req.MRESP = MRESP;
+    end
+endtask: do_data_phase
+
+endinterface: mbus_pipelined_driver_bfm

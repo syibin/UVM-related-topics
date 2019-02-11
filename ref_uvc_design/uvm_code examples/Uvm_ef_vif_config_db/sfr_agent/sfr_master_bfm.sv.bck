@@ -1,0 +1,39 @@
+interface sfr_master_bfm(input clk, input reset);
+
+  import sfr_agent_pkg::*;
+
+  logic[7:0] address;
+  logic[7:0] write_data;
+  logic[7:0] read_data;
+  logic we;
+  logic re;
+
+  always @(reset or posedge clk) begin
+    if(reset == 1) begin
+      re <= 0;
+      we <= 0;
+      address <= 0;
+      write_data <= 0;
+    end
+  end
+
+  task execute(sfr_seq_item item);
+    if(reset == 1) begin
+      wait(reset == 0);
+    end
+    else begin
+      @(posedge clk);
+      address = item.address;
+      we <= item.we;
+      write_data <= item.write_data;
+      re <= item.re;
+      @(posedge clk);
+      if(re == 1) begin
+        item.read_data = read_data;
+        re <= 0;
+      end
+      we <= 0;
+    end
+  endtask: execute
+
+endinterface: sfr_master_bfm

@@ -1,0 +1,1 @@
+vsim +UVM_TESTNAME=iicMasterTxTest $1 -cvg63 -coverage -debugDB  +UVM_VERBOSITY=UVM_FULL  -sv_seed 4 -do run.do top_opt 

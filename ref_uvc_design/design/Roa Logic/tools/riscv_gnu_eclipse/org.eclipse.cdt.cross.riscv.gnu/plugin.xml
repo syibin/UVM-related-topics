@@ -1,0 +1,2720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.0"?>
+<plugin>
+    <!---->
+    <!--#################################################################################-->
+    <!--* This program and the accompanying materials                                    -->
+    <!--* are made available under the terms of the Common Public License v1.0           -->
+    <!--* which accompanies this distribution, and is available at                       -->
+    <!--* http://www.eclipse.org/legal/cpl-v10.html                                      -->
+    <!--*                                                                                -->
+    <!--* Contributors:                                                                  -->
+    <!--*     RoaLogic BV - RISC-V GNU Toolchain support                                 -->
+    <!--#################################################################################-->
+    <!---->
+   <extension
+         id="RISCV_GCC_ContentTypes"
+         name="Content Types"
+         point="org.eclipse.core.runtime.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.text"
+            file-extensions="hex"
+            id="org.eclipse.cdt.cross.riscv.gnu.content-type.hex"
+            name="FLASH Hex file"
+            priority="normal">
+      </content-type>
+      <file-association
+            content-type="org.eclipse.cdt.core.asmSource"
+            file-extensions="s,S,asm">
+      </file-association>
+   </extension>
+   <extension
+         id="RISCV_GCC_BuildProperties"
+         name="Build Properties"
+         point="org.eclipse.cdt.managedbuilder.core.buildProperties">
+      <propertyValue
+            id="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application"
+            name="RISC-V Embedded Application"
+            property="org.eclipse.cdt.build.core.buildArtefactType">
+      </propertyValue>
+      <propertyValue
+            id="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.staticLib"
+            name="RISC-V Embedded Static Library"
+            property="org.eclipse.cdt.build.core.buildArtefactType">
+      </propertyValue>
+      <propertyValue
+            id="org.eclipse.cdt.cross.riscv.gnu.rv11.buildArtefactType.application"
+            name="RV11 Projects"
+            property="org.eclipse.cdt.build.core.buildArtefactType">
+      </propertyValue>
+   </extension>
+   
+ 
+    <extension
+         id="RISCV_GCC_BuildDefinitions"
+         name="Managed Build Definitions"
+         point="org.eclipse.cdt.managedbuilder.core.buildDefinitions">
+      <managedBuildRevision
+            fileVersion="4.0.0">
+      </managedBuildRevision>
+      <tool
+            id="org.eclipse.cdt.cross.riscv.gnu.base"
+            isAbstract="true"
+            name="Options Placeholder">
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level"
+               name="Optimization Level"
+               valueType="enumerated">
+            <enablement
+                  attribute="value"
+                  extensionAdjustment="false"
+                  type="CONTAINER_ATTRIBUTE"
+                  value="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level.size">
+               <checkBuildProperty
+                     property="org.eclipse.cdt.build.core.buildType"
+                     value="org.eclipse.cdt.build.core.buildType.release">
+               </checkBuildProperty>
+            </enablement>
+            <enablement
+                  attribute="value"
+                  extensionAdjustment="false"
+                  type="CONTAINER_ATTRIBUTE"
+                  value="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level.none">
+               <checkBuildProperty
+                     property="org.eclipse.cdt.build.core.buildType"
+                     value="org.eclipse.cdt.build.core.buildType.debug">
+               </checkBuildProperty>
+            </enablement>
+            <enumeratedOptionValue
+                  command="-O0"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level.none"
+                  name="None (-O0)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O1"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level.O1"
+                  name="Optimize (-O1)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O2"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level.O2"
+                  isDefault="true"
+                  name="Optimize more (-O2)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O3"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level.O3"
+                  name="Optimize most (-O3)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-Os"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level.size"
+                  name="Optimize size (-Os)">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level"
+               name="Debug Level"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level.none"
+                  isDefault="false"
+                  name="None">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-g1"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level.minimal"
+                  name="Minimal (-g1)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-g"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level.default"
+                  isDefault="true"
+                  name="Default (-g)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-g3"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level.max"
+                  isDefault="false"
+                  name="Maximum (-g3)">
+            </enumeratedOptionValue>
+            <enablement
+                  attribute="value"
+                  extensionAdjustment="false"
+                  type="CONTAINER_ATTRIBUTE"
+                  value="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level.none">
+               <checkBuildProperty
+                     property="org.eclipse.cdt.build.core.buildType"
+                     value="org.eclipse.cdt.build.core.buildType.release">
+               </checkBuildProperty>
+            </enablement>
+            <enablement
+                  attribute="value"
+                  extensionAdjustment="false"
+                  type="CONTAINER_ATTRIBUTE"
+                  value="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level.max">
+               <checkBuildProperty
+                     property="org.eclipse.cdt.build.core.buildType"
+                     value="org.eclipse.cdt.build.core.buildType.debug">
+               </checkBuildProperty>
+            </enablement>
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.processor"
+               name="Target"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.processor.m64"
+                  isDefault="true"
+                  name="RV64">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.processor.m32"
+                  isDefault="true"
+                  name="RV32">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi"
+               name="ABI (-mabi)"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-mabi=ilp32"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi.ilp32"
+                  isDefault="true"
+                  name="ilp32">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-mabi=ilp32f"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi.ilp32f"
+                  name="ilp32f">
+            </enumeratedOptionValue>
+             <enumeratedOptionValue
+                  command="-mabi=ilp32d"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi.ilp32d"
+                  name="ilp32d">
+            </enumeratedOptionValue>        
+            <enumeratedOptionValue
+                  command="-mabi=lp64"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi.lp64"
+                  name="lp64">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-mabi=lp64f"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi.lp64f"
+                  name="lp64f">
+            </enumeratedOptionValue>
+             <enumeratedOptionValue
+                  command="-mabi=lp64d"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi.lp64d"
+                  name="lp64d">
+            </enumeratedOptionValue>   
+         </option>       
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rva"
+               name="Atomic"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvc"
+               name="Compressed"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rve"
+               name="Embedded"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvm"
+               name="Multiply/Divide"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvf"
+               name="Single Precision Floating Point"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvd"
+               name="Dual Precision Floating Point"
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvq"
+               name="Quad Precision Floating Point"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               command="-mbranch-cost="
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.branch_cost"
+               name="Branch cost"
+               valueType="string">
+         </option>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.code_model"
+               name="Code model"
+               valueType="enumerated">
+            <enumeratedOptionValue
+               command=""
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.code_model.none"
+               name="Default">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+               command="-mcmodel=medany"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.code_model.medany"
+               name="Any (-mcmodel=medany)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+               command="-mcmodel=medlow"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.code_model.medlow"
+               name="Low (-mcmodel=medlow)">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               command="-mfdiv"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.fdiv"
+               name="Use hardware floating point DIV/SQRT (-mfdiv)"
+               valueType="boolean">               
+         </option>
+         <option
+               command="-mdiv"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.div"
+               name="Use hardware integer division (-mdiv)"
+               valueType="boolean">               
+         </option>
+         <option
+               command="-mmemcpy"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.memcpy"
+               name="Don't optimize block moves (-mmemcpy)"
+               valueType="boolean">               
+         </option>
+         <option
+               command="-fpic"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.pic"
+               name="Generate Placement Independent Code (-fpic)"
+               valueType="boolean">               
+         </option>
+         <option
+               command="-mplt"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.plt"
+               name="Use PLTs when -fpic (-mplt)"
+               valueType="boolean">               
+         </option>
+         <option
+               command="-msave-restore"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.saverestore"
+               name="Use smaller pro-/epilogue (-msave-restore)"
+               valueType="boolean">               
+         </option>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format"
+               name="Debug Format"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-gdwarf-2"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format.dwarf2"
+                  name="dwarf-2">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-gdwarf-4"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format.dwarf4"
+                  name="dwarf-4">
+            </enumeratedOptionValue>            
+            <enumeratedOptionValue
+                  command="-gstabs"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format.stabs"
+                  name="stabs">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-gstabs+"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format.stabsplus"
+                  name="stabs+">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-ggdb"
+                  id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format.gdb"
+                  name="gdb">
+            </enumeratedOptionValue>
+            <enablement
+                  attribute="value"
+                  extensionAdjustment="false"
+                  type="CONTAINER_ATTRIBUTE"
+                  value="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format.default">
+               <checkBuildProperty
+                     property="org.eclipse.cdt.build.core.buildType"
+                     value="org.eclipse.cdt.build.core.buildType.release">
+               </checkBuildProperty>
+            </enablement>
+            <enablement
+                  attribute="value"
+                  extensionAdjustment="false"
+                  type="CONTAINER_ATTRIBUTE"
+                  value="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format.dwarf2">
+               <checkBuildProperty
+                     property="org.eclipse.cdt.build.core.buildType"
+                     value="org.eclipse.cdt.build.core.buildType.debug">
+               </checkBuildProperty>
+            </enablement>
+         </option>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.addtools.createlisting"
+               name="Generate code listing"
+               value="true"
+               valueHandler="org.eclipse.cdt.cross.riscv.gnu.RISCVAdditionalToolsManagedOptionValueHandler"
+               valueType="boolean">
+            <supportedProperties>
+               <property
+                     id="org.eclipse.cdt.build.core.buildType">
+                  <value
+                        id="org.eclipse.cdt.build.core.buildType.debug">
+                  </value>
+                  <value
+                        id="org.eclipse.cdt.build.core.buildType.release">
+                  </value>
+               </property>
+            </supportedProperties>
+         </option>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.addtools.printsize"
+               name="Print code size information"
+               value="true"
+               valueHandler="org.eclipse.cdt.cross.riscv.gnu.RISCVAdditionalToolsManagedOptionValueHandler"
+               valueType="boolean">
+            <supportedProperties>
+               <property
+                     id="org.eclipse.cdt.build.core.buildType">
+                  <value
+                        id="org.eclipse.cdt.build.core.buildType.debug">
+                  </value>
+                  <value
+                        id="org.eclipse.cdt.build.core.buildType.release">
+                  </value>
+               </property>
+            </supportedProperties>
+         </option>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.addtools.createflash"
+               name="Generate flash/programmer file"
+               value="true"
+               valueHandler="org.eclipse.cdt.cross.riscv.gnu.RISCVAdditionalToolsManagedOptionValueHandler"
+               valueType="boolean">
+            <supportedProperties>
+               <property
+                     id="org.eclipse.cdt.build.core.buildType">
+                  <value
+                        id="org.eclipse.cdt.build.core.buildType.debug">
+                  </value>
+                  <value
+                        id="org.eclipse.cdt.build.core.buildType.release">
+                  </value>
+               </property>
+            </supportedProperties>
+         </option>
+         <option
+               command="-p"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.prof"
+               name="Generate prof information (-p)"
+               valueType="boolean">
+         </option>
+         <option
+               command="-pg"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.gprof"
+               name="Generate gprof information (-pg)"
+               valueType="boolean">
+         </option>
+         <option
+               command="-Wl,--cref"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.other.cref"
+               name="Cross Reference (-Wl,--cref)"
+               valueType="boolean">
+         </option>
+         <option
+               command="-Wl,--print-map"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.other.printmap"
+               name="Print link map (-Wl,--print-map)"
+               valueType="boolean">
+         </option>
+         <option
+               command="-Wl,-Map,"
+               defaultValue="${BuildArtifactFileBaseName}.map"
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.other.mapfilename"
+               name="Map Filename"
+               valueType="string">
+         </option>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.other"
+               name="Other debugging flags"
+               valueType="string">
+         </option>
+      </tool>
+      
+      
+      <builder
+            command="make"
+            id="org.eclipse.cdt.cross.riscv.gnu.builder"
+            isAbstract="false"
+            isVariableCaseSensitive="false"
+            superClass="cdt.managedbuild.target.gnu.builder">
+      </builder>
+      <tool
+            command="riscv64-unknown-elf-gcc"
+            commandLineGenerator="org.eclipse.cdt.cross.riscv.gnu.RISCVManagedCommandLineGenerator"
+            errorParsers="org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser"
+            id="org.eclipse.cdt.cross.riscv.gnu.assembler"
+            isAbstract="false"
+            name="RISC-V GCC/NewLib Assembler"
+            natureFilter="both"
+            outputFlag="-o">
+         <supportedProperties>
+            <property
+                  id="org.eclipse.cdt.build.core.buildType">
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.debug">
+               </value>
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.release">
+               </value>
+            </property>
+         </supportedProperties>
+         <envVarBuildPath
+               pathType="buildpathInclude"
+               variableList="CPATH,C_INCLUDE_PATH">
+         </envVarBuildPath>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.category.preprocessor"
+               name="Preprocessor"
+               owner="org.eclipse.cdt.cross.riscv.gnu.assembler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.preprocessor"
+               command="-x assembler-with-cpp"
+               commandFalse="-x assembler"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.usecpp"
+               name="Use preprocessor"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.preprocessor"
+               command="-nostdinc"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.preprocessor.nostdinc"
+               name="Do not search system directories (-nostdinc)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.preprocessor"
+               command="-E"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.preprocessor.preprocess"
+               name="Preprocess only (-E)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.preprocessor"
+               command="-D"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.preprocessor.def"
+               name="Defined symbols (-D)"
+               valueType="definedSymbols">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.preprocessor"
+               command="-U"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.preprocessor.undef"
+               name="Undefined symbols (-U)"
+               valueType="undefDefinedSymbols">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.category.dirs"
+               name="Directories"
+               owner="org.eclipse.cdt.cross.riscv.gnu.assembler">
+         </optionCategory>
+         <option
+               browseType="directory"
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.dirs"
+               command="-I"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.include.paths"
+               name="Include paths (-I)"
+               valueType="includePath">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.category.warnings"
+               name="Warnings"
+               owner="org.eclipse.cdt.cross.riscv.gnu.assembler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.warnings"
+               command="-pedantic"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.warnings.pedantic"
+               name="Pedantic (-pedantic)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.warnings"
+               command="-pedantic-errors"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.warnings.pedantic.error"
+               name="Pedantic warnings as errors (-pedantic-errors)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.warnings"
+               command="-w"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.warnings.nowarn"
+               name="Inhibit all warnings (-w)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.warnings"
+               command="-Wall"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.warnings.allwarn"
+               name="All warnings (-Wall)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.warnings"
+               command="-Wextra"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.warnings.extrawarn"
+               name="Extra warnings (-Wextra)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.warnings"
+               command="-Werror"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.warnings.toerrors"
+               name="Warnings as errors (-Werror)"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.category.other"
+               name="Miscellaneous"
+               owner="org.eclipse.cdt.cross.riscv.gnu.assembler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.other"
+               command="-Xassembler ${VALUE}"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.xflags"
+               name="Assembler flags"
+               valueType="stringList">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.other"
+               command="-ansi"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.misc.ansi"
+               name="Support ANSI programs (-ansi)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.other"
+               command="-v"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.other.verbose"
+               name="Verbose (-v)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.assembler.category.other"
+               defaultValue="-c"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.option.other.other"
+               name="Other flags"
+               valueType="string">
+         </option>
+         <inputType
+               dependencyCalculator="org.eclipse.cdt.managedbuilder.makegen.gnu.DefaultGCCDependencyCalculator2"
+               dependencyContentType="org.eclipse.cdt.core.cHeader"
+               dependencyExtensions="h"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.input"
+               languageId="org.eclipse.cdt.core.assembly"
+               sourceContentType="org.eclipse.cdt.core.asmSource"
+               sources="s,S,asm"
+               superClass="cdt.managedbuild.tool.gnu.assembler.input">
+         </inputType>
+         <outputType
+               buildVariable="OBJS"
+               id="org.eclipse.cdt.cross.riscv.gnu.assembler.output"
+               outputs="o"
+               superClass="cdt.managedbuild.tool.gnu.assembler.output">
+         </outputType>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-gcc"
+            commandLineGenerator="org.eclipse.cdt.cross.riscv.gnu.RISCVManagedCommandLineGenerator"
+            errorParsers="org.eclipse.cdt.core.GCCErrorParser"
+            id="org.eclipse.cdt.cross.riscv.gnu.c.compiler"
+            isAbstract="false"
+            name="RISC-V GCC/Newlib C Compiler"
+            natureFilter="cnature"
+            outputFlag="-o">
+         <supportedProperties>
+            <property
+                  id="org.eclipse.cdt.build.core.buildType">
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.debug">
+               </value>
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.release">
+               </value>
+            </property>
+         </supportedProperties>
+         <envVarBuildPath
+               pathType="buildpathInclude"
+               variableList="CPATH,C_INCLUDE_PATH">
+         </envVarBuildPath>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.preprocessor"
+               name="Preprocessor"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.preprocessor"
+               command="-nostdinc"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.preprocessor.nostdinc"
+               name="Do not search system directories (-nostdinc)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.preprocessor"
+               command="-E"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.preprocessor.preprocess"
+               name="Preprocess only (-E)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.preprocessor"
+               command="-D"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.preprocessor.def"
+               name="Defined symbols (-D)"
+               valueType="definedSymbols">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.preprocessor"
+               command="-U"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.preprocessor.undef"
+               name="Undefined symbols (-U)"
+               valueType="undefDefinedSymbols">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.dirs"
+               name="Directories"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.compiler">
+         </optionCategory>
+         <option
+               browseType="directory"
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.dirs"
+               command="-I"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.include.paths"
+               name="Include paths (-I)"
+               valueType="includePath">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               name="Optimization"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.level"
+               name="Optimization level"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.fdiv"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.fdiv">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.div"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.div">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.memcpy"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.memcpy">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.pic"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.pic">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.plt"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.plt">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.saverestore"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.saverestore">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               command="-fpack-struct"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.packstruct"
+               name="Pack structures (-fpack-struct)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               command="-fshort-enums"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.shortenums"
+               name="Short enumerations (-fshort-enums)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               command="-ffunction-sections"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.functionsections"
+               name="Function sections (-ffunction-sections)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               command="-fdata-sections"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.datasections"
+               name="Data sections (-fdata-sections)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.optimization.flags"
+               name="Other optimization flags"
+               valueType="string">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               name="Warnings"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               command="-fno-common"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.warnings.nocommon"
+               name="No common (-fno-common)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               command="-pedantic"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.warnings.pedantic"
+               name="Pedantic (-pedantic)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               command="-pedantic-errors"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.warnings.pedantic.error"
+               name="Pedantic warnings as errors (-pedantic-errors)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               command="-w"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.warnings.nowarn"
+               name="Inhibit all warnings (-w)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               command="-Wall"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.warnings.allwarn"
+               name="All warnings (-Wall)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               command="-Wextra"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.warnings.extrawarn"
+               name="Extra warnings (-Wextra)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.warnings"
+               command="-Werror"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.warnings.toerrors"
+               name="Warnings as errors (-Werror)"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               name="Miscellaneous"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.std"
+               name="Language Standard"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-ansi"
+                  id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.std.ansi"
+                  name="ISO C90 (-ansi)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-std=c99"
+                  id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.std.c99"
+                  name="ISO C99 (-std=c99)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.std.default"
+                  isDefault="true"
+                  name="Compiler Default (ISO C90 with GNU extensions)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-std=gnu99"
+                  id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.std.gnu99"
+                  name="ISO C99 with GNU Extensions (-std=gnu99)">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.branch_cost"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.branch_cost">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.code_model"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.code_model">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               command="-fno-inline-functions"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.noinlinefunctions"
+               name="Do not inline functions (-fno-inline-functions)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               command="-fsigned-char"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.signedchar"
+               name="&apos;char&apos; is signed (-fsigned-char)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               command="-funsigned-bitfields"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.misc.unsignedbitfields"
+               name="Bitfields are unsigned (-funsigned-bitfields)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               command="-v"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.other.verbose"
+               name="Verbose (-v)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.compiler.category.other"
+               defaultValue="-c"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.option.other.otherflags"
+               name="Other flags"
+               valueType="string">
+         </option>
+         <inputType
+               dependencyCalculator="org.eclipse.cdt.managedbuilder.makegen.gnu.DefaultGCCDependencyCalculator2"
+               dependencyContentType="org.eclipse.cdt.core.cHeader"
+               dependencyExtensions="h"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.input"
+               languageId="org.eclipse.cdt.core.gcc"
+               sourceContentType="org.eclipse.cdt.core.cSource"
+               sources="c"
+               superClass="cdt.managedbuild.tool.gnu.c.compiler.input">
+         </inputType>
+         <outputType
+               buildVariable="OBJS"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.compiler.output"
+               outputs="o"
+               superClass="cdt.managedbuild.tool.gnu.c.compiler.output">
+         </outputType>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-g++"
+            commandLineGenerator="org.eclipse.cdt.cross.riscv.gnu.RISCVManagedCommandLineGenerator"
+            errorParsers="org.eclipse.cdt.core.GCCErrorParser"
+            id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler"
+            isAbstract="false"
+            name="RISC-V GCC/Newlib C++ Compiler"
+            natureFilter="ccnature"
+            outputFlag="-o">
+         <supportedProperties>
+            <property
+                  id="org.eclipse.cdt.build.core.buildType">
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.debug">
+               </value>
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.release">
+               </value>
+            </property>
+         </supportedProperties>
+         <envVarBuildPath
+               pathType="buildpathInclude"
+               variableList="CPATH,CPLUS_INCLUDE_PATH">
+         </envVarBuildPath>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.preprocessor"
+               name="Preprocessor"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.preprocessor"
+               command="-nostdinc"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.preprocessor.nostdinc"
+               name="Do not search system directories (-nostdinc)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.preprocessor"
+               command="-nostdinc++"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.preprocessor.nostdincpp"
+               name="Do not search system C++ directories (-nostdinc++)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.preprocessor"
+               command="-E"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.preprocessor.preprocess"
+               name="Preprocess only (-E)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.preprocessor"
+               command="-D"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.preprocessor.def"
+               name="Defined symbols (-D)"
+               valueType="definedSymbols">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.preprocessor"
+               command="-U"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.preprocessor.undef"
+               name="Undefined symbols (-U)"
+               valueType="undefDefinedSymbols">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.dirs"
+               name="Directories"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler">
+         </optionCategory>
+         <option
+               browseType="directory"
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.dirs"
+               command="-I"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.include.paths"
+               name="Include paths (-I)"
+               valueType="includePath">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               name="Optimization"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.level"
+               name="Optimization level"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.optimization.level">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.fdiv"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.fdiv">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.div"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.div">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.memcpy"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.memcpy">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.pic"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.pic">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.plt"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.plt">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.saverestore"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.saverestore">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               command="-fpack-struct"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.packstruct"
+               name="Pack structures (-fpack-struct)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               command="-fshort-enums"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.shortenums"
+               name="Short enumerations (-fshort-enums)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               command="-ffunction-sections"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.functionsections"
+               name="Function sections (-ffunction-sections)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               command="-fdata-sections"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.datasections"
+               name="Data sections (-fdata-sections)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.optimization"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.optimization.flags"
+               name="Other optimization flags"
+               valueType="string">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               name="Warnings"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-fno-common"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.nocommon"
+               name="No common (-fno-common)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-pedantic"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.pedantic"
+               name="Pedantic (-pedantic)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-pedantic-errors"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.pedantic.error"
+               name="Pedantic warnings as errors (-pedantic-errors)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-w"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.nowarn"
+               name="Inhibit all warnings (-w)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-Wall"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.allwarn"
+               name="All warnings (-Wall)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-Wextra"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.extrawarn"
+               name="Extra warnings (-Wextra)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-Wabi"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.abi"
+               name="ABI warnings (-Wabi)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-Weffc++"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.effc"
+               name="Effective C++ warnings (-Weffc++)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.warnings"
+               command="-Werror"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.warnings.toerrors"
+               name="Warnings as errors (-Werror)"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               name="Miscellaneous"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std"
+               name="Language Standard"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-ansi"
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.ansi"
+                  name="ISO 1998 C++ incl. amendments (-ansi)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.default"
+                  isDefault="true"
+                  name="Compiler Default (ISO 1998 C++ with GNU extensions)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-std=c++0x"
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.cpp0x"
+                  name="ISO 2009 C++ (-std=c++0x)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-std=gnu++0x"
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.gnucpp0x"
+                  name="ISO 2009 C++ with GNU Extensions (-std=gnu++0x)">
+            </enumeratedOptionValue>
+                        <enumeratedOptionValue
+                  command="-std=c++0x"
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.cpp11"
+                  name="ISO 2011 C++ (-std=c++11)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-std=gnu++11"
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.gnucpp11"
+                  name="ISO 2011 C++ with GNU Extensions (-std=gnu++11)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-std=c++14"
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.cpp14"
+                  name="ISO 2014 C++ (-std=c++14)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-std=gnu++14"
+                  id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.std.gnucpp14"
+                  name="ISO 2014 C++ with GNU Extensions (-std=gnu++14)">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.branch_cost"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.branch_cost">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.misc.code_model"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.code_model">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               command="-fno-inline-functions"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.noinlinefunctions"
+               name="Do not inline functions (-fno-inline-functions)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               command="-fno-exceptions"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.noexceptions"
+               name="Do not use exceptions (-fno-exceptions)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               command="-fno-rtti"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.nortti"
+               name="Do not use RTTI (-fno-rtti)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               command="-fsigned-char"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.signedchar"
+               name="&apos;char&apos; is signed (-fsigned-char)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               command="-funsigned-bitfields"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.misc.unsignedbitfields"
+               name="Bitfields are unsigned (-funsigned-bitfields)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               command="-v"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.other.verbose"
+               name="Verbose (-v)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.category.other"
+               defaultValue="-c"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.option.other.otherflags"
+               name="Other flags"
+               valueType="string">
+         </option>
+         <inputType
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.input"
+               superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input">
+         </inputType>
+         <outputType
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.output"
+               superClass="cdt.managedbuild.tool.gnu.cpp.compiler.output">
+         </outputType>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-gcc"
+            commandLineGenerator="org.eclipse.cdt.cross.riscv.gnu.RISCVManagedCommandLineGenerator"
+            errorParsers="org.eclipse.cdt.core.GLDErrorParser"
+            id="org.eclipse.cdt.cross.riscv.gnu.c.linker"
+            isAbstract="false"
+            name="RISC-VC GCC/Newlib C Linker"
+            natureFilter="cnature"
+            outputFlag="-o">
+         <envVarBuildPath
+               pathType="buildpathLibrary"
+               variableList="LIBRARY_PATH">
+         </envVarBuildPath>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               name="General"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.linker">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               browseType="file"
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               command="-T&quot;${VALUE}&quot;"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.scriptfile"
+               isAbstract="false"
+               name="Script file (-T)"
+               resourceFilter="all"
+               valueType="string">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               command="-nostartfiles"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.nostart"
+               name="Do not use standard start files (-nostartfiles)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               command="-nodefaultlibs"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.nodeflibs"
+               name="Do not use default libraries (-nodefaultlibs)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               tip="Only search library directories explicitly specified"
+               command="-nostdlib"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.nostdlibs"
+               name="No startup or default libs (-nostdlib)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               command="-Wl,--gc-sections"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.csections"
+               name="Remove unused sections (-gc-sections)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               command="-Wl,--print-gc-sections"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.printcsections"
+               name="Print unused sections (-print-gc-sections)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.general"
+               command="-s"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.strip"
+               name="Omit all symbol information (-s)"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.category.libs"
+               name="Libraries"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.linker">
+         </optionCategory>
+         <option
+               browseType="none"
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.libs"
+               command="-l"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.libs"
+               name="Libraries (-l)"
+               valueType="libs">
+<!--               <listOptionValue value="c" />
+               <listOptionValue value="gcc" /> -->
+         </option>
+         <option
+               browseType="directory"
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.libs"
+               command="-L"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.paths"
+               name="Library search path (-L)"
+               valueType="libPaths">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               name="Miscellaneous"
+               owner="org.eclipse.cdt.cross.riscv.gnu.c.linker">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               command="-Wl,${VALUE}"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.ldflags"
+               name="Linker flags (-Wl,[option])"
+               valueType="stringList">
+         </option>
+         <option
+               browseType="file"
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.otherobjs"
+               name="Other objects"
+               valueType="userObjs">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.mapfilename"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.other.mapfilename">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.other.cref"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.other.cref">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.other.printmap"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.other.printmap">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               command="--verbose"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.linker.option.other.verbose"
+               name="Verbose (--verbose)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.c.link.category.other"
+               defaultValue=""
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.otherflags"
+               name="Other flags"
+               valueType="string">
+         </option>
+         <inputType
+               buildVariable="OBJS"
+               dependencyCalculator="org.eclipse.cdt.managedbuilder.makegen.internal.DefaultNoDependencyCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.linker.input"
+               multipleOfType="true"
+               sourceContentType="org.eclipse.cdt.managedbuilder.core.compiledObjectFile"
+               sources="o">
+            <additionalInput
+                  kind="additionalinputdependency"
+                  paths="$(USER_OBJS)">
+            </additionalInput>
+            <additionalInput
+                  kind="additionalinput"
+                  paths="$(LIBS)">
+            </additionalInput>
+         </inputType>
+         <outputType
+               buildVariable="EXECUTABLES"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.linker.output"
+               nameProvider="org.eclipse.cdt.managedbuilder.makegen.gnu.GnuLinkOutputNameProvider">
+         </outputType>
+         <option
+               applicabilityCalculator="org.eclipse.cdt.managedbuilder.gnu.ui.GprofAppCalculator"
+               command="-pg"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.debugging.gprof"
+               name="Generate gprof information (-pg)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="org.eclipse.cdt.managedbuilder.gnu.ui.ProfAppCalculator"
+               command="-p"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.c.link.option.debugging.prof"
+               name="Generate prof information (-p)"
+               valueType="boolean">
+         </option>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-g++"
+            commandLineGenerator="org.eclipse.cdt.cross.riscv.gnu.RISCVManagedCommandLineGenerator"
+            errorParsers="org.eclipse.cdt.core.GLDErrorParser"
+            id="org.eclipse.cdt.cross.riscv.gnu.cpp.linker"
+            isAbstract="false"
+            name="RISC-V ELF GCC C++ Linker"
+            natureFilter="ccnature"
+            outputFlag="-o">
+         <envVarBuildPath
+               pathType="buildpathLibrary"
+               variableList="LIBRARY_PATH">
+         </envVarBuildPath>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               name="General"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.linker">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               browseType="file"
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               command="-T&quot;${VALUE}&quot;"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.scriptfile"
+               isAbstract="false"
+               name="Script file (-T)"
+               resourceFilter="all"
+               valueType="string">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               command="-nostartfiles"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.nostart"
+               name="Do not use standard start files (-nostartfiles)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               command="-nodefaultlibs"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.nodeflibs"
+               name="Do not use default libraries (-nodefaultlibs)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               tip="Only search library directories explicitly specified"
+               command="-nostdlib"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.nostdlibs"
+               name="No startup or default libs (-nostdlib)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               command="-Wl,--gc-sections"
+               defaultValue="true"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.csections"
+               name="Remove unused sections (-gc-sections)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               command="-Wl,--print-gc-sections"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.printcsections"
+               name="Print unused sections (-print-gc-sections)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.general"
+               command="-s"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.strip"
+               name="Omit all symbol information (-s)"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.libs"
+               name="Libraries"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.linker">
+         </optionCategory>
+         <option
+               browseType="none"
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.libs"
+               command="-l"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.libs"
+               name="Libraries (-l)"
+               valueType="libs">
+<!--               <listOptionValue value="c" />
+               <listOptionValue value="gcc" /> -->
+         </option>
+         <option
+               browseType="directory"
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.libs"
+               command="-L"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.paths"
+               name="Library search path (-L)"
+               valueType="libPaths">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               name="Miscellaneous"
+               owner="org.eclipse.cdt.cross.riscv.gnu.cpp.linker">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               command="-Wl,${VALUE}"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.ldflags"
+               name="Linker flags (-Wl,[option])"
+               valueType="stringList">
+         </option>
+         <option
+               browseType="file"
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.otherobjs"
+               name="Other objects"
+               valueType="userObjs">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.mapfilename"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.other.mapfilename">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.other.cref"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.other.cref">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.other.printmap"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.other.printmap">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               command="-v"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.linker.option.other.verbose"
+               name="Verbose (-v)"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.cpp.link.category.other"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.otherflags"
+               name="Other flags"
+               valueType="string">
+         </option>
+         <inputType
+               buildVariable="OBJS"
+               dependencyCalculator="org.eclipse.cdt.managedbuilder.makegen.internal.DefaultNoDependencyCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.linker.input"
+               multipleOfType="true"
+               sourceContentType="org.eclipse.cdt.managedbuilder.core.compiledObjectFile"
+               sources="o">
+            <additionalInput
+                  kind="additionalinputdependency"
+                  paths="$(USER_OBJS)">
+            </additionalInput>
+            <additionalInput
+                  kind="additionalinput"
+                  paths="$(LIBS)">
+            </additionalInput>
+         </inputType>
+         <outputType
+               buildVariable="EXECUTABLES"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.linker.output"
+               nameProvider="org.eclipse.cdt.managedbuilder.makegen.gnu.GnuLinkOutputNameProvider">
+         </outputType>
+         <option
+               applicabilityCalculator="org.eclipse.cdt.managedbuilder.gnu.ui.GprofAppCalculator"
+               command="-pg"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.debugging.gprof"
+               name="Generate gprof information (-pg)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="org.eclipse.cdt.managedbuilder.gnu.ui.ProfAppCalculator"
+               command="-p"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.cpp.link.option.debugging.prof"
+               name="Generate prof information (-p)"
+               valueType="boolean">
+         </option>
+         <supportedProperties>
+            <property
+                  id="org.eclipse.cdt.build.core.buildType">
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.debug">
+               </value>
+               <value
+                     id="org.eclipse.cdt.build.core.buildType.release">
+               </value>
+            </property>
+         </supportedProperties>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-ar"
+            id="org.eclipse.cdt.cross.riscv.gnu.archiver"
+            isAbstract="false"
+            name="RISC-V GCC/Newlib Archiver"
+            natureFilter="both">
+         <enablement
+               type="ALL">
+            <checkBuildProperty
+                  property="org.eclipse.cdt.build.core.buildArtefactType"
+                  value="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.staticLib">
+            </checkBuildProperty>
+         </enablement>
+         <supportedProperties>
+            <property
+                  id="org.eclipse.cdt.build.core.buildArtefactType">
+               <value
+                     id="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.staticLib">
+               </value>
+            </property>
+         </supportedProperties>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.archiver.category.general"
+               name="General"
+               owner="org.eclipse.cdt.cross.riscv.gnu.archiver">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.archiver.category.general"
+               defaultValue="-r"
+               id="org.eclipse.cdt.cross.riscv.gnu.archiver.option.flags"
+               name="Archiver flags"
+               valueType="string">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.archiver.category.general"
+               command="-v"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.archiver.option.verbose"
+               name="Verbose (-v)"
+               valueType="boolean">
+         </option>
+         <inputType
+               buildVariable="OBJS"
+               dependencyCalculator="org.eclipse.cdt.managedbuilder.makegen.internal.DefaultNoDependencyCalculator"
+               id="org.eclipse.cdt.cross.riscv.gnu.archiver.input"
+               multipleOfType="true"
+               sourceContentType="org.eclipse.cdt.managedbuilder.core.compiledObjectFile"
+               sources="o">
+            <additionalInput
+                  kind="additionalinputdependency"
+                  paths="$(USER_OBJS)">
+            </additionalInput>
+            <additionalInput
+                  kind="additionalinput"
+                  paths="$(LIBS)">
+            </additionalInput>
+         </inputType>
+         <outputType
+               buildVariable="ARCHIVES"
+               id="org.eclipse.cdt.cross.riscv.gnu.archiver.output"
+               nameProvider="org.eclipse.cdt.managedbuilder.makegen.gnu.GnuLinkOutputNameProvider"
+               outputPrefix="lib"
+               outputs="a">
+         </outputType>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-objcopy"
+            id="org.eclipse.cdt.cross.riscv.gnu.createflash"
+            name="RISC-V ELF Create Flash Image"
+            natureFilter="both">
+         <enablement
+               type="ALL">
+            <checkBuildProperty
+                  property="org.eclipse.cdt.build.core.buildArtefactType"
+                  value="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+            </checkBuildProperty>
+         </enablement>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               name="General"
+               owner="org.eclipse.cdt.cross.riscv.gnu.createflash">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.out.choice"
+               name="Output file format (-O)"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-O ihex"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.ihex"
+                  name="ihex">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O elf64-littleriscv"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.elf64-littleriscv"
+                  name="elf64-littleriscv">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O elf32-littleriscv"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.elf32-littleriscv"
+                  name="elf32-littleriscv">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O elf64-little"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.elf64-little"
+                  name="elf64-little">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O elf32-little"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.elf32-little"
+                  name="elf32-little">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O elf64-big"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.elf64-big"
+                  name="elf64-big">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O elf32-big"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.elf32-big"
+                  name="elf32-big">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O srec"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.srec"
+                  name="srec">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O symbolsrec"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.symbolsrec"
+                  name="symbolsrec">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O tekhex"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.tekhex"
+                  name="tekhex">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O binary"
+                  id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.choice.binary"
+                  name="binary">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-O verilog"
+                  id="org.eclipse.cdr.cross.riscv.gnu.createflash.general.choice.verilog"
+                  name="verilog">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               command="--reverse-bytes="
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.reversebytes"
+               isAbstract="false"
+               name="Reverse bytes"
+               tip="Reverses &lt;num&gt; bytes at a time"
+               resourceFilter="all"
+               valueType="string">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               command="--gap-fill="
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.gapfill"
+               isAbstract="false"
+               name="gap-fill"
+               resourceFilter="all"
+               valueType="string">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               command="-j .text*"
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.text"
+               isAbstract="false"
+               name="Section: -j .text"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               command="-j .data*"
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.data"
+               isAbstract="false"
+               name="Section: -j .data"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               command="-j .tohost*"
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.tohost"
+               isAbstract="false"
+               name="Section: -j .tohost"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               command="-j "
+               id="org.eclipse.cdt.cross.riscv.gnu.general.other"
+               isAbstract="false"
+               name="Other (-j)"
+               resourceFilter="all"
+               valueType="stringList">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createflash.general"
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.general.otheropt"
+               name="Other options"
+               valueType="string">
+         </option>
+         <outputType
+               buildVariable="SECONDARY_FLASH"
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.output"
+               outputContentType="org.eclipse.cdt.cross.riscv.gnu.content-type.hex"
+               outputNames="${BuildArtifactFileBaseName}.hex"
+               outputs="hex">
+         </outputType>
+         <inputType
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.input"
+               multipleOfType="true"
+               option="org.eclipse.cdt.cross.riscv.gnu.createflash.InFileName"
+               sources="elf">
+         </inputType>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.createflash.InFileName"
+               resourceFilter="all"
+               value="${BuildArtifactFileName}"
+               valueType="string">
+         </option>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-objdump"
+            id="org.eclipse.cdt.cross.riscv.gnu.createlisting"
+            name="RISC-V ELF Create Listing"
+            natureFilter="both"
+            outputFlag="&gt;">
+         <enablement
+               type="ALL">
+            <checkBuildProperty
+                  property="org.eclipse.cdt.build.core.buildArtefactType"
+                  value="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+            </checkBuildProperty>
+         </enablement>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.createlisting.general"
+               name="General"
+               owner="org.eclipse.cdt.cross.riscv.gnu.createlisting">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.createlisting.general"
+               defaultValue="-h -S"
+               id="org.eclipse.cdt.cross.riscv.gnu.createlisting.general.otherflags"
+               name="Other flags"
+               valueType="string">
+         </option>
+         <outputType
+               buildVariable="SECONDARY_LIST"
+               id="org.eclipse.cdt.cross.riscv.gnu.createlisting.output"
+               outputNames="${BuildArtifactFileBaseName}.lst"
+               outputs="lst">
+         </outputType>
+         <inputType
+               id="org.eclipse.cdt.cross.riscv.gnu.createlisting.input"
+               multipleOfType="true"
+               option="org.eclipse.cdt.cross.riscv.gnu.createlisting.InFileName"
+               sources="elf">
+         </inputType>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.createlisting.InFileName"
+               resourceFilter="all"
+               value="${BuildArtifactFileName}"
+               valueType="string">
+         </option>
+      </tool>
+      <tool
+            command="riscv64-unknown-elf-size"
+            commandLinePattern="${COMMAND} ${FLAGS}"
+            id="org.eclipse.cdt.cross.riscv.gnu.printsize"
+            name="RISC-V GCC/Newlib Print Size"
+            natureFilter="both"
+            outputFlag="&gt;">
+         <enablement
+               type="ALL">
+            <checkBuildProperty
+                  property="org.eclipse.cdt.build.core.buildArtefactType"
+                  value="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+            </checkBuildProperty>
+         </enablement>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.general"
+               name="General"
+               owner="org.eclipse.cdt.cross.riscv.gnu.printsize">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.printsize.general"
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.general.format"
+               name="Size format"
+               tip="Choose whether the output from gnu size resembles output from System V size (using -A, or --format=sysv), or Berkeley size (using -B, or --format=berkeley). The default is the one-line format similar to Berkeley&apos;s."
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="--format=berkeley"
+                  id="org.eclipse.cdt.cross.riscv.gnu.printsize.general.format.berkeley"
+                  name="Berkeley">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="--format=sysv"
+                  id="org.eclipse.cdt.cross.riscv.gnu.printsize.general.format.sysv"
+                  name="SysV">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.printsize.general"
+               command="-x"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.general.hex"
+               name="Hex"
+               tip="The size of each section is given in hexadecimal."
+               valueType="boolean">
+               <enablement
+                   type="ALL">
+                   <checkOption
+                        holderId="org.eclipse.cdt.cross.riscv.gnu.printsize"
+                        isRegex="false"
+                        optionId="org.eclipse.cdt.cross.riscv.gnu.printsize.general.format"
+                        value="org.eclipse.cdt.cross.riscv.gnu.printsize.general.format.berkeley">
+                  </checkOption>
+               </enablement>
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.printsize.general"
+               command="--totals"
+               defaultValue="false"
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.general.totals"
+               name="Show totals"
+               tip="Show totals of all objects listed (Berkeley format listing mode only). "
+               valueType="boolean">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.printsize.general"
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.general.otherflags"
+               name="Other flags"
+               valueType="string">
+         </option>
+         <outputType
+               buildVariable="SECONDARY_SIZE"
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.output"
+               outputNames="${BuildArtifactFileBaseName}.siz"
+               outputs="siz">
+         </outputType>
+         <inputType
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.input"
+               multipleOfType="true"
+               option="org.eclipse.cdt.cross.riscv.gnu.printsize.InFileName"
+               sources="elf">
+         </inputType>
+         <option
+               id="org.eclipse.cdt.cross.riscv.gnu.printsize.InFileName"
+               resourceFilter="all"
+               value="&quot;${BuildArtifactFileName}&quot;"
+               valueType="string">
+         </option>            
+      </tool>
+      
+
+      <toolChain
+            archList="all"
+            id="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+            isAbstract="false"
+            isToolChainSupported="org.eclipse.cdt.cross.riscv.gnu.linux.IsToolChainSupported"
+            name="RISC-V GCC/Newlib Toolchain "
+            osList="linux,win32">
+         <targetPlatform
+               archList="all"
+               binaryParser="org.eclipse.cdt.core.GNU_ELF"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.platform.base"
+               isAbstract="false"
+               name="All Platform"
+               osList="linux,win32">
+         </targetPlatform>
+         <builder
+               command="make"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.builder.base"
+               isAbstract="false"
+               isVariableCaseSensitive="false"
+               name="GNU Make Builder for RISC-V"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.builder">
+         </builder>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+               name="Target Processor">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.riscv.cdt.toolchain.riscv.RISCVApplicabilityCalculator"
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+               commandGenerator="org.eclipse.cdt.cross.riscv.gnu.RISCVManagedCommandLineGenerator"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.processor"
+               name="Target"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.processor">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.abi"
+               name="ABI"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.abi">
+         </option>         
+         <option category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+                 id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.arch.rva"
+                 isAbstract="false"
+                 name="Atomic (RVA)"
+                 superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rva">
+         </option>
+         <option category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+                 id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.arch.rvc"
+                 isAbstract="false"
+                 name="Compressed Instructions (RVC)"
+                 superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvc">
+         </option>
+         <option category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+                 id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.arch.rve"
+                 isAbstract="false"
+                 name="Embedded (RVE)"
+                 superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rve">
+         </option>         
+         <option category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+                 id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.arch.rvm"
+                 isAbstract="false"
+                 name="Hardware Multiply/Divide (RVM)"
+                 superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvm">
+         </option>
+         <option category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+                 id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.arch.rvf"
+                 isAbstract="false"
+                 name="Single Precision Floating Point (RVF)"
+                 superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvf">
+         </option>
+         <option category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+                 id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.arch.rvd"
+                 isAbstract="false"
+                 name="Double Precision Floating Point (RVD)"
+                 superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvd">
+         </option>
+         <option category="org.eclipse.cdt.cross.riscv.gnu.linux.category.target"
+                 id="org.eclipse.cdt.cross.riscv.gnu.linux.option.target.arch.rvq"
+                 isAbstract="false"
+                 name="Quad Precision Floating Point (RVQ)"
+                 superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.target.arch.rvq">
+         </option>
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.category.debugging"
+               name="Debugging">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.debugging"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.debugging.level"
+               name="Debug level"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.debugging"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.debugging.format"
+               name="Debug format"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.format">
+            <enablement
+                  type="UI_ENABLEMENT|CMD_USAGE">
+               <not>
+                  <checkOption
+                        optionId="org.eclipse.cdt.cross.riscv.gnu.linux.option.debugging.level"
+                        value="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.level.none">
+                  </checkOption>
+               </not>
+            </enablement>
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.debugging"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.debugging.other"
+               name="Other debugging flags"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.other">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.debugging"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.debugging.prof"
+               name="Generate prof information (-p)"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.debugging.prof">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.debugging"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.debugging.gprof"
+               name="Generate gprof information (-pg)">
+         </option>   
+         <optionCategory
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.category.addtools"
+               name="Additional Tools">
+         </optionCategory>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.addtools"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.addtools.createlisting"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.addtools.createlisting">
+         </option>
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.addtools"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.addtools.createflash"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.addtools.createflash">
+         </option>      
+         <option
+               category="org.eclipse.cdt.cross.riscv.gnu.linux.category.addtools"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.option.addtools.printsize"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.base.option.addtools.printsize">
+         </option>         
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.assembler.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib Assembler"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.assembler">
+            <inputType
+                  id="org.eclipse.cdt.cross.riscv.gnu.linux.assembler.base.input"
+				  scannerConfigDiscoveryProfileId="org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCManagedMakePerProjectProfileC|org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCStandardMakePerFileProfile"
+                  superClass="org.eclipse.cdt.cross.riscv.gnu.assembler.input">
+            </inputType>
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.c.compiler.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib C Compiler"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.c.compiler">
+            <inputType
+                  id="org.eclipse.cdt.cross.riscv.gnu.linux.c.compiler.base.input"
+				  scannerConfigDiscoveryProfileId="org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCManagedMakePerProjectProfileC|org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCStandardMakePerFileProfile"
+                  superClass="org.eclipse.cdt.cross.riscv.gnu.c.compiler.input">
+            </inputType>
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.compiler.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib C++ Compiler"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler">
+            <inputType
+                  id="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.compiler.base.input"
+				  scannerConfigDiscoveryProfileId="org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCManagedMakePerProjectProfileCXX|org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCStandardMakePerFileProfile"
+                  superClass="org.eclipse.cdt.cross.riscv.gnu.cpp.compiler.input">
+            </inputType>
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.c.linker.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib C Linker"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.c.linker">
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.linker.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib C++ Linker"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.cpp.linker">
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.archiver.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib Archiver"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.archiver">
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.createflash.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib GNU Create Flash Image"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.createflash">
+            <enablement
+                  type="ALL">
+               <checkOption
+                     holderId="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+                     optionId="org.eclipse.cdt.cross.riscv.gnu.linux.option.addtools.createflash"
+                     value="true">
+               </checkOption>
+               <and>
+                  <checkBuildProperty
+                        property="org.eclipse.cdt.build.core.buildArtefactType"
+                        value="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+                  </checkBuildProperty>
+               </and>
+            </enablement>
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.createlisting.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib Create Listing"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.createlisting">
+            <enablement
+                  type="ALL">
+               <checkOption
+                     holderId="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+                     optionId="org.eclipse.cdt.cross.riscv.gnu.linux.option.addtools.createlisting"
+                     value="true">
+               </checkOption>
+               <and>
+                  <checkBuildProperty
+                        property="org.eclipse.cdt.build.core.buildArtefactType"
+                        value="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+                  </checkBuildProperty>
+               </and>
+            </enablement>
+         </tool>
+         <tool
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.printsize.base"
+               isAbstract="false"
+               name="RISC-V GCC/Newlib Print Size"
+               superClass="org.eclipse.cdt.cross.riscv.gnu.printsize">
+            <enablement
+                  type="ALL">
+               <checkOption
+                     holderId="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+                     optionId="org.eclipse.cdt.cross.riscv.gnu.linux.option.addtools.printsize"
+                     value="true">
+               </checkOption>
+               <and>
+                  <checkBuildProperty
+                        property="org.eclipse.cdt.build.core.buildArtefactType"
+                        value="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+                  </checkBuildProperty>
+               </and>
+            </enablement>
+         </tool>
+      </toolChain>
+      <configuration
+            cleanCommand="rm -rf"
+            id="org.eclipse.cdt.cross.riscv.gnu.linux.configuration.base"
+            name="GNU Toolchain for RISC-V Configuration"
+            parent="org.eclipse.cdt.cross.riscv.gnu.configuration.base">
+         <enablement
+               attribute="artifactExtension"
+               extensionAdjustment="false"
+               type="CONTAINER_ATTRIBUTE"
+               value="a">
+            <checkBuildProperty
+                  property="org.eclipse.cdt.build.core.buildArtefactType"
+                  value="org.eclipse.cdt.build.core.buildArtefactType.staticLib">
+            </checkBuildProperty>
+         </enablement>
+      </configuration>
+      <projectType
+            buildArtefactType="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application"
+            id="org.eclipse.cdt.cross.riscv.gnu.linux.elf"
+            isAbstract="true">
+         <configuration
+               artifactExtension="elf"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.debug"
+               name="Debug"
+               parent="org.eclipse.cdt.cross.riscv.gnu.linux.configuration.base">
+            <toolChain
+                  id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.toolchain.debug"
+                  isAbstract="false"
+				  secondaryOutputs="org.eclipse.cdt.cross.riscv.gnu.createflash.output;org.eclipse.cdt.cross.riscv.gnu.createlisting.output;org.eclipse.cdt.cross.riscv.gnu.printsize.output"
+                  superClass="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+				  targetTool="org.eclipse.cdt.cross.riscv.gnu.linux.elf.c.linker.debug;org.eclipse.cdt.cross.riscv.gnu.linux.elf.cpp.linker.debug">
+               <targetPlatform
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.platform.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.platform.base">
+               </targetPlatform>
+               <builder
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.builder.debug"
+                     isAbstract="false"
+                     isVariableCaseSensitive="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.builder.base">
+               </builder>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.assembler.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.assembler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.c.compiler.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.c.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.cpp.compiler.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.c.linker.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.c.linker.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.cpp.linker.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.linker.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.createflash.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.createflash.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.createlisting.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.createlisting.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.printsize.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.printsize.base">
+               </tool>
+            </toolChain>
+         </configuration>
+         <configuration
+               artifactExtension="elf"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.release"
+               name="Release"
+               parent="org.eclipse.cdt.cross.riscv.gnu.linux.configuration.base">
+            <toolChain
+                  id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.toolchain.release"
+                  isAbstract="false"
+				  secondaryOutputs="org.eclipse.cdt.cross.riscv.gnu.createflash.output;org.eclipse.cdt.cross.riscv.gnu.createlisting.output;org.eclipse.cdt.cross.riscv.gnu.printsize.output"
+                  superClass="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+				  targetTool="org.eclipse.cdt.cross.riscv.gnu.linux.elf.c.linker.release;org.eclipse.cdt.cross.riscv.gnu.linux.elf.cpp.linker.release">
+               <targetPlatform
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.platform.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.platform.base">
+               </targetPlatform>
+               <builder
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.builder.release"
+                     isAbstract="false"
+                     isVariableCaseSensitive="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.builder.base">
+               </builder>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.assembler.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.assembler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.c.compiler.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.c.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.cpp.compiler.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.c.linker.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.c.linker.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.cpp.linker.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.linker.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.createflash.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.createflash.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.createlisting.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.createlisting.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.elf.printsize.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.printsize.base">
+               </tool>
+            </toolChain>
+         </configuration>
+      </projectType>
+      <projectType
+            buildArtefactType="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.staticLib"
+            id="org.eclipse.cdt.cross.riscv.gnu.linux.lib"
+            isAbstract="true">
+         <configuration
+               artifactExtension="a"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.debug"
+               name="Debug"
+               parent="org.eclipse.cdt.cross.riscv.gnu.linux.configuration.base">
+            <toolChain
+                  id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.toolchain.debug"
+                  isAbstract="false"
+                  superClass="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+                  targetTool="org.eclipse.cdt.cross.riscv.gnu.linux.lib.archiver.debug">
+               <targetPlatform
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.platform.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.platform.base">
+               </targetPlatform>
+               <builder
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.builder.debug"
+                     isAbstract="false"
+                     isVariableCaseSensitive="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.builder.base">
+               </builder>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.assembler.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.assembler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.c.compiler.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.c.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.cpp.compiler.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.archiver.debug"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.archiver.base">
+               </tool>
+            </toolChain>
+         </configuration>
+         <configuration
+               artifactExtension="a"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release"
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.release"
+               name="Release"
+               parent="org.eclipse.cdt.cross.riscv.gnu.linux.configuration.base">
+            <toolChain
+                  id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.toolchain.release"
+                  isAbstract="false"
+                  superClass="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base"
+                  targetTool="org.eclipse.cdt.cross.riscv.gnu.linux.lib.archiver.release">
+               <targetPlatform
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.platform.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.platform.base">
+               </targetPlatform>
+               <builder
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.builder.release"
+                     isAbstract="false"
+                     isVariableCaseSensitive="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.builder.base">
+               </builder>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.assembler.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.assembler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.c.compiler.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.c.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.cpp.compiler.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.cpp.compiler.base">
+               </tool>
+               <tool
+                     id="org.eclipse.cdt.cross.riscv.gnu.linux.lib.archiver.release"
+                     isAbstract="false"
+                     superClass="org.eclipse.cdt.cross.riscv.gnu.linux.archiver.base">
+               </tool>
+            </toolChain>
+         </configuration>
+      </projectType>
+
+ 
+
+
+   </extension>
+   <extension
+         point="org.eclipse.cdt.core.templateAssociations">
+      <template
+            id="org.eclipse.cdt.build.core.templates.EmptyProject">
+         <toolChain
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base">
+         </toolChain>
+      </template>
+      <template
+            id="org.eclipse.cdt.cross.riscv.gnu.templates.HelloWorld_C_Project">
+         <toolChain
+               id="org.eclipse.cdt.cross.riscv.gnu.linux.toolchain.base">
+         </toolChain>
+      </template>
+   </extension>
+   <extension
+         point="org.eclipse.cdt.core.templates">
+       <template
+            filterPattern=".*g\+\+"
+            id="org.eclipse.cdt.cross.riscv.gnu.templates.HelloWorld_CPP_Project"
+            location="$nl$/templates/projecttemplates/HelloWorld_CPP_Project/template.xml"
+            projectType="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+      </template>
+      <template
+            filterPattern=".*gcc"
+            id="org.eclipse.cdt.cross.riscv.gnu.templates.HelloWorld_C_Project"
+            location="$nl$/templates/projecttemplates/HelloWorld_C_Project/template.xml"
+            projectType="org.eclipse.cdt.cross.riscv.gnu.buildArtefactType.application">
+      </template>
+   </extension>
+   <extension
+         point="org.eclipse.cdt.core.LanguageSettingsProvider">
+            <provider
+            id="com.riscv.cdt.toolchain.riscv.language.settings.providers.RISCVgnugccBuiltinSpecsDetector"
+            name="RISC-V GCC/Newlib Built-in Compiler Settings"
+            parameter="riscv64-unknown-elf-gcc -E -P -v -dD &quot;${INPUTS}&quot;"
+            prefer-non-shared="true">
+         <language-scope
+               id="org.eclipse.cdt.core.gcc">
+         </language-scope>
+         <language-scope
+               id="org.eclipse.cdt.core.g++">
+         </language-scope>
+      </provider>
+      <provider
+            id="com.riscv.cdt.toolchain.riscv.language.settings.providers.RISCVgnugccBuildCommandParser"
+            name="RISC-V GCC/Newlib Build Output Parser"
+            parameter="riscv64-unknown-elf-gcc"
+            prefer-non-shared="true">
+      </provider>
+   </extension>
+
+   <extension
+         id="RISCV_GCCManagedMakePerProjectProfileC"
+         name="RISC-V GNU C/C++ managed make per project SCD profile"
+         point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
+      <scannerInfoCollector
+            class="org.eclipse.cdt.cross.riscv.gnu.scannerconfig.RISCVGCCScannerInfoCollector"
+            scope="project">
+      </scannerInfoCollector>
+      <buildOutputProvider>
+         <open></open>
+         <scannerInfoConsoleParser
+               class="org.eclipse.cdt.cross.riscv.gnu.scannerconfig.RISCVManagedGCCScannerInfoConsoleParser">
+         </scannerInfoConsoleParser>
+      </buildOutputProvider>
+      <scannerInfoProvider
+            providerId="specsFile">
+         <run
+               arguments="-E -P -v -dD ${plugin_state_location}/specs.c"
+               class="org.eclipse.cdt.cross.riscv.gnu.common.RISCVGCCSpecsRunSIProvider"
+               command="riscv64-unknown-elf-gcc">
+         </run>
+         <scannerInfoConsoleParser
+               class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
+         </scannerInfoConsoleParser>
+      </scannerInfoProvider>
+   </extension>
+   <extension
+         point="org.eclipse.cdt.make.ui.DiscoveryProfilePage">
+      <profilePage
+            class="org.eclipse.cdt.make.ui.dialogs.GCCPerProjectSCDProfilePage"
+            name="Managed Build System - per project scanner info profile (C)"
+            profileId="org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCManagedMakePerProjectProfileC">
+      </profilePage>
+      <profilePage
+            class="org.eclipse.cdt.make.ui.dialogs.GCCPerProjectSCDProfilePage"
+            name="Managed Build System - per project scanner info profile (C++)"
+            profileId="org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCManagedMakePerProjectProfileCXX">
+      </profilePage>
+      <profilePage
+            class="org.eclipse.cdt.make.ui.dialogs.GCCPerProjectSCDProfilePage"
+            name="GCC per project scanner info profile "
+            profileId="org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCStandardMakePerProjectProfile">
+      </profilePage>
+      <profilePage
+            class="org.eclipse.cdt.make.ui.dialogs.GCCPerFileSCDProfilePage"
+            name="GCC per file scanner info profile "
+            profileId="org.eclipse.cdt.cross.riscv.gnu.RISCV_GCCStandardMakePerFileProfile">
+      </profilePage>
+   </extension>
+   <extension
+         id="RISCV_GCCManagedMakePerProjectProfileCXX"
+         name="RISC-V GNU C/C++ managed make per project SCD profile"
+         point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
+      <scannerInfoCollector
+            class="org.eclipse.cdt.cross.riscv.gnu.scannerconfig.RISCVGCCScannerInfoCollector"
+            scope="project">
+      </scannerInfoCollector>
+      <buildOutputProvider>
+         <open></open>
+         <scannerInfoConsoleParser
+               class="org.eclipse.cdt.cross.riscv.gnu.scannerconfig.RISCVManagedGCCScannerInfoConsoleParser">
+         </scannerInfoConsoleParser>
+      </buildOutputProvider>
+      <scannerInfoProvider
+            providerId="specsFile">
+         <run
+               arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp"
+               class="org.eclipse.cdt.cross.riscv.gnu.common.RISCVGCCSpecsRunSIProvider"
+               command="riscv64-unknown-elf-g++">
+         </run>
+         <scannerInfoConsoleParser
+               class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCSpecsConsoleParser">
+         </scannerInfoConsoleParser>
+      </scannerInfoProvider>
+   </extension>
+</plugin>

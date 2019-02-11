@@ -1,0 +1,86 @@
+//------------------------------------------------------------
+//   Copyright 2010-2018 Mentor Graphics Corporation
+//   All Rights Reserved Worldwide
+//
+//   Licensed under the Apache License, Version 2.0 (the
+//   "License"); you may not use this file except in
+//   compliance with the License.  You may obtain a copy of
+//   the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in
+//   writing, software distributed under the License is
+//   distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+//   CONDITIONS OF ANY KIND, either express or implied.  See
+//   the License for the specific language governing
+//   permissions and limitations under the License.
+//------------------------------------------------------------
+
+//
+// Interface Description:
+//
+//
+interface apb_slave_monitor_bfm (input PCLK,
+                                 input PRESETn,
+                                 input[31:0] PADDR,
+                                 input[31:0] PRDATA,
+                                 input[31:0] PWDATA,
+                                 input[31:0] PSEL,
+                                 input PENABLE,
+                                 input PWRITE,
+                                 input PREADY,
+                                 input PSLVERR);
+
+  import uvm_pkg::uvm_sequence_item;
+  import apb_slave_agent_pkg::*;
+
+//------------------------------------------
+// Data Members
+//------------------------------------------
+  int apb_index = 0;
+  apb_slave_monitor proxy;
+
+//------------------------------------------
+// Methods
+//------------------------------------------
+  function void set_apb_index(int index);
+    apb_index = index;
+  endfunction : set_apb_index
+
+  task run();
+    uvm_sequence_item item, cloned_item;
+    apb_slave_setup_item req, cloned_req;
+    apb_slave_access_item rsp, cloned_rsp;
+
+    req = apb_slave_setup_item::type_id::create("setup_phase");
+    rsp = apb_slave_access_item::type_id::create("access_phase");
+
+    forever begin
+      @(posedge PCLK);
+      if(PSEL[apb_index])
+        begin
+          req.addr = PADDR;
+          req.rw = PWRITE;
+          if(PWRITE) req.wdata = PWDATA;
+          $cast(cloned_req, req.clone());
+          //req_ap.write(cloned_req);
+          proxy.notify_setup(cloned_req);
+        end
+      if(PREADY && PSEL[apb_index])
+        begin
+          rsp.rw = PWRITE;
+          rsp.slv_err = PSLVERR;
+          if(!PWRITE) rsp.rdata = PRDATA;
+          $cast(cloned_rsp, rsp.clone());
+          //rsp_ap.write(cloned_rsp);
+          proxy.notify_access(cloned_rsp);
+        end
+    end
+  endtask: run
+
+  task wait_for_reset();
+    wait (PRESETn);
+  endtask : wait_for_reset
+  
+endinterface: apb_slave_monitor_bfm

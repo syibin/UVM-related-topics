@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="feature_export" name="build">
+	<target name="feature_export">
+	    <pde.exportFeatures destination="./feature_export" exportSource="false" exportType="directory" features="com.riscv.cdt.feature" useJARFormat="true" qualifier="${VERSION_QUALIFIER}"/>
+	</target>
+</project>

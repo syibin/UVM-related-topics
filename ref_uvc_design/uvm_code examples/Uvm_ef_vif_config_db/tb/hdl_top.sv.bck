@@ -1,0 +1,42 @@
+module hdl_top;
+
+import uvm_pkg::*;
+
+logic clk;
+logic reset;
+
+sfr_master_bfm SFR_MASTER(.clk(clk), .reset(reset));
+sfr_monitor_bfm SFR_MONITOR(.clk(clk), .reset(reset));
+
+sfr_dut dut (.clk(clk),
+             .reset(reset),
+             .address(SFR_MASTER.address),
+             .write_data(SFR_MASTER.write_data),
+             .we(SFR_MASTER.we),
+             .re(SFR_MASTER.re),
+             .read_data(SFR_MASTER.read_data));
+
+assign SFR_MONITOR.address = SFR_MASTER.address;
+assign SFR_MONITOR.write_data = SFR_MASTER.write_data;
+assign SFR_MONITOR.we = SFR_MASTER.we;
+assign SFR_MONITOR.re = SFR_MASTER.re;
+assign SFR_MONITOR.read_data = SFR_MASTER.read_data;
+
+initial begin
+  reset <= 1;
+  clk <= 0;
+  repeat(10) begin
+    #10ns clk <= ~clk;
+  end
+  reset <= 0;
+  forever begin
+    #10ns clk <= ~clk;
+  end
+end
+
+initial begin
+  uvm_config_db #(virtual sfr_master_bfm)::set(null, "uvm_test_top", "SFR_MASTER", SFR_MASTER);
+  uvm_config_db #(virtual sfr_monitor_bfm)::set(null, "uvm_test_top", "SFR_MONITOR", SFR_MONITOR);
+end
+
+endmodule

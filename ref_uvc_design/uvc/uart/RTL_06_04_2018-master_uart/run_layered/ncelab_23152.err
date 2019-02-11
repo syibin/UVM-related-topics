@@ -1,0 +1,491 @@
+csi-ncelab - CSI: Command line:
+ncelab
+    -f /home/project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/run_layered/INCA_libs/irun.lnx8664.15.10.nc/ncelab.args
+        +access+r
+        -ACCESS +r
+        -DISABLE_SEM2009
+        -COVERAGE A
+        -COVDUT uart_top_tb
+        -COVFILE covfile.ccf
+        -MESSAGES
+        -XLMODE ./INCA_libs/irun.lnx8664.15.10.nc
+        -RUNMODE
+        -CDSLIB ./INCA_libs/irun.lnx8664.15.10.nc/cds.lib
+        -HDLVAR ./INCA_libs/irun.lnx8664.15.10.nc/hdl.var
+        -WORK worklib
+        -HASXLMODE
+    -CHECK_VERSION TOOL:	irun(64)	15.10-s015
+    -LOG_FD 4
+
+csi-ncelab - CSI: *F,INTERR: INTERNAL EXCEPTION
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	ncelab(64)	15.10-s015
+  HOSTNAME: ns.server1
+  OPERATING SYSTEM: Linux 3.10.0-693.11.6.el7.x86_64 #1 SMP Thu Dec 28 14:23:39 EST 2017 x86_64
+  MESSAGE: sv_seghandler - trapno -1 addr((nil))
+-----------------------------------------------------------------
+
+csi-ncelab - CSI: Cadence Support Investigation, recording details
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 8
+	Scope: $unit_0x333ed5df
+	Decompile: $unit_0x333ed5df
+	Source  : class transaction;
+	Position:         ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.uart_top_tb:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/uart_top_layered.sv, line 4, position 17
+	Scope: uart_top_tb
+	Decompile: uart_top_tb
+	Source  : module uart_top_tb;                                      
+	Position:                  ^
+Intermediate File: string (IF_STRING) in module worklib.uart_top_tb:sv (VST)
+	Decompile: uart_top_tb
+Verilog Syntax Tree: root (VST_ROOT) in module worklib.uart_top_tb:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/uart_top_layered.sv, line 4, position 5
+	Decompile: uart_top_tb
+	Source  : module uart_top_tb;                                      
+	Position:      ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in interface worklib.uart_interface:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/interface.sv, line 1, position 23
+	Scope: uart_interface
+	Decompile: uart_interface
+	Source  : interface uart_interface(input bit clk, rst_n);
+	Position:                        ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 34, position 24
+	Scope: testcase_combined
+	Decompile: testcase_combined
+	Source  : program testcase_combined(uart_interface uif);
+	Position:                         ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 38, position 19
+	Decompile: Error: csi_sighandler received SIGSEGV
+	Source  :     transaction_mode tr_mode;
+	Position:                    ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in interface worklib.uart_interface:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/interface.sv, line 1, position 23
+	Scope: uart_interface
+	Decompile: uart_interface
+	Source  : interface uart_interface(input bit clk, rst_n);
+	Position:                        ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 38, position 19
+	Decompile: Error: csi_sighandler received SIGSEGV
+	Source  :     transaction_mode tr_mode;
+	Position:                    ^
+Verilog Syntax Tree: design unit type (VST_T_DESIGN_UNIT) in program worklib.testcase_combined:sv (VST)
+	Scope: testcase_combined
+	Decompile: unable to decompile type 865
+Verilog Syntax Tree: class type (VST_T_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/environment.sv, line 1, position 16
+	Scope: $unit_0x333ed5df::environment
+	Decompile: $unit_0x333ed5df::environment
+	Source  : class environment;
+	Position:                 ^
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/environment.sv, line 1, position 16
+	Scope: $unit_0x333ed5df::environment
+	Decompile: $unit_0x333ed5df::environment
+	Source  : class environment;
+	Position:                 ^
+Verilog Syntax Tree: compilation unit referral (VST_R_COMP_UNIT) in program worklib.testcase_combined:sv (VST)
+	Decompile: Error: csi_sighandler received SIGSEGV
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 8
+	Decompile: $unit_0x333ed5df
+	Source  : class transaction;
+	Position:         ^
+Intermediate File: reference symbolic (IF_SYMBOLIC_REFERENCE) in program worklib.testcase_combined:sv (VST)
+Verilog Syntax Tree: symbolic referral (VST_R_SYMBOLIC) in program worklib.testcase_combined:sv (VST)
+	Decompile: Error: csi_sighandler received SIGSEGV
+Intermediate File: string (IF_STRING) in program worklib.testcase_combined:sv (VST)
+	Decompile: transaction_mode
+Intermediate File: string (IF_STRING) in program worklib.testcase_combined:sv (VST)
+	Decompile: I.worklib.#24unit_0x333ed5df.W..vlog.w.lnx8664.110.vst
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 8
+	Scope: $unit_0x333ed5df
+	Decompile: $unit_0x333ed5df
+	Source  : class transaction;
+	Position:         ^
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 1, position 11
+	Scope: $unit_0x333ed5df::driver
+	Decompile: $unit_0x333ed5df::driver
+	Source  : class driver;
+	Position:            ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 31, position 14
+	Scope: $unit_0x333ed5df::driver
+	Decompile: $unit_0x333ed5df::transaction
+	Source  :     transaction trans;
+	Position:               ^
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit
+Verilog Syntax Tree: queue type (VST_T_QUEUE) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit queue
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 16
+	Scope: $unit_0x333ed5df::transaction
+	Decompile: $unit_0x333ed5df::transaction
+	Source  : class transaction;
+	Position:                 ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 31, position 14
+	Scope: $unit_0x333ed5df::driver
+	Decompile: $unit_0x333ed5df::transaction
+	Source  :     transaction trans;
+	Position:               ^
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit
+Verilog Syntax Tree: enum const declaration (VST_D_ENUM_CONST) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 4, position 43
+	Scope: $unit_0x333ed5df::driver
+	Decompile: unable to decompile type 745
+	Source  :     typedef enum bit { REG_RD = 1'b0, REG_WR = 1'b1 } reg_access_t;
+	Position:                                            ^
+Verilog Syntax Tree: enum vec type (VST_T_ENUM_VEC) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit
+Verilog Syntax Tree: covergroup declaration (VST_D_COVERGROUP) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/coverage_loopback.sv, line 1, position 26
+	Scope: $unit_0x333ed5df::driver
+	Decompile: unable to decompile type 611
+	Source  : covergroup uart_cg_loopback;
+	Position:                           ^
+Verilog Syntax Tree: covergroup instance declaration (VST_D_COVERGROUP_INSTANCE) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/coverage_loopback.sv, line 1, position 26
+	Scope: $unit_0x333ed5df::driver
+	Decompile: unable to decompile type 610
+	Source  : covergroup uart_cg_loopback;
+	Position:                           ^
+Verilog Syntax Tree: upscope referral (VST_R_UPSCOPE) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df
+	Decompile: $unit_0x333ed5df::transaction
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 16
+	Scope: $unit_0x333ed5df::transaction
+	Decompile: $unit_0x333ed5df::transaction
+	Source  : class transaction;
+	Position:                 ^
+Verilog Syntax Tree: upscope referral (VST_R_UPSCOPE) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df
+	Decompile: $unit_0x333ed5df::transaction
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 16
+	Scope: $unit_0x333ed5df::transaction::post_randomize
+	Decompile: post_randomize
+	Source  : class transaction;
+	Position:                 ^
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 16
+	Scope: $unit_0x333ed5df::transaction
+	Decompile: $unit_0x333ed5df::transaction
+	Source  : class transaction;
+	Position:                 ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 13, position 22
+	Scope: $unit_0x333ed5df::transaction
+	Decompile: bit cts
+	Source  :     rand bit        cts;
+	Position:                       ^
+Verilog Syntax Tree: constraint declaration (VST_D_CONSTRAINT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 15, position 18
+	Scope: $unit_0x333ed5df::transaction
+	Decompile: unable to decompile type 778
+	Source  :     constraint data { pwdata inside { [ 65:90 ] }; }
+	Position:                   ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 8
+	Scope: $unit_0x333ed5df
+	Decompile: $unit_0x333ed5df
+	Source  : class transaction;
+	Position:         ^
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 8
+	Decompile: $unit_0x333ed5df
+	Source  : class transaction;
+	Position:         ^
+Verilog Syntax Tree: root (VST_ROOT) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 34, position 6
+	Decompile: testcase_combined
+	Source  : program testcase_combined(uart_interface uif);
+	Position:       ^
+Verilog Syntax Tree: instance declaration (VST_D_INSTANCE) in module worklib.uart_top_tb:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/uart_top_layered.sv, line 52, position 19
+	Scope: uart_top_tb
+	Decompile: tc
+	Source  : testcase_combined tc(uif);
+	Position:                    ^
+Verilog Syntax Tree: enum vec type (VST_T_ENUM_VEC) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 8
+	Decompile: $unit_0x333ed5df
+	Source  : class transaction;
+	Position:         ^
+Verilog Syntax Tree: number expression (VST_E_NUMBER) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 4, position 47
+	Decompile: 1'b1
+	Source  :     typedef enum bit { REG_RD = 1'b0, REG_WR = 1'b1 } reg_access_t;
+	Position:                                                ^
+Verilog Syntax Tree: enum const declaration (VST_D_ENUM_CONST) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 4, position 43
+	Scope: $unit_0x333ed5df::driver
+	Decompile: unable to decompile type 745
+	Source  :     typedef enum bit { REG_RD = 1'b0, REG_WR = 1'b1 } reg_access_t;
+	Position:                                            ^
+Verilog Syntax Tree: enum vec type (VST_T_ENUM_VEC) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit
+Verilog Syntax Tree: number expression (VST_E_NUMBER) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 4, position 47
+	Decompile: 1'b1
+	Source  :     typedef enum bit { REG_RD = 1'b0, REG_WR = 1'b1 } reg_access_t;
+	Position:                                                ^
+Verilog Syntax Tree: static range (VST_R_STATIC_RANGE) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Decompile: 0 to 0
+Verilog Syntax Tree: bit type (VST_T_BIT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Decompile: bit
+Verilog Syntax Tree: enum vec type (VST_T_ENUM_VEC) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit
+Verilog Syntax Tree: compilation unit type (VST_T_COMP_UNIT) in program worklib.testcase_combined:sv (VST)
+	Decompile: $unit_0x333ed5df
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/transaction.sv, line 1, position 8
+	Decompile: $unit_0x333ed5df
+	Source  : class transaction;
+	Position:         ^
+Verilog Syntax Tree: enum vec type (VST_T_ENUM_VEC) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	Scope: $unit_0x333ed5df::driver
+	Decompile: bit
+Verilog Syntax Tree: number expression (VST_E_NUMBER) in compilation_unit worklib.\$unit_0x333ed5df :compilation_unit (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/driver.sv, line 4, position 47
+	Decompile: 1'b1
+	Source  :     typedef enum bit { REG_RD = 1'b0, REG_WR = 1'b1 } reg_access_t;
+	Position:                                                ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 38, position 19
+	Decompile: Error: csi_sighandler received SIGSEGV
+	Source  :     transaction_mode tr_mode;
+	Position:                    ^
+Verilog Syntax Tree: design unit type (VST_T_DESIGN_UNIT) in program worklib.testcase_combined:sv (VST)
+	Scope: testcase_combined
+	Decompile: unable to decompile type 865
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 34, position 43
+	Scope: testcase_combined
+	Decompile: uif
+	Source  : program testcase_combined(uart_interface uif);
+	Position:                                            ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_top_tb:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/uart_top_layered.sv, line 52, position 23
+	Scope: uart_top_tb
+	Decompile: uif
+	Source  : testcase_combined tc(uif);
+	Position:                        ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 38, position 19
+	Decompile: Error: csi_sighandler received SIGSEGV
+	Source  :     transaction_mode tr_mode;
+	Position:                    ^
+Verilog Syntax Tree: instance declaration (VST_D_INSTANCE) in module worklib.uart_top_tb:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/uart_top_layered.sv, line 17, position 21
+	Scope: uart_top_tb
+	Decompile: uif
+	Source  :     uart_interface uif(clk, rst_n);
+	Position:                      ^
+Verilog Syntax Tree: io interface declaration (VST_D_IO_INTERFACE) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 34, position 43
+	Scope: testcase_combined
+	Decompile: unable to decompile type 519
+	Source  : program testcase_combined(uart_interface uif);
+	Position:                                            ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in program worklib.testcase_combined:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/testcase_combined.sv, line 34, position 24
+	Scope: testcase_combined
+	Decompile: testcase_combined
+	Source  : program testcase_combined(uart_interface uif);
+	Position:                         ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in interface worklib.uart_interface:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/interface.sv, line 1, position 23
+	Scope: uart_interface
+	Decompile: uart_interface
+	Source  : interface uart_interface(input bit clk, rst_n);
+	Position:                        ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_top_tb:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/uart_top_layered.sv, line 52, position 23
+	Scope: uart_top_tb
+	Decompile: uif
+	Source  : testcase_combined tc(uif);
+	Position:                        ^
+Verilog Syntax Tree: parameter declaration (VST_D_PARAMETER) in module worklib.uart_top:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_top.v, line 11, position 42
+	Scope: uart_top
+	Decompile: unspecified APB_ADDR_WIDTH
+	Source  : module uart_top #( parameter APB_ADDR_WIDTH    = 8,
+	Position:                                           ^
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in module worklib.uart_top:v (VST)
+	Decompile: logic signed
+Verilog Syntax Tree: root (VST_ROOT) in module worklib.uart_receiver:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_receiver.v, line 11, position 5
+	Decompile: uart_receiver
+	Source  : module uart_receiver
+	Position:      ^
+Verilog Syntax Tree: parameter declaration (VST_D_PARAMETER) in module worklib.uart_top:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_top.v, line 11, position 42
+	Scope: uart_top
+	Decompile: unspecified APB_ADDR_WIDTH
+	Source  : module uart_top #( parameter APB_ADDR_WIDTH    = 8,
+	Position:                                           ^
+Verilog Syntax Tree: instance declaration (VST_D_INSTANCE) in module worklib.uart_top:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_top.v, line 204, position 28
+	Scope: uart_top
+	Decompile: uart_receiver_u
+	Source  : uart_receiver uart_receiver_u(
+	Position:                             ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.uart_receiver:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_receiver.v, line 11, position 19
+	Scope: uart_receiver
+	Decompile: uart_receiver
+	Source  : module uart_receiver
+	Position:                    ^
+Verilog Syntax Tree: list expression (VST_VE_LIST) in module worklib.uart_top:v (VST)
+	Decompile: unable to decompile type 631
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in module worklib.uart_top:v (VST)
+	Decompile: logic
+Verilog Syntax Tree: root (VST_ROOT) in module worklib.uart_receiver:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_receiver.v, line 11, position 5
+	Decompile: uart_receiver
+	Source  : module uart_receiver
+	Position:      ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.uart_receiver:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_receiver.v, line 11, position 19
+	Scope: uart_receiver
+	Decompile: uart_receiver
+	Source  : module uart_receiver
+	Position:                    ^
+Verilog Syntax Tree: parameter declaration (VST_D_PARAMETER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 14, position 40
+	Scope: uart_apb_slave
+	Decompile: unspecified BASE_ADDR
+	Source  : parameter                       BASE_ADDR	  = 32'h0
+	Position:                                         ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.uart_receiver:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_receiver.v, line 11, position 19
+	Scope: uart_receiver
+	Decompile: uart_receiver
+	Source  : module uart_receiver
+	Position:                    ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.uart_top_tb:sv (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/tb_layered/uart_top_layered.sv, line 4, position 17
+	Scope: uart_top_tb
+	Decompile: uart_top_tb
+	Source  : module uart_top_tb;                                      
+	Position:                  ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.uart_receiver:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_receiver.v, line 11, position 19
+	Scope: uart_receiver
+	Decompile: uart_receiver
+	Source  : module uart_receiver
+	Position:                    ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_top:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_top.v, line 83, position 46
+	Scope: uart_top
+	Decompile: APB_BASE_ADDRESS
+	Source  :                   .BASE_ADDR	( APB_BASE_ADDRESS  )
+	Position:                             	                 ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.uart_receiver:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_receiver.v, line 11, position 19
+	Scope: uart_receiver
+	Decompile: uart_receiver
+	Source  : module uart_receiver
+	Position:                    ^
+Verilog Syntax Tree: parameter declaration (VST_D_PARAMETER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 13, position 37
+	Scope: uart_apb_slave
+	Decompile: unspecified DWIDTH
+	Source  : parameter                       DWIDTH	  = 32,
+	Position:                                      ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_top:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_top.v, line 83, position 46
+	Scope: uart_top
+	Decompile: APB_BASE_ADDRESS
+	Source  :                   .BASE_ADDR	( APB_BASE_ADDRESS  )
+	Position:                             	                 ^
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in module worklib.uart_apb_slave:v (VST)
+	Decompile: logic signed
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 135, position 10
+	Scope: uart_apb_slave
+	Decompile: DWIDTH
+	Source  : reg [DWIDTH - 1 : 0] apb_rdata_r;
+	Position:           ^
+Verilog Syntax Tree: parameter declaration (VST_D_PARAMETER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 13, position 37
+	Scope: uart_apb_slave
+	Decompile: unspecified DWIDTH
+	Source  : parameter                       DWIDTH	  = 32,
+	Position:                                      ^
+Verilog Syntax Tree: logic type (VST_T_LOGIC) in module worklib.uart_apb_slave:v (VST)
+	Decompile: logic
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in module worklib.uart_top:v (VST)
+	Decompile: logic
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 135, position 10
+	Scope: uart_apb_slave
+	Decompile: DWIDTH
+	Source  : reg [DWIDTH - 1 : 0] apb_rdata_r;
+	Position:           ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 43, position 18
+	Scope: uart_apb_slave
+	Decompile: DWIDTH
+	Source  : output wire [DWIDTH/8 - 1:0]    wstr_o
+	Position:                   ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 43, position 18
+	Scope: uart_apb_slave
+	Decompile: DWIDTH
+	Source  : output wire [DWIDTH/8 - 1:0]    wstr_o
+	Position:                   ^
+Verilog Syntax Tree: unspecified type (VST_T_UNSPECIFIED) in module worklib.uart_apb_slave:v (VST)
+	Scope: uart_apb_slave
+	Decompile: unspecified
+Verilog Syntax Tree: parameter declaration (VST_D_PARAMETER) in module worklib.uart_top:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_top.v, line 11, position 42
+	Scope: uart_top
+	Decompile: unspecified APB_ADDR_WIDTH
+	Source  : module uart_top #( parameter APB_ADDR_WIDTH    = 8,
+	Position:                                           ^
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in module worklib.uart_apb_slave:v (VST)
+	Decompile: logic signed
+Verilog Syntax Tree: logic type (VST_T_LOGIC) in module worklib.uart_top:v (VST)
+	Decompile: logic
+Verilog Syntax Tree: parameter declaration (VST_D_PARAMETER) in module worklib.uart_apb_slave:v (VST)
+	File: /project/rv32i/design/verification/UART/RTL_22_02_18/RTL_22_02_18_receiver_data_matching/rtl/uart_apb_slave.v, line 13, position 37
+	Scope: uart_apb_slave
+	Decompile: unspecified DWIDTH
+	Source  : parameter                       DWIDTH	  = 32,
+	Position:                                      ^
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in module worklib.uart_top:v (VST)
+	Decompile: logic signed
+Verilog Syntax Tree: unspecified type (VST_T_UNSPECIFIED) in module worklib.uart_top:v (VST)
+	Scope: uart_top
+	Decompile: unspecified
+Verilog Syntax Tree: static range (VST_R_STATIC_RANGE) in module worklib.uart_top:v (VST)
+	Decompile: 31 to 0
+Verilog Syntax Tree: logic type (VST_T_LOGIC) in module worklib.uart_apb_slave:v (VST)
+	Decompile: logic
+Verilog Syntax Tree: indexed vector type (VST_T_INDEXED_VEC) in module worklib.uart_apb_slave:v (VST)
+	Decompile: logic signed
+csi-ncelab - CSI: investigation output 1st 100 entries took 0.014 secs, send this file to Cadence Support

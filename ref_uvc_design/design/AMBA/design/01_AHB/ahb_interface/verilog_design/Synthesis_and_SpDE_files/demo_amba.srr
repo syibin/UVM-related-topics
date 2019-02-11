@@ -1,0 +1,581 @@
+$ Start of Compile
+#Fri Sep 13 17:34:13 2002
+
+Synplicity Verilog Compiler, version 7.0.0, Build 130R, built Nov 16 2001
+Copyright (C) 1994-2001, Synplicity Inc.  All Rights Reserved
+
+@I::"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\macros.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\ahb_master.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\ahb_slave.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\appreq_sm.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\app_codec.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\app_codec.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\xor32x2.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\qmipsesp.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\busreq_sm.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\fifo128x32.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\fifo128x32.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\r128a32_25um.v"
+@I:"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\r128a32_25um.v":"\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\ram128x18_25um.v"
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module demo_amba
+Synthesizing module qmipsesp
+Synthesizing module hsckmux
+Synthesizing module gclkbuff_25um
+Synthesizing module ahb_master
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_master.v":196:0:196:5|Optimizing register bit hburst_o[1] to a constant 0
+Synthesizing module busreq_sm
+Synthesizing module RAM128X18_25UM
+Synthesizing module r128a32_25um
+Synthesizing module fifo128x32
+Synthesizing module appreq_sm
+Synthesizing module ahb_slave
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_slave.v":59:16:59:25|Input ahbs_hsize is unused
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_slave.v":60:16:60:26|Input ahbs_hburst is unused
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_slave.v":61:16:61:25|Input ahbs_hprot is unused
+Synthesizing module frag_a
+Synthesizing module frag_m
+Synthesizing module frag_f
+Synthesizing module xor2i0
+Synthesizing module xor32x2
+Synthesizing module app_codec
+Synthesizing module demo_amba
+@END
+Process took 0.711 seconds realtime, 0.751 seconds cputime
+Synplicity QuickLogic Technology Mapper, version 7.0.0, Build 129R, built Nov 12 2001
+Copyright (C) 1994-2001, Synplicity Inc.  All Rights Reserved
+Setting fanout limit to 16
+Loading Properties file: \\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.sc
+@N|Setting default wire load to 'pASICQDSP' 
+@W:|Disconnecting duplicate driver pin:O[0] inst:true of PrimLib.true(prim)
+@W:|Disconnecting duplicate driver pin:O[0] inst:false of PrimLib.false(prim)
+Automatic dissolve at startup in view:work.fifo128x32(verilog) of m(r128a32_25um)
+Automatic dissolve at startup in view:work.app_codec(verilog) of xor2_1(xor32x2)
+Automatic dissolve at startup in view:work.demo_amba(verilog) of app_inst(app_codec)
+Automatic dissolve at startup in view:work.demo_amba(verilog) of out_fifo(fifo128x32)
+Automatic dissolve at startup in view:work.demo_amba(verilog) of in_fifo(fifo128x32)
+@W:"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\fifo128x32.v":68:16:68:27|Removing sequential instance I_168 of view:PrimLib.dffrs(prim) because there are no references to its outputs 
+@W:"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\fifo128x32.v":68:16:68:27|Removing sequential instance I_134 of view:PrimLib.dffrs(prim) because there are no references to its outputs 
+@W:"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\fifo128x32.v":68:16:68:27|Removing sequential instance I_100 of view:PrimLib.dffrs(prim) because there are no references to its outputs 
+@W:"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\fifo128x32.v":68:16:68:27|Removing sequential instance I_66 of view:PrimLib.dffrs(prim) because there are no references to its outputs 
+@W:"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\ahb_slave.v":146:0:146:5|Removing sequential instance curr_state[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+@W:"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\ahb_slave.v":130:0:130:5|Removing sequential instance prevsel[0] of view:PrimLib.dffr(prim) because there are no references to its outputs 
+---------------------------------------
+Resource Usage Report
+Part: ql901m
+
+Area estimate:  846 Cells
+Register count: 247
+Latch count:    0
+I/O cells:      216
+
+Details:
+Q_INPAD_25UM:    53
+Q_IOPAD_25UM:    76
+Q_OUTPAD_25UM:   87
+
+AND2I0:          73 (area 1)
+AND2I1:          75 (area 1)
+AND2I2:          32 (area 1)
+AND3I0:           6 (area 1)
+AND3I1:           5 (area 1)
+AND3I2:           8 (area 1)
+AND3I3:           9 (area 1)
+AND4I1:           1 (area 1)
+AND4I2:           3 (area 1)
+AND4I3:           2 (area 1)
+AND6I3:           3 (area 1)
+LOGIC2:          26 (area 1)
+MUX2X0:         101 (area 1)
+MUX2X1:          95 (area 1)
+MUX2X2:          22 (area 1)
+MUX2X3:         112 (area 1)
+OR2I0:           12 (area 1)
+OR2I1:            8 (area 1)
+OR2I2:            1 (area 1)
+OR3I0:            4 (area 1)
+OR3I1:            1 (area 1)
+OR4I0:            6 (area 1)
+OR5I1:            2 (area 1)
+OR6I2:            1 (area 1)
+Q_AND2:          67 (area 0.3)
+Q_DECSKIP:        3 (area 1)
+Q_DECSKIP2:       3 (area 1)
+Q_DECX:          34 (area 1)
+Q_DFF:          221
+Q_INCSKIP:        7 (area 1)
+Q_INCSKIP2:      10 (area 1)
+Q_INCX:         108 (area 1)
+Q_INV:           19 (area 0.2)
+RAM128X18_25UM:   4
+XNOR2I0:          4 (area 1)
+XOR2I0:          12 (area 1)
+gclkbuff_25um:    1 (area 1)
+qmipsesp:         1
+xor2i0:          32 (area 1)
+
+@W:"\\judd_ql_dallas\d\mips\ahb\interface_ex\verilog\demo_amba.v":347:9:347:21|Net hclk appears to be a clock source which was not identified. Assuming default frequency. 
+
+
+##### START TIMING REPORT #####
+# Timing Report written on Fri Sep 13 17:34:23 2002
+#
+
+
+Top view:              demo_amba
+Operating conditions:  TYP-7
+Wire load model:       pASICQDSP
+Slew propagation mode: worst
+Paths requested:       5
+Constraint File(s):    
+@N| This timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 985.223
+
+                   Requested     Estimated     Requested     Estimated                 Clock 
+Starting Clock     Frequency     Frequency     Period        Period        Slack       Type  
+---------------------------------------------------------------------------------------------
+System             1.0 MHz       67.7 MHz      1000.000      14.777        985.223     system
+=============================================================================================
+
+
+
+Interface Information 
+*********************
+
+
+
+Input Ports: 
+
+Port                Starting            User           Arrival     Required            
+Name                Reference           Constraint     Time        Time         Slack  
+                    Clock                                                              
+---------------------------------------------------------------------------------------
+BOOT[0]             System (rising)     NA             0.000       999.224      999.224
+BOOT[1]             System (rising)     NA             0.000       999.224      999.224
+CPU_BIGENDIAN       System (rising)     NA             0.000       999.224      999.224
+CPU_EXTINT_n[0]     System (rising)     NA             0.000       999.224      999.224
+CPU_EXTINT_n[1]     System (rising)     NA             0.000       999.224      999.224
+CPU_EXTINT_n[2]     System (rising)     NA             0.000       999.224      999.224
+CPU_EXTINT_n[3]     System (rising)     NA             0.000       999.224      999.224
+CPU_EXTINT_n[4]     System (rising)     NA             0.000       999.224      999.224
+CPU_EXTINT_n[5]     System (rising)     NA             0.000       999.224      999.224
+CPU_EXTINT_n[6]     System (rising)     NA             0.000       999.224      999.224
+DATA[0]             NA                  NA             NA          NA           NA     
+DATA[1]             NA                  NA             NA          NA           NA     
+DATA[2]             NA                  NA             NA          NA           NA     
+DATA[3]             NA                  NA             NA          NA           NA     
+DATA[4]             NA                  NA             NA          NA           NA     
+DATA[5]             NA                  NA             NA          NA           NA     
+DATA[6]             NA                  NA             NA          NA           NA     
+DATA[7]             NA                  NA             NA          NA           NA     
+DATA[8]             NA                  NA             NA          NA           NA     
+DATA[9]             NA                  NA             NA          NA           NA     
+DATA[10]            NA                  NA             NA          NA           NA     
+DATA[11]            NA                  NA             NA          NA           NA     
+DATA[12]            NA                  NA             NA          NA           NA     
+DATA[13]            NA                  NA             NA          NA           NA     
+DATA[14]            NA                  NA             NA          NA           NA     
+DATA[15]            NA                  NA             NA          NA           NA     
+DATA[16]            NA                  NA             NA          NA           NA     
+DATA[17]            NA                  NA             NA          NA           NA     
+DATA[18]            NA                  NA             NA          NA           NA     
+DATA[19]            NA                  NA             NA          NA           NA     
+DATA[20]            NA                  NA             NA          NA           NA     
+DATA[21]            NA                  NA             NA          NA           NA     
+DATA[22]            NA                  NA             NA          NA           NA     
+DATA[23]            NA                  NA             NA          NA           NA     
+DATA[24]            NA                  NA             NA          NA           NA     
+DATA[25]            NA                  NA             NA          NA           NA     
+DATA[26]            NA                  NA             NA          NA           NA     
+DATA[27]            NA                  NA             NA          NA           NA     
+DATA[28]            NA                  NA             NA          NA           NA     
+DATA[29]            NA                  NA             NA          NA           NA     
+DATA[30]            NA                  NA             NA          NA           NA     
+DATA[31]            NA                  NA             NA          NA           NA     
+EJTAG_DINT          System (rising)     NA             0.000       999.224      999.224
+EJTAG_TCK           System (rising)     NA             0.000       999.224      999.224
+EJTAG_TDI           System (rising)     NA             0.000       999.224      999.224
+EJTAG_TMS           System (rising)     NA             0.000       999.224      999.224
+EJTAG_TRST          System (rising)     NA             0.000       999.224      999.224
+M1_COL              System (rising)     NA             0.000       999.224      999.224
+M1_CRS              System (rising)     NA             0.000       999.224      999.224
+M1_MDIO             NA                  NA             NA          NA           NA     
+M1_RXCLK            System (rising)     NA             0.000       999.224      999.224
+M1_RXDV             System (rising)     NA             0.000       999.224      999.224
+M1_RXD[0]           System (rising)     NA             0.000       999.224      999.224
+M1_RXD[1]           System (rising)     NA             0.000       999.224      999.224
+M1_RXD[2]           System (rising)     NA             0.000       999.224      999.224
+M1_RXD[3]           System (rising)     NA             0.000       999.224      999.224
+M1_RXER             System (rising)     NA             0.000       999.224      999.224
+M1_TXCLK            System (rising)     NA             0.000       999.224      999.224
+M2_COL              System (rising)     NA             0.000       999.224      999.224
+M2_CRS              System (rising)     NA             0.000       999.224      999.224
+M2_MDIO             NA                  NA             NA          NA           NA     
+M2_RXCLK            System (rising)     NA             0.000       999.224      999.224
+M2_RXDV             System (rising)     NA             0.000       999.224      999.224
+M2_RXD[0]           System (rising)     NA             0.000       999.224      999.224
+M2_RXD[1]           System (rising)     NA             0.000       999.224      999.224
+M2_RXD[2]           System (rising)     NA             0.000       999.224      999.224
+M2_RXD[3]           System (rising)     NA             0.000       999.224      999.224
+M2_RXER             System (rising)     NA             0.000       999.224      999.224
+M2_TXCLK            System (rising)     NA             0.000       999.224      999.224
+PCI_AD[0]           NA                  NA             NA          NA           NA     
+PCI_AD[1]           NA                  NA             NA          NA           NA     
+PCI_AD[2]           NA                  NA             NA          NA           NA     
+PCI_AD[3]           NA                  NA             NA          NA           NA     
+PCI_AD[4]           NA                  NA             NA          NA           NA     
+PCI_AD[5]           NA                  NA             NA          NA           NA     
+PCI_AD[6]           NA                  NA             NA          NA           NA     
+PCI_AD[7]           NA                  NA             NA          NA           NA     
+PCI_AD[8]           NA                  NA             NA          NA           NA     
+PCI_AD[9]           NA                  NA             NA          NA           NA     
+PCI_AD[10]          NA                  NA             NA          NA           NA     
+PCI_AD[11]          NA                  NA             NA          NA           NA     
+PCI_AD[12]          NA                  NA             NA          NA           NA     
+PCI_AD[13]          NA                  NA             NA          NA           NA     
+PCI_AD[14]          NA                  NA             NA          NA           NA     
+PCI_AD[15]          NA                  NA             NA          NA           NA     
+PCI_AD[16]          NA                  NA             NA          NA           NA     
+PCI_AD[17]          NA                  NA             NA          NA           NA     
+PCI_AD[18]          NA                  NA             NA          NA           NA     
+PCI_AD[19]          NA                  NA             NA          NA           NA     
+PCI_AD[20]          NA                  NA             NA          NA           NA     
+PCI_AD[21]          NA                  NA             NA          NA           NA     
+PCI_AD[22]          NA                  NA             NA          NA           NA     
+PCI_AD[23]          NA                  NA             NA          NA           NA     
+PCI_AD[24]          NA                  NA             NA          NA           NA     
+PCI_AD[25]          NA                  NA             NA          NA           NA     
+PCI_AD[26]          NA                  NA             NA          NA           NA     
+PCI_AD[27]          NA                  NA             NA          NA           NA     
+PCI_AD[28]          NA                  NA             NA          NA           NA     
+PCI_AD[29]          NA                  NA             NA          NA           NA     
+PCI_AD[30]          NA                  NA             NA          NA           NA     
+PCI_AD[31]          NA                  NA             NA          NA           NA     
+PCI_CLK             System (rising)     NA             0.000       999.224      999.224
+PCI_C_BE_n[0]       NA                  NA             NA          NA           NA     
+PCI_C_BE_n[1]       NA                  NA             NA          NA           NA     
+PCI_C_BE_n[2]       NA                  NA             NA          NA           NA     
+PCI_C_BE_n[3]       NA                  NA             NA          NA           NA     
+PCI_DEVSEL_n        NA                  NA             NA          NA           NA     
+PCI_FRAME_n         NA                  NA             NA          NA           NA     
+PCI_GNT_n           System (rising)     NA             0.000       999.224      999.224
+PCI_IDSEL           System (rising)     NA             0.000       999.224      999.224
+PCI_IRDY_n          NA                  NA             NA          NA           NA     
+PCI_LOCK_n          System (rising)     NA             0.000       999.224      999.224
+PCI_PAR             NA                  NA             NA          NA           NA     
+PCI_RST_n           System (rising)     NA             0.000       999.224      999.224
+PCI_STOP_n          NA                  NA             NA          NA           NA     
+PCI_TRDY_n          NA                  NA             NA          NA           NA     
+PL_BYPASS           System (rising)     NA             0.000       999.224      999.224
+PL_CLOCKIN          System (rising)     NA             0.000       999.224      999.224
+PL_ENABLE           System (rising)     NA             0.000       999.224      999.224
+PL_RESET_n          System (rising)     NA             0.000       999.224      999.224
+PL_WARMRESET_n      System (rising)     NA             0.000       999.224      999.224
+SD_CLKIN            System (rising)     NA             0.000       999.224      999.224
+TM_ENABLE           System (rising)     NA             0.000       999.224      999.224
+U1_CTS_n            System (rising)     NA             0.000       999.224      999.224
+U1_DCD_n            System (rising)     NA             0.000       999.224      999.224
+U1_DSR_n            System (rising)     NA             0.000       999.224      999.224
+U1_RI_n             System (rising)     NA             0.000       999.224      999.224
+U1_RXD_SIRIN        System (rising)     NA             0.000       999.224      999.224
+U2_RXD_SIRIN        System (rising)     NA             0.000       999.224      999.224
+=======================================================================================
+
+
+Output Ports: 
+
+Port                Starting            User           Arrival     Required            
+Name                Reference           Constraint     Time        Time         Slack  
+                    Clock                                                              
+---------------------------------------------------------------------------------------
+ADDR[0]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[1]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[2]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[3]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[4]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[5]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[6]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[7]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[8]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[9]             System (rising)     NA             1.118       1000.000     998.882
+ADDR[10]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[11]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[12]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[13]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[14]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[15]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[16]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[17]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[18]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[19]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[20]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[21]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[22]            System (rising)     NA             1.118       1000.000     998.882
+ADDR[23]            System (rising)     NA             1.118       1000.000     998.882
+BLS_n[0]            System (rising)     NA             1.118       1000.000     998.882
+BLS_n[1]            System (rising)     NA             1.118       1000.000     998.882
+BLS_n[2]            System (rising)     NA             1.118       1000.000     998.882
+BLS_n[3]            System (rising)     NA             1.118       1000.000     998.882
+CS_n[0]             System (rising)     NA             1.118       1000.000     998.882
+CS_n[1]             System (rising)     NA             1.118       1000.000     998.882
+CS_n[2]             System (rising)     NA             1.118       1000.000     998.882
+CS_n[3]             System (rising)     NA             1.118       1000.000     998.882
+CS_n[4]             System (rising)     NA             1.118       1000.000     998.882
+CS_n[5]             System (rising)     NA             1.118       1000.000     998.882
+CS_n[6]             System (rising)     NA             1.118       1000.000     998.882
+CS_n[7]             System (rising)     NA             1.118       1000.000     998.882
+DATA[0]             System (rising)     NA             1.118       1000.000     998.882
+DATA[1]             System (rising)     NA             1.118       1000.000     998.882
+DATA[2]             System (rising)     NA             1.118       1000.000     998.882
+DATA[3]             System (rising)     NA             1.118       1000.000     998.882
+DATA[4]             System (rising)     NA             1.118       1000.000     998.882
+DATA[5]             System (rising)     NA             1.118       1000.000     998.882
+DATA[6]             System (rising)     NA             1.118       1000.000     998.882
+DATA[7]             System (rising)     NA             1.118       1000.000     998.882
+DATA[8]             System (rising)     NA             1.118       1000.000     998.882
+DATA[9]             System (rising)     NA             1.118       1000.000     998.882
+DATA[10]            System (rising)     NA             1.118       1000.000     998.882
+DATA[11]            System (rising)     NA             1.118       1000.000     998.882
+DATA[12]            System (rising)     NA             1.118       1000.000     998.882
+DATA[13]            System (rising)     NA             1.118       1000.000     998.882
+DATA[14]            System (rising)     NA             1.118       1000.000     998.882
+DATA[15]            System (rising)     NA             1.118       1000.000     998.882
+DATA[16]            System (rising)     NA             1.118       1000.000     998.882
+DATA[17]            System (rising)     NA             1.118       1000.000     998.882
+DATA[18]            System (rising)     NA             1.118       1000.000     998.882
+DATA[19]            System (rising)     NA             1.118       1000.000     998.882
+DATA[20]            System (rising)     NA             1.118       1000.000     998.882
+DATA[21]            System (rising)     NA             1.118       1000.000     998.882
+DATA[22]            System (rising)     NA             1.118       1000.000     998.882
+DATA[23]            System (rising)     NA             1.118       1000.000     998.882
+DATA[24]            System (rising)     NA             1.118       1000.000     998.882
+DATA[25]            System (rising)     NA             1.118       1000.000     998.882
+DATA[26]            System (rising)     NA             1.118       1000.000     998.882
+DATA[27]            System (rising)     NA             1.118       1000.000     998.882
+DATA[28]            System (rising)     NA             1.118       1000.000     998.882
+DATA[29]            System (rising)     NA             1.118       1000.000     998.882
+DATA[30]            System (rising)     NA             1.118       1000.000     998.882
+DATA[31]            System (rising)     NA             1.118       1000.000     998.882
+EJTAG_DEBUGM        System (rising)     NA             1.118       1000.000     998.882
+EJTAG_TDO           System (rising)     NA             1.118       1000.000     998.882
+LED8[0]             System (rising)     NA             2.729       1000.000     997.271
+LED8[1]             System (rising)     NA             2.729       1000.000     997.271
+LED8[2]             System (rising)     NA             2.871       1000.000     997.129
+LED8[3]             System (rising)     NA             2.729       1000.000     997.271
+LED8[4]             NA                  NA             NA          NA           NA     
+LED8[5]             NA                  NA             NA          NA           NA     
+LED8[6]             NA                  NA             NA          NA           NA     
+LED8[7]             NA                  NA             NA          NA           NA     
+M1_MDC              System (rising)     NA             1.118       1000.000     998.882
+M1_MDIO             System (rising)     NA             1.118       1000.000     998.882
+M1_TXD[0]           System (rising)     NA             1.118       1000.000     998.882
+M1_TXD[1]           System (rising)     NA             1.118       1000.000     998.882
+M1_TXD[2]           System (rising)     NA             1.118       1000.000     998.882
+M1_TXD[3]           System (rising)     NA             1.118       1000.000     998.882
+M1_TXEN             System (rising)     NA             1.118       1000.000     998.882
+M2_MDC              System (rising)     NA             1.118       1000.000     998.882
+M2_MDIO             System (rising)     NA             1.118       1000.000     998.882
+M2_TXD[0]           System (rising)     NA             1.118       1000.000     998.882
+M2_TXD[1]           System (rising)     NA             1.118       1000.000     998.882
+M2_TXD[2]           System (rising)     NA             1.118       1000.000     998.882
+M2_TXD[3]           System (rising)     NA             1.118       1000.000     998.882
+M2_TXEN             System (rising)     NA             1.118       1000.000     998.882
+OEN_n               System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[0]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[1]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[2]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[3]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[4]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[5]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[6]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[7]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[8]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[9]           System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[10]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[11]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[12]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[13]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[14]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[15]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[16]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[17]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[18]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[19]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[20]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[21]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[22]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[23]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[24]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[25]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[26]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[27]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[28]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[29]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[30]          System (rising)     NA             1.118       1000.000     998.882
+PCI_AD[31]          System (rising)     NA             1.118       1000.000     998.882
+PCI_C_BE_n[0]       System (rising)     NA             1.118       1000.000     998.882
+PCI_C_BE_n[1]       System (rising)     NA             1.118       1000.000     998.882
+PCI_C_BE_n[2]       System (rising)     NA             1.118       1000.000     998.882
+PCI_C_BE_n[3]       System (rising)     NA             1.118       1000.000     998.882
+PCI_DEVSEL_n        System (rising)     NA             1.118       1000.000     998.882
+PCI_FRAME_n         System (rising)     NA             1.118       1000.000     998.882
+PCI_INTA_n          System (rising)     NA             1.118       1000.000     998.882
+PCI_IRDY_n          System (rising)     NA             1.118       1000.000     998.882
+PCI_PAR             System (rising)     NA             1.118       1000.000     998.882
+PCI_PERR_n          System (rising)     NA             1.118       1000.000     998.882
+PCI_REQ_n           System (rising)     NA             1.118       1000.000     998.882
+PCI_SERR_n          System (rising)     NA             1.118       1000.000     998.882
+PCI_STOP_n          System (rising)     NA             1.118       1000.000     998.882
+PCI_TRDY_n          System (rising)     NA             1.118       1000.000     998.882
+PL_CLKOUT           System (rising)     NA             1.118       1000.000     998.882
+PL_LOCK             System (rising)     NA             1.118       1000.000     998.882
+SD_CAS_n            System (rising)     NA             1.118       1000.000     998.882
+SD_CKE[0]           System (rising)     NA             1.118       1000.000     998.882
+SD_CKE[1]           System (rising)     NA             1.118       1000.000     998.882
+SD_CKE[2]           System (rising)     NA             1.118       1000.000     998.882
+SD_CKE[3]           System (rising)     NA             1.118       1000.000     998.882
+SD_CLKOUT           System (rising)     NA             1.118       1000.000     998.882
+SD_CS_n[0]          System (rising)     NA             1.118       1000.000     998.882
+SD_CS_n[1]          System (rising)     NA             1.118       1000.000     998.882
+SD_CS_n[2]          System (rising)     NA             1.118       1000.000     998.882
+SD_CS_n[3]          System (rising)     NA             1.118       1000.000     998.882
+SD_DQM[0]           System (rising)     NA             1.118       1000.000     998.882
+SD_DQM[1]           System (rising)     NA             1.118       1000.000     998.882
+SD_DQM[2]           System (rising)     NA             1.118       1000.000     998.882
+SD_DQM[3]           System (rising)     NA             1.118       1000.000     998.882
+SD_RAS_n            System (rising)     NA             1.118       1000.000     998.882
+SD_WE_n             System (rising)     NA             1.118       1000.000     998.882
+TM_OVERFLOW         System (rising)     NA             1.118       1000.000     998.882
+U1_DTR_n            System (rising)     NA             1.118       1000.000     998.882
+U1_RTS_n            System (rising)     NA             1.118       1000.000     998.882
+U1_TXD_SIROUT_n     System (rising)     NA             1.118       1000.000     998.882
+U2_TXD_SIROUT_n     System (rising)     NA             1.118       1000.000     998.882
+WEN_n               System (rising)     NA             1.118       1000.000     998.882
+=======================================================================================
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with worst slack 
+********************************
+
+                                                                                        Arrival            
+Instance                           Type      Pin     Net                                Time        Slack  
+                                                                                                           
+-----------------------------------------------------------------------------------------------------------
+ahb_master.ahb_master_state[3]     Q_DFF     QZ      ahb_master.ahb_master_state[3]     2.474       985.223
+ahb_master.ahb_master_state[1]     Q_DFF     QZ      ahb_master.ahb_master_state[1]     2.474       985.644
+ahb_slave.block_size[0]            Q_DFF     QZ      block_size[0]                      3.712       985.942
+ahb_master.ahb_master_state[2]     Q_DFF     QZ      ahb_master.ahb_master_state[2]     1.932       986.859
+ahb_slave.ahbs_haddr_reg[2]        Q_DFF     QZ      ahb_slave.ahbs_haddr_reg[2]        5.837       987.168
+ahb_slave.block_size[1]            Q_DFF     QZ      block_size[1]                      2.338       987.180
+ahb_master.ahb_master_state[0]     Q_DFF     QZ      ahb_master.ahb_master_state[0]     2.203       987.181
+ahb_slave.block_size[2]            Q_DFF     QZ      block_size[2]                      2.338       987.315
+ahb_slave.block_size[3]            Q_DFF     QZ      block_size[3]                      2.338       987.315
+ahb_slave.dst_addr[2]              Q_DFF     QZ      dst_addr[2]                        2.067       987.586
+===========================================================================================================
+
+
+Ending Points with worst slack 
+******************************
+
+                                                                        Required            
+Instance                           Type      Pin     Net                Time         Slack  
+                                                                                            
+--------------------------------------------------------------------------------------------
+ahb_master.hbusreq_o               Q_DFF     QD      ahb_master.N_5     1000.000     985.223
+ahb_master.ahb_master_state[1]     Q_DFF     QD      ahb_master.N_2     1000.000     985.844
+ahb_slave.dst_addr[31]             Q_DFF     QD      ahb_slave.N_64     1000.000     985.942
+ahb_slave.src_addr[31]             Q_DFF     QD      ahb_slave.N_32     1000.000     985.942
+ahb_slave.dst_addr[30]             Q_DFF     QD      ahb_slave.N_63     1000.000     986.501
+ahb_slave.src_addr[30]             Q_DFF     QD      ahb_slave.N_31     1000.000     986.501
+ahb_slave.dst_addr[28]             Q_DFF     QD      ahb_slave.N_61     1000.000     986.777
+ahb_slave.src_addr[28]             Q_DFF     QD      ahb_slave.N_29     1000.000     986.777
+ahb_master.ahb_master_state[0]     Q_DFF     QD      ahb_master.N_1     1000.000     986.806
+ahb_master.ahb_master_state[3]     Q_DFF     QD      ahb_master.N_4     1000.000     986.904
+============================================================================================
+
+
+
+Worst Paths Information
+***********************
+
+
+Path information for path number 1: 
+    - Setup time:                         0.000
+    = Required time:                      1000.000
+
+    - Propagation  time:                  14.777
+    = Slack (critical) :                  985.223
+
+    Starting point:                       ahb_master.ahb_master_state[3] / QZ
+    Ending point:                         ahb_master.hbusreq_o / QD
+    The start point is clocked by         System [rising] on pin QC
+    The end   point is clocked by         System [rising] on pin QC
+
+Instance / Net                                               Pin      Pin               Arrival     Fan
+Name                                              Type       Name     Dir     Delay     Time        Out
+-------------------------------------------------------------------------------------------------------
+ahb_master.ahb_master_state[3]                    Q_DFF      QZ       Out     2.474     2.474          
+ahb_master.ahb_master_state[3]                    Net                                               14 
+I_186                                             Q_INV      A        In                2.474          
+I_186                                             Q_INV      Q        Out     0.640     3.114          
+ahb_master.ahb_master_state_i[3]                  Net                                               1  
+ahb_master.htrans_o_sn.htrans_o_17.htrans_o_7     XOR2I0     B        In                3.114          
+ahb_master.htrans_o_sn.htrans_o_17.htrans_o_7     XOR2I0     Q        Out     1.041     4.155          
+ahb_master.htrans_o_sn.htrans_o_17.N_5            Net                                               1  
+ahb_master.htrans_o_sn.htrans_o_17.htrans_o_8     AND2I2     B        In                4.155          
+ahb_master.htrans_o_sn.htrans_o_17.htrans_o_8     AND2I2     Q        Out     1.000     5.155          
+ahb_master.htrans_o_sn.htrans_o_17.N_6            Net                                               1  
+ahb_master.htrans_o_sn.htrans_o_17.htrans_o_9     MUX2X0     B        In                5.155          
+ahb_master.htrans_o_sn.htrans_o_17.htrans_o_9     MUX2X0     Q        Out     0.645     5.800          
+ahb_master.htrans_o_sn.htrans_o_17.N_7            Net                                               3  
+ahb_master.htrans_o[1]                            AND2I0     B        In                5.800          
+ahb_master.htrans_o[1]                            AND2I0     Q        Out     0.462     6.262          
+ahbm_htrans[1]                                    Net                                               4  
+ahb_master.un1_lastbrstrd                         OR2I1      B        In                6.262          
+ahb_master.un1_lastbrstrd                         OR2I1      Q        Out     1.260     7.522          
+ahb_master.un1_lastbrstrd                         Net                                               3  
+ahb_master.un1_rddf_wren35_4                      AND2I0     B        In                7.522          
+ahb_master.un1_rddf_wren35_4                      AND2I0     Q        Out     0.557     8.080          
+ahb_master.un1_rddf_wren35_4                      Net                                               1  
+ahb_master.un1_rddf_wren36_3                      AND2I2     B        In                8.080          
+ahb_master.un1_rddf_wren36_3                      AND2I2     Q        Out     0.993     9.073          
+ahb_master.un1_rddf_wren36_3_i                    Net                                               1  
+ahb_master.un1_hburst_o61_9                       AND2I1     B        In                9.073          
+ahb_master.un1_hburst_o61_9                       AND2I1     Q        Out     1.151     10.223         
+ahb_master.un1_hburst_o61_9                       Net                                               1  
+ahb_master.un1_un1_un1_hburst_o58_173             OR2I1      A        In                10.223         
+ahb_master.un1_un1_un1_hburst_o58_173             OR2I1      Q        Out     1.653     11.876         
+N_161                                             Net                                               1  
+ahb_master.un1_un1_un1_hburst_o58                 OR4I0      C        In                11.876         
+ahb_master.un1_un1_un1_hburst_o58                 OR4I0      Q        Out     1.673     13.549         
+ahb_master.un1_un1_un1_hburst_o58                 Net                                               1  
+ahb_master.hbusreq_o_0                            MUX2X0     S        In                13.549         
+ahb_master.hbusreq_o_0                            MUX2X0     Q        Out     1.229     14.777         
+ahb_master.N_5                                    Net                                               1  
+ahb_master.hbusreq_o                              Q_DFF      QD       In                14.777         
+=======================================================================================================
+
+
+
+
+##### END TIMING REPORT #####
+
+Wrote QDIF file '\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.qdf' part='ql901m' grade='-4' package='ps680'.
+Mapper successful!
+Process took 9.344 seconds realtime, 9.413 seconds cputime

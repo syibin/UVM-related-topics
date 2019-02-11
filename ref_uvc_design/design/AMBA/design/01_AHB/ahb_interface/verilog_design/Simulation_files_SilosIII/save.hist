@@ -1,0 +1,96 @@
+sim to 0
+sim 6000.00ns
+scope "t.m "
+vprobe LED8[7:0]
+scope "t "
+vprobe hresetn
+scope "t "
+vprobe hclk
+vprobe --Testbench_Master_Signals
+vprobe ( --Testbench_Master_Signals )
+scope "t.ahbmst_inst "
+vprobe hbusreq_o
+scope "t.ahbmst_inst "
+vprobe hgrant_i
+scope "t.ahbmst_inst "
+vprobe haddr_o[31:0]
+scope "t.ahbmst_inst "
+vprobe htrans_o[1:0]
+scope "t.ahbmst_inst "
+vprobe hburst_o[2:0]
+scope "t.ahbmst_inst "
+vprobe hsize_o[2:0]
+scope "t.ahbmst_inst "
+vprobe hwrite_o
+scope "t.ahbmst_inst "
+vprobe hwdata_o[31:0]
+scope "t.ahbmst_inst "
+vprobe hresp_i[1:0]
+scope "t.ahbmst_inst "
+vprobe hrdata_i[31:0]
+vprobe --Testbench_Slave_Signals
+vprobe ( --Testbench_Slave_Signals )
+scope "t.ahbslv_inst "
+vprobe hsel_i
+scope "t.ahbslv_inst "
+vprobe haddr_i[31:0]
+scope "t.ahbslv_inst "
+vprobe htrans_i[1:0]
+scope "t.ahbslv_inst "
+vprobe hburst_i[2:0]
+scope "t.ahbslv_inst "
+vprobe hsize_i[2:0]
+scope "t.ahbslv_inst "
+vprobe hwrite_i
+scope "t.ahbslv_inst "
+vprobe hwdata_i[31:0]
+scope "t.ahbslv_inst "
+vprobe hresp_o[1:0]
+scope "t.ahbslv_inst "
+vprobe hready_o
+scope "t.ahbslv_inst "
+vprobe hrdata_o[31:0]
+vprobe --My_Design_Master_Signals
+vprobe ( --My_Design_Master_Signals )
+scope "t.m "
+vprobe ahbm_hbusreq
+scope "t.m "
+vprobe ahbm_hgrant
+scope "t.m "
+vprobe ahbm_haddr[31:0]
+scope "t.m "
+vprobe ahbm_htrans[1:0]
+scope "t.m "
+vprobe ahbm_hburst[2:0]
+scope "t.m "
+vprobe ahbm_hsize[2:0]
+scope "t.m "
+vprobe ahbm_hwrite
+scope "t.m "
+vprobe ahbm_hwdata[31:0]
+scope "t.m "
+vprobe ahbm_hresp[1:0]
+scope "t.m "
+vprobe ahbm_hrdata[31:0]
+vprobe --My_Design_Slave_Signals
+vprobe ( --My_Design_Slave_Signals )
+scope "t.m "
+vprobe ahbs_hsel
+scope "t.m "
+vprobe ahbs_haddr[31:0]
+scope "t.m "
+vprobe ahbs_htrans[1:0]
+scope "t.m "
+vprobe ahbs_hburst[2:0]
+scope "t.m "
+vprobe ahbs_hsize[2:0]
+scope "t.m "
+vprobe ahbs_hwrite
+scope "t.m "
+vprobe ahbs_hwdata[31:0]
+scope "t.m "
+vprobe ahbs_hresp[1:0]
+scope "t.m "
+vprobe ahbs_hready_out
+scope "t.m "
+vprobe ahbs_hrdata[31:0]

@@ -1,0 +1,202 @@
+
+Purpose
+-------
+
+This is a quick guide on how to setup and run this UVM based I2C TB. 
+
+The project was done using Mentor Graphics Questasim 10.1. 
+
+
+TB structure 
+-------------
+                                               
+                                              (wb)
+                             a1                DUT
+                             |                  |
+                             --------------------  I2C Bus
+                              |     |    |    |
+                              a2    a3   a4   a5
+
+ wb = wishbone agent.
+ ax = iic agent
+
+The wb agent runs the master sequences that drive the DUT via the DUT's wishbone interface.
+
+The a1 agent is used to run master sequences to create cross traffic. 
+
+Agents a2, a3, a4 and a5 are used to run slave sequences that respond to the master sequences
+running on the a1 and wb agents. 
+
+The tests included in this delivery use a2 and a4 to run slave transmit sequences and a3 and
+a5 to run slave receive sequences. The slave addresses of a2 and a3, and of a4 and a5 may be 
+identical, but the addresses of a2 and a3 cannot be the same as those of a4 and a5. In other 
+words a2 and a3 can be, but don't have to be, 'one' device, and a4 and a5 can be, but don't 
+have to be, 'one' device. Master a1 and wb randomly communicate with a matching sequence on
+a2-a5. This address allocation is controlled via constraints and can be changed to any other
+desired scheme.
+      
+
+Directory Overview
+------------------
+The directory structure generally follows that recommended in Mentor's cookbook.
+
+For a tree view please refer to the "tree.txt" located in this directory.
+
+
+iic
+|-- agents
+|   |-- iic_agent
+
+    All files relating to the I2C agents used by the TB to communicate with the DUT, and  
+    to create background traffic.
+|   |
+|   `-- wb_agent
+    The agent that is used to drive the DUT via the DUT's wishbone interface.
+
+|-- iic_tb
+|   |-- env
+    Contains the iic_env.svh file, which is the top level of the class based part of the testbench. 
+    It also contains the virtual sequencer that is used to run sequences to coordinate the wb and 
+    iic agents sequences, as well as the scoreboard that decides whether the data transferred across 
+    the bus is correct or not.
+|   |
+|   |-- register_model
+    Not implemented due to lack of time.
+|   |
+|   |-- sequences
+    All sequences used by the testbench.The sequences that run on the wb agent start with "wb", those that
+    run on the iic agents start with "iic" and the virtual sequences that run on the virtual sequencer
+    contain "vseq" in their names.
+|   |
+|   |-- sim
+    Simulation directory. Contains all scripts used to compile the project and run simulations.
+|   |   |
+|   |   |-- coverage
+        Directory to which coverage information is written when regressions are run.
+|   |   |
+|   |   |-- run_dirs
+        When a test is run it will create a test subdirectory, individual to the test, in this directory and
+        run the simulation in that directory.     
+|   |   |
+|   |   `-- work
+        Compiled libraries.
+|   |   |
+|   `-- test
+    Directory containing test source code directories.
+|   |   |
+
+|-- rtl
+    DUT RTL source code.
+
+Set-up
+-------
+
+Change the $PROJECTS variable in the compile script to point to where you've untared the testbench. 
+The path to the compile script is iic/tb/sim/compile
+
+
+What's randomised controlled by constraints.
+------------------------------------------
+
+1.  The type of the transfer (read/write).
+2.  The length of the transfer.
+3.  If arbitration occours or not.
+4.  Slave clock stretching.
+5.  The speed of the transfer.
+6.  The SCL frequency of each participant.
+7.  The addresses addressed by the masters.
+8.  The addresses of the slaves.
+9.  The number of frames.
+10. The ACK/NACK probability.
+11. Master's reaction to NACK.
+12. Whether the bus is released at the
+    end of a transfer (STOP vs Re-START). 
+13. The delay between frames.
+14. The presence and density of cross traffic.
+
+
+Individual Tests
+----------------
+
+Setup to work with Mentor's Questasim.
+
+1. Change to the simulation directory.
+
+cd iic/iic_tb/sim
+
+2. Compile
+
+./compile
+
+3. Run test.
+
+Using the iicMasterTxTest (located in iic/iic_tb/test), and a seed value of 4 as an example :
+
+vsim  +UVM_TESTNAME=iicMasterTxTest -cvg63 -coverage -debugDB  +UVM_VERBOSITY=UVM_NONE  -sv_seed 4 -do run.do top_opt
+
+For more transcript information change the verbosity level to UVM_FULL.
+
+
+Regression
+----------
+
+Setup to work with Mentor's Questasim.
+
+1. Change to the simulation directory.
+
+cd iic/iic_tb/sim
+
+2. Compile
+
+./compile
+
+3. Run the regression. The regression has been configured to run each available test with 10 different seeds. The 
+   results will be written to the run_dirs sub-directory. All coverage information will be written to the coverage
+   subdirectory. The coverage information from the individual tests will automatically be merged at the end of 
+   the regression run.Waveforms of each test will be automatically saved in the tests run directory.
+
+./run_all.pl
+
+4. Report results.
+
+./report.pl
+
+5. View result log files
+
+cd results_dir/<TestName>_<seed>
+emacs run.log
+
+6. View result wave files
+
+cd results_dir/<TestName>_<seed>
+./viewWave
+
+7. Viewing and analyzing coverage once the regression has finished.
+
+vsim -viewcov coverage/merged.ucdb &
+
+
+Drop Offs
+---------
+
+1. Some seeds for some tests will cause fails. It would need to be investigated whether this is due to bugs in the
+   test/testbench or the DUT.
+
+2. The situation of arbitration in the Master Rx versus Master Rx case has been constrained to arbitration in the 
+   address part of the transfer. When arbitration continues beyond the address byte and the frames are of unequal
+   length, then the master that finished its read first can legitimately start another transfer whilst the other
+   master is still carrying on with its read. It seems to me that this is a corner case not addressed by the I2C
+   standard.
+
+3. The DUT RTL had to be slightly modified. Using the original code led to situations where the DUT would sometimes
+   start transfers during ongoing cross traffic transfers. This was due to the delay in the bus busy information
+   reaching the wb master sequence and the delay in making the wishbone write to initiate a transfer. The scenario
+   being that the wb master sequence checks if the bus is free and initiating a transfer, only for the cross traffic
+   to start a transfer in the meanwhile, and this transfer having gone beyond the start bit by the time that the 
+   DUT transfer starts up. 
+
+   
+Feedback
+--------
+
+Please mail any feedback to me, Carsten Thiele, at carsten.thiele@enquireservicesltd.co.uk. Thanks.

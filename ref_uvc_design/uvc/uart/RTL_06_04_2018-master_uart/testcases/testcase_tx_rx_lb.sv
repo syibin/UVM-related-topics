@@ -1,0 +1,91 @@
+class transaction_mode extends transaction;
+  
+  constraint mod_cnst { 
+                        mode              inside {
+
+                                                            /***************RX/TX MODES***************/
+                                                  [32'h0000_0080:32'h0000_009F], [32'h0000_0180:32'h0000_019F], 
+                                                  //[32'h0000_0280:32'h0000_029F], [32'h0000_0380:32'h0000_039F],
+
+                                                  /*[32'h0000_0880:32'h0000_089F], [32'h0000_0980:32'h0000_099F],
+                                                  [32'h0000_0A80:32'h0000_0A9F], [32'h0000_0B80:32'h0000_0B9F]*/
+
+
+                                                            /***************TX MODES***************/    
+                                                                //[32'h0000_1090:32'h0000_1090]
+
+
+                                                          /* **************LOOPBACK MODES************** */
+                                                  [32'h0000_00A0:32'h0000_00BF], [32'h0000_01A0:32'h0000_01BF],
+                                                  //[32'h0000_02A0:32'h0000_02BF], [32'h0000_03A0:32'h0000_03BF],
+
+                                                  [32'h0000_10A0:32'h0000_10BF], [32'h0000_11A0:32'h0000_11BF]/*,
+                                                  [32'h0000_12A0:32'h0000_12BF], [32'h0000_13A0:32'h0000_13BF]*/
+
+                                                 };
+
+                		    ins_errors        ==  2'b00;
+                      }
+
+  constraint solve_mode_b4_intc         { solve mode      before interrupts_config; }
+  constraint solve_mode_b4_block_sel    { solve mode      before block_sel; }
+  constraint solve_mode_b4_special      { solve mode      before special; }
+  constraint solve_block_sel_b4_special { solve block_sel before special; }
+  constraint solve_block_sel_b4_intc    { solve block_sel before interrupts_config; }
+  constraint solve_special_b4_intc      { solve special   before interrupts_config; }
+
+  constraint block_sel_cnst    {
+
+                                  if(mode[5]) block_sel  ==  2'b10;
+                                  else        block_sel  inside { 2'b00, 2'b01 };
+
+                                }
+
+  constraint special_cnst      {
+
+                                  if(mode[5])                 special  ==  2'b00;
+                                  else if(block_sel == 2'b00) special  ==  2'b11;
+                                  else if(block_sel == 2'b01) special  ==  2'b00;
+
+                                }
+
+  constraint intc_cnst         {
+
+                                  if(mode[5])                                       interrupts_config dist { 3'b000 := 1, 3'b011 := 1  };
+                                  else if(block_sel == 2'b00 && special  ==  2'b11) interrupts_config ==  3'b001;
+                                  else if(block_sel == 2'b01 && special  ==  2'b00) interrupts_config ==  3'b010;
+
+                                }
+  
+endclass : transaction_mode
+
+
+program testcase_combined(uart_interface uif);
+
+    int              num;
+    environment      env;
+    transaction_mode tr_mode;
+
+    initial begin
+
+        env = new(uif);
+
+        repeat(1250) begin //////////////////////////////// 256
+
+            tr_mode       = new();
+            env.gen.trans = tr_mode; 
+            num           = $urandom_range(5, 10); //////////////////////////////// 20, 50
+            env.drv.LOOPBACK_CHARACTER_NUM = num;
+            env.scb.LOOPBACK_CHARACTER_NUM = num;
+            env.drv.loop_count             = num;
+            env.scb.loop_count             = num;
+            env.gen.repeat_count           = num;
+            env.gen.signal_generate();
+            env.drv.run_sim_control();
+            env.scb.scb_control();
+
+        end
+
+    end
+
+endprogram : testcase_combined

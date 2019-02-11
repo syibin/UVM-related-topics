@@ -1,0 +1,103 @@
+[Settings]
+Mode=Debug
+Version=97.1
+
+[DebugMode]
+LogFile=Yes
+
+[Quick]
+DesignFile=demo_amba_for_tb.tre
+
+[WindowPos]
+Output=0,1,0,-1,0,-1,9,3,844,482
+Explorer=0,1,0,-1,0,-1,95,123,908,529
+OpenWindows=1
+Analyzer=0,1,0,-1,0,-1,22,22,759,349
+
+[Analyzer]
+P1Width=321
+P2Width=397
+C1Width=230
+C2Width=20
+C3Width=89
+
+[Options]
+DebugEnable=No
+CCEnable=No
+CcOpEnable=No
+
+[Position]
+Width=903
+Height=609
+X=61
+Y=88
+
+[Group1]
+Name=New Group
+0="t : hclk" default
+
+[TraceInput]
+P1Width=100
+P2Width=694
+
+[Explorer]
+P1Width=213
+P2Width=581
+View=Icon
+Scope=t.m
+
+[Group0]
+Name=Default
+0="t.m : ahbs_hrdata[31:0]" default
+1="t.m : ahbs_hready_out" default
+2="t.m : ahbs_hresp[1:0]" default
+3="t.m : ahbs_hwdata[31:0]" default
+4="t.m : ahbs_hwrite" default
+5="t.m : ahbs_hsize[2:0]" default
+6="t.m : ahbs_hburst[2:0]" default
+7="t.m : ahbs_htrans[1:0]" default
+8="t.m : ahbs_haddr[31:0]" default
+9="t.m : ahbs_hsel" default
+10=" : --My_Design_Slave_Signals" default
+11="t.m : ahbm_hrdata[31:0]" default
+12="t.m : ahbm_hresp[1:0]" default
+13="t.m : ahbm_hwdata[31:0]" default
+14="t.m : ahbm_hwrite" default
+15="t.m : ahbm_hsize[2:0]" default
+16="t.m : ahbm_hburst[2:0]" default
+17="t.m : ahbm_htrans[1:0]" default
+18="t.m : ahbm_haddr[31:0]" default
+19="t.m : ahbm_hgrant" default
+20="t.m : ahbm_hbusreq" default
+21=" : --My_Design_Master_Signals" default
+22="t.ahbslv_inst : hrdata_o[31:0]" default
+23="t.ahbslv_inst : hready_o" default
+24="t.ahbslv_inst : hresp_o[1:0]" default
+25="t.ahbslv_inst : hwdata_i[31:0]" default
+26="t.ahbslv_inst : hwrite_i" default
+27="t.ahbslv_inst : hsize_i[2:0]" default
+28="t.ahbslv_inst : hburst_i[2:0]" default
+29="t.ahbslv_inst : htrans_i[1:0]" default
+30="t.ahbslv_inst : haddr_i[31:0]" default
+31="t.ahbslv_inst : hsel_i" default
+32=" : --Testbench_Slave_Signals" default
+33="t.ahbmst_inst : hrdata_i[31:0]" default
+34="t.ahbmst_inst : hresp_i[1:0]" default
+35="t.ahbmst_inst : hwdata_o[31:0]" default
+36="t.ahbmst_inst : hwrite_o" default
+37="t.ahbmst_inst : hsize_o[2:0]" default
+38="t.ahbmst_inst : hburst_o[2:0]" default
+39="t.ahbmst_inst : htrans_o[1:0]" default
+40="t.ahbmst_inst : haddr_o[31:0]" default
+41="t.ahbmst_inst : hgrant_i" default
+42="t.ahbmst_inst : hbusreq_o" default
+43=" : --Testbench_Master_Signals" default
+44="t : hclk" default
+45="t : hresetn" default
+46="t.m : LED8[7:0]" default
+
+[Files]
+0="testbench.v"
+
+[GroupList]
+0=Default

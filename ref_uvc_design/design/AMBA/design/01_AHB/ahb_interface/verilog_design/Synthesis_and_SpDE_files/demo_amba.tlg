@@ -1,0 +1,22 @@
+Selecting top level module demo_amba
+Synthesizing module qmipsesp
+Synthesizing module hsckmux
+Synthesizing module gclkbuff_25um
+Synthesizing module ahb_master
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_master.v":196:0:196:5|Optimizing register bit hburst_o[1] to a constant 0
+Synthesizing module busreq_sm
+Synthesizing module RAM128X18_25UM
+Synthesizing module r128a32_25um
+Synthesizing module fifo128x32
+Synthesizing module appreq_sm
+Synthesizing module ahb_slave
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_slave.v":59:16:59:25|Input ahbs_hsize is unused
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_slave.v":60:16:60:26|Input ahbs_hburst is unused
+@W:"\\Judd_ql_dallas\D\mips\ahb\interface_ex\verilog\ahb_slave.v":61:16:61:25|Input ahbs_hprot is unused
+Synthesizing module frag_a
+Synthesizing module frag_m
+Synthesizing module frag_f
+Synthesizing module xor2i0
+Synthesizing module xor32x2
+Synthesizing module app_codec
+Synthesizing module demo_amba

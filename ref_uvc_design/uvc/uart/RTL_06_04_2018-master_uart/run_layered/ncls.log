@@ -1,0 +1,6 @@
+ncls(64): 15.10-s015: (c) Copyright 1995-2016 Cadence Design Systems, Inc.
+	snapshot worklib.testcase_combined:sv (SSS)
+	snapshot worklib.testcase_one:sv (SSS)
+	snapshot worklib.testcase_three:sv (SSS)
+	snapshot worklib.uart_top:v (SSS)
+	snapshot worklib.uart_top_tb:sv (SSS)

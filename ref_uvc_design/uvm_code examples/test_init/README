@@ -1,0 +1,13 @@
+This example shows how to initialise the sequencer handles in a virtual sequence
+from an initialisation method in a test.
+
+The Makefile will compile the design and run the simulation withi versions of Questa from 10.0c onwards.
+
+If you are using an earlier version of Questa, then the Makefile will need to be
+modified to include the UVM source directory.
+
+To compile and run type:
+
+make
+
+

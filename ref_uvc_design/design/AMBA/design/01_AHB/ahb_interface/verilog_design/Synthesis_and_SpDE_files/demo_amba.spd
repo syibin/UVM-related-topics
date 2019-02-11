@@ -1,0 +1,1772 @@
+; Time: Fri Sep 13 18:34:30 2002
+; SpDE Version: SpDE 9.3 Patch1
+; Time: Fri Sep 13 18:34:30 2002
+; Status: Load file \\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.qdf begin...
+; Time: Fri Sep 13 18:34:35 2002
+; Status: Load file \\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.qdf complete
+;  supriay temp
+; Time: Fri Sep 13 18:34:35 2002
+; Status: Fragment-Level Netlister begin...
+; Time: Fri Sep 13 18:34:37 2002
+; Status: Fragment-Level Netlister complete
+; Time: Fri Sep 13 18:34:38 2002
+; Status: No constraint file loaded
+; Time: Fri Sep 13 18:34:38 2002
+; Status: No ESP Configuration file loaded
+; Time: Fri Sep 13 18:34:40 2002
+; Status: Verifier begin...
+; Time: Fri Sep 13 18:34:40 2002
+; Status: verifier: no buffer removal
+; Time: Fri Sep 13 18:34:40 2002
+; Status: verifier: const FFs removal starts
+; Time: Fri Sep 13 18:34:40 2002
+; Status: verifier: const FFs removal ends
+; Time: Fri Sep 13 18:34:40 2002
+; Status: verifier: begin fixing global clock buffers
+; NNote: Net g_hreset used a global clock network to drive incompatible inputs.  A buffer was inserted to fix this.
+; Time: Fri Sep 13 18:34:41 2002
+; Status: verifier: finished fixing global clock buffers
+; Time: Fri Sep 13 18:34:41 2002
+; Status: verifier: vrAddFF2Clock
+; Time: Fri Sep 13 18:34:41 2002
+; Status: verifier: vrAddFF2Clock
+; NQuickMIPS port AF_PCI_CFGDONE is tied to VCC
+; NQuickMIPS has been selected to be the PCI host
+; NNote: Net g_hreset uses global clock to drive F1 logic input
+; NNote: Net .rd_req has high logic cell fanout of 34
+; NNote: Net .ahb_slave.ahbs_haddr_reg[2] has high logic cell fanout of 38 (34 are clock compatible inputs)
+; NNote: Net .ahb_slave.un1_prevsel has high logic cell fanout of 69 (60 are clock compatible inputs)
+; NNote: Net .ahb_master.N_97 has high logic cell fanout of 35 (35 are clock compatible inputs)
+; NNote: Net .ahb_pop_i_0 has high logic cell fanout of 37
+; Time: Fri Sep 13 18:34:42 2002
+; Status: Verifier complete
+; Time: Fri Sep 13 18:34:42 2002
+; Status: Fragment-Level Netlister begin...
+; Time: Fri Sep 13 18:34:44 2002
+; Status: Fragment-Level Netlister complete
+; Options for logic optimizer
+; logic optimizer.Mode = Quality
+; logic optimizer.Goal = Speed
+; logic optimizer.p2Level = 1
+; logic optimizer.Level = 2
+; logic optimizer.IgnorePack = FALSE
+; logic optimizer.Utilization = 0
+; logic optimizer.FragAUtilization = 0
+; logic optimizer.FragFUtilization = 0
+; logic optimizer.FragOUtilization = 0
+; logic optimizer.FragNUtilization = 0
+; logic optimizer.FragQUtilization = 0
+; logic optimizer.FragQ2Utilization = 0
+; logic optimizer.UseNonBondedPads = TRUE
+; Time: Fri Sep 13 18:34:50 2002
+; Status: Logic Optimizer begin: minimize delay.
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:56 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:57 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:58 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:34:59 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:00 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:01 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:02 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:03 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:04 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:05 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:06 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:07 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:08 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:09 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:10 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:11 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:12 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:13 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:35:14 2002
+; Status: Timing driven calculations end...
+; Time: Fri Sep 13 18:35:15 2002
+; Status: AD Close...
+; Time: Fri Sep 13 18:35:15 2002
+; Status: Pulling 0 FFs into pads by user's specification.
+; Time: Fri Sep 13 18:35:17 2002
+; Result: ;Summary: Logic cell utilization: 10
+; Time: Fri Sep 13 18:35:17 2002
+; Result: ; Summary: IO control cells: 0 of 8
+; Time: Fri Sep 13 18:35:17 2002
+; Result: ; Summary: Clock-only cells: 0 of 9
+; Time: Fri Sep 13 18:35:17 2002
+; Result: ; Summary: Bi-directional cells: 8 of 252
+; Time: Fri Sep 13 18:35:18 2002
+; Status: Logic Optimizer complete
+; Options for placer
+; placer.Seed = 42
+; placer.Mode = Quality
+; placer.Lambda = 0.080000
+; placer.Level = 1
+; placer.FastAnnealer = 2
+; Time: Fri Sep 13 18:35:18 2002
+; Status: Placer begin...
+Debug: WindowBasedPlacer:  0 blocks with window constraints assigned
+Debug: Initializing Ad Module
+; Time: Fri Sep 13 18:35:18 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:35:18 2002
+; Status: FastPlacer running...
+Debug: Temp 1087.641862, rate 1.000000, Beta 0, cost 53036, bbCost 53036.000000, tdCost 0.000000, Cost 53036.000000, sigma 1087.641862
+First Cycle Sigma 1021.587346 Avg Cost 51812.754287 Min Cost 49263 Offset 2.495875
+Debug: Temp 0.021246, rate 0.048379, Beta 0, cost 7605, bbCost 7605.000000, tdCost 0.000000, Cost 7605.000000, sigma 0.100000
+; Time: Fri Sep 13 18:37:01 2002
+; Status: clock assignment routines complete
+; Time: Fri Sep 13 18:37:16 2002
+; Status: FastPlacer finished
+; Time: Fri Sep 13 18:37:16 2002
+; Status: Finding initial temperature...
+; Time: Fri Sep 13 18:37:16 2002
+; Status: Cycle loop begin...
+Debug: Temp 28.063042, rate 1.000000, Beta 0, cost 7605, bbCost 7605.000000, tdCost 0.000000, Cost 7605.000000, sigma 28.063042
+Debug: Temp 0.000000, rate 0.033477, Beta 12.6927, cost 7888, bbCost 7888.000000, tdCost 452.248746, Cost 13628.260217, sigma 0.174756
+; Time: Fri Sep 13 18:41:11 2002
+; Status: Cycle loop with 18304000 attempted moves complete
+Debug:  *** MIPS INTERFACE PORT INFORMATION *** 
+Debug: i=0 port 95937(x=0 y=34) mport name EJTAG_DEBUGM Unused Port net EJTAG_DEBUGM  
+Debug: i=1 port 95936(x=0 y=34) mport name EJTAG_DINT Unused Port net EJTAG_DINT  
+Debug: i=2 port 95935(x=0 y=34) mport name CS_n[7] Unused Port net CS_n[7]  
+Debug: i=3 port 95934(x=0 y=34) mport name CS_n[6] Unused Port net CS_n[6]  
+Debug: i=4 port 95933(x=0 y=34) mport name CS_n[5] Unused Port net CS_n[5]  
+Debug: i=5 port 95932(x=0 y=34) mport name CS_n[4] Unused Port net CS_n[4]  
+Debug: i=6 port 95931(x=0 y=34) mport name CS_n[3] Unused Port net CS_n[3]  
+Debug: i=7 port 95930(x=0 y=34) mport name CS_n[2] Unused Port net CS_n[2]  
+Debug: i=8 port 95929(x=0 y=34) mport name CS_n[1] Unused Port net CS_n[1]  
+Debug: i=9 port 95928(x=0 y=34) mport name CS_n[0] Unused Port net CS_n[0]  
+Debug: i=10 port 95927(x=0 y=34) mport name WEN_n Unused Port net WEN_n  
+Debug: i=11 port 95926(x=0 y=34) mport name BLS_n[3] Unused Port net BLS_n[3]  
+Debug: i=12 port 95925(x=0 y=34) mport name BLS_n[2] Unused Port net BLS_n[2]  
+Debug: i=13 port 95924(x=0 y=34) mport name BLS_n[1] Unused Port net BLS_n[1]  
+Debug: i=14 port 95923(x=0 y=34) mport name BLS_n[0] Unused Port net BLS_n[0]  
+Debug: i=15 port 95922(x=0 y=34) mport name OEN_n Unused Port net OEN_n  
+Debug: i=16 port 95921(x=0 y=34) mport name ADDR[23] Unused Port net ADDR[23]  
+Debug: i=17 port 95920(x=0 y=34) mport name ADDR[22] Unused Port net ADDR[22]  
+Debug: i=18 port 95919(x=0 y=34) mport name ADDR[21] Unused Port net ADDR[21]  
+Debug: i=19 port 95918(x=0 y=34) mport name ADDR[20] Unused Port net ADDR[20]  
+Debug: i=20 port 95917(x=0 y=34) mport name ADDR[19] Unused Port net ADDR[19]  
+Debug: i=21 port 95916(x=0 y=34) mport name ADDR[18] Unused Port net ADDR[18]  
+Debug: i=22 port 95915(x=0 y=34) mport name ADDR[17] Unused Port net ADDR[17]  
+Debug: i=23 port 95914(x=0 y=34) mport name ADDR[16] Unused Port net ADDR[16]  
+Debug: i=24 port 95913(x=0 y=34) mport name ADDR[15] Unused Port net ADDR[15]  
+Debug: i=25 port 95912(x=0 y=34) mport name ADDR[14] Unused Port net ADDR[14]  
+Debug: i=26 port 95911(x=0 y=34) mport name ADDR[13] Unused Port net ADDR[13]  
+Debug: i=27 port 95910(x=0 y=34) mport name ADDR[12] Unused Port net ADDR[12]  
+Debug: i=28 port 95909(x=0 y=34) mport name ADDR[11] Unused Port net ADDR[11]  
+Debug: i=29 port 95908(x=0 y=34) mport name ADDR[10] Unused Port net ADDR[10]  
+Debug: i=30 port 95907(x=0 y=34) mport name ADDR[9] Unused Port net ADDR[9]  
+Debug: i=31 port 95906(x=0 y=34) mport name ADDR[8] Unused Port net ADDR[8]  
+Debug: i=32 port 95905(x=0 y=34) mport name ADDR[7] Unused Port net ADDR[7]  
+Debug: i=33 port 95904(x=0 y=34) mport name ADDR[6] Unused Port net ADDR[6]  
+Debug: i=34 port 95903(x=0 y=34) mport name ADDR[5] Unused Port net ADDR[5]  
+Debug: i=35 port 95902(x=0 y=34) mport name ADDR[4] Unused Port net ADDR[4]  
+Debug: i=36 port 95901(x=0 y=34) mport name ADDR[3] Unused Port net ADDR[3]  
+Debug: i=37 port 95900(x=0 y=34) mport name ADDR[2] Unused Port net ADDR[2]  
+Debug: i=38 port 95899(x=0 y=34) mport name ADDR[1] Unused Port net ADDR[1]  
+Debug: i=39 port 95898(x=0 y=34) mport name ADDR[0] Unused Port net ADDR[0]  
+Debug: i=40 port 95897(x=0 y=34) mport name DATA[31] Unused Port net DATA[31]  
+Debug: i=41 port 95896(x=0 y=34) mport name DATA[30] Unused Port net DATA[30]  
+Debug: i=42 port 95895(x=0 y=34) mport name DATA[29] Unused Port net DATA[29]  
+Debug: i=43 port 95894(x=0 y=34) mport name DATA[28] Unused Port net DATA[28]  
+Debug: i=44 port 95893(x=0 y=34) mport name DATA[27] Unused Port net DATA[27]  
+Debug: i=45 port 95892(x=0 y=34) mport name DATA[26] Unused Port net DATA[26]  
+Debug: i=46 port 95891(x=0 y=34) mport name DATA[25] Unused Port net DATA[25]  
+Debug: i=47 port 95890(x=0 y=34) mport name DATA[24] Unused Port net DATA[24]  
+Debug: i=48 port 95889(x=0 y=34) mport name DATA[23] Unused Port net DATA[23]  
+Debug: i=49 port 95888(x=0 y=34) mport name DATA[22] Unused Port net DATA[22]  
+Debug: i=50 port 95887(x=0 y=34) mport name DATA[21] Unused Port net DATA[21]  
+Debug: i=51 port 95886(x=0 y=34) mport name DATA[20] Unused Port net DATA[20]  
+Debug: i=52 port 95885(x=0 y=34) mport name DATA[19] Unused Port net DATA[19]  
+Debug: i=53 port 95884(x=0 y=34) mport name DATA[18] Unused Port net DATA[18]  
+Debug: i=54 port 95883(x=0 y=34) mport name DATA[17] Unused Port net DATA[17]  
+Debug: i=55 port 95882(x=0 y=34) mport name DATA[16] Unused Port net DATA[16]  
+Debug: i=56 port 95881(x=0 y=34) mport name DATA[15] Unused Port net DATA[15]  
+Debug: i=57 port 95880(x=0 y=34) mport name DATA[14] Unused Port net DATA[14]  
+Debug: i=58 port 95879(x=0 y=34) mport name DATA[13] Unused Port net DATA[13]  
+Debug: i=59 port 95878(x=0 y=34) mport name DATA[12] Unused Port net DATA[12]  
+Debug: i=60 port 95877(x=0 y=34) mport name DATA[11] Unused Port net DATA[11]  
+Debug: i=61 port 95876(x=0 y=34) mport name DATA[10] Unused Port net DATA[10]  
+Debug: i=62 port 95875(x=0 y=34) mport name DATA[9] Unused Port net DATA[9]  
+Debug: i=63 port 95874(x=0 y=34) mport name DATA[8] Unused Port net DATA[8]  
+Debug: i=64 port 95873(x=0 y=34) mport name DATA[7] Unused Port net DATA[7]  
+Debug: i=65 port 95872(x=0 y=34) mport name DATA[6] Unused Port net DATA[6]  
+Debug: i=66 port 95871(x=0 y=34) mport name DATA[5] Unused Port net DATA[5]  
+Debug: i=67 port 95870(x=0 y=34) mport name DATA[4] Unused Port net DATA[4]  
+Debug: i=68 port 95869(x=0 y=34) mport name DATA[3] Unused Port net DATA[3]  
+Debug: i=69 port 95868(x=0 y=34) mport name DATA[2] Unused Port net DATA[2]  
+Debug: i=70 port 95867(x=0 y=34) mport name DATA[1] Unused Port net DATA[1]  
+Debug: i=71 port 95866(x=0 y=34) mport name DATA[0] Unused Port net DATA[0]  
+Debug: i=72 port 95865(x=0 y=34) mport name SD_CLKIN Unused Port net SD_CLKIN  
+Debug: i=73 port 95864(x=0 y=34) mport name SD_CLKOUT Unused Port net SD_CLKOUT  
+Debug: i=74 port 95863(x=0 y=34) mport name SD_DQM[3] Unused Port net SD_DQM[3]  
+Debug: i=75 port 95862(x=0 y=34) mport name SD_DQM[2] Unused Port net SD_DQM[2]  
+Debug: i=76 port 95861(x=0 y=34) mport name SD_DQM[1] Unused Port net SD_DQM[1]  
+Debug: i=77 port 95860(x=0 y=34) mport name SD_DQM[0] Unused Port net SD_DQM[0]  
+Debug: i=78 port 95859(x=0 y=34) mport name SD_CS_n[3] Unused Port net SD_CS_n[3]  
+Debug: i=79 port 95858(x=0 y=34) mport name SD_CS_n[2] Unused Port net SD_CS_n[2]  
+Debug: i=80 port 95857(x=0 y=34) mport name SD_CS_n[1] Unused Port net SD_CS_n[1]  
+Debug: i=81 port 95856(x=0 y=34) mport name SD_CS_n[0] Unused Port net SD_CS_n[0]  
+Debug: i=82 port 95855(x=0 y=34) mport name SD_RAS_n Unused Port net SD_RAS_n  
+Debug: i=83 port 95854(x=0 y=34) mport name SD_CAS_n Unused Port net SD_CAS_n  
+Debug: i=84 port 95853(x=0 y=34) mport name SD_WE_n Unused Port net SD_WE_n  
+Debug: i=85 port 95852(x=0 y=34) mport name SD_CKE[3] Unused Port net SD_CKE[3]  
+Debug: i=86 port 95851(x=0 y=34) mport name SD_CKE[2] Unused Port net SD_CKE[2]  
+Debug: i=87 port 95850(x=0 y=34) mport name SD_CKE[1] Unused Port net SD_CKE[1]  
+Debug: i=88 port 95849(x=0 y=34) mport name SD_CKE[0] Unused Port net SD_CKE[0]  
+Debug: i=89 port 95848(x=0 y=34) mport name U1_RXD_SIRIN Unused Port net U1_RXD_SIRIN  
+Debug: i=90 port 95847(x=0 y=34) mport name U1_TXD_SIROUT_n Unused Port net U1_TXD_SIROUT_n  
+Debug: i=91 port 95846(x=0 y=34) mport name U1_CTS_n Unused Port net U1_CTS_n  
+Debug: i=92 port 95845(x=0 y=34) mport name U1_DCD_n Unused Port net U1_DCD_n  
+Debug: i=93 port 95844(x=0 y=34) mport name U1_DSR_n Unused Port net U1_DSR_n  
+Debug: i=94 port 95843(x=0 y=34) mport name U1_RI_n Unused Port net U1_RI_n  
+Debug: i=95 port 95842(x=0 y=34) mport name U1_DTR_n Unused Port net U1_DTR_n  
+Debug: i=96 port 95841(x=0 y=34) mport name U1_RTS_n Unused Port net U1_RTS_n  
+Debug: i=97 port 95840(x=0 y=34) mport name U2_RXD_SIRIN Unused Port net U2_RXD_SIRIN  
+Debug: i=98 port 95839(x=0 y=34) mport name U2_TXD_SIROUT_n Unused Port net U2_TXD_SIROUT_n  
+Debug: i=99 port 95838(x=0 y=34) mport name CPU_BIGENDIAN Unused Port net CPU_BIGENDIAN  
+Debug: i=100 port 95837(x=0 y=34) mport name CPU_EXTINT_n[6] Unused Port net CPU_EXTINT_n[6]  
+Debug: i=101 port 95836(x=0 y=34) mport name CPU_EXTINT_n[5] Unused Port net CPU_EXTINT_n[5]  
+Debug: i=102 port 95835(x=0 y=34) mport name CPU_EXTINT_n[4] Unused Port net CPU_EXTINT_n[4]  
+Debug: i=103 port 95834(x=0 y=34) mport name CPU_EXTINT_n[3] Unused Port net CPU_EXTINT_n[3]  
+Debug: i=104 port 95833(x=0 y=34) mport name CPU_EXTINT_n[2] Unused Port net CPU_EXTINT_n[2]  
+Debug: i=105 port 95832(x=0 y=34) mport name CPU_EXTINT_n[1] Unused Port net CPU_EXTINT_n[1]  
+Debug: i=106 port 95831(x=0 y=34) mport name CPU_EXTINT_n[0] Unused Port net CPU_EXTINT_n[0]  
+Debug: i=107 port 95830(x=0 y=34) mport name EJTAG_TCK Unused Port net EJTAG_TCK  
+Debug: i=108 port 95829(x=0 y=34) mport name EJTAG_TDI Unused Port net EJTAG_TDI  
+Debug: i=109 port 95828(x=0 y=34) mport name EJTAG_TDO Unused Port net EJTAG_TDO  
+Debug: i=110 port 95827(x=0 y=34) mport name EJTAG_TMS Unused Port net EJTAG_TMS  
+Debug: i=111 port 95826(x=0 y=34) mport name EJTAG_TRST Unused Port net EJTAG_TRST  
+Debug: i=112 port 95825(x=0 y=34) mport name PCI_AD[31] Unused Port net PCI_AD[31]  
+Debug: i=113 port 95824(x=0 y=34) mport name PCI_AD[30] Unused Port net PCI_AD[30]  
+Debug: i=114 port 95823(x=0 y=34) mport name PCI_AD[29] Unused Port net PCI_AD[29]  
+Debug: i=115 port 95822(x=0 y=34) mport name PCI_AD[28] Unused Port net PCI_AD[28]  
+Debug: i=116 port 95821(x=0 y=34) mport name PCI_AD[27] Unused Port net PCI_AD[27]  
+Debug: i=117 port 95820(x=0 y=34) mport name PCI_AD[26] Unused Port net PCI_AD[26]  
+Debug: i=118 port 95819(x=0 y=34) mport name PCI_AD[25] Unused Port net PCI_AD[25]  
+Debug: i=119 port 95818(x=0 y=34) mport name PCI_AD[24] Unused Port net PCI_AD[24]  
+Debug: i=120 port 95817(x=0 y=34) mport name PCI_AD[23] Unused Port net PCI_AD[23]  
+Debug: i=121 port 95816(x=0 y=34) mport name PCI_AD[22] Unused Port net PCI_AD[22]  
+Debug: i=122 port 95815(x=0 y=34) mport name PCI_AD[21] Unused Port net PCI_AD[21]  
+Debug: i=123 port 95814(x=0 y=34) mport name PCI_AD[20] Unused Port net PCI_AD[20]  
+Debug: i=124 port 95813(x=0 y=34) mport name PCI_AD[19] Unused Port net PCI_AD[19]  
+Debug: i=125 port 95812(x=0 y=34) mport name PCI_AD[18] Unused Port net PCI_AD[18]  
+Debug: i=126 port 95811(x=0 y=34) mport name PCI_AD[17] Unused Port net PCI_AD[17]  
+Debug: i=127 port 95810(x=0 y=34) mport name PCI_AD[16] Unused Port net PCI_AD[16]  
+Debug: i=128 port 95809(x=0 y=34) mport name PCI_AD[15] Unused Port net PCI_AD[15]  
+Debug: i=129 port 95808(x=0 y=34) mport name PCI_AD[14] Unused Port net PCI_AD[14]  
+Debug: i=130 port 95807(x=0 y=34) mport name PCI_AD[13] Unused Port net PCI_AD[13]  
+Debug: i=131 port 95806(x=0 y=34) mport name PCI_AD[12] Unused Port net PCI_AD[12]  
+Debug: i=132 port 95805(x=0 y=34) mport name PCI_AD[11] Unused Port net PCI_AD[11]  
+Debug: i=133 port 95804(x=0 y=34) mport name PCI_AD[10] Unused Port net PCI_AD[10]  
+Debug: i=134 port 95803(x=0 y=34) mport name PCI_AD[9] Unused Port net PCI_AD[9]  
+Debug: i=135 port 95802(x=0 y=34) mport name PCI_AD[8] Unused Port net PCI_AD[8]  
+Debug: i=136 port 95801(x=0 y=34) mport name PCI_AD[7] Unused Port net PCI_AD[7]  
+Debug: i=137 port 95800(x=0 y=34) mport name PCI_AD[6] Unused Port net PCI_AD[6]  
+Debug: i=138 port 95799(x=0 y=34) mport name PCI_AD[5] Unused Port net PCI_AD[5]  
+Debug: i=139 port 95798(x=0 y=34) mport name PCI_AD[4] Unused Port net PCI_AD[4]  
+Debug: i=140 port 95797(x=0 y=34) mport name PCI_AD[3] Unused Port net PCI_AD[3]  
+Debug: i=141 port 95796(x=0 y=34) mport name PCI_AD[2] Unused Port net PCI_AD[2]  
+Debug: i=142 port 95795(x=0 y=34) mport name PCI_AD[1] Unused Port net PCI_AD[1]  
+Debug: i=143 port 95794(x=0 y=34) mport name PCI_AD[0] Unused Port net PCI_AD[0]  
+Debug: i=144 port 95793(x=0 y=34) mport name PCI_C_BE_n[3] Unused Port net PCI_C_BE_n[3]  
+Debug: i=145 port 95792(x=0 y=34) mport name PCI_C_BE_n[2] Unused Port net PCI_C_BE_n[2]  
+Debug: i=146 port 95791(x=0 y=34) mport name PCI_C_BE_n[1] Unused Port net PCI_C_BE_n[1]  
+Debug: i=147 port 95790(x=0 y=34) mport name PCI_C_BE_n[0] Unused Port net PCI_C_BE_n[0]  
+Debug: i=148 port 95789(x=0 y=34) mport name PCI_PAR Unused Port net PCI_PAR  
+Debug: i=149 port 95788(x=0 y=34) mport name PCI_SERR_n Unused Port net PCI_SERR_n  
+Debug: i=150 port 95787(x=0 y=34) mport name PCI_PERR_n Unused Port net PCI_PERR_n  
+Debug: i=151 port 95786(x=0 y=34) mport name PCI_LOCK_n Unused Port net PCI_LOCK_n  
+Debug: i=152 port 95785(x=0 y=34) mport name PCI_STOP_n Unused Port net PCI_STOP_n  
+Debug: i=153 port 95784(x=0 y=34) mport name PCI_DEVSEL_n Unused Port net PCI_DEVSEL_n  
+Debug: i=154 port 95783(x=0 y=34) mport name PCI_TRDY_n Unused Port net PCI_TRDY_n  
+Debug: i=155 port 95782(x=0 y=34) mport name PCI_IRDY_n Unused Port net PCI_IRDY_n  
+Debug: i=156 port 95781(x=0 y=34) mport name PCI_FRAME_n Unused Port net PCI_FRAME_n  
+Debug: i=157 port 95780(x=0 y=34) mport name PCI_CLK Unused Port net PCI_CLK  
+Debug: i=158 port 95779(x=0 y=34) mport name PCI_IDSEL Unused Port net PCI_IDSEL  
+Debug: i=159 port 95778(x=0 y=34) mport name PCI_INTA_n Unused Port net PCI_INTA_n  
+Debug: i=160 port 95777(x=0 y=34) mport name PCI_GNT_n Unused Port net PCI_GNT_n  
+Debug: i=161 port 95776(x=0 y=34) mport name PCI_REQ_n Unused Port net PCI_REQ_n  
+Debug: i=162 port 95775(x=0 y=34) mport name PCI_RST_n Unused Port net PCI_RST_n  
+Debug: i=163 port 95774(x=0 y=34) mport name TM_OVERFLOW Unused Port net TM_OVERFLOW  
+Debug: i=164 port 95773(x=0 y=34) mport name TM_ENABLE Unused Port net TM_ENABLE  
+Debug: i=165 port 95772(x=0 y=34) mport name M1_RXD[3] Unused Port net M1_RXD[3]  
+Debug: i=166 port 95771(x=0 y=34) mport name M1_RXD[2] Unused Port net M1_RXD[2]  
+Debug: i=167 port 95770(x=0 y=34) mport name M1_RXD[1] Unused Port net M1_RXD[1]  
+Debug: i=168 port 95769(x=0 y=34) mport name M1_RXD[0] Unused Port net M1_RXD[0]  
+Debug: i=169 port 95768(x=0 y=34) mport name M1_CRS Unused Port net M1_CRS  
+Debug: i=170 port 95767(x=0 y=34) mport name M1_COL Unused Port net M1_COL  
+Debug: i=171 port 95766(x=0 y=34) mport name M1_RXDV Unused Port net M1_RXDV  
+Debug: i=172 port 95765(x=0 y=34) mport name M1_RXCLK Unused Port net M1_RXCLK  
+Debug: i=173 port 95764(x=0 y=34) mport name M1_RXER Unused Port net M1_RXER  
+Debug: i=174 port 95763(x=0 y=34) mport name M1_TXCLK Unused Port net M1_TXCLK  
+Debug: i=175 port 95762(x=0 y=34) mport name M1_TXD[3] Unused Port net M1_TXD[3]  
+Debug: i=176 port 95761(x=0 y=34) mport name M1_TXD[2] Unused Port net M1_TXD[2]  
+Debug: i=177 port 95760(x=0 y=34) mport name M1_TXD[1] Unused Port net M1_TXD[1]  
+Debug: i=178 port 95759(x=0 y=34) mport name M1_TXD[0] Unused Port net M1_TXD[0]  
+Debug: i=179 port 95758(x=0 y=34) mport name M1_MDC Unused Port net M1_MDC  
+Debug: i=180 port 95757(x=0 y=34) mport name M1_TXEN Unused Port net M1_TXEN  
+Debug: i=181 port 95756(x=0 y=34) mport name M2_CRS Unused Port net M2_CRS  
+Debug: i=182 port 95755(x=0 y=34) mport name M1_MDIO Unused Port net M1_MDIO  
+Debug: i=183 port 95754(x=0 y=34) mport name M2_COL Unused Port net M2_COL  
+Debug: i=184 port 95753(x=0 y=34) mport name M2_RXCLK Unused Port net M2_RXCLK  
+Debug: i=185 port 95752(x=0 y=34) mport name M2_RXD[3] Unused Port net M2_RXD[3]  
+Debug: i=186 port 95751(x=0 y=34) mport name M2_RXD[2] Unused Port net M2_RXD[2]  
+Debug: i=187 port 95750(x=0 y=34) mport name M2_RXD[1] Unused Port net M2_RXD[1]  
+Debug: i=188 port 95749(x=0 y=34) mport name M2_RXD[0] Unused Port net M2_RXD[0]  
+Debug: i=189 port 95748(x=0 y=34) mport name M2_RXDV Unused Port net M2_RXDV  
+Debug: i=190 port 95747(x=0 y=34) mport name M2_TXCLK Unused Port net M2_TXCLK  
+Debug: i=191 port 95746(x=0 y=34) mport name M2_RXER Unused Port net M2_RXER  
+Debug: i=192 port 95745(x=0 y=34) mport name M2_MDC Unused Port net M2_MDC  
+Debug: i=193 port 95744(x=0 y=34) mport name M2_TXD[3] Unused Port net M2_TXD[3]  
+Debug: i=194 port 95743(x=0 y=34) mport name M2_TXD[2] Unused Port net M2_TXD[2]  
+Debug: i=195 port 95742(x=0 y=34) mport name M2_TXD[1] Unused Port net M2_TXD[1]  
+Debug: i=196 port 95741(x=0 y=34) mport name M2_TXD[0] Unused Port net M2_TXD[0]  
+Debug: i=197 port 95740(x=0 y=34) mport name M2_TXEN Unused Port net M2_TXEN  
+Debug: i=198 port 95739(x=0 y=34) mport name M2_MDIO Unused Port net M2_MDIO  
+Debug: i=199 port 95738(x=0 y=34) mport name BOOT[1] Unused Port net BOOT[1]  
+Debug: i=200 port 95737(x=0 y=34) mport name BOOT[0] Unused Port net BOOT[0]  
+Debug: i=201 port 95736(x=0 y=34) mport name PL_WARMRESET_n Unused Port net PL_WARMRESET_n  
+Debug: i=202 port 95735(x=0 y=34) mport name PL_RESET_n Unused Port net PL_RESET_n  
+Debug: i=203 port 95734(x=0 y=34) mport name PL_BYPASS Unused Port net PL_BYPASS  
+Debug: i=204 port 95733(x=0 y=34) mport name PL_ENABLE Unused Port net PL_ENABLE  
+Debug: i=205 port 95732(x=0 y=34) mport name PL_CLKOUT Unused Port net PL_CLKOUT  
+Debug: i=206 port 95731(x=0 y=34) mport name PL_LOCK Unused Port net PL_LOCK  
+Debug: i=207 port 95730(x=0 y=34) mport name PL_CLOCKIN Unused Port net PL_CLOCKIN  
+Debug: i=208 port 95729(x=0 y=34) mport name hclk Unused Port net hclk  
+Debug:          port 6031 RAM_O2(x=61 y=33) 
+Debug:          port 5986 RAM_Q2(x=69 y=33) 
+Debug:          port 5933 RAM_N2(x=55 y=33) 
+Debug:          port 5888 RAM_P2(x=65 y=33) 
+Debug: i=209 port 95728(x=0 y=34) mport name fb_int Unused Port net GND  
+Debug: i=210 port 95727(x=0 y=34) mport name ahbm_hgrant Unused Port net ahbm_hgrant_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=74 y=34)  bank=-1
+Debug: i=211 port 95726(x=0 y=34) mport name ahbm_hresp[1] Unused Port net ahbm_hresp[1]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=74 y=34)  bank=-1
+Debug: i=212 port 95725(x=0 y=34) mport name ahbm_hresp[0] Unused Port net ahbm_hresp[0]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=74 y=34)  bank=-1
+Debug: i=213 port 95724(x=0 y=34) mport name ahbm_hbusreq Unused Port net ahbm_hbusreq_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=74 y=34)  bank=-1
+Debug: i=214 port 95723(x=0 y=34) mport name ahbm_hprot[3] Unused Port net GND  
+Debug: i=215 port 95722(x=0 y=34) mport name ahbm_hprot[2] Unused Port net GND  
+Debug: i=216 port 95721(x=0 y=34) mport name ahbm_hprot[1] Unused Port net GND  
+Debug: i=217 port 95720(x=0 y=34) mport name ahbm_hprot[0] Unused Port net GND  
+Debug: i=218 port 95719(x=0 y=34) mport name ahbm_hburst[2] Unused Port net GND  
+Debug: i=219 port 95718(x=0 y=34) mport name ahbm_hburst[1] Unused Port net GND  
+Debug: i=220 port 95717(x=0 y=34) mport name ahbm_hburst[0] Unused Port net ahbm_hburst[0]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=73 y=34)  bank=-1
+Debug: i=221 port 95716(x=0 y=34) mport name ahbm_hsize[2] Unused Port net GND  
+Debug: i=222 port 95715(x=0 y=34) mport name ahbm_hsize[1] Unused Port net VCC  
+Debug: i=223 port 95714(x=0 y=34) mport name ahbm_hsize[0] Unused Port net GND  
+Debug: i=224 port 95713(x=0 y=34) mport name ahbm_hwrite Unused Port net ahbm_hwrite_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=73 y=34)  bank=-1
+Debug: i=225 port 95712(x=0 y=34) mport name ahbm_htrans[1] Unused Port net ahbm_htrans[1]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=73 y=34)  bank=-1
+Debug: i=226 port 95711(x=0 y=34) mport name ahbm_htrans[0] Unused Port net ahbm_htrans[0]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=73 y=34)  bank=-1
+Debug: i=227 port 95710(x=0 y=34) mport name ahbm_hrdata[31] Unused Port net ahbm_hrdata[31]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=72 y=34)  bank=-1
+Debug:          port 5971 RAM_Q2(x=69 y=33) 
+Debug: i=228 port 95709(x=0 y=34) mport name ahbm_hrdata[30] Unused Port net ahbm_hrdata[30]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=72 y=34)  bank=-1
+Debug:          port 5970 RAM_Q2(x=69 y=33) 
+Debug: i=229 port 95708(x=0 y=34) mport name ahbm_hrdata[29] Unused Port net ahbm_hrdata[29]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=72 y=34)  bank=-1
+Debug:          port 5969 RAM_Q2(x=69 y=33) 
+Debug: i=230 port 95707(x=0 y=34) mport name ahbm_hrdata[28] Unused Port net ahbm_hrdata[28]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=72 y=34)  bank=-1
+Debug:          port 5968 RAM_Q2(x=69 y=33) 
+Debug: i=231 port 95706(x=0 y=34) mport name ahbm_hrdata[27] Unused Port net ahbm_hrdata[27]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=72 y=34)  bank=-1
+Debug:          port 5967 RAM_Q2(x=69 y=33) 
+Debug: i=232 port 95705(x=0 y=34) mport name ahbm_hrdata[26] Unused Port net ahbm_hrdata[26]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=72 y=34)  bank=-1
+Debug:          port 5966 RAM_Q2(x=69 y=33) 
+Debug: i=233 port 95704(x=0 y=34) mport name ahbm_hrdata[25] Unused Port net ahbm_hrdata[25]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=72 y=34)  bank=-1
+Debug:          port 5965 RAM_Q2(x=69 y=33) 
+Debug: i=234 port 95703(x=0 y=34) mport name ahbm_hrdata[24] Unused Port net ahbm_hrdata[24]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5964 RAM_Q2(x=69 y=33) 
+Debug: i=235 port 95702(x=0 y=34) mport name ahbm_hrdata[23] Unused Port net ahbm_hrdata[23]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5963 RAM_Q2(x=69 y=33) 
+Debug: i=236 port 95701(x=0 y=34) mport name ahbm_hrdata[22] Unused Port net ahbm_hrdata[22]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5962 RAM_Q2(x=69 y=33) 
+Debug: i=237 port 95700(x=0 y=34) mport name ahbm_hrdata[21] Unused Port net ahbm_hrdata[21]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5961 RAM_Q2(x=69 y=33) 
+Debug: i=238 port 95699(x=0 y=34) mport name ahbm_hrdata[20] Unused Port net ahbm_hrdata[20]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5960 RAM_Q2(x=69 y=33) 
+Debug: i=239 port 95698(x=0 y=34) mport name ahbm_hrdata[19] Unused Port net ahbm_hrdata[19]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5959 RAM_Q2(x=69 y=33) 
+Debug: i=240 port 95697(x=0 y=34) mport name ahbm_hrdata[18] Unused Port net ahbm_hrdata[18]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5958 RAM_Q2(x=69 y=33) 
+Debug: i=241 port 95696(x=0 y=34) mport name ahbm_hrdata[17] Unused Port net ahbm_hrdata[17]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5957 RAM_Q2(x=69 y=33) 
+Debug: i=242 port 95695(x=0 y=34) mport name ahbm_hrdata[16] Unused Port net ahbm_hrdata[16]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=71 y=34)  bank=-1
+Debug:          port 5956 RAM_Q2(x=69 y=33) 
+Debug: i=243 port 95694(x=0 y=34) mport name ahbm_hrdata[15] Unused Port net ahbm_hrdata[15]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 5955 RAM_Q2(x=69 y=33) 
+Debug: i=244 port 95693(x=0 y=34) mport name ahbm_hrdata[14] Unused Port net ahbm_hrdata[14]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 5954 RAM_Q2(x=69 y=33) 
+Debug: i=245 port 95692(x=0 y=34) mport name ahbm_hrdata[13] Unused Port net ahbm_hrdata[13]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 6016 RAM_O2(x=61 y=33) 
+Debug: i=246 port 95691(x=0 y=34) mport name ahbm_hrdata[12] Unused Port net ahbm_hrdata[12]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 6015 RAM_O2(x=61 y=33) 
+Debug: i=247 port 95690(x=0 y=34) mport name ahbm_hrdata[11] Unused Port net ahbm_hrdata[11]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 6014 RAM_O2(x=61 y=33) 
+Debug: i=248 port 95689(x=0 y=34) mport name ahbm_hrdata[10] Unused Port net ahbm_hrdata[10]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 6013 RAM_O2(x=61 y=33) 
+Debug: i=249 port 95688(x=0 y=34) mport name ahbm_hrdata[9] Unused Port net ahbm_hrdata[9]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 6012 RAM_O2(x=61 y=33) 
+Debug: i=250 port 95687(x=0 y=34) mport name ahbm_hrdata[8] Unused Port net ahbm_hrdata[8]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=70 y=34)  bank=-1
+Debug:          port 6011 RAM_O2(x=61 y=33) 
+Debug: i=251 port 95686(x=0 y=34) mport name ahbm_hrdata[7] Unused Port net ahbm_hrdata[7]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6010 RAM_O2(x=61 y=33) 
+Debug: i=252 port 95685(x=0 y=34) mport name ahbm_hrdata[6] Unused Port net ahbm_hrdata[6]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6009 RAM_O2(x=61 y=33) 
+Debug: i=253 port 95684(x=0 y=34) mport name ahbm_hrdata[5] Unused Port net ahbm_hrdata[5]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6008 RAM_O2(x=61 y=33) 
+Debug: i=254 port 95683(x=0 y=34) mport name ahbm_hrdata[4] Unused Port net ahbm_hrdata[4]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6007 RAM_O2(x=61 y=33) 
+Debug: i=255 port 95682(x=0 y=34) mport name ahbm_hrdata[3] Unused Port net ahbm_hrdata[3]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6006 RAM_O2(x=61 y=33) 
+Debug: i=256 port 95681(x=0 y=34) mport name ahbm_hrdata[2] Unused Port net ahbm_hrdata[2]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6005 RAM_O2(x=61 y=33) 
+Debug: i=257 port 95680(x=0 y=34) mport name ahbm_hrdata[1] Unused Port net ahbm_hrdata[1]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6004 RAM_O2(x=61 y=33) 
+Debug: i=258 port 95679(x=0 y=34) mport name ahbm_hrdata[0] Unused Port net ahbm_hrdata[0]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=69 y=34)  bank=-1
+Debug:          port 6003 RAM_O2(x=61 y=33) 
+Debug: i=259 port 95678(x=0 y=34) mport name ahbm_hwdata[31] Unused Port net ahbm_hwdata[31]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=68 y=34)  bank=-1
+Debug: i=260 port 95677(x=0 y=34) mport name ahbm_hwdata[30] Unused Port net ahbm_hwdata[30]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=68 y=34)  bank=-1
+Debug: i=261 port 95676(x=0 y=34) mport name ahbm_hwdata[29] Unused Port net ahbm_hwdata[29]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=68 y=34)  bank=-1
+Debug: i=262 port 95675(x=0 y=34) mport name ahbm_hwdata[28] Unused Port net ahbm_hwdata[28]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=68 y=34)  bank=-1
+Debug: i=263 port 95674(x=0 y=34) mport name ahbm_hwdata[27] Unused Port net ahbm_hwdata[27]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=68 y=34)  bank=-1
+Debug: i=264 port 95673(x=0 y=34) mport name ahbm_hwdata[26] Unused Port net ahbm_hwdata[26]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=68 y=34)  bank=-1
+Debug: i=265 port 95672(x=0 y=34) mport name ahbm_hwdata[25] Unused Port net ahbm_hwdata[25]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=68 y=34)  bank=-1
+Debug: i=266 port 95671(x=0 y=34) mport name ahbm_hwdata[24] Unused Port net ahbm_hwdata[24]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=267 port 95670(x=0 y=34) mport name ahbm_hwdata[23] Unused Port net ahbm_hwdata[23]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=268 port 95669(x=0 y=34) mport name ahbm_hwdata[22] Unused Port net ahbm_hwdata[22]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=269 port 95668(x=0 y=34) mport name ahbm_hwdata[21] Unused Port net ahbm_hwdata[21]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=270 port 95667(x=0 y=34) mport name ahbm_hwdata[20] Unused Port net ahbm_hwdata[20]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=271 port 95666(x=0 y=34) mport name ahbm_hwdata[19] Unused Port net ahbm_hwdata[19]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=272 port 95665(x=0 y=34) mport name ahbm_hwdata[18] Unused Port net ahbm_hwdata[18]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=273 port 95664(x=0 y=34) mport name ahbm_hwdata[17] Unused Port net ahbm_hwdata[17]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=274 port 95663(x=0 y=34) mport name ahbm_hwdata[16] Unused Port net ahbm_hwdata[16]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=67 y=34)  bank=-1
+Debug: i=275 port 95662(x=0 y=34) mport name ahbm_hwdata[15] Unused Port net ahbm_hwdata[15]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=276 port 95661(x=0 y=34) mport name ahbm_hwdata[14] Unused Port net ahbm_hwdata[14]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=277 port 95660(x=0 y=34) mport name ahbm_hwdata[13] Unused Port net ahbm_hwdata[13]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=278 port 95659(x=0 y=34) mport name ahbm_hwdata[12] Unused Port net ahbm_hwdata[12]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=279 port 95658(x=0 y=34) mport name ahbm_hwdata[11] Unused Port net ahbm_hwdata[11]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=280 port 95657(x=0 y=34) mport name ahbm_hwdata[10] Unused Port net ahbm_hwdata[10]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=281 port 95656(x=0 y=34) mport name ahbm_hwdata[9] Unused Port net ahbm_hwdata[9]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=282 port 95655(x=0 y=34) mport name ahbm_hwdata[8] Unused Port net ahbm_hwdata[8]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=283 port 95654(x=0 y=34) mport name ahbm_hwdata[7] Unused Port net ahbm_hwdata[7]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=66 y=34)  bank=-1
+Debug: i=284 port 95653(x=0 y=34) mport name ahbm_hwdata[6] Unused Port net ahbm_hwdata[6]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=65 y=34)  bank=-1
+Debug: i=285 port 95652(x=0 y=34) mport name ahbm_hwdata[5] Unused Port net ahbm_hwdata[5]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=65 y=34)  bank=-1
+Debug: i=286 port 95651(x=0 y=34) mport name ahbm_hwdata[4] Unused Port net ahbm_hwdata[4]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=65 y=34)  bank=-1
+Debug: i=287 port 95650(x=0 y=34) mport name ahbm_hwdata[3] Unused Port net ahbm_hwdata[3]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=65 y=34)  bank=-1
+Debug: i=288 port 95649(x=0 y=34) mport name ahbm_hwdata[2] Unused Port net ahbm_hwdata[2]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=65 y=34)  bank=-1
+Debug: i=289 port 95648(x=0 y=34) mport name ahbm_hwdata[1] Unused Port net ahbm_hwdata[1]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=65 y=34)  bank=-1
+Debug: i=290 port 95647(x=0 y=34) mport name ahbm_hwdata[0] Unused Port net ahbm_hwdata[0]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=65 y=34)  bank=-1
+Debug: i=291 port 95646(x=0 y=34) mport name ahbm_haddr[31] Unused Port net ahbm_haddr[31]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=64 y=34)  bank=-1
+Debug: i=292 port 95645(x=0 y=34) mport name ahbm_haddr[30] Unused Port net ahbm_haddr[30]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=64 y=34)  bank=-1
+Debug: i=293 port 95644(x=0 y=34) mport name ahbm_haddr[29] Unused Port net ahbm_haddr[29]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=64 y=34)  bank=-1
+Debug: i=294 port 95643(x=0 y=34) mport name ahbm_haddr[28] Unused Port net ahbm_haddr[28]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=64 y=34)  bank=-1
+Debug: i=295 port 95642(x=0 y=34) mport name ahbm_haddr[27] Unused Port net ahbm_haddr[27]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=64 y=34)  bank=-1
+Debug: i=296 port 95641(x=0 y=34) mport name ahbm_haddr[26] Unused Port net ahbm_haddr[26]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=64 y=34)  bank=-1
+Debug: i=297 port 95640(x=0 y=34) mport name ahbm_haddr[25] Unused Port net ahbm_haddr[25]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=64 y=34)  bank=-1
+Debug: i=298 port 95639(x=0 y=34) mport name ahbm_haddr[24] Unused Port net ahbm_haddr[24]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=299 port 95638(x=0 y=34) mport name ahbm_haddr[23] Unused Port net ahbm_haddr[23]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=300 port 95637(x=0 y=34) mport name ahbm_haddr[22] Unused Port net ahbm_haddr[22]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=301 port 95636(x=0 y=34) mport name ahbm_haddr[21] Unused Port net ahbm_haddr[21]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=302 port 95635(x=0 y=34) mport name ahbm_haddr[20] Unused Port net ahbm_haddr[20]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=303 port 95634(x=0 y=34) mport name ahbm_haddr[19] Unused Port net ahbm_haddr[19]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=304 port 95633(x=0 y=34) mport name ahbm_haddr[18] Unused Port net ahbm_haddr[18]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=305 port 95632(x=0 y=34) mport name ahbm_haddr[17] Unused Port net ahbm_haddr[17]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=306 port 95631(x=0 y=34) mport name ahbm_haddr[16] Unused Port net ahbm_haddr[16]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=63 y=34)  bank=-1
+Debug: i=307 port 95630(x=0 y=34) mport name ahbm_haddr[15] Unused Port net ahbm_haddr[15]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=308 port 95629(x=0 y=34) mport name ahbm_haddr[14] Unused Port net ahbm_haddr[14]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=309 port 95628(x=0 y=34) mport name ahbm_haddr[13] Unused Port net ahbm_haddr[13]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=310 port 95627(x=0 y=34) mport name ahbm_haddr[12] Unused Port net ahbm_haddr[12]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=311 port 95626(x=0 y=34) mport name ahbm_haddr[11] Unused Port net ahbm_haddr[11]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=312 port 95625(x=0 y=34) mport name ahbm_haddr[10] Unused Port net ahbm_haddr[10]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=313 port 95624(x=0 y=34) mport name ahbm_haddr[9] Unused Port net ahbm_haddr[9]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=314 port 95623(x=0 y=34) mport name ahbm_haddr[8] Unused Port net ahbm_haddr[8]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=315 port 95622(x=0 y=34) mport name ahbm_haddr[7] Unused Port net ahbm_haddr[7]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=62 y=34)  bank=-1
+Debug: i=316 port 95621(x=0 y=34) mport name ahbm_haddr[6] Unused Port net ahbm_haddr[6]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=61 y=34)  bank=-1
+Debug: i=317 port 95620(x=0 y=34) mport name ahbm_haddr[5] Unused Port net ahbm_haddr[5]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=61 y=34)  bank=-1
+Debug: i=318 port 95619(x=0 y=34) mport name ahbm_haddr[4] Unused Port net ahbm_haddr[4]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=61 y=34)  bank=-1
+Debug: i=319 port 95618(x=0 y=34) mport name ahbm_haddr[3] Unused Port net ahbm_haddr[3]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=61 y=34)  bank=-1
+Debug: i=320 port 95617(x=0 y=34) mport name ahbm_haddr[2] Unused Port net ahbm_haddr[2]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=61 y=34)  bank=-1
+Debug: i=321 port 95616(x=0 y=34) mport name ahbm_haddr[1] Unused Port net GND  
+Debug: i=322 port 95615(x=0 y=34) mport name ahbm_haddr[0] Unused Port net GND  
+Debug: i=323 port 95614(x=0 y=34) mport name ahbs_hrdata[31] Unused Port net ahbs_hrdata[31]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=58 y=34)  bank=-1
+Debug: i=324 port 95613(x=0 y=34) mport name ahbs_hrdata[30] Unused Port net ahbs_hrdata[30]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=58 y=34)  bank=-1
+Debug: i=325 port 95612(x=0 y=34) mport name ahbs_hrdata[29] Unused Port net ahbs_hrdata[29]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=58 y=34)  bank=-1
+Debug: i=326 port 95611(x=0 y=34) mport name ahbs_hrdata[28] Unused Port net ahbs_hrdata[28]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=58 y=34)  bank=-1
+Debug: i=327 port 95610(x=0 y=34) mport name ahbs_hrdata[27] Unused Port net ahbs_hrdata[27]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=58 y=34)  bank=-1
+Debug: i=328 port 95609(x=0 y=34) mport name ahbs_hrdata[26] Unused Port net ahbs_hrdata[26]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=58 y=34)  bank=-1
+Debug: i=329 port 95608(x=0 y=34) mport name ahbs_hrdata[25] Unused Port net ahbs_hrdata[25]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=58 y=34)  bank=-1
+Debug: i=330 port 95607(x=0 y=34) mport name ahbs_hrdata[24] Unused Port net ahbs_hrdata[24]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=331 port 95606(x=0 y=34) mport name ahbs_hrdata[23] Unused Port net ahbs_hrdata[23]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=332 port 95605(x=0 y=34) mport name ahbs_hrdata[22] Unused Port net ahbs_hrdata[22]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=333 port 95604(x=0 y=34) mport name ahbs_hrdata[21] Unused Port net ahbs_hrdata[21]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=334 port 95603(x=0 y=34) mport name ahbs_hrdata[20] Unused Port net ahbs_hrdata[20]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=335 port 95602(x=0 y=34) mport name ahbs_hrdata[19] Unused Port net ahbs_hrdata[19]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=336 port 95601(x=0 y=34) mport name ahbs_hrdata[18] Unused Port net ahbs_hrdata[18]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=337 port 95600(x=0 y=34) mport name ahbs_hrdata[17] Unused Port net ahbs_hrdata[17]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=338 port 95599(x=0 y=34) mport name ahbs_hrdata[16] Unused Port net ahbs_hrdata[16]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=57 y=34)  bank=-1
+Debug: i=339 port 95598(x=0 y=34) mport name ahbs_hrdata[15] Unused Port net ahbs_hrdata[15]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=340 port 95597(x=0 y=34) mport name ahbs_hrdata[14] Unused Port net ahbs_hrdata[14]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=341 port 95596(x=0 y=34) mport name ahbs_hrdata[13] Unused Port net ahbs_hrdata[13]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=342 port 95595(x=0 y=34) mport name ahbs_hrdata[12] Unused Port net ahbs_hrdata[12]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=343 port 95594(x=0 y=34) mport name ahbs_hrdata[11] Unused Port net ahbs_hrdata[11]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=344 port 95593(x=0 y=34) mport name ahbs_hrdata[10] Unused Port net ahbs_hrdata[10]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=345 port 95592(x=0 y=34) mport name ahbs_hrdata[9] Unused Port net ahbs_hrdata[9]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=346 port 95591(x=0 y=34) mport name ahbs_hrdata[8] Unused Port net ahbs_hrdata[8]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=347 port 95590(x=0 y=34) mport name ahbs_hrdata[7] Unused Port net ahbs_hrdata[7]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=56 y=34)  bank=-1
+Debug: i=348 port 95589(x=0 y=34) mport name ahbs_hrdata[6] Unused Port net ahbs_hrdata[6]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=55 y=34)  bank=-1
+Debug: i=349 port 95588(x=0 y=34) mport name ahbs_hrdata[5] Unused Port net ahbs_hrdata[5]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=55 y=34)  bank=-1
+Debug: i=350 port 95587(x=0 y=34) mport name ahbs_hrdata[4] Unused Port net ahbs_hrdata[4]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=55 y=34)  bank=-1
+Debug: i=351 port 95586(x=0 y=34) mport name ahbs_hrdata[3] Unused Port net ahbs_hrdata[3]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=55 y=34)  bank=-1
+Debug: i=352 port 95585(x=0 y=34) mport name ahbs_hrdata[2] Unused Port net ahbs_hrdata[2]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=55 y=34)  bank=-1
+Debug: i=353 port 95584(x=0 y=34) mport name ahbs_hrdata[1] Unused Port net ahbs_hrdata[1]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=55 y=34)  bank=-1
+Debug: i=354 port 95583(x=0 y=34) mport name ahbs_hrdata[0] Unused Port net ahbs_hrdata[0]_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=55 y=34)  bank=-1
+Debug: i=355 port 95582(x=0 y=34) mport name ahbs_hwdata[31] Unused Port net ahbs_hwdata[31]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=54 y=34)  bank=-1
+Debug: i=356 port 95581(x=0 y=34) mport name ahbs_hwdata[30] Unused Port net ahbs_hwdata[30]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=54 y=34)  bank=-1
+Debug: i=357 port 95580(x=0 y=34) mport name ahbs_hwdata[29] Unused Port net ahbs_hwdata[29]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=54 y=34)  bank=-1
+Debug: i=358 port 95579(x=0 y=34) mport name ahbs_hwdata[28] Unused Port net ahbs_hwdata[28]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=54 y=34)  bank=-1
+Debug: i=359 port 95578(x=0 y=34) mport name ahbs_hwdata[27] Unused Port net ahbs_hwdata[27]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=54 y=34)  bank=-1
+Debug: i=360 port 95577(x=0 y=34) mport name ahbs_hwdata[26] Unused Port net ahbs_hwdata[26]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=54 y=34)  bank=-1
+Debug: i=361 port 95576(x=0 y=34) mport name ahbs_hwdata[25] Unused Port net ahbs_hwdata[25]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=54 y=34)  bank=-1
+Debug: i=362 port 95575(x=0 y=34) mport name ahbs_hwdata[24] Unused Port net ahbs_hwdata[24]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=363 port 95574(x=0 y=34) mport name ahbs_hwdata[23] Unused Port net ahbs_hwdata[23]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=364 port 95573(x=0 y=34) mport name ahbs_hwdata[22] Unused Port net ahbs_hwdata[22]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=365 port 95572(x=0 y=34) mport name ahbs_hwdata[21] Unused Port net ahbs_hwdata[21]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=366 port 95571(x=0 y=34) mport name ahbs_hwdata[20] Unused Port net ahbs_hwdata[20]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=367 port 95570(x=0 y=34) mport name ahbs_hwdata[19] Unused Port net ahbs_hwdata[19]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=368 port 95569(x=0 y=34) mport name ahbs_hwdata[18] Unused Port net ahbs_hwdata[18]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=369 port 95568(x=0 y=34) mport name ahbs_hwdata[17] Unused Port net ahbs_hwdata[17]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=370 port 95567(x=0 y=34) mport name ahbs_hwdata[16] Unused Port net ahbs_hwdata[16]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=53 y=34)  bank=-1
+Debug: i=371 port 95566(x=0 y=34) mport name ahbs_hwdata[15] Unused Port net ahbs_hwdata[15]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=372 port 95565(x=0 y=34) mport name ahbs_hwdata[14] Unused Port net ahbs_hwdata[14]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=373 port 95564(x=0 y=34) mport name ahbs_hwdata[13] Unused Port net ahbs_hwdata[13]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=374 port 95563(x=0 y=34) mport name ahbs_hwdata[12] Unused Port net ahbs_hwdata[12]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=375 port 95562(x=0 y=34) mport name ahbs_hwdata[11] Unused Port net ahbs_hwdata[11]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=376 port 95561(x=0 y=34) mport name ahbs_hwdata[10] Unused Port net ahbs_hwdata[10]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=377 port 95560(x=0 y=34) mport name ahbs_hwdata[9] Unused Port net ahbs_hwdata[9]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=378 port 95559(x=0 y=34) mport name ahbs_hwdata[8] Unused Port net ahbs_hwdata[8]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=52 y=34)  bank=-1
+Debug: i=379 port 95558(x=0 y=34) mport name ahbs_hwdata[7] Unused Port net ahbs_hwdata[7]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=380 port 95557(x=0 y=34) mport name ahbs_hwdata[6] Unused Port net ahbs_hwdata[6]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=381 port 95556(x=0 y=34) mport name ahbs_hwdata[5] Unused Port net ahbs_hwdata[5]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=382 port 95555(x=0 y=34) mport name ahbs_hwdata[4] Unused Port net ahbs_hwdata[4]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=383 port 95554(x=0 y=34) mport name ahbs_hwdata[3] Unused Port net ahbs_hwdata[3]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=384 port 95553(x=0 y=34) mport name ahbs_hwdata[2] Unused Port net ahbs_hwdata[2]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=385 port 95552(x=0 y=34) mport name ahbs_hwdata[1] Unused Port net ahbs_hwdata[1]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=386 port 95551(x=0 y=34) mport name ahbs_hwdata[0] Unused Port net ahbs_hwdata[0]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=51 y=34)  bank=-1
+Debug: i=387 port 95550(x=0 y=34) mport name ahbs_haddr[31] Unused Port net not exists  
+Debug: i=388 port 95549(x=0 y=34) mport name ahbs_haddr[30] Unused Port net not exists  
+Debug: i=389 port 95548(x=0 y=34) mport name ahbs_haddr[29] Unused Port net not exists  
+Debug: i=390 port 95547(x=0 y=34) mport name ahbs_haddr[28] Unused Port net not exists  
+Debug: i=391 port 95546(x=0 y=34) mport name ahbs_haddr[27] Unused Port net not exists  
+Debug: i=392 port 95545(x=0 y=34) mport name ahbs_haddr[26] Unused Port net not exists  
+Debug: i=393 port 95544(x=0 y=34) mport name ahbs_haddr[25] Unused Port net not exists  
+Debug: i=394 port 95543(x=0 y=34) mport name ahbs_haddr[24] Unused Port net not exists  
+Debug: i=395 port 95542(x=0 y=34) mport name ahbs_haddr[23] Unused Port net not exists  
+Debug: i=396 port 95541(x=0 y=34) mport name ahbs_haddr[22] Unused Port net not exists  
+Debug: i=397 port 95540(x=0 y=34) mport name ahbs_haddr[21] Unused Port net not exists  
+Debug: i=398 port 95539(x=0 y=34) mport name ahbs_haddr[20] Unused Port net not exists  
+Debug: i=399 port 95538(x=0 y=34) mport name ahbs_haddr[19] Unused Port net not exists  
+Debug: i=400 port 95537(x=0 y=34) mport name ahbs_haddr[18] Unused Port net not exists  
+Debug: i=401 port 95536(x=0 y=34) mport name ahbs_haddr[17] Unused Port net not exists  
+Debug: i=402 port 95535(x=0 y=34) mport name ahbs_haddr[16] Unused Port net not exists  
+Debug: i=403 port 95534(x=0 y=34) mport name ahbs_haddr[15] Unused Port net ahbs_haddr[15]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=48 y=34)  bank=-1
+Debug: i=404 port 95533(x=0 y=34) mport name ahbs_haddr[14] Unused Port net not exists  
+Debug: i=405 port 95532(x=0 y=34) mport name ahbs_haddr[13] Unused Port net not exists  
+Debug: i=406 port 95531(x=0 y=34) mport name ahbs_haddr[12] Unused Port net not exists  
+Debug: i=407 port 95530(x=0 y=34) mport name ahbs_haddr[11] Unused Port net not exists  
+Debug: i=408 port 95529(x=0 y=34) mport name ahbs_haddr[10] Unused Port net not exists  
+Debug: i=409 port 95528(x=0 y=34) mport name ahbs_haddr[9] Unused Port net not exists  
+Debug: i=410 port 95527(x=0 y=34) mport name ahbs_haddr[8] Unused Port net not exists  
+Debug: i=411 port 95526(x=0 y=34) mport name ahbs_haddr[7] Unused Port net not exists  
+Debug: i=412 port 95525(x=0 y=34) mport name ahbs_haddr[6] Unused Port net not exists  
+Debug: i=413 port 95524(x=0 y=34) mport name ahbs_haddr[5] Unused Port net not exists  
+Debug: i=414 port 95523(x=0 y=34) mport name ahbs_haddr[4] Unused Port net not exists  
+Debug: i=415 port 95522(x=0 y=34) mport name ahbs_haddr[3] Unused Port net ahbs_haddr[3]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=47 y=34)  bank=-1
+Debug: i=416 port 95521(x=0 y=34) mport name ahbs_haddr[2] Unused Port net ahbs_haddr[2]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=47 y=34)  bank=-1
+Debug: i=417 port 95520(x=0 y=34) mport name ahbs_haddr[1] Unused Port net not exists  
+Debug: i=418 port 95519(x=0 y=34) mport name ahbs_haddr[0] Unused Port net not exists  
+Debug: i=419 port 95518(x=0 y=34) mport name tm_overflow4 Unused Port net not exists  
+Debug: i=420 port 95517(x=0 y=34) mport name tm_overflow3 Unused Port net not exists  
+Debug: i=421 port 95516(x=0 y=34) mport name tm_overflow2 Unused Port net not exists  
+Debug: i=422 port 95515(x=0 y=34) mport name tm_fbenable Unused Port net GND  
+Debug: i=423 port 95514(x=0 y=34) mport name tm_extclk4 Unused Port net GND  
+Debug: i=424 port 95513(x=0 y=34) mport name tm_extclk3 Unused Port net GND  
+Debug: i=425 port 95512(x=0 y=34) mport name tm_extclk2 Unused Port net GND  
+Debug: i=426 port 95511(x=0 y=34) mport name tm_extclk1 Unused Port net GND  
+Debug: i=427 port 95510(x=0 y=34) mport name ahbs_hready_out Unused Port net ahbs_hready_out_InterfaceIn  
+Debug:      MCESPXXIN buffer location(x=45 y=34)  bank=-1
+Debug: i=428 port 95509(x=0 y=34) mport name ahbs_hresp[1] Unused Port net GND  
+Debug: i=429 port 95508(x=0 y=34) mport name ahbs_hresp[0] Unused Port net GND  
+Debug: i=430 port 95507(x=0 y=34) mport name ahbs_hsel Unused Port net ahbs_hsel_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=45 y=34)  bank=-1
+Debug: i=431 port 95506(x=0 y=34) mport name ahbs_hprot[3] Unused Port net not exists  
+Debug: i=432 port 95505(x=0 y=34) mport name ahbs_hprot[2] Unused Port net not exists  
+Debug: i=433 port 95504(x=0 y=34) mport name ahbs_hprot[1] Unused Port net not exists  
+Debug: i=434 port 95503(x=0 y=34) mport name ahbs_hprot[0] Unused Port net not exists  
+Debug: i=435 port 95502(x=0 y=34) mport name ahbs_hburst[2] Unused Port net not exists  
+Debug: i=436 port 95501(x=0 y=34) mport name ahbs_hburst[1] Unused Port net not exists  
+Debug: i=437 port 95500(x=0 y=34) mport name ahbs_hburst[0] Unused Port net not exists  
+Debug: i=438 port 95499(x=0 y=34) mport name ahbs_hsize[2] Unused Port net not exists  
+Debug: i=439 port 95498(x=0 y=34) mport name ahbs_hsize[1] Unused Port net not exists  
+Debug: i=440 port 95497(x=0 y=34) mport name ahbs_hsize[0] Unused Port net not exists  
+Debug: i=441 port 95496(x=0 y=34) mport name ahbs_htrans[1] Unused Port net ahbs_htrans[1]_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=44 y=34)  bank=-1
+Debug: i=442 port 95495(x=0 y=34) mport name ahbs_htrans[0] Unused Port net not exists  
+Debug: i=443 port 95494(x=0 y=34) mport name ahbs_hwrite Unused Port net ahbs_hwrite_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=43 y=34)  bank=-1
+Debug: i=444 port 95493(x=0 y=34) mport name fb_bigendian Unused Port net not exists  
+Debug: i=445 port 95492(x=0 y=34) mport name ahb_hready_in Unused Port net ahb_hready_in_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=43 y=34)  bank=-1
+Debug: i=446 port 95491(x=0 y=34) mport name hresetn Unused Port net hresetn_InterfaceOut  
+Debug:      MCESPXXOUT buffer location(x=43 y=34)  bank=-1
+Debug: i=447 port 95490(x=0 y=34) mport name apbs_psel2 Unused Port net not exists  
+Debug: i=448 port 95489(x=0 y=34) mport name apbs_psel1 Unused Port net not exists  
+Debug: i=449 port 95488(x=0 y=34) mport name apbs_psel0 Unused Port net not exists  
+Debug: i=450 port 95487(x=0 y=34) mport name apbs_penable Unused Port net not exists  
+Debug: i=451 port 95486(x=0 y=34) mport name apbs_pwrite Unused Port net not exists  
+Debug: i=452 port 95485(x=0 y=34) mport name apbs_pwdata[31] Unused Port net not exists  
+Debug: i=453 port 95484(x=0 y=34) mport name apbs_pwdata[30] Unused Port net not exists  
+Debug: i=454 port 95483(x=0 y=34) mport name apbs_pwdata[29] Unused Port net not exists  
+Debug: i=455 port 95482(x=0 y=34) mport name apbs_pwdata[28] Unused Port net not exists  
+Debug: i=456 port 95481(x=0 y=34) mport name apbs_pwdata[27] Unused Port net not exists  
+Debug: i=457 port 95480(x=0 y=34) mport name apbs_pwdata[26] Unused Port net not exists  
+Debug: i=458 port 95479(x=0 y=34) mport name apbs_pwdata[25] Unused Port net not exists  
+Debug: i=459 port 95478(x=0 y=34) mport name apbs_pwdata[24] Unused Port net not exists  
+Debug: i=460 port 95477(x=0 y=34) mport name apbs_pwdata[23] Unused Port net not exists  
+Debug: i=461 port 95476(x=0 y=34) mport name apbs_pwdata[22] Unused Port net not exists  
+Debug: i=462 port 95475(x=0 y=34) mport name apbs_pwdata[21] Unused Port net not exists  
+Debug: i=463 port 95474(x=0 y=34) mport name apbs_pwdata[20] Unused Port net not exists  
+Debug: i=464 port 95473(x=0 y=34) mport name apbs_pwdata[19] Unused Port net not exists  
+Debug: i=465 port 95472(x=0 y=34) mport name apbs_pwdata[18] Unused Port net not exists  
+Debug: i=466 port 95471(x=0 y=34) mport name apbs_pwdata[17] Unused Port net not exists  
+Debug: i=467 port 95470(x=0 y=34) mport name apbs_pwdata[16] Unused Port net not exists  
+Debug: i=468 port 95469(x=0 y=34) mport name apbs_pwdata[15] Unused Port net not exists  
+Debug: i=469 port 95468(x=0 y=34) mport name apbs_pwdata[14] Unused Port net not exists  
+Debug: i=470 port 95467(x=0 y=34) mport name apbs_pwdata[13] Unused Port net not exists  
+Debug: i=471 port 95466(x=0 y=34) mport name apbs_pwdata[12] Unused Port net not exists  
+Debug: i=472 port 95465(x=0 y=34) mport name apbs_pwdata[11] Unused Port net not exists  
+Debug: i=473 port 95464(x=0 y=34) mport name apbs_pwdata[10] Unused Port net not exists  
+Debug: i=474 port 95463(x=0 y=34) mport name apbs_pwdata[9] Unused Port net not exists  
+Debug: i=475 port 95462(x=0 y=34) mport name apbs_pwdata[8] Unused Port net not exists  
+Debug: i=476 port 95461(x=0 y=34) mport name apbs_pwdata[7] Unused Port net not exists  
+Debug: i=477 port 95460(x=0 y=34) mport name apbs_pwdata[6] Unused Port net not exists  
+Debug: i=478 port 95459(x=0 y=34) mport name apbs_pwdata[5] Unused Port net not exists  
+Debug: i=479 port 95458(x=0 y=34) mport name apbs_pwdata[4] Unused Port net not exists  
+Debug: i=480 port 95457(x=0 y=34) mport name apbs_pwdata[3] Unused Port net not exists  
+Debug: i=481 port 95456(x=0 y=34) mport name apbs_pwdata[2] Unused Port net not exists  
+Debug: i=482 port 95455(x=0 y=34) mport name apbs_pwdata[1] Unused Port net not exists  
+Debug: i=483 port 95454(x=0 y=34) mport name apbs_pwdata[0] Unused Port net not exists  
+Debug: i=484 port 95453(x=0 y=34) mport name apbs_paddr[15] Unused Port net not exists  
+Debug: i=485 port 95452(x=0 y=34) mport name apbs_paddr[14] Unused Port net not exists  
+Debug: i=486 port 95451(x=0 y=34) mport name apbs_paddr[13] Unused Port net not exists  
+Debug: i=487 port 95450(x=0 y=34) mport name apbs_paddr[12] Unused Port net not exists  
+Debug: i=488 port 95449(x=0 y=34) mport name apbs_paddr[11] Unused Port net not exists  
+Debug: i=489 port 95448(x=0 y=34) mport name apbs_paddr[10] Unused Port net not exists  
+Debug: i=490 port 95447(x=0 y=34) mport name apbs_paddr[9] Unused Port net not exists  
+Debug: i=491 port 95446(x=0 y=34) mport name apbs_paddr[8] Unused Port net not exists  
+Debug: i=492 port 95445(x=0 y=34) mport name apbs_paddr[7] Unused Port net not exists  
+Debug: i=493 port 95444(x=0 y=34) mport name apbs_paddr[6] Unused Port net not exists  
+Debug: i=494 port 95443(x=0 y=34) mport name apbs_paddr[5] Unused Port net not exists  
+Debug: i=495 port 95442(x=0 y=34) mport name apbs_paddr[4] Unused Port net not exists  
+Debug: i=496 port 95441(x=0 y=34) mport name apbs_paddr[3] Unused Port net not exists  
+Debug: i=497 port 95440(x=0 y=34) mport name apbs_paddr[2] Unused Port net not exists  
+Debug: i=498 port 95439(x=0 y=34) mport name apbs_prdata2[31] Unused Port net GND  
+Debug: i=499 port 95438(x=0 y=34) mport name apbs_prdata2[30] Unused Port net GND  
+Debug: i=500 port 95437(x=0 y=34) mport name apbs_prdata2[29] Unused Port net GND  
+Debug: i=501 port 95436(x=0 y=34) mport name apbs_prdata2[28] Unused Port net GND  
+Debug: i=502 port 95435(x=0 y=34) mport name apbs_prdata2[27] Unused Port net GND  
+Debug: i=503 port 95434(x=0 y=34) mport name apbs_prdata2[26] Unused Port net GND  
+Debug: i=504 port 95433(x=0 y=34) mport name apbs_prdata2[25] Unused Port net GND  
+Debug: i=505 port 95432(x=0 y=34) mport name apbs_prdata2[24] Unused Port net GND  
+Debug: i=506 port 95431(x=0 y=34) mport name apbs_prdata2[23] Unused Port net GND  
+Debug: i=507 port 95430(x=0 y=34) mport name apbs_prdata2[22] Unused Port net GND  
+Debug: i=508 port 95429(x=0 y=34) mport name apbs_prdata2[21] Unused Port net GND  
+Debug: i=509 port 95428(x=0 y=34) mport name apbs_prdata2[20] Unused Port net GND  
+Debug: i=510 port 95427(x=0 y=34) mport name apbs_prdata2[19] Unused Port net GND  
+Debug: i=511 port 95426(x=0 y=34) mport name apbs_prdata2[18] Unused Port net GND  
+Debug: i=512 port 95425(x=0 y=34) mport name apbs_prdata2[17] Unused Port net GND  
+Debug: i=513 port 95424(x=0 y=34) mport name apbs_prdata2[16] Unused Port net GND  
+Debug: i=514 port 95423(x=0 y=34) mport name apbs_prdata2[15] Unused Port net GND  
+Debug: i=515 port 95422(x=0 y=34) mport name apbs_prdata2[14] Unused Port net GND  
+Debug: i=516 port 95421(x=0 y=34) mport name apbs_prdata2[13] Unused Port net GND  
+Debug: i=517 port 95420(x=0 y=34) mport name apbs_prdata2[12] Unused Port net GND  
+Debug: i=518 port 95419(x=0 y=34) mport name apbs_prdata2[11] Unused Port net GND  
+Debug: i=519 port 95418(x=0 y=34) mport name apbs_prdata2[10] Unused Port net GND  
+Debug: i=520 port 95417(x=0 y=34) mport name apbs_prdata2[9] Unused Port net GND  
+Debug: i=521 port 95416(x=0 y=34) mport name apbs_prdata2[8] Unused Port net GND  
+Debug: i=522 port 95415(x=0 y=34) mport name apbs_prdata2[7] Unused Port net GND  
+Debug: i=523 port 95414(x=0 y=34) mport name apbs_prdata2[6] Unused Port net GND  
+Debug: i=524 port 95413(x=0 y=34) mport name apbs_prdata2[5] Unused Port net GND  
+Debug: i=525 port 95412(x=0 y=34) mport name apbs_prdata2[4] Unused Port net GND  
+Debug: i=526 port 95411(x=0 y=34) mport name apbs_prdata2[3] Unused Port net GND  
+Debug: i=527 port 95410(x=0 y=34) mport name apbs_prdata2[2] Unused Port net GND  
+Debug: i=528 port 95409(x=0 y=34) mport name apbs_prdata2[1] Unused Port net GND  
+Debug: i=529 port 95408(x=0 y=34) mport name apbs_prdata2[0] Unused Port net GND  
+Debug: i=530 port 95407(x=0 y=34) mport name apbs_prdata1[31] Unused Port net GND  
+Debug: i=531 port 95406(x=0 y=34) mport name apbs_prdata1[30] Unused Port net GND  
+Debug: i=532 port 95405(x=0 y=34) mport name apbs_prdata1[29] Unused Port net GND  
+Debug: i=533 port 95404(x=0 y=34) mport name apbs_prdata1[28] Unused Port net GND  
+Debug: i=534 port 95403(x=0 y=34) mport name apbs_prdata1[27] Unused Port net GND  
+Debug: i=535 port 95402(x=0 y=34) mport name apbs_prdata1[26] Unused Port net GND  
+Debug: i=536 port 95401(x=0 y=34) mport name apbs_prdata1[25] Unused Port net GND  
+Debug: i=537 port 95400(x=0 y=34) mport name apbs_prdata1[24] Unused Port net GND  
+Debug: i=538 port 95399(x=0 y=34) mport name apbs_prdata1[23] Unused Port net GND  
+Debug: i=539 port 95398(x=0 y=34) mport name apbs_prdata1[22] Unused Port net GND  
+Debug: i=540 port 95397(x=0 y=34) mport name apbs_prdata1[21] Unused Port net GND  
+Debug: i=541 port 95396(x=0 y=34) mport name apbs_prdata1[20] Unused Port net GND  
+Debug: i=542 port 95395(x=0 y=34) mport name apbs_prdata1[19] Unused Port net GND  
+Debug: i=543 port 95394(x=0 y=34) mport name apbs_prdata1[18] Unused Port net GND  
+Debug: i=544 port 95393(x=0 y=34) mport name apbs_prdata1[17] Unused Port net GND  
+Debug: i=545 port 95392(x=0 y=34) mport name apbs_prdata1[16] Unused Port net GND  
+Debug: i=546 port 95391(x=0 y=34) mport name apbs_prdata1[15] Unused Port net GND  
+Debug: i=547 port 95390(x=0 y=34) mport name apbs_prdata1[14] Unused Port net GND  
+Debug: i=548 port 95389(x=0 y=34) mport name apbs_prdata1[13] Unused Port net GND  
+Debug: i=549 port 95388(x=0 y=34) mport name apbs_prdata1[12] Unused Port net GND  
+Debug: i=550 port 95387(x=0 y=34) mport name apbs_prdata1[11] Unused Port net GND  
+Debug: i=551 port 95386(x=0 y=34) mport name apbs_prdata1[10] Unused Port net GND  
+Debug: i=552 port 95385(x=0 y=34) mport name apbs_prdata1[9] Unused Port net GND  
+Debug: i=553 port 95384(x=0 y=34) mport name apbs_prdata1[8] Unused Port net GND  
+Debug: i=554 port 95383(x=0 y=34) mport name apbs_prdata1[7] Unused Port net GND  
+Debug: i=555 port 95382(x=0 y=34) mport name apbs_prdata1[6] Unused Port net GND  
+Debug: i=556 port 95381(x=0 y=34) mport name apbs_prdata1[5] Unused Port net GND  
+Debug: i=557 port 95380(x=0 y=34) mport name apbs_prdata1[4] Unused Port net GND  
+Debug: i=558 port 95379(x=0 y=34) mport name apbs_prdata1[3] Unused Port net GND  
+Debug: i=559 port 95378(x=0 y=34) mport name apbs_prdata1[2] Unused Port net GND  
+Debug: i=560 port 95377(x=0 y=34) mport name apbs_prdata1[1] Unused Port net GND  
+Debug: i=561 port 95376(x=0 y=34) mport name apbs_prdata1[0] Unused Port net GND  
+Debug: i=562 port 95375(x=0 y=34) mport name apbs_prdata0[31] Unused Port net GND  
+Debug: i=563 port 95374(x=0 y=34) mport name apbs_prdata0[30] Unused Port net GND  
+Debug: i=564 port 95373(x=0 y=34) mport name apbs_prdata0[29] Unused Port net GND  
+Debug: i=565 port 95372(x=0 y=34) mport name apbs_prdata0[28] Unused Port net GND  
+Debug: i=566 port 95371(x=0 y=34) mport name apbs_prdata0[27] Unused Port net GND  
+Debug: i=567 port 95370(x=0 y=34) mport name apbs_prdata0[26] Unused Port net GND  
+Debug: i=568 port 95369(x=0 y=34) mport name apbs_prdata0[25] Unused Port net GND  
+Debug: i=569 port 95368(x=0 y=34) mport name apbs_prdata0[24] Unused Port net GND  
+Debug: i=570 port 95367(x=0 y=34) mport name apbs_prdata0[23] Unused Port net GND  
+Debug: i=571 port 95366(x=0 y=34) mport name apbs_prdata0[22] Unused Port net GND  
+Debug: i=572 port 95365(x=0 y=34) mport name apbs_prdata0[21] Unused Port net GND  
+Debug: i=573 port 95364(x=0 y=34) mport name apbs_prdata0[20] Unused Port net GND  
+Debug: i=574 port 95363(x=0 y=34) mport name apbs_prdata0[19] Unused Port net GND  
+Debug: i=575 port 95362(x=0 y=34) mport name apbs_prdata0[18] Unused Port net GND  
+Debug: i=576 port 95361(x=0 y=34) mport name apbs_prdata0[17] Unused Port net GND  
+Debug: i=577 port 95360(x=0 y=34) mport name apbs_prdata0[16] Unused Port net GND  
+Debug: i=578 port 95359(x=0 y=34) mport name apbs_prdata0[15] Unused Port net GND  
+Debug: i=579 port 95358(x=0 y=34) mport name apbs_prdata0[14] Unused Port net GND  
+Debug: i=580 port 95357(x=0 y=34) mport name apbs_prdata0[13] Unused Port net GND  
+Debug: i=581 port 95356(x=0 y=34) mport name apbs_prdata0[12] Unused Port net GND  
+Debug: i=582 port 95355(x=0 y=34) mport name apbs_prdata0[11] Unused Port net GND  
+Debug: i=583 port 95354(x=0 y=34) mport name apbs_prdata0[10] Unused Port net GND  
+Debug: i=584 port 95353(x=0 y=34) mport name apbs_prdata0[9] Unused Port net GND  
+Debug: i=585 port 95352(x=0 y=34) mport name apbs_prdata0[8] Unused Port net GND  
+Debug: i=586 port 95351(x=0 y=34) mport name apbs_prdata0[7] Unused Port net GND  
+Debug: i=587 port 95350(x=0 y=34) mport name apbs_prdata0[6] Unused Port net GND  
+Debug: i=588 port 95349(x=0 y=34) mport name apbs_prdata0[5] Unused Port net GND  
+Debug: i=589 port 95348(x=0 y=34) mport name apbs_prdata0[4] Unused Port net GND  
+Debug: i=590 port 95347(x=0 y=34) mport name apbs_prdata0[3] Unused Port net GND  
+Debug: i=591 port 95346(x=0 y=34) mport name apbs_prdata0[2] Unused Port net GND  
+Debug: i=592 port 95345(x=0 y=34) mport name apbs_prdata0[1] Unused Port net GND  
+Debug: i=593 port 95344(x=0 y=34) mport name apbs_prdata0[0] Unused Port net GND  
+Debug: i=594 port 95343(x=0 y=34) mport name si_sleep Unused Port net not exists  
+Debug: i=595 port 95342(x=0 y=34) mport name si_rp Unused Port net not exists  
+Debug: i=596 port 95341(x=0 y=34) mport name pm_wtbnomerge Unused Port net not exists  
+Debug: i=597 port 95340(x=0 y=34) mport name pm_wtbmerge Unused Port net not exists  
+Debug: i=598 port 95339(x=0 y=34) mport name pm_jtlbmiss Unused Port net not exists  
+Debug: i=599 port 95338(x=0 y=34) mport name pm_jtlbhit Unused Port net not exists  
+Debug: i=600 port 95337(x=0 y=34) mport name pm_instncomplete Unused Port net not exists  
+Debug: i=601 port 95336(x=0 y=34) mport name pm_itlbmiss Unused Port net not exists  
+Debug: i=602 port 95335(x=0 y=34) mport name pm_itlbhit Unused Port net not exists  
+Debug: i=603 port 95334(x=0 y=34) mport name pm_icachemiss Unused Port net not exists  
+Debug: i=604 port 95333(x=0 y=34) mport name pm_icachehit Unused Port net not exists  
+Debug: i=605 port 95332(x=0 y=34) mport name pm_dtlbmiss Unused Port net not exists  
+Debug: i=606 port 95331(x=0 y=34) mport name pm_dtlbhit Unused Port net not exists  
+Debug: i=607 port 95330(x=0 y=34) mport name pm_dcachemiss Unused Port net not exists  
+Debug: i=608 port 95329(x=0 y=34) mport name pm_dcachehit Unused Port net not exists  
+Debug: i=609 port 95328(x=0 y=34) mport name AF_PCI_MINGNT[7] Unused Port net GND  
+Debug: i=610 port 95327(x=0 y=34) mport name AF_PCI_MINGNT[6] Unused Port net VCC  
+Debug: i=611 port 95326(x=0 y=34) mport name AF_PCI_MINGNT[5] Unused Port net GND  
+Debug: i=612 port 95325(x=0 y=34) mport name AF_PCI_MINGNT[4] Unused Port net GND  
+Debug: i=613 port 95324(x=0 y=34) mport name AF_PCI_MINGNT[3] Unused Port net GND  
+Debug: i=614 port 95323(x=0 y=34) mport name AF_PCI_MINGNT[2] Unused Port net VCC  
+Debug: i=615 port 95322(x=0 y=34) mport name AF_PCI_MINGNT[1] Unused Port net GND  
+Debug: i=616 port 95321(x=0 y=34) mport name AF_PCI_MINGNT[0] Unused Port net GND  
+Debug: i=617 port 95320(x=0 y=34) mport name AF_PCI_HOST Unused Port net VCC  
+Debug: i=618 port 95319(x=0 y=34) mport name AF_PCI_CFGDONE Unused Port net VCC  
+Debug: i=619 port 95318(x=0 y=34) mport name AF_PCI_MAXLAT[7] Unused Port net GND  
+Debug: i=620 port 95317(x=0 y=34) mport name AF_PCI_MAXLAT[6] Unused Port net VCC  
+Debug: i=621 port 95316(x=0 y=34) mport name AF_PCI_MAXLAT[5] Unused Port net GND  
+Debug: i=622 port 95315(x=0 y=34) mport name AF_PCI_MAXLAT[4] Unused Port net VCC  
+Debug: i=623 port 95314(x=0 y=34) mport name AF_PCI_MAXLAT[3] Unused Port net GND  
+Debug: i=624 port 95313(x=0 y=34) mport name AF_PCI_MAXLAT[2] Unused Port net VCC  
+Debug: i=625 port 95312(x=0 y=34) mport name AF_PCI_MAXLAT[1] Unused Port net GND  
+Debug: i=626 port 95311(x=0 y=34) mport name AF_PCI_MAXLAT[0] Unused Port net VCC  
+Debug: i=627 port 95310(x=0 y=34) mport name AF_PCI_SUBSYSVID[15] Unused Port net GND  
+Debug: i=628 port 95309(x=0 y=34) mport name AF_PCI_SUBSYSVID[14] Unused Port net GND  
+Debug: i=629 port 95308(x=0 y=34) mport name AF_PCI_SUBSYSVID[13] Unused Port net GND  
+Debug: i=630 port 95307(x=0 y=34) mport name AF_PCI_SUBSYSVID[12] Unused Port net VCC  
+Debug: i=631 port 95306(x=0 y=34) mport name AF_PCI_SUBSYSVID[11] Unused Port net GND  
+Debug: i=632 port 95305(x=0 y=34) mport name AF_PCI_SUBSYSVID[10] Unused Port net GND  
+Debug: i=633 port 95304(x=0 y=34) mport name AF_PCI_SUBSYSVID[9] Unused Port net GND  
+Debug: i=634 port 95303(x=0 y=34) mport name AF_PCI_SUBSYSVID[8] Unused Port net VCC  
+Debug: i=635 port 95302(x=0 y=34) mport name AF_PCI_SUBSYSVID[7] Unused Port net VCC  
+Debug: i=636 port 95301(x=0 y=34) mport name AF_PCI_SUBSYSVID[6] Unused Port net VCC  
+Debug: i=637 port 95300(x=0 y=34) mport name AF_PCI_SUBSYSVID[5] Unused Port net VCC  
+Debug: i=638 port 95299(x=0 y=34) mport name AF_PCI_SUBSYSVID[4] Unused Port net GND  
+Debug: i=639 port 95298(x=0 y=34) mport name AF_PCI_SUBSYSVID[3] Unused Port net GND  
+Debug: i=640 port 95297(x=0 y=34) mport name AF_PCI_SUBSYSVID[2] Unused Port net GND  
+Debug: i=641 port 95296(x=0 y=34) mport name AF_PCI_SUBSYSVID[1] Unused Port net VCC  
+Debug: i=642 port 95295(x=0 y=34) mport name AF_PCI_SUBSYSVID[0] Unused Port net VCC  
+Debug: i=643 port 95294(x=0 y=34) mport name AF_PCI_SUBSYSID[15] Unused Port net GND  
+Debug: i=644 port 95293(x=0 y=34) mport name AF_PCI_SUBSYSID[14] Unused Port net GND  
+Debug: i=645 port 95292(x=0 y=34) mport name AF_PCI_SUBSYSID[13] Unused Port net GND  
+Debug: i=646 port 95291(x=0 y=34) mport name AF_PCI_SUBSYSID[12] Unused Port net GND  
+Debug: i=647 port 95290(x=0 y=34) mport name AF_PCI_SUBSYSID[11] Unused Port net GND  
+Debug: i=648 port 95289(x=0 y=34) mport name AF_PCI_SUBSYSID[10] Unused Port net GND  
+Debug: i=649 port 95288(x=0 y=34) mport name AF_PCI_SUBSYSID[9] Unused Port net GND  
+Debug: i=650 port 95287(x=0 y=34) mport name AF_PCI_SUBSYSID[8] Unused Port net GND  
+Debug: i=651 port 95286(x=0 y=34) mport name AF_PCI_SUBSYSID[7] Unused Port net GND  
+Debug: i=652 port 95285(x=0 y=34) mport name AF_PCI_SUBSYSID[6] Unused Port net GND  
+Debug: i=653 port 95284(x=0 y=34) mport name AF_PCI_SUBSYSID[5] Unused Port net VCC  
+Debug: i=654 port 95283(x=0 y=34) mport name AF_PCI_SUBSYSID[4] Unused Port net GND  
+Debug: i=655 port 95282(x=0 y=34) mport name AF_PCI_SUBSYSID[3] Unused Port net GND  
+Debug: i=656 port 95281(x=0 y=34) mport name AF_PCI_SUBSYSID[2] Unused Port net GND  
+Debug: i=657 port 95280(x=0 y=34) mport name AF_PCI_SUBSYSID[1] Unused Port net VCC  
+Debug: i=658 port 95279(x=0 y=34) mport name AF_PCI_SUBSYSID[0] Unused Port net GND  
+Debug: i=659 port 95278(x=0 y=34) mport name AF_PCI_REVID[7] Unused Port net GND  
+Debug: i=660 port 95277(x=0 y=34) mport name AF_PCI_REVID[6] Unused Port net GND  
+Debug: i=661 port 95276(x=0 y=34) mport name AF_PCI_REVID[5] Unused Port net VCC  
+Debug: i=662 port 95275(x=0 y=34) mport name AF_PCI_REVID[4] Unused Port net VCC  
+Debug: i=663 port 95274(x=0 y=34) mport name AF_PCI_REVID[3] Unused Port net GND  
+Debug: i=664 port 95273(x=0 y=34) mport name AF_PCI_REVID[2] Unused Port net VCC  
+Debug: i=665 port 95272(x=0 y=34) mport name AF_PCI_REVID[1] Unused Port net GND  
+Debug: i=666 port 95271(x=0 y=34) mport name AF_PCI_REVID[0] Unused Port net GND  
+Debug: i=667 port 95270(x=0 y=34) mport name AF_PCI_CLASSCODE[23] Unused Port net VCC  
+Debug: i=668 port 95269(x=0 y=34) mport name AF_PCI_CLASSCODE[22] Unused Port net GND  
+Debug: i=669 port 95268(x=0 y=34) mport name AF_PCI_CLASSCODE[21] Unused Port net VCC  
+Debug: i=670 port 95267(x=0 y=34) mport name AF_PCI_CLASSCODE[20] Unused Port net GND  
+Debug: i=671 port 95266(x=0 y=34) mport name AF_PCI_CLASSCODE[19] Unused Port net VCC  
+Debug: i=672 port 95265(x=0 y=34) mport name AF_PCI_CLASSCODE[18] Unused Port net GND  
+Debug: i=673 port 95264(x=0 y=34) mport name AF_PCI_CLASSCODE[17] Unused Port net VCC  
+Debug: i=674 port 95263(x=0 y=34) mport name AF_PCI_CLASSCODE[16] Unused Port net VCC  
+Debug: i=675 port 95262(x=0 y=34) mport name AF_PCI_CLASSCODE[15] Unused Port net VCC  
+Debug: i=676 port 95261(x=0 y=34) mport name AF_PCI_CLASSCODE[14] Unused Port net VCC  
+Debug: i=677 port 95260(x=0 y=34) mport name AF_PCI_CLASSCODE[13] Unused Port net GND  
+Debug: i=678 port 95259(x=0 y=34) mport name AF_PCI_CLASSCODE[12] Unused Port net GND  
+Debug: i=679 port 95258(x=0 y=34) mport name AF_PCI_CLASSCODE[11] Unused Port net VCC  
+Debug: i=680 port 95257(x=0 y=34) mport name AF_PCI_CLASSCODE[10] Unused Port net VCC  
+Debug: i=681 port 95256(x=0 y=34) mport name AF_PCI_CLASSCODE[9] Unused Port net GND  
+Debug: i=682 port 95255(x=0 y=34) mport name AF_PCI_CLASSCODE[8] Unused Port net VCC  
+Debug: i=683 port 95254(x=0 y=34) mport name AF_PCI_CLASSCODE[7] Unused Port net VCC  
+Debug: i=684 port 95253(x=0 y=34) mport name AF_PCI_CLASSCODE[6] Unused Port net VCC  
+Debug: i=685 port 95252(x=0 y=34) mport name AF_PCI_CLASSCODE[5] Unused Port net VCC  
+Debug: i=686 port 95251(x=0 y=34) mport name AF_PCI_CLASSCODE[4] Unused Port net GND  
+Debug: i=687 port 95250(x=0 y=34) mport name AF_PCI_CLASSCODE[3] Unused Port net VCC  
+Debug: i=688 port 95249(x=0 y=34) mport name AF_PCI_CLASSCODE[2] Unused Port net VCC  
+Debug: i=689 port 95248(x=0 y=34) mport name AF_PCI_CLASSCODE[1] Unused Port net VCC  
+Debug: i=690 port 95247(x=0 y=34) mport name AF_PCI_CLASSCODE[0] Unused Port net VCC  
+Debug: i=691 port 95246(x=0 y=34) mport name AF_PCI_VENID[15] Unused Port net GND  
+Debug: i=692 port 95245(x=0 y=34) mport name AF_PCI_VENID[14] Unused Port net GND  
+Debug: i=693 port 95244(x=0 y=34) mport name AF_PCI_VENID[13] Unused Port net GND  
+Debug: i=694 port 95243(x=0 y=34) mport name AF_PCI_VENID[12] Unused Port net VCC  
+Debug: i=695 port 95242(x=0 y=34) mport name AF_PCI_VENID[11] Unused Port net GND  
+Debug: i=696 port 95241(x=0 y=34) mport name AF_PCI_VENID[10] Unused Port net GND  
+Debug: i=697 port 95240(x=0 y=34) mport name AF_PCI_VENID[9] Unused Port net GND  
+Debug: i=698 port 95239(x=0 y=34) mport name AF_PCI_VENID[8] Unused Port net VCC  
+Debug: i=699 port 95238(x=0 y=34) mport name AF_PCI_VENID[7] Unused Port net VCC  
+Debug: i=700 port 95237(x=0 y=34) mport name AF_PCI_VENID[6] Unused Port net VCC  
+Debug: i=701 port 95236(x=0 y=34) mport name AF_PCI_VENID[5] Unused Port net VCC  
+Debug: i=702 port 95235(x=0 y=34) mport name AF_PCI_VENID[4] Unused Port net GND  
+Debug: i=703 port 95234(x=0 y=34) mport name AF_PCI_VENID[3] Unused Port net GND  
+Debug: i=704 port 95233(x=0 y=34) mport name AF_PCI_VENID[2] Unused Port net GND  
+Debug: i=705 port 95232(x=0 y=34) mport name AF_PCI_VENID[1] Unused Port net VCC  
+Debug: i=706 port 95231(x=0 y=34) mport name AF_PCI_VENID[0] Unused Port net VCC  
+Debug: i=707 port 95230(x=0 y=34) mport name AF_PCI_DEVID[15] Unused Port net GND  
+Debug: i=708 port 95229(x=0 y=34) mport name AF_PCI_DEVID[14] Unused Port net GND  
+Debug: i=709 port 95228(x=0 y=34) mport name AF_PCI_DEVID[13] Unused Port net GND  
+Debug: i=710 port 95227(x=0 y=34) mport name AF_PCI_DEVID[12] Unused Port net VCC  
+Debug: i=711 port 95226(x=0 y=34) mport name AF_PCI_DEVID[11] Unused Port net GND  
+Debug: i=712 port 95225(x=0 y=34) mport name AF_PCI_DEVID[10] Unused Port net GND  
+Debug: i=713 port 95224(x=0 y=34) mport name AF_PCI_DEVID[9] Unused Port net VCC  
+Debug: i=714 port 95223(x=0 y=34) mport name AF_PCI_DEVID[8] Unused Port net GND  
+Debug: i=715 port 95222(x=0 y=34) mport name AF_PCI_DEVID[7] Unused Port net GND  
+Debug: i=716 port 95221(x=0 y=34) mport name AF_PCI_DEVID[6] Unused Port net GND  
+Debug: i=717 port 95220(x=0 y=34) mport name AF_PCI_DEVID[5] Unused Port net VCC  
+Debug: i=718 port 95219(x=0 y=34) mport name AF_PCI_DEVID[4] Unused Port net VCC  
+Debug: i=719 port 95218(x=0 y=34) mport name AF_PCI_DEVID[3] Unused Port net GND  
+Debug: i=720 port 95217(x=0 y=34) mport name AF_PCI_DEVID[2] Unused Port net VCC  
+Debug: i=721 port 95216(x=0 y=34) mport name AF_PCI_DEVID[1] Unused Port net GND  
+Debug: i=722 port 95215(x=0 y=34) mport name AF_PCI_DEVID[0] Unused Port net GND  
+Debug: Closing Ad-Module
+; Time: Fri Sep 13 18:41:14 2002
+; Status: AD Close...
+; Time: Fri Sep 13 18:41:15 2002
+; Status: Placer complete
+; Time: Fri Sep 13 18:41:15 2002
+; Status: Post-placement optimization.
+; Time: Fri Sep 13 18:41:15 2002
+; Status: Auto buffering starts.
+; Time: Fri Sep 13 18:41:16 2002
+; Result: ;Summary: Logic cell utilization: 10
+; Time: Fri Sep 13 18:41:16 2002
+; Result: ; Summary: IO control cells: 0 of 8
+; Time: Fri Sep 13 18:41:16 2002
+; Result: ; Summary: Clock-only cells: 0 of 9
+; Time: Fri Sep 13 18:41:16 2002
+; Result: ; Summary: Bi-directional cells: 8 of 252
+; Time: Fri Sep 13 18:41:16 2002
+; Status: Auto buffering complete -- 67 buffers inserted.
+; Time: Fri Sep 13 18:41:16 2002
+; Status: Fixing bypass muxes starts.
+; Time: Fri Sep 13 18:41:16 2002
+; Status: Fixing bypass muxes--95 bypass muxes, 59 swaps.
+; Time: Fri Sep 13 18:41:16 2002
+; Status: Fragment-Level Netlister begin...
+; Time: Fri Sep 13 18:41:16 2002
+; Status: Fragment-Level Netlister complete
+; Time: Fri Sep 13 18:41:16 2002
+; Status: Fragment simulator begins ...
+; Time: Fri Sep 13 18:41:25 2002
+; Status: Fragment simulator ends successfully.
+; Options for router
+; router.MinCycles = 5
+; router.MaxCycles = 512
+; router.Seed = 42
+; router.LoopCnt = 5
+; router.MaxHidriveFanouts = 20
+; router.CongestionTable = 0
+; router.RouteMode = 0
+; router.UnusedIO = 0
+; Time: Fri Sep 13 18:41:25 2002
+; Status: R2 router begin...
+; Time: Fri Sep 13 18:41:25 2002
+; Status: R2: routing clock nets
+; Time: Fri Sep 13 18:41:25 2002
+; Status: R2: routing supply nets
+; Time: Fri Sep 13 18:41:25 2002
+; Status: R2: initializing...
+; Time: Fri Sep 13 18:41:26 2002
+; Status: Fragment-Level Netlister begin...
+; Time: Fri Sep 13 18:41:26 2002
+; Status: Fragment-Level Netlister complete
+; Time: Fri Sep 13 18:41:26 2002
+; Status: Initializing AD with constraints ...
+; Time: Fri Sep 13 18:41:26 2002
+; Status: R2: routing low skew nets
+; Time: Fri Sep 13 18:41:26 2002
+; Status: R2: routing conventional nets...
+; Time: Fri Sep 13 18:41:26 2002
+; Status: R2: beginning initial cycle
+Debug: cycle= 0: cong= 0  over= 0  histoc= 0
+Debug: cycle= 0: overconstraints= 685
+; Time: Fri Sep 13 18:41:33 2002
+; Status: Timing driven calculations begin...
+; Time: Fri Sep 13 18:41:33 2002
+; Status: Timing driven calculations end...
+Debug: cycle= 1: cong= 0  over= 0.105  histoc= 0
+Debug: cycle= 1: overconstraints= 7
+Debug: cycle= 2: cong= 0  over= 0.11025  histoc= 0
+Debug: cycle= 2: overconstraints= 4
+Debug: cycle= 3: cong= 0  over= 0.115763  histoc= 0
+Debug: cycle= 3: overconstraints= 3
+Debug: cycle= 4: cong= 0  over= 0.121551  histoc= 0
+Debug: cycle= 4: overconstraints= 2
+Debug: cycle= 5: cong= 0  over= 0.127628  histoc= 0
+Debug: cycle= 5: overconstraints= 1
+Debug: cycle= 6: cong= 0  over= 0.13401  histoc= 0.0315
+Debug: cycle= 6: overconstraints= 1
+Debug: cycle= 7: cong= 0  over= 0.14071  histoc= 0.033075
+Debug: cycle= 7: overconstraints= 0
+; Time: Fri Sep 13 18:41:35 2002
+; Status: R2: detail routing...
+; Time: Fri Sep 13 18:41:35 2002
+; Status: R2: writeback...
+; Time: Fri Sep 13 18:41:36 2002
+; Status: AD Close...
+; Time: Fri Sep 13 18:41:36 2002
+; Status: R2 router complete.
+; Options for delay modeler
+; delay modeler.Mode = Commercial
+; delay modeler.Corner = Worst
+; delay modeler.OutPadCap = 30.000000
+; delay modeler.SpeedGrade = 6
+; delay modeler.LowPower = FALSE
+; delay modeler.CustomVccBest = 2.500000
+; delay modeler.CustomVccNominal = 2.500000
+; delay modeler.CustomVccWorst = 2.500000
+; delay modeler.CustomVccLPBest = 3.600000
+; delay modeler.CustomVccLPNominal = 3.300000
+; delay modeler.CustomVccLPWorst = 3.000000
+; delay modeler.CustomTempBest = 25.000000
+; delay modeler.CustomTempNominal = 25.000000
+; delay modeler.CustomTempWorst = 25.000000
+; Time: Fri Sep 13 18:41:36 2002
+; Status: Delay Simulator begin...
+; Time: Fri Sep 13 18:41:40 2002
+; Status: Delay Simulator complete
+; Options for back annotation
+; Time: Fri Sep 13 18:41:40 2002
+; Status: Verilog back annotation begin...
+; Time: Fri Sep 13 18:41:40 2002
+; Status: Verilog netlist begin...
+; Time: Fri Sep 13 18:41:40 2002
+; Status: Verilog back annotation in progress...
+; Time: Fri Sep 13 18:41:59 2002
+; Status: Verilog netlist complete
+; Time: Fri Sep 13 18:41:59 2002
+; Status: SDF back annotation begin...
+; Time: Fri Sep 13 18:42:00 2002
+; Status: SDF back annotation complete
+; Time: Fri Sep 13 18:42:00 2002
+; Status: Verilog back annotation complete
+; Time: Fri Sep 13 18:42:00 2002
+; Status: Back annotation begin...
+; Time: Fri Sep 13 18:42:00 2002
+; Status: Back annotation complete
+; Time: Fri Sep 13 18:42:09 2002
+; Status: Report file demo_amba.rpt created.
+; Time: Fri Sep 13 18:42:48 2002
+; Status: Report file demo_amba.rpt created.
+; Time: Fri Sep 13 18:42:50 2002
+; Status: utMemClose: Max memory used was 66251849 bytes

@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>svaunit
+API Specification</title>
+
+	<meta name="author" content="">
+	<meta name="description" content="svaunit API Specification">
+	<meta name="generator" content="Specador. Copyright (C) 2005-2015 AMIQ EDA ">
+	<meta name="keywords" content="SystemVerilog, HTML Documentation, Specador, AMIQ EDA, svaunit API Specification">
+
+	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="lib/select2/css/select2.css" rel="stylesheet">
+	<link href="lib/select2/css/select2-bootstrap.css" rel="stylesheet">
+	<link href="css/toc.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+				<h2>svaunit</h2>
+				<h4>API Specification</h4>
+
+		<hr>
+
+		<div class="input-group select2-bootstrap-prepend">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button"
+					data-select2-open="toc-search">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+			</span>
+			<select id="toc-search" class="form-control select2" style="width: 100%">
+				<option></option>
+
+	<optgroup label="Enums">
+		    	<option value="svaunit_pkg-svaunit_concurrent_assertion_state_type.html">svaunit_pkg::svaunit_concurrent_assertion_state_type</option>
+		    	<option value="svaunit_pkg-svaunit_status_type.html">svaunit_pkg::svaunit_status_type</option>
+		    	<option value="svaunit_pkg-svaunit_sva_tested_type.html">svaunit_pkg::svaunit_sva_tested_type</option>
+	</optgroup>
+
+
+	<optgroup label="Classes">
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_after_reset_enable.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_after_reset_enable</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_after_reset_sel.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_after_reset_sel</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_after_reset_slverr.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_after_reset_slverr</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_after_reset_test_suite.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_after_reset_test_suite</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_en_assertion.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_en_assertion</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_en_deassertion.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_en_deassertion</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_en_fall.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_en_fall</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_en_trans.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_en_trans</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_en_val.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_en_val</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_rdata_trans.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_rdata_trans</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_ready_max_low_time.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_ready_max_low_time</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_sel_min_time.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_sel_min_time</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_sel_trans.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_sel_trans</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_sel_trans_during_trans.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_sel_trans_during_trans</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_sel_val.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_sel_val</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_sign_trans.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_sign_trans</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_strb_val_read_trans.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_strb_val_read_trans</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_illegal_svlerr_cond.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_illegal_svlerr_cond</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_protocol_test_suite.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_protocol_test_suite</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_suite.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_suite</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_addr.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_addr</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_enable.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_enable</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_prot.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_prot</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_ready.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_ready</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_sel.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_sel</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_slverr.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_slverr</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_strb.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_strb</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_test_suite.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_test_suite</option>
+		    	<option value="amiq_svaunit_ex_apb_test_pkg-amiq_svaunit_ex_apb_test_x_z_write.html">amiq_svaunit_ex_apb_test_pkg::amiq_svaunit_ex_apb_test_x_z_write</option>
+		    	<option value="amiq_svaunit_ex_simple_pkg-amiq_svaunit_ex_simple_test_head_sequence.html">amiq_svaunit_ex_simple_pkg::amiq_svaunit_ex_simple_test_head_sequence</option>
+		    	<option value="amiq_svaunit_ex_simple_pkg-amiq_svaunit_ex_simple_test_sequence.html">amiq_svaunit_ex_simple_pkg::amiq_svaunit_ex_simple_test_sequence</option>
+		    	<option value="amiq_svaunit_ex_simple_pkg-amiq_svaunit_ex_simple_test_suite.html">amiq_svaunit_ex_simple_pkg::amiq_svaunit_ex_simple_test_suite</option>
+		    	<option value="amiq_svaunit_ex_simple_pkg-amiq_svaunit_ex_simple_test_unit.html">amiq_svaunit_ex_simple_pkg::amiq_svaunit_ex_simple_test_unit</option>
+		    	<option value="amiq_svaunit_ex_simple_pkg-amiq_svaunit_ex_simple_test_with_parameter.html">amiq_svaunit_ex_simple_pkg::amiq_svaunit_ex_simple_test_with_parameter</option>
+		    	<option value="svaunit_pkg-svaunit_base.html">svaunit_pkg::svaunit_base</option>
+		    	<option value="svaunit_pkg-svaunit_base_sequence.html">svaunit_pkg::svaunit_base_sequence</option>
+		    	<option value="svaunit_pkg-svaunit_concurrent_assertion_details.html">svaunit_pkg::svaunit_concurrent_assertion_details</option>
+		    	<option value="svaunit_pkg-svaunit_concurrent_assertion_info.html">svaunit_pkg::svaunit_concurrent_assertion_info</option>
+		    	<option value="svaunit_pkg-svaunit_immediate_assertion_details.html">svaunit_pkg::svaunit_immediate_assertion_details</option>
+		    	<option value="svaunit_pkg-svaunit_immediate_assertion_info.html">svaunit_pkg::svaunit_immediate_assertion_info</option>
+		    	<option value="svaunit_pkg-svaunit_reporter.html">svaunit_pkg::svaunit_reporter</option>
+		    	<option value="svaunit_pkg-svaunit_sequence_test.html">svaunit_pkg::svaunit_sequence_test</option>
+		    	<option value="svaunit_pkg-svaunit_sequencer.html">svaunit_pkg::svaunit_sequencer</option>
+		    	<option value="svaunit_pkg-svaunit_test.html">svaunit_pkg::svaunit_test</option>
+		    	<option value="svaunit_pkg-svaunit_test_suite.html">svaunit_pkg::svaunit_test_suite</option>
+		    	<option value="svaunit_pkg-svaunit_vpi_wrapper.html">svaunit_pkg::svaunit_vpi_wrapper</option>
+	</optgroup>
+
+	<optgroup label="Interfaces">
+		    	<option value="work_amiq_apb_if.html">amiq_apb_if</option>
+		    	<option value="work_an_interface.html">an_interface</option>
+		    	<option value="work_another_interface.html">another_interface</option>
+		    	<option value="work_svaunit_vpi_interface.html">svaunit_vpi_interface</option>
+	</optgroup>
+
+	<optgroup label="Modules">
+		    	<option value="work_apb_top.html">apb_top</option>
+		    	<option value="work_top.html">top</option>
+	</optgroup>
+
+
+	<optgroup label="Macros">
+		    	<option value="summary-macro-global.html#macro_AMIQ_APB_PROT_WIDTH">AMIQ_APB_PROT_WIDTH</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_END_STATE_INDEX">SVAUNIT_END_STATE_INDEX</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_MAJOR_REV">SVAUNIT_MAJOR_REV</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_MINOR_REV">SVAUNIT_MINOR_REV</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_NAME">SVAUNIT_NAME</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_START_STATE_INDEX">SVAUNIT_START_STATE_INDEX</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_TEST_WITH_PARAM_UTILS">SVAUNIT_TEST_WITH_PARAM_UTILS</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_UTILS">SVAUNIT_UTILS</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VERSION_STRING">SVAUNIT_VERSION_STRING</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_DISABLE">SVAUNIT_VPI_CB_ASSERTION_DISABLE</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_ENABLE">SVAUNIT_VPI_CB_ASSERTION_ENABLE</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_FAILURE">SVAUNIT_VPI_CB_ASSERTION_FAILURE</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_KILL">SVAUNIT_VPI_CB_ASSERTION_KILL</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_RESET">SVAUNIT_VPI_CB_ASSERTION_RESET</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_START">SVAUNIT_VPI_CB_ASSERTION_START</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_STEP_FAILURE">SVAUNIT_VPI_CB_ASSERTION_STEP_FAILURE</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_STEP_SUCCESS">SVAUNIT_VPI_CB_ASSERTION_STEP_SUCCESS</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CB_ASSERTION_SUCCESS">SVAUNIT_VPI_CB_ASSERTION_SUCCESS</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_DISABLE_ASSERTION">SVAUNIT_VPI_CONTROL_DISABLE_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_DISABLE_STEP_ASSERTION">SVAUNIT_VPI_CONTROL_DISABLE_STEP_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_ENABLE_ASSERTION">SVAUNIT_VPI_CONTROL_ENABLE_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_ENABLE_STEP_ASSERTION">SVAUNIT_VPI_CONTROL_ENABLE_STEP_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_KILL_ASSERTION">SVAUNIT_VPI_CONTROL_KILL_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_RESET_ASSERTION">SVAUNIT_VPI_CONTROL_RESET_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_SYSTEM_END_ASSERTION">SVAUNIT_VPI_CONTROL_SYSTEM_END_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_SYSTEM_OFF_ASSERTION">SVAUNIT_VPI_CONTROL_SYSTEM_OFF_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_SYSTEM_ON_ASSERTION">SVAUNIT_VPI_CONTROL_SYSTEM_ON_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_SVAUNIT_VPI_CONTROL_SYSTEM_RESET_ASSERTION">SVAUNIT_VPI_CONTROL_SYSTEM_RESET_ASSERTION</option>
+		    	<option value="summary-macro-global.html#macro_add_test">add_test</option>
+		    	<option value="summary-macro-global.html#macro_fail_if">fail_if</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_does_not_exists">fail_if_sva_does_not_exists</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_enabled">fail_if_sva_enabled</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_finished">fail_if_sva_finished</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_not_finished">fail_if_sva_not_finished</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_not_started">fail_if_sva_not_started</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_not_succeeded">fail_if_sva_not_succeeded</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_started_but_not_finished">fail_if_sva_started_but_not_finished</option>
+		    	<option value="summary-macro-global.html#macro_fail_if_sva_succeeded">fail_if_sva_succeeded</option>
+		    	<option value="summary-macro-global.html#macro_pass_if">pass_if</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_does_not_exists">pass_if_sva_does_not_exists</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_enabled">pass_if_sva_enabled</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_finished">pass_if_sva_finished</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_not_finished">pass_if_sva_not_finished</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_not_started">pass_if_sva_not_started</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_not_succeeded">pass_if_sva_not_succeeded</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_started_but_not_finished">pass_if_sva_started_but_not_finished</option>
+		    	<option value="summary-macro-global.html#macro_pass_if_sva_succeeded">pass_if_sva_succeeded</option>
+	</optgroup>
+
+			</select>
+	    </div>
+
+	    <br>
+
+		<ul class="list-group">
+			<li class="list-group-item"><a target="content" href="summary-overview.html">Overview</a></li>
+		</ul>
+
+
+
+			<ul class="list-group">
+					<li class="list-group-item"><a target="content" href="summary-module-global.html">Modules</a></li>
+					<li class="list-group-item"><a target="content" href="summary-interface-global.html">Interfaces</a></li>
+					<li class="list-group-item"><a target="content" href="summary-macro-global.html">Macros</a></li>
+			</ul>
+
+
+			<ul class="list-group">
+				<li class="list-group-item">Packages</li>
+						<li class="list-group-item"><a data-toggle="collapse" href="#toc_pkg_svaunit_pkg"><span class="glyphicon glyphicon-chevron-right"></span></a> <a target="content" href="summary-svaunit_pkg.html">svaunit_pkg</a>
+							<div id="toc_pkg_svaunit_pkg" class="collapse ">
+								<ul class="list-unstyled">
+										<li><a target="content" href="summary-enum-svaunit_pkg.html">Enums</a></li>
+										<li><a target="content" href="summary-class-svaunit_pkg.html">Classes</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="list-group-item"><a data-toggle="collapse" href="#toc_pkg_amiq_svaunit_ex_simple_pkg"><span class="glyphicon glyphicon-chevron-right"></span></a> <a target="content" href="summary-amiq_svaunit_ex_simple_pkg.html">amiq_svaunit_ex_simple_pkg</a>
+							<div id="toc_pkg_amiq_svaunit_ex_simple_pkg" class="collapse ">
+								<ul class="list-unstyled">
+										<li><a target="content" href="summary-class-amiq_svaunit_ex_simple_pkg.html">Classes</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="list-group-item"><a data-toggle="collapse" href="#toc_pkg_amiq_svaunit_ex_apb_test_pkg"><span class="glyphicon glyphicon-chevron-right"></span></a> <a target="content" href="summary-amiq_svaunit_ex_apb_test_pkg.html">amiq_svaunit_ex_apb_test_pkg</a>
+							<div id="toc_pkg_amiq_svaunit_ex_apb_test_pkg" class="collapse ">
+								<ul class="list-unstyled">
+										<li><a target="content" href="summary-class-amiq_svaunit_ex_apb_test_pkg.html">Classes</a></li>
+								</ul>
+							</div>
+						</li>
+				</li>
+			</ul>
+
+		<ul class="list-group">
+
+					<li class="list-group-item"><a target="content" href="summary-assertions.html">Assertions</a></li>
+		</ul>
+		
+		
+		<ul class="list-group">
+			<li class="list-group-item"><a target="content" href="summary.html">Index</a></li>
+		</ul>
+
+
+
+
+		<hr>
+
+		<div class="row">
+		  <div class="col-xs-6"><div class="pull-left"><a href="http://www.dvteclipse.com" target="_new"><b>Specador<sup>TM</sup><br></>Version 15.1.32</b></a></div></div>
+		  <div class="col-xs-6"><div class="pull-right"><a href="http://www.amiq.com" target="_new"><img style="border:0;" src="img/amiq.png" width="91" height="45"></a></div></div>
+		</div>
+
+	</div>
+
+	<script src="lib/jquery/js/jquery.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<script src="lib/select2/js/select2.js"></script>
+	<script src="js/toc.js"></script>
+	<script src="js/custom.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,19 @@
+Starting:  C:\pasic\synplcty\bin\mbin\synplify.exe
+Version:   7.0.2   
+Date:      Fri Sep 13 17:34:10 2002
+
+
+Running synthesis on demo_amba:Synthesis_and_SpDE_files
+
+log file: "\\Judd_ql_dallas\d\mips\ahb\interface_ex\verilog_design\Synthesis_and_SpDE_files\demo_amba.srr"
+
+Running verilog Syntax check...
+Verilog Compiler Completed
+
+Verilog Compiler: 0 errors, 4 warnings, 0 notes
+
+Mapper Completed
+
+Mapper: 0 errors, 9 warnings, 2 notes
+
+Total: 0 errors, 13 warnings, 2 notes

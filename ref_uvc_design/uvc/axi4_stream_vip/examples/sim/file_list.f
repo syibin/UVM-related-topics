@@ -1,0 +1,9 @@
+../../verification_ip/axi4_str_m_if.sv
+../../verification_ip/axi4_str_m.sv
+../../verification_ip/axi4_str_s_if.sv
+../../verification_ip/axi4_str_s.sv
+../../verification_ip/axi4_str_monitor_if.sv
+../../verification_ip/axi4_str_monitor.sv
+../testbench/packet.sv
+../testbench/testbench_top.sv
+../testbench/test.sv

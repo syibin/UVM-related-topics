@@ -1,0 +1,71 @@
+Title: I2C Package Integration
+
+The following describes the steps needed to integrate the I2C package into 
+a working environment.
+
+_I2C Interface Instance and Binding_: see <i2c_if> for the interface instance and binding coding example.
+
+_Package Import_: The I2C package contains all of the declarations needed to 
+instantiate and use an I2C agent. Import the package into the working environment.
+(start code)
+import i2c_package::*;
+(end code)
+
+_Agents Instantiation in an Environment_: Instantiating  
+I2C agents objects requires the following:
+
+Virtual Interface - Define an I2C virtual interface and retrieve the pointer.
+
+Agents Configuration Objects - Create the agents configuration objects in the build phase.
+The agents configuration objects members are constrainted to default values.
+All constraints in the configuration objects are "soft" allowing the integrator to override each
+class member without modifying the configuration class code.
+
+Creating the Agent Object - Create the agent object in the build phase. 
+Pass to the agent the I2C virtual interface and the I2C configuration object. 
+ 
+
+Connecting Agent to a Scoreboard (optional) - In the connect phase, connect the agents
+analysis port to your scoreboard.
+
+Slave Agent Default Address - The master agent has a default configuration for a single slave device setup at 
+address <i2c_package::I2C_DEFAULT_SLAVE_ADDRESS>. Slave agents addresses are configured by default to this define as well. 
+(start code)
+class env extends uvm_env;
+ .
+ .
+ virtual i2c_if   i2c_slave_sigs;
+ virtual i2c_if   i2c_master_sigs;
+ i2c_slave_agent  i2c_slave_agnt;
+ i2c_master_agent i2c_master_agnt;
+ .
+ .
+ 
+function void build_phase(uvm_phase phase);
+ .
+ .
+ if (!uvm_config_db#(virtual i2c_if)::get(null, "uvm_test_top", "i2c_slave_sigs", i2c_slave_sigs))
+    `uvm_fatal(get_type_name(), "i2c slave interface not set");
+    
+ if (!uvm_config_db#(virtual i2c_if)::get(null, "uvm_test_top", "i2c_master_sigs", i2c_master_sigs))
+    `uvm_fatal(get_type_name(), "i2c master interface not set");
+ 
+ i2c_slave_agnt      = i2c_slave_agent::type_id::create("i2c_slave_agnt", this);
+ i2c_slave_agnt.cfg  = cfg.i2c_slave_agnt_cfg; // env config object holds the agents config objects
+ i2c_slave_agnt.sigs = i2c_slave_sigs;
+ 
+ i2c_master_agnt     = i2c_master_agent::type_id::create("i2c_master_agnt", this);
+ i2c_master_agnt.cfg = cfg.i2c_master_agnt_cfg; // env config object holds the agents config objects
+ i2c_master_agnt.sigs= i2c_master_sigs;
+ .
+ .
+endfunction 
+
+function void connect_phase(uvm_phase phase);
+  .
+  .
+  i2c_slave_agnt.analysis_port.connect(i2c_sb.receive_stream.analysis_export);
+  .
+  .
+endfunction
+(end code)

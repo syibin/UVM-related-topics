@@ -1,0 +1,145 @@
+Format: Development Release 01-12-2008 (1.35 base)
+
+
+Title: Verification Cores
+
+# You can also add a sub-title to your menu like this:
+# SubTitle: [subtitle]
+
+Footer: Copyright 2017 Dov Stamler (dov.stamler@gmail.com)
+Timestamp: Generated on month day, year
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# --------------------------------------------------------------------------
+
+
+File: Introduction  (no auto-title, docs/src/common/introduction.txt)
+
+Group: I2C Agents  {
+
+   File: Getting Started With I2C  (docs/src/i2c/i2c_getting_started.txt)
+
+   Group: I2C Package  {
+
+      File: i2c package  (no auto-title, src/i2c/i2c_package.sv)
+
+      Group: Master Agent  {
+
+         File: i2c master agent  (no auto-title, src/i2c/i2c_master_agent.sv)
+         File: i2c master cfg  (no auto-title, src/i2c/i2c_master_cfg.sv)
+         File: i2c master driver  (no auto-title, src/i2c/i2c_master_driver.sv)
+
+         Group: Master Sequences  {
+
+            File: i2c_base_sequence  (src/i2c/master_sequences/i2c_base_sequence.sv)
+            File: i2c_basic_sequence  (src/i2c/master_sequences/i2c_basic_sequence.sv)
+            }  # Group: Master Sequences
+
+         }  # Group: Master Agent
+
+      Group: Slave Agent  {
+
+         File: i2c_slave_agent  (src/i2c/i2c_slave_agent.sv)
+         File: i2c_slave_cfg  (no auto-title, src/i2c/i2c_slave_cfg.sv)
+         File: i2c_slave_driver  (src/i2c/i2c_slave_driver.sv)
+         }  # Group: Slave Agent
+
+      Group: Common Objects  {
+
+         File: i2c_common_methods  (src/i2c/i2c_common_methods.sv)
+         File: i2c_cfg  (src/i2c/i2c_cfg.sv)
+         File: i2c_monitor  (no auto-title, src/i2c/i2c_monitor.sv)
+         File: i2c_sequence_item  (src/i2c/i2c_sequence_item.sv)
+         }  # Group: Common Objects
+
+      }  # Group: I2C Package
+
+   Group: I2C Interface  {
+
+      File: i2c_if  (src/i2c/i2c_if.sv)
+      }  # Group: I2C Interface
+
+   File: I2C Package Integration  (docs/src/i2c/i2c_integration.txt)
+   File: I2C Release Notes  (src/i2c/release_notes.txt)
+   }  # Group: I2C Agents
+
+Group: Wishbone B3 Agents  {
+
+   File: Getting Started With Wishbone B3  (docs/src/wishbone_b3/wishbone_b3_getting_started.txt)
+
+   Group: Wishbone B3 Package  {
+
+      File: wishbone b3 package  (no auto-title, src/wishbone_b3/wishbone_b3_package.sv)
+
+      Group: Master Agent  {
+
+         File: wishbone b3 master agent  (no auto-title, src/wishbone_b3/wishbone_b3_master_agent.svh)
+         File: wishbone b3 master cfg  (no auto-title, src/wishbone_b3/wishbone_b3_master_cfg.svh)
+         File: wishbone b3 master driver  (no auto-title, src/wishbone_b3/wishbone_b3_master_driver.svh)
+
+         Group: Master Sequences  {
+
+            File: wishbone b3 master base sequence  (no auto-title, src/wishbone_b3/master_sequences/wishbone_b3_master_base_sequence.sv)
+            }  # Group: Master Sequences
+
+         }  # Group: Master Agent
+
+      Group: Common Objects  {
+
+         File: wishbone b3 sequence item  (no auto-title, src/wishbone_b3/wishbone_b3_sequence_item.svh)
+         File: wishbone b3 monitor  (no auto-title, src/wishbone_b3/wishbone_b3_monitor.svh)
+         File: wishbone b3 reg adapter  (no auto-title, src/wishbone_b3/wishbone_b3_reg_adapter.svh)
+         }  # Group: Common Objects
+
+      }  # Group: Wishbone B3 Package
+
+   Group: Wishbone B3 Interface  {
+
+      File: wishbone b3 if  (no auto-title, src/wishbone_b3/wishbone_b3_if.sv)
+      }  # Group: Wishbone B3 Interface
+
+   File: Wishbone B3 Package Integration  (docs/src/wishbone_b3/wishbone_b3_integration.txt)
+   File: Wishbone B3 Release Notes  (src/wishbone_b3/release_notes.txt)
+   }  # Group: Wishbone B3 Agents
+
+Group: Index  {
+
+   Index: Everything
+   Class Index: Classes
+   Method Index: Methods
+   Variable Index: Variables
+   Constant Index: Constants
+   Type Index: Types
+   Package Index: Packages
+   Constraint Index: Constraints
+   Interface Index: Interfaces
+   Macro Index: Macros
+   }  # Group: Index
+

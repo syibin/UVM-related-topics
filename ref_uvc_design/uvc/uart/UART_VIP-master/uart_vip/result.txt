@@ -1,0 +1,1928 @@
+==> ./result.txt <==
+
+==> ./uart_sim01.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 2885825: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   65 
+ 																 Txn Failed    135 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   81
+UVM_WARNING :    0
+UVM_ERROR :  135
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ CHAR SIZE 5  ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[DATA Matched]    65
+[DATA Mismatch]   135
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              2885825
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2885825 ns
+CPU Time:      2.420 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:48:27 2016
+
+==> ./uart_sim02.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 2885825: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   65 
+ 																 Txn Failed    135 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   81
+UVM_WARNING :    0
+UVM_ERROR :  135
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ CHAR SIZE 5  ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[DATA Matched]    65
+[DATA Mismatch]   135
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              2885825
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2885825 ns
+CPU Time:      2.420 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:48:43 2016
+
+==> ./uart_sim03.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 2885825: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   62 
+ 																 Txn Failed    138 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   78
+UVM_WARNING :    0
+UVM_ERROR :  138
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ CHAR SIZE 5  ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[DATA Matched]    62
+[DATA Mismatch]   138
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              2885825
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2885825 ns
+CPU Time:      2.450 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:48:58 2016
+
+==> ./uart_sim04.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 2885825: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   65 
+ 																 Txn Failed    135 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   81
+UVM_WARNING :    0
+UVM_ERROR :  135
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ CHAR SIZE 5  ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[DATA Matched]    65
+[DATA Mismatch]   135
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              2885825
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2885825 ns
+CPU Time:      2.390 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:49:14 2016
+
+==> ./uart_sim05.log <==
+          tx_mon_port        uvm_analysis_port        -     @668      
+        u0_sequencer         u0_sequencer             -     @703      
+          rsp_export         uvm_analysis_export      -     @711      
+          seq_item_export    uvm_seq_item_pull_imp    -     @817      
+          arbitration_queue  array                    0     -         
+          lock_queue         array                    0     -         
+          num_last_reqs      integral                 32    'd1       
+          num_last_rsps      integral                 32    'd1       
+        is_active            uvm_active_passive_enum  1     UVM_ACTIVE
+      dut_agnt_h             uart_dut_agent           -     @646      
+        uart_dut_monitor     uart_dut_monitor         -     @837      
+          dut_mon_port       uvm_analysis_port        -     @845      
+----------------------------------------------------------------------
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(126) @ 130: uvm_test_top.tb_h.tx_scbd [ CFG_SETTINGS ] Async USART Mode set
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(141) @ 130: uvm_test_top.tb_h.tx_scbd [ ODD PARITY]  Odd Parity Configured 
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(147) @ 130: uvm_test_top.tb_h.tx_scbd [ STOP BIT 2-bits] Stop bit is set to 2 bits 
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(150) @ 130: uvm_test_top.tb_h.tx_scbd [ CHAR SIZE 5  ] Char size set to 5
+UVM_FATAL /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_phase.svh(1270) @ 5000000: reporter [PH_TIMEOUT] Explicit timeout of 5000000 hit, indicating a probable testbench issue
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   10
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[ CFG_SETTINGS ]     1
+[ CHAR SIZE 5  ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[PH_TIMEOUT]     1
+[RNTST]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_report_object.svh", line 292.
+$finish at simulation time              5000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 5000000 ns
+CPU Time:      3.660 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:49:29 2016
+
+==> ./uart_sim06.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.130 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:49:45 2016
+
+==> ./uart_sim07.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.120 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:50:02 2016
+
+==> ./uart_sim08.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.130 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:50:17 2016
+
+==> ./uart_sim09.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3522625: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3522625: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  170
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3522625: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 170 
+ 																 Txn Passed   1 
+ 																 Txn Failed    169 
+  																 Txn Dropped   30 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3522625: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   17
+UVM_WARNING :    0
+UVM_ERROR :30840
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]     1
+[DATA Mismatch]   169
+[Parity Error]    90
+[RNTST]     1
+[Start Bit Error]    49
+[Stop Bit Error] 30532
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3522625
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3522625 ns
+CPU Time:      3.500 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:50:37 2016
+
+==> ./uart_sim0.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 2885825: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 2885825: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   65 
+ 																 Txn Failed    135 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 2885825: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   81
+UVM_WARNING :    0
+UVM_ERROR :  135
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ CHAR SIZE 5  ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[DATA Matched]    65
+[DATA Mismatch]   135
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              2885825
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2885825 ns
+CPU Time:      2.400 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:48:12 2016
+
+==> ./uart_sim10.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :32000
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[Stop Bit Error] 32000
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.670 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:50:54 2016
+
+==> ./uart_sim11.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.080 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:51:09 2016
+
+==> ./uart_sim12.log <==
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3458935: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3458935: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  170
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3458935: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 170 
+ 																 Txn Passed   0 
+ 																 Txn Failed    170 
+  																 Txn Dropped   30 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3458935: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   16
+UVM_WARNING :    0
+UVM_ERROR :32496
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Mismatch]   170
+[Parity Error]    84
+[RNTST]     1
+[Start Bit Error]    25
+[Stop Bit Error] 32217
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3458935
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3458935 ns
+CPU Time:      3.310 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:51:28 2016
+
+==> ./uart_sim13.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.090 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:51:46 2016
+
+==> ./uart_sim14.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.120 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:52:01 2016
+
+==> ./uart_sim15.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3554465: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3554465: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  172
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3554465: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 172 
+ 																 Txn Passed   2 
+ 																 Txn Failed    170 
+  																 Txn Dropped   28 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3554465: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   18
+UVM_WARNING :    0
+UVM_ERROR :31926
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]     2
+[DATA Mismatch]   170
+[Parity Error]    89
+[RNTST]     1
+[Start Bit Error]    47
+[Stop Bit Error] 31620
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3554465
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3554465 ns
+CPU Time:      3.330 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:52:18 2016
+
+==> ./uart_sim16.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 4159425: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 4159425: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 4159425: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 4159425: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 4159425: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :17054
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[Parity Error]    94
+[RNTST]     1
+[Stop Bit Error] 16960
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              4159425
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4159425 ns
+CPU Time:      3.590 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:52:35 2016
+
+==> ./uart_sim17.log <==
+          tx_mon_port        uvm_analysis_port        -     @668      
+        u0_sequencer         u0_sequencer             -     @703      
+          rsp_export         uvm_analysis_export      -     @711      
+          seq_item_export    uvm_seq_item_pull_imp    -     @817      
+          arbitration_queue  array                    0     -         
+          lock_queue         array                    0     -         
+          num_last_reqs      integral                 32    'd1       
+          num_last_rsps      integral                 32    'd1       
+        is_active            uvm_active_passive_enum  1     UVM_ACTIVE
+      dut_agnt_h             uart_dut_agent           -     @646      
+        uart_dut_monitor     uart_dut_monitor         -     @837      
+          dut_mon_port       uvm_analysis_port        -     @845      
+----------------------------------------------------------------------
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(126) @ 130: uvm_test_top.tb_h.tx_scbd [ CFG_SETTINGS ] Async USART Mode set
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(141) @ 130: uvm_test_top.tb_h.tx_scbd [ ODD PARITY]  Odd Parity Configured 
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(147) @ 130: uvm_test_top.tb_h.tx_scbd [ STOP BIT 2-bits] Stop bit is set to 2 bits 
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(159) @ 130: uvm_test_top.tb_h.tx_scbd [CHAR SIZE 8 ]  Char size set to 8 
+UVM_FATAL /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_phase.svh(1270) @ 5000000: reporter [PH_TIMEOUT] Explicit timeout of 5000000 hit, indicating a probable testbench issue
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   10
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[PH_TIMEOUT]     1
+[RNTST]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_report_object.svh", line 292.
+$finish at simulation time              5000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 5000000 ns
+CPU Time:      3.760 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:52:52 2016
+
+==> ./uart_sim18.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.100 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:53:06 2016
+
+==> ./uart_sim19.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.320 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:53:22 2016
+
+==> ./uart_sim20.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3860225: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3860225: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3860225: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3860225: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  201
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3860225: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 201 
+ 																 Txn Passed   3 
+ 																 Txn Failed    198 
+  																 Txn Dropped   -1 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3860225: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   19
+UVM_WARNING :    0
+UVM_ERROR :  198
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]     3
+[DATA Mismatch]   198
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3860225
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3860225 ns
+CPU Time:      3.100 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:53:37 2016
+
+==> ./uart_sim21.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.130 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:53:54 2016
+
+==> ./uart_sim22.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.120 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:54:11 2016
+
+==> ./uart_sim23.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 4159425: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 4159425: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 4159425: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 4159425: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 4159425: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :17054
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[Parity Error]    94
+[RNTST]     1
+[Stop Bit Error] 16960
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              4159425
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4159425 ns
+CPU Time:      3.630 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:54:31 2016
+
+==> ./uart_sim24.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.150 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:54:47 2016
+
+==> ./uart_sim25.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.120 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:55:04 2016
+
+==> ./uart_sim26.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.170 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:55:23 2016
+
+==> ./uart_sim27.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.120 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:55:39 2016
+
+==> ./uart_sim28.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.140 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:55:56 2016
+
+==> ./uart_sim29.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.100 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:56:17 2016
+
+==> ./uart_sim30.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.100 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:56:33 2016
+
+==> ./uart_sim31.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.110 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:56:48 2016
+
+==> ./uart_sim32.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.100 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:57:05 2016
+
+==> ./uart_sim33.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      3.180 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:57:23 2016
+
+==> ./uart_sim34.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(147) @ 130: uvm_test_top.tb_h.tx_scbd [ STOP BIT 2-bits] Stop bit is set to 2 bits 
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(159) @ 130: uvm_test_top.tb_h.tx_scbd [CHAR SIZE 8 ]  Char size set to 8 
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 28175: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 28175: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 28175: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 28175: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  0
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 28175: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 0 
+ 																 Txn Passed   0 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 28175: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   16
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time                28175
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 28175 ns
+CPU Time:      0.320 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:57:37 2016
+
+==> ./uart_sim35.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3522625: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3522625: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  174
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3522625: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 174 
+ 																 Txn Passed   2 
+ 																 Txn Failed    172 
+  																 Txn Dropped   26 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3522625: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   18
+UVM_WARNING :    0
+UVM_ERROR :33996
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]     2
+[DATA Mismatch]   172
+[Parity Error]    89
+[RNTST]     1
+[Start Bit Error]    51
+[Stop Bit Error] 33684
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3522625
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3522625 ns
+CPU Time:      3.440 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:57:53 2016
+
+==> ./uart_sim36.log <==
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   199 
+ 																 Txn Failed    1 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  215
+UVM_WARNING :    0
+UVM_ERROR :    1
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   199
+[DATA Mismatch]     1
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      2.920 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:58:10 2016
+
+==> ./uart_sim37.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      2.970 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:58:25 2016
+
+==> ./uart_sim38.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      2.970 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:58:43 2016
+
+==> ./uart_sim39.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      2.980 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:58:58 2016
+
+==> ./uart_sim40.log <==
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(236) @ 3834620: uvm_test_top.tb_h.tx_scbd [DATA Matched] expected 063 received 063
+UVM_INFO /apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_objection.svh(1268) @ 3841025: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(337) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(338) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_IN     ] Num. of Transactions input to the DUT     200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(339) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_OUT    ] Num. of Transactions output from the DUT  200
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(340) @ 3841025: uvm_test_top.tb_h.tx_scbd [    TXN_STATUS ]                    
+ 																 Txn compared 200 
+ 																 Txn Passed   200 
+ 																 Txn Failed    0 
+  																 Txn Dropped   0 
+
+UVM_INFO verif/sequences/./../top/uart_tx_sb.sv(341) @ 3841025: uvm_test_top.tb_h.tx_scbd [    $$$$$$     ] ############################################################### 
+
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  216
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[    $$$$$$     ]     2
+[    TXN_IN     ]     1
+[    TXN_OUT    ]     1
+[    TXN_STATUS ]     1
+[ CFG_SETTINGS ]     1
+[ ODD PARITY]     1
+[ STOP BIT 2-bits]     1
+[CHAR SIZE 8 ]     1
+[DATA Matched]   200
+[RNTST]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[U0_DRIVER]     1
+[U0_MONITOR]     1
+[UART_DUT_MON]     1
+[UVMTOP]     1
+$finish called from file "/apps/synopsys/I-2014.03-2/etc/uvm-1.1/base/uvm_root.svh", line 438.
+$finish at simulation time              3841025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3841025 ns
+CPU Time:      2.970 seconds;       Data structure size:   0.2Mb
+Fri Dec  2 01:59:14 2016

@@ -1,0 +1,48 @@
+Title: I2C Release Notes
+
+_Version: 1.4_
+
+- fixed monitor halting when a continuous start is created after a read
+
+_Version: 1.3_
+
+- Removed objections from build phases
+- added timeunit to interface
+
+_Version: 1.2_
+
+- Simplified interface connectivity
+- Added debug signal to the interface reporting current bus state
+
+_Version: 1.1_
+
+Supported Functionality: 
+- Master & slave agents
+- Seven bit addressing
+- Sequence item encapsulates an entire transaction including
+  multiple transmitted / received words for a single address request. 
+- Master and slave agents support continuous start.
+- Master agent supports clock stretching and arbitration lost.
+
+Framework:
+- Implementation tested with the UVM-1.1d framework.
+
+Unimplemented Features:
+- Addressing supports only seven bit request for master and slave agents.
+- Reserved addresses are currently treated as a normal addressing requests. 
+- Master agent configuration object member <i2c_master_cfg::max_num_of_master_words> has not been implemented.
+- Slave agent does not support clock stretching.
+
+Testing:
+- Slave agent was connected and tested against the I2C opencore RTL found at
+  http://opencores.org/project,i2c
+
+_Version: 1.0_
+
+Supported Functionality: 
+- Slave agent
+- 7 bit addressing
+- Continuous starts
+- Sequence item encapsulates an entire transaction including
+  multiple transmitted / received words for a single address request. 
+

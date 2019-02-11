@@ -1,0 +1,25 @@
+class sfr_seq_item extends uvm_sequence_item;
+
+`uvm_object_utils(sfr_seq_item)
+
+function new(string name = "sfr_seq_item");
+  super.new(name);
+endfunction
+
+rand bit[7:0] address;
+rand bit[7:0] write_data;
+rand bit we;
+rand bit re;
+
+bit[7:0] read_data;
+
+function string to_string();
+  string s;
+
+  s = $sformatf("%t address: %0h we: %b write_data: %0h re:%0b read_data:%0h", $time(), address, we, write_data, re, read_data);
+
+  return s;
+endfunction
+
+
+endclass: sfr_seq_item

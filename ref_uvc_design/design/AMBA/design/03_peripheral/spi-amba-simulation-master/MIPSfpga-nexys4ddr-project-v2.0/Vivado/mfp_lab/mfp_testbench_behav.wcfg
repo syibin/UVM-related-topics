@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mfp_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mfp_testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6470000001fs"></ZoomEndTime>
+      <Cursor1Time time="2290000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/mfp_testbench/SI_ClkIn" type="logic">
+      <obj_property name="ElementShortName">SI_ClkIn</obj_property>
+      <obj_property name="ObjectShortName">SI_ClkIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/SI_ColdReset" type="logic">
+      <obj_property name="ElementShortName">SI_ColdReset</obj_property>
+      <obj_property name="ObjectShortName">SI_ColdReset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/SI_Reset" type="logic">
+      <obj_property name="ElementShortName">SI_Reset</obj_property>
+      <obj_property name="ObjectShortName">SI_Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/HADDR" type="array">
+      <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/HRDATA" type="array">
+      <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/HWDATA" type="array">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/HWRITE" type="logic">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/EJ_TRST_N_probe" type="logic">
+      <obj_property name="ElementShortName">EJ_TRST_N_probe</obj_property>
+      <obj_property name="ObjectShortName">EJ_TRST_N_probe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/EJ_TDI" type="logic">
+      <obj_property name="ElementShortName">EJ_TDI</obj_property>
+      <obj_property name="ObjectShortName">EJ_TDI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/EJ_TDO" type="logic">
+      <obj_property name="ElementShortName">EJ_TDO</obj_property>
+      <obj_property name="ObjectShortName">EJ_TDO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/EJ_TMS" type="logic">
+      <obj_property name="ElementShortName">EJ_TMS</obj_property>
+      <obj_property name="ObjectShortName">EJ_TMS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/EJ_TCK" type="logic">
+      <obj_property name="ElementShortName">EJ_TCK</obj_property>
+      <obj_property name="ObjectShortName">EJ_TCK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/EJ_DINT" type="logic">
+      <obj_property name="ElementShortName">EJ_DINT</obj_property>
+      <obj_property name="ObjectShortName">EJ_DINT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/IO_Switches" type="array">
+      <obj_property name="ElementShortName">IO_Switches[17:0]</obj_property>
+      <obj_property name="ObjectShortName">IO_Switches[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/IO_Buttons" type="array">
+      <obj_property name="ElementShortName">IO_Buttons[4:0]</obj_property>
+      <obj_property name="ObjectShortName">IO_Buttons[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/IO_RedLEDs" type="array">
+      <obj_property name="ElementShortName">IO_RedLEDs[17:0]</obj_property>
+      <obj_property name="ObjectShortName">IO_RedLEDs[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/IO_GreenLEDs" type="array">
+      <obj_property name="ElementShortName">IO_GreenLEDs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">IO_GreenLEDs[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/IO_7_SegmentHEX" type="array">
+      <obj_property name="ElementShortName">IO_7_SegmentHEX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IO_7_SegmentHEX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/cycle" type="array">
+      <obj_property name="ElementShortName">cycle[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/SPI_SCLK" type="logic">
+      <obj_property name="ElementShortName">SPI_SCLK</obj_property>
+      <obj_property name="ObjectShortName">SPI_SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/SPI_SS" type="logic">
+      <obj_property name="ElementShortName">SPI_SS</obj_property>
+      <obj_property name="ObjectShortName">SPI_SS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/SPI_MOSI" type="logic">
+      <obj_property name="ElementShortName">SPI_MOSI</obj_property>
+      <obj_property name="ObjectShortName">SPI_MOSI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mfp_testbench/SPI_MISO" type="logic">
+      <obj_property name="ElementShortName">SPI_MISO</obj_property>
+      <obj_property name="ObjectShortName">SPI_MISO</obj_property>
+   </wvobject>
+</wave_config>

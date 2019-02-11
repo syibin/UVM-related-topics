@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.riscv.cdt.feature"
+      label="RISC-V GNU Toolchain"
+      version="2017.01.0.qualifier"
+      provider-name="RoaLogic BV"
+      plugin="org.eclipse.cdt.cross.riscv.gnu"
+      image="logo_emb_full.png">
+
+   <description>
+      RISC-V GNU Toolchain Plugin.
+The RISC-V GNU Toolchain Plugin is an Eclipse CDT Managed Build Extension for the development of applications for RISC-V processors.
+   </description>
+
+   <copyright>
+      Copyright © 2016 RoaLogic BV.  All rights reserved.
+   </copyright>
+
+   <license url="%licenseURL">
+      The &quot;RISC-V GNU Toolchain Plugin&quot; is free software. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish,distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   </license>
+
+   <url>
+      <discovery label="RISC-V Main Site" url="http://www.riscv.org"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.cdt.core" version="5.0.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.cdt.managedbuilder.core"/>
+      <import plugin="org.eclipse.cdt.managedbuilder.gnu.ui" version="5.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.ui.console" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.variables"/>
+      <import plugin="org.eclipse.ui.workbench"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.cdt.cross.riscv.gnu"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

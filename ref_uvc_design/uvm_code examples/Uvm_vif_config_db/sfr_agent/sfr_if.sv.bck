@@ -1,0 +1,9 @@
+interface sfr_if(input clk, input reset);
+
+  logic[7:0] address;
+  logic[7:0] write_data;
+  logic[7:0] read_data;
+  logic we;
+  logic re;
+
+endinterface: sfr_if

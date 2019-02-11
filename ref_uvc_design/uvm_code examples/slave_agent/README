@@ -1,0 +1,8 @@
+This example illustrates the operation of a slave sequence running on a slave
+agent. The slave sequence is in the agents/apb_agent directory.
+
+To run and build this example type make
+
+Note that the Makefile provided assumes the use of Questa 10.0c onwards,
+earlier versions of Questa will require the UVM package to be added to the
+build process.

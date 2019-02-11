@@ -1,0 +1,22 @@
+class sfr_test_seq extends uvm_sequence #(sfr_seq_item);
+
+`uvm_object_utils(sfr_test_seq)
+
+function new(string name = "sfr_test_seq");
+  super.new(name);
+endfunction
+
+task body;
+  sfr_seq_item item = sfr_seq_item::type_id::create("item");
+
+  repeat(2048) begin
+    start_item(item);
+    assert(item.randomize());
+    finish_item(item);
+  end
+
+endtask: body
+
+endclass: sfr_test_seq
+
+
